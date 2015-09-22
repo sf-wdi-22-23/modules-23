@@ -2,8 +2,6 @@
 
 Look here for all things related to lesson notes, exercises, and solutions as well as the schedule.
 
-#WDI SF 21
-
 [HW Submission Form]()
 
 <!-- ##Week 12 -->
