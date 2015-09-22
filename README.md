@@ -310,7 +310,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!--    <td>Rails Guides (Ilias)</td>-->
 <!--    <td>Rails Guides (Ilias)</td>-->
 <!--    <td>Rails Guides (Ilias)</td>-->
-<!--    <td><!-- LEAVE BLANK --></td>-->
+<!--    <td></td>-->
 <!--  </tr>-->
 <!--</table>-->
 
@@ -405,7 +405,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!--    <td><a href="week-04/day-3-auth/readme.md">Auth</a> (Ilias) </td>-->
 <!--    <td>No Reading!</td>-->
 <!--    <td>Project One</td>-->
-<!--    <td><!-- LEAVE BLANK --></td>-->
+<!--    <td></td>-->
 <!--  </tr>-->
 <!--</table>-->
 
@@ -450,7 +450,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!--    <td><a href="week-03/day-03-crud-express/rest.md">RESTful convention</a> (Ilias)</td>-->
 <!--    <td><a href="week-03/day-04-mongo-crud/dawn-mongo/readme.md">Mongo CRUD</a>(Justin)</td>-->
 <!--    <td><a href="https://vimeo.com/36579366">Bret Victor: Inventing on Principle</a> (Ilias)</td>-->
-<!--    <td><!-- LEAVE BLANK --></td>-->
+<!--    <td></td>-->
 <!--  </tr>-->
 <!--</table>-->
 
@@ -496,7 +496,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!--    <td><a href="week-02/day-03-jquery-templating/howTheInternetWorks.md">How the Internet Works</a> (Ilias)</td>-->
 <!--    <td><a href="week-02/day-04-Objects-and-OOP/dawn-objects">OOP Reading</a> (Justin)</td>-->
 <!--    <td><a href="https://github.com/airbnb/javascript/tree/master/es5">JS Style Guide</a> (Nathan)</td>-->
-<!--    <td><!-- LEAVE BLANK --></td>-->
+<!--    <td></td>-->
 
 <!--  </tr>-->
 <!--</table>-->
