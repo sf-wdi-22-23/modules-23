@@ -531,7 +531,6 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Assessment (Team)</td>
     <td>Bootstrap (Braus / Alex)</td>
     <td>Functions & Arguments (Alex / Braus)</td>
-    <td>Class-based CSS (Ilias / Justin)</td>
     <td>DOM Context & Event Binding (Braus / Ben)</td>
     <td>Flash Cards (Brianna)</td>
   </tr>
