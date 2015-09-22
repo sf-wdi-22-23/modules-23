@@ -513,33 +513,34 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td><a href="week-01/drills.md">Kyrel basics</a> (Brianna, Prof. X)</td>
-    <td><a href="week-01/drills.md">Kyrel loops</a> (Alex, Prof. X)</td>
-    <td><a href="week-01/drills.md">Kyrel advanced</a> (Prof. X, Alex)</td>
+    <td><a href="week-01/drills.md">Kyrel basics</a> (Brianna / Prof. X)</td>
+    <td><a href="week-01/drills.md">Kyrel loops</a> (Alex / Prof. X)</td>
+    <td><a href="week-01/drills.md">Kyrel advanced</a> (Prof. X / Alex)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
     <td>Module1</td>
     <td>Culture Setting (Team)</td>
-    <td><a href="week-01/day-2-control-flow/dawn-control-flow">Control Flow</a> (Nathan / Ilias)</td>
-    <td><a href="week-01/day-3-functions%2BCSS/dawn-functions">Functions & Arguments</a> (Justin / Ilias)</td>
-    <td><a href="week-01/day-4-DOM/dawn-intro-dom-jquery">Intro jQuery & DOM</a> (Nathan / Justin)</td>
-    <td>Review (Team)</td>
+    <td>HTML, CSS, Emmet (Ben / Juliana)</td>
+    <td>Control Flow (Brianna / Juliana)</td>
+    <td>Intro jQuery & DOM (Juliana / Brianna)</td>
+    <td>Review (Braus / Ben)</td>
   </tr>
   <tr>
     <td>Module2</td>
     <td>Assessment (Team)</td>
-    <td><a href="week-01/day-2-control-flow/dusk-modular-programs/">Modular Programs</a> (Ilias / Justin)</td>
-    <td><a href="week-01/day-3-functions%2BCSS/dusk-modular-css/exercise.md">Class-based CSS</a> (Ilias / Justin)</td>
-    <td><a href="week-01/day-4-DOM/dusk-dom-events">DOM Context & Event Binding</a> (Nathan / Ilias)</td>
-    <td><a href="week-01/day-5/weekend_project_spec.md">Racing Game</a> (Team)</td>
+    <td>Bootstrap (Braus / Alex)</td>
+    <td>Functions & Arguments (Alex / Braus)</td>
+    <td>Class-based CSS (Ilias / Justin)</td>
+    <td>DOM Context & Event Binding (Braus / Ben)</td>
+    <td>Flash Cards (Brianna)</td>
   </tr>
   <tr>
     <td>HW</td>
-    <td><a href="week-01/day-1-intro/reading/1_javascript_primitives.md">JS Primitives</a> & <a href="week-01/day-2-control-flow/dawn-control-flow/README.md">Control Flow</a></td>
-    <td><a href="week-01/day-3-functions%2BCSS/dawn-functions/reading.md">Functions</a> & <a href="week-01/day-3-functions%2BCSS/dusk-modular-css/readme.md">CSS</a></td>
+    <td><a href="week-01/day-2-control-flow/dawn-control-flow/README.md">Control Flow & <a href="week-01/day-3-functions%2BCSS/dusk-modular-css/readme.md">CSS</a></a></td>
+    <td><a href="week-01/day-3-functions%2BCSS/dawn-functions/reading.md">Functions</a> & <a href="week-01/day-1-intro/reading/1_javascript_primitives.md">JS Primitives</a></td>
+    <td>Code Academy jQuery</td>
     <td><a href="week-01/day-4-DOM/dawn-intro-dom-jquery/README.md">jQuery & DOM</a></td>
-    <td>No Reading!</a></td>
     <td></td>
   </tr>
 </table>
