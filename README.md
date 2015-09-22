@@ -513,9 +513,9 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td><a href="week-01/drills.md">Kyrel basics</a> (Nathan)</td>
-    <td><a href="week-01/drills.md">Kyrel loops</a> (Nathan)</td>
-    <td><a href="week-01/drills.md">Kyrel advanced</a> (Nathan)</td>
+    <td><a href="week-01/drills.md">Kyrel basics</a> (Brianna, Prof. X)</td>
+    <td><a href="week-01/drills.md">Kyrel loops</a> (Alex, Prof. X)</td>
+    <td><a href="week-01/drills.md">Kyrel advanced</a> (Prof. X, Alex)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
