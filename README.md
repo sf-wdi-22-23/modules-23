@@ -2,7 +2,7 @@
 
 Look here for all things related to lesson notes, exercises, and solutions as well as the schedule.
 
-[HW Submission Form]()
+[HW Submission Form](https://docs.google.com/forms/d/1zSklHtCYKg_NhkLdjlQaCXFrHJQ4Io266cKUs9_Dg8I/viewform)
 
 <!-- ##Week 12 -->
 <!-- <table>
