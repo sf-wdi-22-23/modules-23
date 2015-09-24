@@ -513,21 +513,21 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td><a href="week-01/drills.md">Kyrel basics</a> (Brianna / Prof. X)</td>
-    <td><a href="week-01/drills.md">Kyrel loops</a> (Alex / Prof. X)</td>
-    <td><a href="week-01/drills.md">Kyrel advanced</a> (Alex / Prof. X)</td>
+    <td>Kyrel basics (Brianna / Travis)</td>
+    <td>Kyrel loops</a> (Alex / Travis)</td>
+    <td>Kyrel advanced (Alex / Travis)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
-    <td>Module1</td>
+    <td>Module 1</td>
     <td>Culture Setting (Team)</td>
     <td>HTML, CSS, Emmet (Ben / Juliana)</td>
-    <td>Control Flow (Brianna / Juliana)</td>
+    <td>JS Control Flow (Brianna / Juliana)</td>
     <td>Intro jQuery & DOM (Juliana / Brianna)</td>
     <td>Review (Braus / Ben)</td>
   </tr>
   <tr>
-    <td>Module2</td>
+    <td>Module 2</td>
     <td>Assessment (Team)</td>
     <td>Bootstrap (Braus / Alex)</td>
     <td>Functions & Arguments (Alex / Braus)</td>
@@ -536,10 +536,10 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td><a href="week-01/day-2-control-flow/dawn-control-flow/README.md">Control Flow & <a href="week-01/day-3-functions%2BCSS/dusk-modular-css/readme.md">CSS</a></a></td>
-    <td><a href="week-01/day-3-functions%2BCSS/dawn-functions/reading.md">Functions</a> & <a href="week-01/day-1-intro/reading/1_javascript_primitives.md">JS Primitives</a></td>
-    <td>Code Academy jQuery</td>
-    <td><a href="week-01/day-4-DOM/dawn-intro-dom-jquery/README.md">jQuery & DOM</a></td>
+    <td>Control Flow & CSS</td>
+    <td>Functions & JS Primitives</td>
+    <td>jQuery</td>
+    <td>jQuery for the DOM</td>
     <td></td>
   </tr>
 </table>
