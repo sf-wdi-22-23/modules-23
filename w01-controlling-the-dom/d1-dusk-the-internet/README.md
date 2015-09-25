@@ -2,8 +2,7 @@
 | Objectives |
 | :--- |
 | Describe the difference between a client and a server and how they interact. |
-| Explain what a URL is and how it works. |
-| Use the Chrome Developer Tools to explore and manipulate the Elements, Sources, Resources, and JS Console. |
+| Use the Chrome Developer Tools to explore and manipulate the elements. |
 
 ## What is the internet?
 Millions of devices connected globally...
