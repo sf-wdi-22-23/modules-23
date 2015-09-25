@@ -1,11 +1,12 @@
-#Control Flow Challenge Solutions
-## Basic Challenges
+#Control Flow Exercise Solutions
+
+## Basic Exercises
 
 1. Which of the following are truthy values? (hint: try `if("abc"){"console.log('I'm truthy!')"}` in the JS console).       
-	truthy: 1, "abc", [], {}, -1, (1+1), 3.14159, Object       
+	truthy: 1, "abc", [], {}, -1, (1+1), 3.14159, Array, Object       
 	falsey: "", 0    
 
-2. Log to the console "This is awesome!" 25 times.   
+2. Log "This is awesome!" to the console 25 times.   
 	```
 	for (var i=0; i<25; i++){
 		console.log("This is awesome!");
@@ -190,7 +191,7 @@
 
 
 
-### Stretch Challenges
+### Stretch Exercises
 
 5. In a snippet, create a new variable that is an array containing 5 objects, each of which has the keys `name` and `age`. You can make up the names and ages for your objects.
 
