@@ -1,67 +1,58 @@
-#Intro to JavaScript Functions
+#JavaScript Functions
 
-##Learning Objectives
+| Objectives |
+| :--- |
+| Explain what a function is and why we should use functions |
+| Create a function definition based on written specifications |
+| Implement functions that incorporate conditionals, loops, and other function calls |
+| Identify the scope where a variable is defined |
 
-* Contrast an algorithm with a function
-* Articulate the importance of functions in a computer language
-* Create Javascript functions with parameters
-* Explain what scope is and compare global and local scope
-* Write functions that incorporate conditionals, loops
-* Understand and Implement Callbacks
-* Use functions to break programs into smaller sub-programs
-
----
-
-##What are functions?
-
-Computer science can essentially be divided into two core elements: **data structures** & **algorithms**.
-
-A **data structure** organizes information.
-
-An **algorithm** *abstractly* describes how to manipulate data to solve a problem.
+## What are functions?
 
 A [**function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a concrete implementation of an algorithm in a computer language. *It is a "subprogram" that encapsulates a specific behavior.*
 
----
-
-##Algorithms vs functions
-
-How could we describe the act of `squaring` a number in an algorithm vs in a function?
-
-**Algorithm —**
-*abstract*
+**Algorithm (abstract):**
 
 ```
 Take a number, multiply it by itself, and return the product.
 ```
 
-**Function —**
-*concrete*
+**Function (concrete):**
 
-```
+```js
 var square = function(num) {
-	return num * num;
+  return num * num;
 }
 ```
-Question: What are the fundamental differences between an algorithm and a function?
 
----
+#### Analogy: Dry Cleaner
 
-##Why do we care?
+Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
 
-"Functions are the *bread and butter* of JavaScript programming.
+```js
+var dryClean = function(dirtyClothes) {
+  // code that turns dirtyClothes into cleanClothes
+  return cleanClothes;
+}
+```
 
-The concept of wrapping a *piece of program* in a value has many uses.
+## Why use functions?
 
-It is a *tool to structure* larger programs, to *reduce repetition*, to *associate names with subprograms*, and to isolate these subprograms from each other."
+> "Functions are the bread and butter of JavaScript programming.
 
--Marjin Haverbeke, *Eloquent Javascript*.
+> The concept of wrapping a piece of program in a value has many uses.
 
-Question: Why are functions important?
+> It is a tool to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other."
 
----
+> -Marjin Haverbeke, *Eloquent Javascript*
 
-##Components of a function
+#### Benefits of Using Functions
+
+* **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
+
+* **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function!
+
+##Anatomy of a function
 
 The **parameters** are what you delare as being passed into the fuction in its definition, while *arguments* are what is actually passed into the function when called.
 
@@ -91,22 +82,15 @@ var rockingBod = function() {
 
 ##Declaring a function
 
-Either:
+```js
+greet();
 
-```
-var sweetFunk = function() {
-	//sweetness
-} 
-```
-
-or:
-
-```
-function sweetFunk() {
-	//sweetness
+function greet() {
+  console.log("Hello, there!");
 }
+
+// prints "Hello, there!"
 ```
-is acceptable for declaring a function; just stick to one convention.
 
 ---
 
@@ -116,35 +100,6 @@ is acceptable for declaring a function; just stick to one convention.
 
 <img src="http://i.giphy.com/wsEX8uMrTRDoI.gif" style="width: 250px;">
 
----
-
-##Challenge: Variable output
-
-In the next **10m**:
-
-1) Define a function `maxOrMin` that takes three parameters: two numbers and a boolean.
-
-2) Have it return the larger of the two numbers if the boolean is true, otherwise have it return the lesser of the numbers.
-
----
-
-##Example solution
-
-```
-function maxOrMin(num1, num2, max) {
-    //sort the numbers
-    var sorted = [num1, num2].sort(function(a, b){
-      return a - b;
-    });
-    if(max) {
-    	//if max is true return the greater number
-        return sorted[1];
-    } else {
-    	//otherwise return the lesser number
-        return sorted[0];
-    }
-}
-```
 
 ---
 
@@ -199,20 +154,7 @@ Question: Consider the JS function `sort`, is it a firstclass function?
 
 ---
 
-##Challenge: Callbacks
-
-Create a function called `sweetNothings` that takes a name as a parameter and outputs a love poem to that person.
-
-Create another funtion called `swoon` that also takes in a name and a callback as parameters and in the body of the function calls the callback with the name passed in.
-
-Finally try calling `swoon("Delmer", sweetNothings);` so that a love poem is written to Del.
-
----
-<img src="http://i.giphy.com/dsKnRuALlWsZG.gif" style="width:350px">
-
----
-
-##Further Discussion Topics
+##Further Reading
 
 Check out the [refactor_to_functions.js](https://github.com/sf-wdi-22-23/Intro-to-JavaScript-Functions/blob/master/refactor_to_functions.js) file for an example of how functions make life better!
 
