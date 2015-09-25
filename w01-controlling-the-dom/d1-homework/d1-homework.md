@@ -1,0 +1,37 @@
+# Homework!
+
+Congratulations on completing the first day of WDI!  In WDI, homework will usually be readings or tutorials to prepare you for the next day. Most days, you will also continue the day's exercises or lab during the evenings. 
+
+## Dev Directory
+
+We suggest students store their WDI work in a directory located at `~/dev`. Create this directory using the following terminal commands:
+
+```bash
+	cd ~
+	mkdir dev
+```
+
+## Homework Repository
+
+Each class will use a homework repository to submit homework. Right now, follow the instructions on your class's homework repository to get set up.  
+
+* <a href="https://github.com/sf-wdi-22-23/22-homework" target="_blank">WDI 22</a>
+* <a href="https://github.com/sf-wdi-22-23/23-homework" target="_blank">WDI 23</a>
+
+## Readings
+
+
+1. Read the lessons from the "The Internet" section below. 
+1. Inside your homework directory (`~/dev/22-homework` or `~/dev/23-homework`), make an `day1.hmtl` file. In that file, write three things you learned from the reading.
+7.  Create a `passion_project.hmtl` file inside your homework directory.  Think of a "passion project" that you're excited to work on either as one of your formal WDI projects or after WDI. Write one paragraph about the project in the `passion_project.html` file. 
+1. Also in the `passion_project.html` file, write three pieces of advice (or things you learned) from the other readings that will help you reach your goal of building that project. 
+
+### The Internet
+  * [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction)
+  * [CSS Lesson]()
+
+### Words of Wisdom
+  * [Growth Mindset](https://www.youtube.com/watch?v=pN34FNbOKXc)
+  * [Things I Wish Someone Had Told Me When I Was Learning How to Code](https://medium.com/@cecilycarver/things-i-wish-someone-had-told-me-when-i-was-learning-how-to-code-565fc9dcb329)
+
+
