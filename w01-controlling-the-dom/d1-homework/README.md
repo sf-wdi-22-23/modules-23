@@ -1,3 +1,9 @@
+#### Instructions:
+
+Please read the following high-level lesson and work through the exercises.
+[More on CSS Basics](more-basic-css.md)
+[More on the Box Model](more-box-model.md)
+
 ---
 title: CSS Intro
 type: Reading
