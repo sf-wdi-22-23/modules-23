@@ -535,7 +535,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td>Control Flow & CSS</td>
+    <td>Control Flow & [CSS](https://github.com/sf-wdi-18/notes/tree/27877620c965067f2a50822c267459c122f88989/lectures/week-01/day_4_dom_and_context/dusk_css)</td>
     <td>Functions & JS Primitives</td>
     <td>jQuery</td>
     <td>jQuery for the DOM</td>
