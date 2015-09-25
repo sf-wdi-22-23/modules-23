@@ -21,8 +21,8 @@ Each class will use a homework repository to submit homework. Right now, follow 
 ## Readings
 
 
-1. Read [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction)
-1. Read [Intro CSS]() and work through the exercises. More in-depth CSS resources with exercises are linked at the bottom of that lesson! 
+1. Read [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction). Mozilla Developer Network is a great source for information on web technologies.
+1. Read our [CSS Overview](./css-overview.md) and work through the exercises. More in-depth CSS resources with exercises are linked at the bottom of that lesson! 
 1. Inside your homework directory (`~/dev/22-homework` or `~/dev/23-homework`), make an `day1.hmtl` file. In that file, write three things you learned from those resources.
 
 
