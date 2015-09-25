@@ -2,10 +2,6 @@
 
 Please read the following high-level lesson and work through the exercises.
 
-[More on CSS Basics](more-basic-css.md)
-
-[More on the Box Model](more-box-model.md)
-
 # Intro CSS
 
 ## Stylesheets - Where do styles live?
@@ -286,6 +282,8 @@ p {
 
 ##Resources
 
+*[More on CSS Basics](more-basic-css.md)
+*[More on the Box Model](more-box-model.md)
 * CSS Reference - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 * CSS Properties List - https://css-tricks.com/almanac/properties/
 * What are the Default CSS Values? - http://www.w3.org/TR/CSS2/sample.html
