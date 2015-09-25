@@ -529,7 +529,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module 2</td>
     <td>Assessment (Team)</td>
     <td>Bootstrap (Braus / Alex)</td>
-    <td>[Functions & Arguments](https://github.com/sf-wdi-22-23/Intro-to-JavaScript-Functions) (Alex / Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/Intro-to-JavaScript-Functions">Functions & Arguments</a> (Alex / Braus)</td>
     <td>DOM Context & Event Binding (Braus / Ben)</td>
     <td>Flash Cards (Brianna)</td>
   </tr>
