@@ -1,5 +1,8 @@
+# JavaScript Control Flow
+
 ##Objectives  
-| Objectives |
+
+| Students will be able to... |
 | :--- |
 | Predict the output of boolean logic expressions|
 | Trace the flow of a program based on its code |
@@ -9,9 +12,18 @@
 
 ## Motivation
 
-Conditionals and loops are fundamental to all programming in every language and paradigm.
+"Control flow" refers to the way our computers move through a program's code.   The ability to trade the flow of a program based on its code is essential for working with any programs.  In particular, conditionals and loops are fundamental to understanding programming in every language and paradigm.
 
 ## Boolean Logic
+
+At the very lowest level, computers understand our instructions as sequences of 1s and 0s.  This "binary code" drives everything a computer does, from outputting text in the terminal, to displaying complex video game graphics, to communicating with other computers across the internet. 
+
+"Boolean" logic is the closest web developers need to get to thinking about binary code.  In boolean logic, every value is either true or false.
+
+```js
+typeof(true)    // boolean
+typeof(false)   // boolean
+```
 
 ### Basic Boolean Operators
 
@@ -31,9 +43,9 @@ Conditionals and loops are fundamental to all programming in every language and 
 
 ### `if/else`
 
-A diehard Giants fan:
+A diehard Giants fan might have the following rules for baseball games:
 
-```
+```js
 if (giantsPlaying) {
   getTickets();
 }
@@ -43,7 +55,9 @@ if (!giantsPlaying) {
 }
 ```
 
-```
+We can rephrase this more succinctly using `if` and `else`.
+
+```js
 if (giantsPlaying) {
   getTickets();
 } else {
@@ -51,9 +65,21 @@ if (giantsPlaying) {
 }
 ```
 
-#### `else if`
+The expression in `if( EXPRESSION )` will always be evaluated as truthy or falsy to determine what will happen next. 
 
-A commuter:
+A slightly more complex boolean expression will help our Giants fan save some money:
+
+```js 
+if (giantsPlaying && gameInSF){
+  getTickets();
+} else {
+  watchOnTV();
+}
+```
+
+### `else if`
+
+Here's a sample ruleset for commuters (though maybe not in SF):
 
 ```
 if ( hasCar ) {
@@ -70,7 +96,7 @@ if ( hasCar ) {
 #### `switch`
 
 
-A vending machine with a different price for each row:
+A `switch` statement checks the value of one variable or expression to determine which of many "cases" to jump to.  Here's code for a vending machine with a different price for each row:
 
 ```
 switch (row){	
@@ -120,9 +146,7 @@ while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
 }
 ```
 
-##Challenges
-
-### Docs & Resources
+## Docs & Resources
 
 [Loops - JSforcats](http://jsforcats.com/#loops)
 </br>
@@ -130,61 +154,6 @@ while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
 </br>
 [Loops - CodeAcademy](http://www.codecademy.com/glossary/javascript/loops)
 </br>
-
-
-### Basic Challenges
-1. Which of the following are truthy values? (hint: try `if("abc"){console.log("I'm truthy!")}` in the JS console)
-  * 1
-  * -1 
-  * 0 
-  * 3.14159
-  * "abc"
-  * ""
-  * Array 
-  * []
-  * Object
-  * {}
-2. Log to the console "This is awesome!" 25 times.
-3. Create a snippet inside of chrome's developer tools. Create snippets to do the rest of the challenges.
-4. In your snippet, create a new variable that is an array of 4 phrases: `Howdy there`, `OMG`, `javascript`, and `Pair Programming`.
-5. Loop over the array and console log each phrase.
-6. Loop over the array and log each phrase to the console if its total length is 4 or longer. Otherwise, console log that the phrase is too short.
-
-
-1. Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
-
-For starters, it costs 5 tokens. Here's how we might code that:
-
-```
-var tokens = 3; // Jimmy's tokens
-
-// Can he ride?
-if ( tokens >= 5 ) {
-    console.log("Step right up!");
-} else {
-    console.log("Sorry, you can't ride")
-}
-```
-Edit the code above to check the following additional Requirements:
-
-    Must be at least 4ft tall
-    Must be at least 12 years old
-    Replace the prevoius rule: now riders under 12 must be accompanied by an adult
-    (If the boss isn't looking, you can sneak in!)
-    Riders with a park pass get in free.
-
-
-### Stretch Challenges
-
-5. In a snippet, create a new variable that is an array containing 5 objects, each of which has the keys `name` and `age`. You can make up the names and ages for your objects.
-6. Log the name value of each object to the console.
-7. Create and log an array with the age of each object in months (assume the original ages were in years).
-9. Find and log the sum of the ages.
-8. Log to the console only the name of the oldest person.
-9. Log to the console the index of each element in the array.
-10. Create and log an array containing only the objects with an age over 20.
-11. Create and log an array of all the names, in which any names that begin with a consonant are upper case.
-12. Create and log an array that is the original array in a random order.
 
 ### External Reading and Tutorials
 
