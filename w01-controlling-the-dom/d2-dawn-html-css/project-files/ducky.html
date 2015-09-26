@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<!-- meta tags go first -->
+	<title>Ducky</title><!-- title is required for valid HTML -->
+	<!-- link fonts, CSS, then any javascript sources -->
+	<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+	<link href='css/theme.css' rel='stylesheet' type='text/css'>
+	<script src='js/script.js'  type='text/javascript' ></script>
+</head>
+<body>
+<!-- You might get nice results pretty quickly if you assign a background color or image to the body element. -->
+<div class= "container">
+<!-- You can also wrap everything in a container div, but you get the <body> for free -->
+
+<!-- It is common to give your header 100% width and a darker background color -->
+	<header>
+		<div class="centered">
+		<a href="index.html"><img src="images/ducky.svg" alt=" Logo" width="150px"></a>
+		<h1>Everything's Ducky</h1>
+		<nav>
+<!-- I don't need a class or id on this ul element because it is the direct child of the nav element. -->
+			<ul>
+				<li>Catalog</li>
+				<li>Locations</li>
+				<li>Events</li><!-- You can target this list item with nth-child(3) -->
+				<li>Contact</li>
+			</ul>
+			<input class="search" placeholder="Search"><button onclick="doSomething();"></button></input>
+		</nav>
+		</div>
+	</header>
+	<div class="container">
+<!-- HTML5 gives us the ability to use section and article elements, as well as header, footer, aside, canvas and many more. Some of them have interesting attributes you won't find in a regular div and they have the added advantage of making your HTML much more readable. If you ever build a jQuery Mobile multipage document, consider using these elements. -->
+		<section class="main centered">
+			<article>
+				<h2>Title of first article</h2>
+				<p>The first article on the page is just text.</p>
+			</article>
+			<article>
+<!-- If you want the style of the following <h2> or <p> tags to be different from the ones above, they need to have a class or unique id because they are at the same node of the DOM. -->
+				<h2>Title of second article</h2>
+				<p>This is the description for the second part of my article and it contains a useful unordered list of some information I want to display in a heirarchichal format</p>
+				<ul>Things we like
+					<li>Clothes, but mostly shoes</li>
+					<li>Books</li>
+					<li>Computers</li>
+					<li>Sesquatch</li>
+				</ul>
+			</article>
+		</section>
+<!-- The row should have 100% width and will inherit the width of the parent container, in this case ___________. This row > column.four structure is common when working with a grid. In this case we have 12 columns, so the .four class should have a width of ________. A little confusing at first but similar to many frameworks, such as bootstrap, foundation, etc. -->
+		<div class="row centered">
+			<div class="column four">
+				<h2 class="column-title">
+					<span id="button-set">
+						<button></button>
+						<button></button>
+						<button></button></span>
+					<p></p>
+				</h2>
+			</div><div class="gutter"></div>
+			<div class="column four">
+				<h2 class="column-title">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<p></p>
+				</h2>
+			</div><div class="gutter"></div>
+			<div class="column four">
+				<h2 class="column-title">
+					<div id="calendar">
+						<span><button></button></span>
+					</div>
+				</h2>
+			</div>
+		</div>
+<!-- Create content with the Emmet plugin for Sublime Text 
+h2.column-title>span#button-set>button*3^p
+h2.column-title>ul>li*4^p
+h2.column-title>div#calendar>span>button
+-->
+
+	</div>
+	<footer class="centered">
+		This is the footer
+	</footer>
+</div><!-- end of container -->
+<script type="text/javascript">
+/* For a simple site, you can write your custom page scripts here, or include any plugin scripts. Some things may need to be called by user interaction on the page. Putting these scripts last ensures that all your HTML will be loaded before you try to interact with it. We are using js/scripts.js Check the console to see the results. */
+</script>
+</body>
+</html>
