@@ -531,12 +531,17 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Bootstrap (Braus / Alex)</td>
     <td>Functions & Arguments (Alex / Braus)</td>
     <td>DOM Context & Event Binding (Braus / Ben)</td>
-    <td>Flash Cards (Brianna)</td>
+    <td>Weekend Lab (Brianna)</td>
   </tr>
   <tr>
     <td>HW</td>
-    <td>Control Flow & <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d1-homework/css-overview.md">CSS</a></td>
-    <td>Functions & JS Primitives, <a href="https://www.youtube.com/watch?v=DNN6G9EuPT0">Sublime Keyboard Shortcuts (screencast!)</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d1-homework/css-overview.md">CSS</a></td>
+    <td>
+      JS Primitives, <br>
+      Control Flow, <br>
+      Functions, <br>
+      <a href="https://www.youtube.com/watch?v=DNN6G9EuPT0">Sublime Keyboard Shortcuts (screencast!)</a>
+    </td>
     <td>jQuery</td>
     <td>jQuery for the DOM</td>
     <td></td>
