@@ -1,6 +1,6 @@
 #Control Flow Exercise Solutions
 
-## Basic Exercises
+## Base Exercises
 
 1. Which of the following are truthy values? (hint: try `if("abc"){"console.log('I'm truthy!')"}` in the JS console).       
 	truthy: 1, "abc", [], {}, -1, (1+1), 3.14159, Array, Object       
