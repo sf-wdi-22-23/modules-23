@@ -512,7 +512,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td>Kyrel basics (Brianna / Travis)</td>
+    <td>Kyrel basics (Travis / Brianna)</td>
     <td>Kyrel loops</a> (Alex / Travis)</td>
     <td>Kyrel advanced (Alex / Travis)</td>
     <td>Assessment (Team)</td>
@@ -535,7 +535,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d1-homework/css-overview.md">CSS</a></td>
+    <td>HTML, <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d1-homework/css-overview.md">CSS</a></td>
     <td>
       JS Primitives, <br>
       Control Flow, <br>
