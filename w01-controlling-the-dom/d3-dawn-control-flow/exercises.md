@@ -4,7 +4,6 @@
 
 1. Which of the following are truthy values? (hint: try `if("abc"){console.log("I'm truthy!")}` in the JS console)
   * 1
-  * -1 
   * 0 
   * 3.14159
   * "abc"
@@ -16,13 +15,11 @@
 
 2. Log to the console "This is awesome!" 25 times.
 
-3. Create a snippet inside of chrome's developer tools. Create snippets to do the rest of the challenges.
-
-4. In your snippet, create a new variable that is an array of 4 phrases: `"Howdy there"`, `"OMG"`, `"javascript"`, and `"Pair Programming"`.
+Create a new variable that is an array of 4 phrases: `"Howdy there"`, `"OMG"`, `"javascript"`, and `"Pair Programming"`.
 
 5. Loop over the array and log each phrase to the console.
 
-6. Loop over the array and log each phrase to the console *only if* its total length is 4 or longer. If the phrase is shorter than 4 characters, console log a message that the phrase is too short.
+6. Loop over the array and log each phrase to the console *only if* its total length is 4 or longer. If the phrase is shorter than 4 characters, console log "phrase is too short".
 
 
 1. Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
@@ -50,9 +47,9 @@ Edit the code above to check the following additional Requirements:
 
 ## Stretch Exercises
 
-5. In a snippet, create a new variable that is an array containing 5 objects, each of which has the keys `name` and `age`. You can make up the names and ages for your objects.
+5. Create a new variable that is an array containing 5 objects, each of which has the keys `name` and `age`. You can make up the names and ages for your objects.
 
-6. Log the name value of each object to the console.
+6. Log the `name` value of each object to the console.
 
 7. Create and log an array with the age of each object in months (assume the original ages were in years).
 
