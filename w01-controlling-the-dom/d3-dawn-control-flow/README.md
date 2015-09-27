@@ -5,20 +5,19 @@
 | Students will be able to... |
 | :--- |
 | Predict the output of boolean logic expressions|
-| Trace the flow of a program based on its code |
 | Describe the structure of `if/else` and `switch` statements |
 | Explain the purpose of `for` loops and `while` loops, and when to use each |
 | Implement `if/else` logic, `for` and `while` loops, and combinations |
 
 ## Motivation
 
-"Control flow" refers to the way our computers move through a program's code.   The ability to trade the flow of a program based on its code is essential for working with any programs.  In particular, conditionals and loops are fundamental to understanding programming in every language and paradigm.
+"Control flow" refers to the way our computers move through a program's code.   Understanding control flow allows us to trace the flow of a program based on its code. This skill is essential for programming in every language and paradigm.  In particular, conditionals and loops are fundamental to understanding modern programming languages.
 
 ## Boolean Logic
 
 At the very lowest level, computers understand our instructions as sequences of 1s and 0s.  This "binary code" drives everything a computer does, from outputting text in the terminal, to displaying complex video game graphics, to communicating with other computers across the internet. 
 
-"Boolean" logic is the closest web developers need to get to thinking about binary code.  In boolean logic, every value is either true or false.
+Boolean logic is the closest web developers need to get to thinking about binary code.  In boolean logic, every value is either true or false.
 
 ```js
 typeof(true)    // boolean
@@ -39,9 +38,11 @@ typeof(false)   // boolean
 | ------------- |:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|
 | `===` | `==` | `!==` | `!=` | `>` | `<` | `>=` | `<=` |
 
-## Conditinal Control Flow Structures
+## Conditinals
 
 ### `if/else`
+
+The boolean expression inside an `if`'s parentheses will always be evaluated as truthy or falsy to determine what will happen next. 
 
 A diehard Giants fan might have the following rules for baseball games:
 
@@ -65,7 +66,6 @@ if (giantsPlaying) {
 }
 ```
 
-The expression in `if( EXPRESSION )` will always be evaluated as truthy or falsy to determine what will happen next. 
 
 A slightly more complex boolean expression will help our Giants fan save some money:
 
@@ -77,74 +77,119 @@ if (giantsPlaying && gameInSF){
 }
 ```
 
+
+Some languages allow us to write if/else expressions in even fewer lines with a "ternary operator." 
+
+```js
+giantsPlaying && gameInSF ? getTickets() : watchOnTV;
+```
+
 ### `else if`
 
-Here's a sample ruleset for commuters (though maybe not in SF):
+ Here's a sample ruleset for commuters:
 
-```
-if ( hasCar ) {
-	// drive it!
-} else if ( hasBike ) {
-	// ride it!
+```js
+var destination = "GA";
+if ( hasBike ) {
+  rideToGA();
 } else if ( hasTransitPass ) {
-	// take the bus!
+  busToGA();
 } else {
-	// better start walking!
+  walkToGA();
 }
 ```
+
+
+### Nested `if`s
+
+```js
+var drink;
+
+if (isSleepy) {
+  if (likesCoffee) {
+    drink = "coffee";
+  } else {
+    drink = "black tea";
+  }
+} else {
+  drink = "water";
+}
+```
+
 
 #### `switch`
 
 
 A `switch` statement checks the value of one variable or expression to determine which of many "cases" to jump to.  Here's code for a vending machine with a different price for each row:
 
-```
+```js
 switch (row){	
 	case 1: 	
 		price = 0.25;
+		break;
 	case 2: 
 		price = 0.50;
+		break;
 	case 3:
 		price = 0.75;
+		break;
 	case 4: 
 		price = 1.00;
+		break;
 	default:  // the rest of the products (rows 5-7) 
-		price = 1.25
+		price = 1.25;
 }			
 ```
 
-### Loops
+## Loops
 
-#### `for` loops
+Whenever we want to repeat something in code, we use a loop.  We can think of every loop as three parts: initial setup, continue condition(s), and update expression(s).
 
-For loops for arrays:
 
+### `while` loops
+
+In while loops, the initial setup happens before the loop. The continue condition goes inside the parentheses. The update expressions happen inside the loop. 
+
+```js
+var minutesBeforeWork = 80;     // wake up early... or not
+while (minutesBeforeWork > 30) { 
+  minutesBeforeWork = minutesBeforeWork - 5;  // hit snooze!
+}
 ```
-var m = ["Bill", "Nicki", "Kelly"]
-for (i = 0; i < m.length; i++) {
+
+### `for` loops
+
+For loops allow the setup, continue condition, and update expression inside the for loop parentheses. They only really need a continue condition (or the loop will never end!); We can also do setup before the loop and extra updating inside the loop. In this way, a for loop can look a lot like a while loop.
+
+```js
+var minutesBeforeWork = 540;
+for( ; minutesBeforeWork > 30; ) {
+  minutesBeforeWork = minutesBeforeWork - 5;
+}
+```
+
+
+For loops for arrays usually use a counter variable to move through the indices of the array.
+
+```js
+var friends = ["Bill", "Nicki", "Kelly"]
+for (var i = 0; i < m.length; i++) {
   console.log(m[i] + " is a nice person")
 }
 
 ```
 
-For loops for objects:
+Objects have keys instead of indices, so there is a special `for in` structure used to loop on objects. The `hasOwnProperty` line is part of the pattern that we won't go into today. Here's an example that pulls all of the data about a movie into the console. 
 
-```
+```js
 var movieData = {director: "Burton", year: 1993, title: "The Nightmare Before Christmas", price: 4.55}
 for (key in movieData){
-	if (movieData.hasOwnProperty(key)){
+	if (movieData.hasOwnProperty(key)) {
 		console.log(key + ": ", movieData[key]);
 	}
 }
 ```
 
-### `while` loops
-
-```
-while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
-  hitSnooze()
-}
-```
 
 ## Docs & Resources
 
