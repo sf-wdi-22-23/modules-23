@@ -23,7 +23,7 @@ curl www.google.com
 
 ## Challenges
 
-#### Basic Challenges
+#### Base Challenges
   1. Go to your favorite website.
   4. Hit `command + option + i`
   5. You are now in the Elements tab of the Chrome Developer Tools. Click through the other tabs and explore!
