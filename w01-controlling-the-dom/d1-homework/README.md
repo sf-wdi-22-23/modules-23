@@ -13,7 +13,7 @@ We suggest students store their WDI work in a directory located at `~/dev`. Crea
 
 ## Homework Repository
 
-Each class will use a homework repository to submit homework. Right now, follow the instructions on your class's homework repository to get set up.  
+Each class will use a homework repository to submit homework. Right now, follow the instructions on your class's homework repository to get set up inside your `dev` directory. 
 
 * <a href="https://github.com/sf-wdi-22-23/22-homework" target="_blank">WDI 22</a>
 * <a href="https://github.com/sf-wdi-22-23/23-homework" target="_blank">WDI 23</a>
@@ -24,7 +24,7 @@ Each class will use a homework repository to submit homework. Right now, follow 
 
 1. Read our [CSS Overview](./css-overview.md) and work through the exercises. More in-depth CSS resources with exercises are linked at the bottom of that lesson! 
 
-1. Inside your homework directory (`~/dev/22-homework` or `~/dev/23-homework`), make a `day1.hmtl` file. In that file, write three questions you have or things you learned from the HTML and CSS readings.  Structure your list as an HTML ordered list (`ol`) with list items(`li`).  Use CSS classes to style any questions bold. 
+1. Inside your homework directory (`~/dev/22-homework/YOUR_GITHUB_USERNAME` or `~/dev/23-homework/YOUR_GITHUB USERNAME`), make a `day1.hmtl` file. In that file, write three questions you have or things you learned from the HTML and CSS readings.  Structure your list as an HTML ordered list (`ol`) with list items(`li`).  Use CSS classes to style any questions bold. 
 
 1.  Create a `passion_project.hmtl` file inside your homework directory.  Think of a "passion project" that you're excited to work on either as one of your formal WDI projects or after WDI. Write one paragraph about the project in the `passion_project.html` file. Use an HTML paragraph element (`p`).
 
