@@ -26,7 +26,7 @@
   <div class="col-sm-offset-3 col-sm-6">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et leo leo. Suspendisse ut tincidunt felis, nec efficitur nulla. Morbi auctor, nulla non varius molestie, magna ligula ullamcorper erat, quis aliquet dui arcu in neque.
   </div>
-</div>
+</div> 
 ```
 
 1.
