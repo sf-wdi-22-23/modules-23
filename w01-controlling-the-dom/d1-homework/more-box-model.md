@@ -1,18 +1,6 @@
-
----
-title: CSS Box Model and Positioning
-type: lesson
-duration: "1:25"
-creator:
-    name: Alex Chin
-    city: London
-competencies: HTML and CSS
----
-
 # CSS Box Model and Positioning
 
-### Objectives
-*After this lesson, students will be able to:*
+## Objectives
 
 - Describe the difference between block, inline, and inline-block elements
 - Adjust element spacing using padding and margin
@@ -21,15 +9,13 @@ competencies: HTML and CSS
 - Create a page with multicolumn layout
 
 ### Preparation
-*Before this lesson, students should already be able to:*
 
 - Write basic CSS
 - Write basic HTML
 - Use the chrome console
 
-> Note: Solution code for this lesson is built out as the lesson progresses.
 
-## An Intro to The Box Model (5 mins)
+## An Intro to The Box Model 
 
 
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box.
@@ -38,7 +24,7 @@ The CSS box model describes this principal - a box wraps around all HTML element
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
 
-## Box Model Demo - Codealong (5 mins)
+## Box Model Codealong
 
 Let's write some HTML we can come back to and use to visualize what we're talking about.
 
@@ -47,7 +33,7 @@ Let's write some HTML we can come back to and use to visualize what we're talkin
 - Inside your html page create a "container" div holding four divs within.
 - Inside our CSS page, make the container a 500px gray square containing 100px squares within that are red, blue, green, and black.
 
-Looking at the html:
+Here are the files you should have so far. HTML:
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -90,9 +76,9 @@ And the CSS:
 }
 ```
 
-Dynamite!  Now, navigate to your dev tools and under the elements tab, hover over each of the divs.  What do you notice? A "box" is being highlighted in your browswer!
+Dynamite!  Now, open index.html in your Chrome browser. Navigate to your chrome dev tools and, under the Elements tab, hover over each of the divs.  What do you notice? A "box" is being highlighted in your browswer!
 
-How about if we drop this code into our CSS file:
+How about if we add this code into our CSS file:
 
 
 ```css
@@ -103,7 +89,7 @@ How about if we drop this code into our CSS file:
 
 Notice the body, the container, and each of the divs are surrounded by a red border.  Peak at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
 
-## The Box Model and its components - Intro (10 mins)
+## The Box Model and its components 
 
 The image below illustrates the box model and what you should have seen in your dev tools:
 
@@ -122,7 +108,7 @@ But what do these different layers mean, and how are they relating to one anothe
 
 * **Content** - The content of the box, where text and images appear
 
-#### Layers of the Box Model - Codealong (15 mins)
+#### Layers of the Box Model - Codealong 
 
 Let's get go into some more detail and practice with each of these elements of The Box Model.
 
@@ -142,11 +128,13 @@ div {
   margin-top: /*some value*/
   margin-right: /*some value*/
   margin-bottom: /*some value*/
-  margin-left: /*some-value*/
+  margin-left: /*some value*/
 }
 
 ```
-> Note: Demonstrate altering each of these values in the dev tools for the div selector.
+
+
+Try altering each of these values to a different number of pixels (like `20px`) in the dev tools.  Find the div selector in the dev tools first!
 
 You can also set an element's margins all at once: you just start from the top margin and go around clockwise (going from top to right to bottom to left). For instance,
 
@@ -195,7 +183,7 @@ div {
 }
 ```
 
-Update your CSS file to include this.
+Update your CSS file to include the code snippet above.
 
 Padding becomes more apparent when we have "stuff" inside the box. If we're talking about a `<p>` element, the "stuff" is the text of the paragraph - the __content__. Let's add some text:
 
@@ -209,7 +197,7 @@ Padding becomes more apparent when we have "stuff" inside the box. If we're talk
 </div>
 ```
 
-Open the browser, and now, give that `p` tag some padding in the dev tools:
+Open (or refresh) the browser, and now, give that `p` tag some padding in the dev tools:
 
 ```css
 
@@ -218,10 +206,10 @@ p {
 }
 ```
 
-Amazing!  Add those styles to your CSS file.
+Amazing!  Add those new styles to your CSS file.
 
 
-## Taking Up Space using Display - Intro (15 mins)
+## Taking Up Space using Display 
 
 Cool, right? Each HTML element gets its own box to live in.
 
@@ -237,7 +225,7 @@ We can change all this with the first positioning property we'll learn, the `dis
 
 * If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
 
-To illustrate this, if we had this HTML:
+To illustrate this, if we had this HTML...
 
 
 ```html
@@ -261,7 +249,7 @@ To illustrate this, if we had this HTML:
 
 ```
 
-With this CSS:
+with this CSS...
 
 ```css
 .inline {
@@ -277,19 +265,17 @@ display: inline-block;
 }
 ```
 
-We would end up with something like this:
+... we would end up with something like this:
 
 ![display](https://i.imgur.com/zeD1f2m.png)
 
-> Note: Explain the styling in this image.
 
 
-## Positioning - Codealong (10 mins)
+## Positioning - Codealong
 
 Another CSS property, "position", can take `relative` or `absolute` values, among others.
 
 A page element with "relative positioning" gives you the control to "absolutely position" children elements inside of it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an example.
-
 
 ![css position relative](https://i.imgur.com/LRd7lBy.png)
 
@@ -315,8 +301,6 @@ Declaring `position:relative` allows you to position the element top, bottom, le
     left: 40px;
 }
 ```
-
-
 
 #### Static Positioning
 
@@ -371,7 +355,6 @@ Specifying `position:absolute` _removes the element from the document_ and place
 ```
 
 
-
 ##### Relative Positioning
 
 Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.
@@ -387,7 +370,7 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 }
 ```
 
-## Floats and Clears - Intro (10 min)
+## Floats and Clears
 
 The float property specifies whether or not a box (or an element) should float; essentially, it determines whether text will be wrapped around the element.
 
@@ -399,7 +382,7 @@ Note that "absolutely positioned" elements ignore the float property as they are
 
 Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning.
 
-There are four valid values for the float property. "Left" and "right" float elements those directions, respectively. "None" (the default) ensures the element will not float and "inherit" which will assume the float value from that elements parent element.
+There are four valid values for the float property. "Left" and "right" float elements those directions, respectively. The default value, "none", ensures the element will not float. Finally, "inherit" will assume the float value from that element's parent element.
 
 #### Clear
 
@@ -409,7 +392,7 @@ All elements will float next to floated items until they are specifically cleare
 <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
 
-## Using position, floats, and clears to create columns - Code along (20 mins)
+## Using position, floats, and clears to create columns - Codealong
 
 Now that we have the basics of relative and absolute positioning, lets create a two column layout by changing the heights; then, we'll investigate how to do this with floats and clears for a more effective approach.  
 
@@ -470,27 +453,27 @@ This works fine when we know the exact sizes of our elements but what if we were
 
 #### Floats to create multicolumn layouts
 
-If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text.
+If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text (or copy a few paragraphs from this page if you'd like).
 
 Now, let's venture back to our html page and add this text after the closing tag of our "square2" div and before the opening tag of our "square3" div.
 
-Your html should like this:
+This section of our html should like this:
 
 ```html
 
     <div id="container">
         <div id="square1"></div>
         <div id="square2"></div>
-        (4 paragraphs of ipsum)
+        (4 paragraphs of text)
         <div id="square3"></div>
         <div id="square4"></div>
     </div>
 
 ```
 
-As expected our text falls behind our absolute positioned columns? Now lets make our elements aware of each other with floats.
+As expected, our text falls behind our absolute positioned columns.  Not a great user experience.  Now lets make our elements aware of each other with floats.
 
-Back in our CSS remove the absolute positioning from our "square2" div and replace it with `float:left`:
+Back in the CSS, let's remove the absolute positioning from our "square2" div and replace it with `float:left`:
 
 ```css
 #square2 {
@@ -512,7 +495,7 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 `Clear` is saying "I'm not sure how much space I'm going to take but whatever it is clear off my right side" so our text respects its wishes and drops to the line below.
 
 
-## Conclusion (5 mins)
+## Conclusion 
 
 - Compare the elements of The Box Model - margin, border, padding, content.
 - How do floats work with clears to create a multicolumn layout?

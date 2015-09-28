@@ -1,4 +1,5 @@
----
+<!-- 
+Modified from:
 title: CSS Selectors Basics
 type: lesson
 duration: "1:25"
@@ -6,11 +7,11 @@ creator:
     name: Gerry Mathe, Alex Chin
     city: LDN
 competencies: HTML and CSS
----
+ -->
+
 # CSS Selectors Basics
 
 ### Objectives
-*After this lesson, students will be able to:*
 
 - Describe the syntactical and functional relationship between selectors, properties, and values
 - Style all elements of a particular HTML element on a web page
@@ -22,15 +23,12 @@ competencies: HTML and CSS
 
 ### Preparation
 
-*Before this lesson, students should already be able to:*
-
 - Write basic HTML
 - Use a text editor
 - Open the chrome console and inspect elements.
 
-> Note: As instructors demonstrate different CSS properties, be sure to explain and point out the property being used.
 
-## What is CSS? Intro (5 mins)
+## What is CSS? 
 
 If HTML is a set of instructions telling the browser what to display, CSS tells it how to display it.
 
@@ -42,7 +40,7 @@ CSS stands for:
 
 It provides the browser with precise instructions on how to style each element we want displayed on the page and can affect the text format - like font, size, color - the size and position of various objects on the page, colors, spacial layouts, etc. There are literally hundreds of different properties we can use to style HTML elements on a webpage.
 
-## Let's write some CSS - Codealong (20 mins)
+## Let's write some CSS - Codealong 
 
 Create a new folder with a HTML page:
 
@@ -67,6 +65,7 @@ First, add a basic HTML structure to your `index.html` file:
  </body>
  </html>
 ```
+
 
 ####Adding CSS
 
@@ -99,11 +98,11 @@ To use inline styles, add the style attribute to the relevant tag. The style att
 
 Open this HTML file in browser and let's see what we have - a red page!
 
-Inline CSS has a lot of downsides, though, so try to avoid using it on your projects and during class.
+Inline CSS is notoriously tricky to debug and has some other downsides, too, so try to avoid using it on your projects and during class.
 
 #### Style Sheets
 
-Style sheets can be written in your HTML (internal) or in a separate CSS file (external).  Whatever style sheet you use, the CSS syntax is the same. We build our CSS with a selector - usually the name of the HTML tag, a specific class of elements, or an element with a unique ID:
+Style sheets can be written inside your HTML (internal) or in a separate CSS file (external).  Whatever style sheet you use, the CSS syntax is the same. We build our CSS with a selector - usually the name of the HTML tag, a specific class of elements, or an element with a unique ID:
 
 ```css
 selector {
@@ -115,12 +114,10 @@ selector {
 
 Do not forget the curly brackets or the semi-colon after the value!
 
-The last semi-colon can be omitted but it's optional.
-
 
 #### Internal Style Sheets
 
-If a _single page_ has a unique style, you could use an internal style sheet - these are defined and written in your HTML using the `<style>`` element, inside the head section of an HTML page:
+If a _single HTML page_ has a unique style, you could use an internal style sheet - these are defined and written in your HTML using the `<style>` element, inside the head section of an HTML page:
 
 ```html
 
@@ -145,9 +142,9 @@ Just like before, if you open the index.html with your browser, you'll notice th
 
 #### External Style Sheets
 
-With just one file - your external style sheet - you can modify the styles of your entire website.  That's really powerful and helps keep your code organized and separate.
+With just one file - an external style sheet - you can modify the styles of your entire website.  That's really powerful; it helps keep your code organized and your styles consistent.
 
-To link the stylesheet to the HTML file, inside the `<head>` tags, we need to add a self-closing `<link>` tag, indicating the type of relations (`rel="stylesheet"`) and the file path.  But first, let's create a css file within our css directory.
+To link the stylesheet to the HTML file, inside the `<head>` tags, we need to add a self-closing `<link>` tag, indicating the type of relations (`rel="stylesheet"`) and the file path.  But first, let's create a css file within a new css directory.
 
 ```bash
 
@@ -156,14 +153,15 @@ touch css/style.css
 
 ```
 
-Then we can move the CSS from our internal style sheet to our external style sheet and add the file path (`href="style.css"`) to our HTML file:
+Simple projects with one CSS file often have it called `style.css`, `styles.css`, or `main.css`. Now, let's move the CSS from our internal style sheet to our external style sheet and add the file path (`href="style.css"`) to our HTML file:
 
 ```html
+
  <!DOCTYPE>
  <html>
    <head>
 	 <title>Intro to CSS</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
    </head>
  <body>
  </body>
@@ -189,7 +187,7 @@ And let's add some more html to our index.html:
  <html>
    <head>
 	 <title>Intro to CSS</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
    </head>
 
    <body>
@@ -225,7 +223,7 @@ div {
 
 ```
 
-Our body rule is still applied, and these new rules will change the color of all paragraph tags to have the font-color "orange" and add a 1px black border to each DIV on the page, since the selector targets the "div" elements.  Refresh your browser and check it out.
+Our body rule is still applied, and these new rules will change the color of all paragraph tags to have the font-color "orange" and add a 1px black border to each div on the page, since the selector targets the "div" elements.  Refresh your browser and check it out.
 
 Luckily for us, CSS gives us some nice shortcuts that we'll go over throughout this lesson, and we can combine the `div` border styles into this:
 
@@ -237,9 +235,21 @@ Luckily for us, CSS gives us some nice shortcuts that we'll go over throughout t
   border-color: black;*/
 ```
 
-Notice, we can comment out CSS with ``/* your css */`.
+Notice, we can comment out CSS with `/* your css */`.
 
-## Differences between Classes and IDs - Demo (15 mins)
+## Differences between Tags, Classes, and IDs
+
+#### Tag Selector
+
+All of the CSS we've used so far has attached to HTML elements based on their types (`body`, `div`, `p`). These are often called "tags".
+
+As you've seen, writing a CSS style for `div` applies that style to all div elements on the page. 
+
+Note that:
+
+- Tags are **NOT** unique on the page (except for special cases like `body`)
+- Each element has only one tag, which determines what type of element it is
+- You can style all elements with one tag using `tag-name {}`
 
 #### The Class Selector
 
@@ -307,15 +317,15 @@ div {
 }
 ```
 
-If I refresh my browser, I see the updates.  The browser selects all elements on the page with the `comments` class and alters the font-weight and color.
+Refresh your browser to see the updates.  The browser selects all elements on the page with the `comments` class and alters the font-weight and color.
 
 ####The ID Selector
 
-The ID selector uses the id attribute of an HTML tag to find one specific element. We can give any name we want to our ID attribute, besides the obvious reserved words, such as tag names, etc.
+The ID selector uses the `id` attribute of an HTML tag to find one specific element. We can give any name we want to our ID attribute, besides the obvious reserved words, such as tag names, etc.
 
 - An ID is **unique** within a page.
 - You should use the id selector when you want to find a single, unique element.
-- In the CSS document, you use a hashtag (#) to denote an ID
+- In the CSS document, you use a hash (#) to denote an ID
 
 How about we try it out?  Altering the HTML:
 
@@ -346,8 +356,8 @@ How about we try it out?  Altering the HTML:
     	Hello
     </div>
 
-    <section id="dolphin">
-    	I am a dolphin
+    <section id="spartacus">
+    	I am Spartacus!
     </section>
 
   </body>
@@ -377,7 +387,7 @@ div {
 	color: #64FE2E; /* green */
 }
 
-#dolphin {
+#spartacus {
 	font-style: italic;
 	color: #0040FF; /*blue*/
 }
@@ -385,13 +395,22 @@ div {
 
 Sweet!
 
-> Note: Explain what happens when more than one element is referenced with the same ID and how we'll get into specificity later.
+So what happens when more than one element is referenced with the same ID?  Add another section claiming to be *the* Spartacus, and refresh your browser to see the results.
 
-## Style using Classes and IDs - Independent Practice (10 mins)
+```html
+    <!-- add on: -->
+    <section id="spartacus">
+      No, I am Spartacus!
+    </section>
+```
 
-Using what we've done in class, open the [starter code](starter-code) provided and see how far you can get through these exercises in 10 minutes:
+The rules that determine how these two elements are styled relate to a concept called specificity.  We'll talk about CSS selector specificity later. 
 
-- make an unordered HTML list of the following animals:  
+## Style using Classes and IDs - Practice (15 minutes)
+
+Make a new web project, and see how far you can get in 15 minutes. 
+
+1. Make an unordered HTML list of the following animals:  
 
 	- mouse  
 	- canary  
@@ -404,26 +423,27 @@ Using what we've done in class, open the [starter code](starter-code) provided a
 	- parakeet  
 	- tuna  
 
-- make all the mammals red, all the birds blue, and all the fish orange using CSS classes
-- apply the following colors to the list using IDs:
+1. Make all the mammals red, all the birds blue, and all the fish orange using CSS classes.
 
-    - mouse - <span style = "color: gray">gray</span>
-    - canary - <span style = "color: orangeRed">orangeRed</span>
-    - penguin - <span style = "color: black">black</span>
-    - salmon - <span style = "color: salmon">salmon</span>  
-    - cat - <span style = "color: sienna">sienna</span>
-    - goldfish - <span style = "color: gold">gold</span>  
-    - dog - <span style = "color: tan">tan</span>  
-    - sheep - <span style = "color: steelBlue">steelBlue</span>
-    - parakeet - <span style = "color: lime">lime</span>  
-    - tuna - <span style = "color: purple">purple</span>
+1. Apply the following colors to the list using IDs:
 
-- add the following background colors to your existing classes:
-    - mammal - lavenderBlush
-    - bird - lightGray
-    - fish - lightYellow
+    - mouse - color: gray
+    - canary - color: orangeRed
+    - penguin - color: black
+    - salmon - color: salmon
+    - cat - color: sienna
+    - goldfish - color: goldenRod
+    - dog - color: tan
+    - sheep - color: steelBlue
+    - parakeet - color: lime
+    - tuna - color: red
 
-#### Multiple classes and multiple elements - Codealong (10 mins)
+1. Add the following background colors to your existing classes:
+    - mammal - background-color: oliveDrab
+    - bird - background-color: skyBlue
+    - fish - background-color: aqua
+
+#### Multiple classes and multiple elements - Codealong
 
 You can also chain classes together, applying several classes to one element:
 
@@ -456,9 +476,11 @@ Let's add:
     	Hello
     </div>
 
-    <section id="dolphin">
-    	I am a dolphin
+    <section id="spartacus">
+    	I am Spartacus!
     </section>
+
+    <!-- Note: we've removed the other Spartacus. -->
 
      <p class="first second">Multiple classes</p>
 
@@ -488,7 +510,7 @@ div {
 	color: #64FE2E; /* green */
 }
 
-#dolphin {
+#spartacus {
 	font-style: italic;
 	color: #0040FF; /*blue*/
 }
@@ -532,14 +554,14 @@ We can even use classes/IDs with elements to select and style HTML. Lets add a s
     	Hello
     </div>
 
-    <section id="dolphin">
-    	I am a dolphin
+    <section id="spartacus">
+    	I am Spartacus!
     </section>
 
      <p class="first second">Multiple classes</p>
 
      <ul>
-      <li class="why" >Why a dolphin?</li>
+      <li class="why" >Why Spartacus?</li>
       <li class="why" id="not">Why not?</li>
      </ul>
 
@@ -548,11 +570,11 @@ We can even use classes/IDs with elements to select and style HTML. Lets add a s
 </html>
 ```
 
-Imagine, we wanted to particular style to apply to all of the elements from the list but wanted other particular styles to apply to each item, individually. Definitely doable. Take a look at our CSS:
+Imagine if we wanted a particular style to apply to all of the elements from the list but wanted other particular styles to apply to each item individually. Definitely doable. Take a look at our CSS:
 
 ```css
 body {
-  background: read
+  background: red;
 }
 
 p {
@@ -568,7 +590,7 @@ div {
 	color: #64FE2E; /* green */
 }
 
-#dolphin {
+#spartacus {
 	font-style: italic;
 	color: #0040FF; /*blue*/
 }
@@ -598,7 +620,7 @@ Now, all our list items are centered but the top item has a different font than 
 
 
 
-## Specificity in CSS - Intro (10 mins)
+## Specificity in CSS 
 
 One of the most important concepts with CSS is specificity. Imagine you select an element by it's class and give it some style; then, on the next line, you select the same element by it's element name and it's ID - how does the browser know what style to apply?  Well, every element gets a score and it's this score that dictates what CSS property is applied.
 
@@ -623,7 +645,7 @@ Every selector has its place in the specificity hierarchy, and if two selectors 
 
 *This is calculated as 1000*
 
-A couple of rules to think about:
+Some specificity rules to think about:
 
 - If two selectors apply to the same element, the one with higher specificity wins
 - When selectors have an equal specificity value, the latest rule is the one that counts
@@ -635,20 +657,18 @@ A couple of rules to think about:
 - You should always try to use IDs to increase the specificity
 - A class selector beats any number of element selectors
 
-_Taken from SmahingMagazine.com_
-
-> Note: Read through these briefly with students but ask students to review on their own [here](http://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)
+_These rules are taken from SmahingMagazine.com_: review therm [here](http://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/).
 
 
-## Independent Practice - Using CSS to select class and id attributes (10 minutes)
+## Using CSS to select class and id attributes - Practice (15 minutes)
 
 Go back to your code from the previous independent practice problem and continue to work through these exercises:
 
-- make the mammals bold
-- make the birds italic
-- make the fish underlined
+1. Make the mammals bold.  
+1. Make the birds italic.  
+1. Make the fish underlined.  
 
-- create a new unordered ordered list add a list item for each the following plants:
+1. Create a new unordered ordered list add a list item for each the following plants:
 
     - Dogwood Tree
     - Oak Tree
@@ -657,11 +677,11 @@ Go back to your code from the previous independent practice problem and continue
     - Venus Fly Trap
     - Ent
 
-- give all ul's a border with a width of 3 pixels, a color of plum, and a style of dotted. Also, give them a border radius of 5px.
-- give all li's a top border of 3 pixels, a color of seagreen, and a style of solid.
+1. Give all ul elements a border. The border should have a width of 3 pixels, a color of plum, and a style of dotted. Also, give them a border radius of 5px.  
+1. Give all li elements a top border of 3 pixels, a color of seagreen, and a style of solid.
 
 
-## Conclusion (5 mins)
+## Conclusion 
 
 CSS can be really fun or a total nightmare. You have to remember a few rules, but once you have them remembered, it's great to see your webpage come to life as you imagined.
 
