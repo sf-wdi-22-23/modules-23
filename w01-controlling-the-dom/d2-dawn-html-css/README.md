@@ -25,7 +25,7 @@ competencies: HTML and CSS
 - ...should have worked through the homework reading from last night, including additional resources, if necessary
 - ...should already be able to write HTML and CSS
 
-## CSS Basics Review (Small Group Discussion and Teachback - 30 mins)
+## CSS Basics Review (Large Group Discussion with Small Group breakouts and Teachback - 30 mins)
 
 Divide the class into groups or invite them to self-identify their level of understanding (fist-to-five). Each group will answer 2 of the following questions with or without notes (depending on instructor discretion) and then present their answers to the class.
 
@@ -176,15 +176,13 @@ Go back to your code from the previous independent practice problem and continue
 - give all li's a top border of 3 pixels, a color of seagreen, and a style of solid.
 
 
-## HTML Grid Architecture 
+## HTML Grid Architecture and the Ducky Challenge - Independent Practice (30-40 mins)
 
 Modern web developers rarely start from scratch anymore. Many of us use a framework such as Bootstrap, Foundation, Skeleton, Initializr and others. These frameworks take the architectural decision-making out of the process, allowing us to focus on more specific design, interface and development questions.
 
 That said, there's still value in creating your own grid from scratch to solidify some of the most elusive concepts behind writing great HTML and CSS.
 
-Beginning with the example.html, add classes, CSS and content to try to match ducky.html
-
-<!-- ADD THE DUCKY CODE CHALLENGE -->
+Beginning with the example.html, add classes, CSS and content to try to match example-one-solution.html
 
 
 ## Conclusion (5 mins)
