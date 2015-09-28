@@ -4,6 +4,11 @@ body {
 	margin: 0;
 	width:100%;
 }
+button {
+	border-radius: 10px;
+	margin: 5px;
+	padding: 5px;
+}
 h1 {
 	font-family: 'Rock Salt', cursive;
 	font-size: 2.75em;
@@ -12,10 +17,13 @@ h1 {
 	top: 0.3em;
 }
 h2 {
-	font-family: Tangerine;
+	font-family:  'Rock Salt', cursive;
+	font-size: 1.5em;
+	margin: 0;
 }
 article ul li {
 	text-decoration: none;
+	list-style-type: none;
 }
 img {
 	border: 2px dashed #00AEEF;
@@ -23,14 +31,14 @@ img {
 	padding: 0.5em;
 }
 header {
-	background-color: #CCC;
+	background-color: #77ccee;
 	border-bottom: 1px solid #4267B1;
 	display: inline-block;
 	height: 200px;
 	width:100%;
 }
 header ul {
-
+	font-weight: 700;
 }
 nav ul li {
 	display: inline-block;
@@ -51,26 +59,25 @@ nav ul li {
 .column{
 	background-color: #4267B1;
 	height: 200px;
-	margin: 5px;
+	margin-right: 1.5%;
+	padding-left: 1.5%
 }
 .four{
 	float:left;
 	position:relative;
 	width:30%;
-}.gutter{
-	width: 1%;
+}
+.gutter{
 }
 section{
-
 }
 .row{
-
+	min-height: 210px;
 }
 footer{
 	background-color: #888;
 	bottom: 0;
 	color: #FFF;
 	margin-top:10px;
-	position: absolute;
 	width: 100%;
 }

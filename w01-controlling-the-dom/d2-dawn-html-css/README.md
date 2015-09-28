@@ -1,5 +1,5 @@
 ---
-title: Well-structured HTML Architecture
+title: Well-structured HTML with CSS
 type: lesson
 duration: "1:25"
 creator:
@@ -7,6 +7,7 @@ creator:
     city: SF
 competencies: HTML and CSS
 ---
+# Well-structured HTML with CSS
 
 ### Objectives
 *After this lesson, students will be able to:*
@@ -24,10 +25,11 @@ competencies: HTML and CSS
 - ...should have worked through the homework reading from last night, including additional resources, if necessary
 - ...should already be able to write HTML and CSS
 
-## CSS Basics Review (30 mins)
+## CSS Basics Review (Small Group Discussion and Teachback - 30 mins)
 
-Divide the class into groups. Each group will answer 1 - 2 of the following questions with open notes and then present their answers to the class.
+Divide the class into groups or invite them to self-identify their level of understanding (fist-to-five). Each group will answer 2 of the following questions with or without notes (depending on instructor discretion) and then present their answers to the class.
 
+Group 1:
 Q: What does CSS stand for?
 <!-- A: Cascading Style Sheets -->
 
@@ -35,7 +37,7 @@ Q: Explain the difference between an element, a class and an id.
 <!-- A: HTML elements include div, h1, p, etc. In CSS an ID must be unique to the page whereas a class can be reused. -->
 
 
-
+Group 2:
 Q: Describe the concept of specificity and how it is used.
 <!-- A: Specificity allows the browser to determine which CSS rule applies to a given element on a page:
 
@@ -53,6 +55,7 @@ Q: What are the three ways to implement CSS styling? which one is best practice 
 <!-- A: Inline, internal and external style sheets. Inline is worst. Internal uses the HTML <style></style> tag. External offers separation of concerns -->
 
 
+Group 3:
 Q: Explain the Box Model.
 <!-- A: HTML elements can have margin, border and padding properties. Margin is the space outside of the element's content. The border is the outer edge of the element. The padding is the space between the content and its border. -->
 
@@ -71,6 +74,8 @@ Block, Inline, Inline-block and None:
 
 -->
 
+Group 4:
+
 Q: What is the difference between Absolute, Fixed, Relative and Static positioning?
 <!--  A:  
 Specifying `position:absolute` _removes the element from the document_ and places it exactly where you tell it to be.
@@ -87,11 +92,20 @@ Q: Explain floats and clears.
 <!-- A: While floats make other elements aware of their location and get text hugs, clears make other elements aware and are told not to touch. -->
 
 
+## Another Way to Look at It (5 min):
+
+![Calder](calder-mobile.jpg)
+
+Many sources compare well-structured HTML to a tree. I tend to think about it more as a top - down architecture, like a mobile.
+If you were asked to build this mobile with HTML and CSS, what classes and ID's would you use?
+Compare and contrast the mobile and the tree as metaphors for HTML and CSS.
+
+
 ## What is Emmet and how do we use it?
 
 Emmet is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow. It enables the user to create HTML templates really quickly. If you get good at it, you will save a lot of typing!
 
-Type the following into your text editor (SublimeText3) and press tab
+After installing the plugin, type the following into your text editor one line at a time and press tab.
 
 ```
 h2.column-title>span#button-set>button*3^p
@@ -105,7 +119,6 @@ You can do so much more with this, if you want...
 
 
 ## Code with Emmet, Style using Classes and IDs - Independent Practice (10 mins)
-
 
 Using what we've done in class, open the [project-files example.html](project-files/example.html) provided and see how far you can get through these exercises in 10 minutes:
 
@@ -142,7 +155,7 @@ Using what we've done in class, open the [project-files example.html](project-fi
     - fish - lightYellow
 
 
-## Independent Practice - Using CSS to select class and id attributes (10 minutes)
+## More Independent Practice - Using CSS to select class and id attributes (Optional - 10 minutes)
 
 Go back to your code from the previous independent practice problem and continue to work through these exercises:
 
@@ -163,9 +176,13 @@ Go back to your code from the previous independent practice problem and continue
 - give all li's a top border of 3 pixels, a color of seagreen, and a style of solid.
 
 
-## Understanding HTML Grid Structure
+## HTML Grid Architecture 
 
-![Calder](calder-mobile.jpg)
+Modern web developers rarely start from scratch anymore. Many of us use a framework such as Bootstrap, Foundation, Skeleton, Initializr and others. These frameworks take the architectural decision-making out of the process, allowing us to focus on more specific design, interface and development questions.
+
+That said, there's still value in creating your own grid from scratch to solidify some of the most elusive concepts behind writing great HTML and CSS.
+
+Beginning with the example.html, add classes, CSS and content to try to match ducky.html
 
 <!-- ADD THE DUCKY CODE CHALLENGE -->
 
