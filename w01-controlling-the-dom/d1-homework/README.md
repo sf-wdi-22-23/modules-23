@@ -24,9 +24,9 @@ Each class will use a homework repository to submit homework. Right now, follow 
 
 1. Read our [CSS Overview](./css-overview.md) and work through the exercises. More in-depth CSS resources with exercises are linked at the bottom of that lesson! 
 
-1. Inside your homework directory (`~/dev/22-homework` or `~/dev/23-homework`), make an `day1.hmtl` file. In that file, write three things you learned from those resources.
+1. Inside your homework directory (`~/dev/22-homework` or `~/dev/23-homework`), make an `day1.hmtl` file. In that file, write three things you learned from the HTML and CSS readings. 
 
-7.  Create a `passion_project.hmtl` file inside your homework directory.  Think of a "passion project" that you're excited to work on either as one of your formal WDI projects or after WDI. Write one paragraph about the project in the `passion_project.html` file. Use the HTML `p` tag.
+7.  Create a `passion_project.hmtl` file inside your homework directory.  Think of a "passion project" that you're excited to work on either as one of your formal WDI projects or after WDI. Write one paragraph about the project in the `passion_project.html` file.
 
 1. Watch the video [Growth Mindset](https://www.youtube.com/watch?v=pN34FNbOKXc).
 

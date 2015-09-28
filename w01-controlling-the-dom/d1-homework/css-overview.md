@@ -280,10 +280,12 @@ p {
 ```
 
 
-##Resources
+##More WDI Readings with Exercises
 
 *[More on CSS Basics](more-basic-css.md)
 *[More on the Box Model](more-box-model.md)
+
+## Other CSS Resources
 * CSS Reference - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 * CSS Properties List - https://css-tricks.com/almanac/properties/
 * What are the Default CSS Values? - http://www.w3.org/TR/CSS2/sample.html
