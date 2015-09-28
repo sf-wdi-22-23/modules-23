@@ -14,4 +14,4 @@
 
 # Stretch
 
-1. Pick any website online and block it out with the bootstrap grid and lorem ipsum text. Be sure to draw out the basic outline of the site before you get started. (**Hint**: Use bootstraps [image classes](http://getbootstrap.com/css/#images) and [Placehold.it](https://placehold.it/) to block out images.)
+1. Pick any website online, wireframe it on paper or whiteboard and create a simple bootstrap version with the bootstrap grid, navbar, lorem ipsum, and [Placehold.it](https://placehold.it/). (**Hint**: Use bootstraps [image classes](http://getbootstrap.com/css/#images) to size images.)
