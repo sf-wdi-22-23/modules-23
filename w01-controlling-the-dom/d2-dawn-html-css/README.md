@@ -93,9 +93,11 @@ Emmet is a web-developer’s toolkit that can greatly improve your HTML & CSS wo
 
 Type the following into your text editor (SublimeText3) and press tab
 
-```h2.column-title>span#button-set>button*3^p```
-```h2.column-title>ul>li.hello*4^p.caption```
-```h2.column-title>div#calendar>span>button```
+```
+h2.column-title>span#button-set>button*3^p
+h2.column-title>ul>li.hello*4^p.caption
+h2.column-title>div#calendar>span>button
+```
 
 You can do so much more with this, if you want...
 
