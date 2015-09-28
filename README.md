@@ -535,7 +535,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td>HTML, <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d1-homework/css-overview.md">CSS</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/w01-d1-evening-writeup/w01-controlling-the-dom/d1-homework/README.md" target="_blank">HTML, CSS</a></td>
     <td>
       JS Primitives, <br>
       Control Flow, <br>
