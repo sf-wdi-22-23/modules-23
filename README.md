@@ -513,8 +513,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
     <td>Kyrel basics (Travis / Brianna)</td>
-    <td>Kyrel loops</a> (Alex / Travis)</td>
-    <td>Kyrel advanced (Alex / Travis)</td>
+    <td>Kyrel loops</a> (Ben / Travis)</td>
+    <td>Kyrel advanced (Brianna / Travis)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
@@ -542,8 +542,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
       Functions, <br>
       <a href="https://www.youtube.com/watch?v=DNN6G9EuPT0">Sublime Keyboard Shortcuts (screencast!)</a>
     </td>
-    <td>jQuery</td>
-    <td>jQuery for the DOM</td>
+    <td>jQuery (Ben)</td>
+    <td>jQuery for the DOM (Alex)</td>
     <td></td>
   </tr>
 </table>
