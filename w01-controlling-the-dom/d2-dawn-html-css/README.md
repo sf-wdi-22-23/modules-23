@@ -1,4 +1,4 @@
----
+<!--
 title: Well-structured HTML with CSS
 type: lesson
 duration: "1:25"
@@ -6,16 +6,16 @@ creator:
     name: Ben Hulan
     city: SF
 competencies: HTML and CSS
----
+-->
+
 # Well-structured HTML with CSS
 
-### Objectives
-*After this lesson, students will be able to:*
-
-- Hand-code well-structured HTML documents
-- Understand grid-based HTML structure
-- Write better CSS
-- Debug CSS more quickly
+| Objectives |
+| :--- |
+| Hand-code well-structured HTML documents |
+| Understand grid-based HTML structure |
+| Write better CSS |
+| Debug CSS more quickly |
 
 
 ### Preparation
