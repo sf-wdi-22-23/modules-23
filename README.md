@@ -528,7 +528,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module 2</td>
     <td>Assessment (Team)</td>
-    <td>Bootstrap (Braus / Alex)</td>
+    <td>Bootstrap Grid & Navbar (Braus / Alex)</td>
     <td>Functions & Arguments (Alex / Braus)</td>
     <td>DOM Context & Event Binding (Braus / Ben)</td>
     <td>Weekend Lab (Brianna)</td>
