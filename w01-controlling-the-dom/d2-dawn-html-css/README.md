@@ -120,10 +120,9 @@ You can do so much more with this, if you want...
 
 ## Code with Emmet, Style using Classes and IDs - Independent Practice (10 mins)
 
-Using what we've done in class, open the [project-files example.html](project-files/example.html) provided and see how far you can get through these exercises in 10 minutes:
+Using what we've done in class, open the [project-files emmet-basics.html](project-files/emmet-basics.html) and [project-files / css / emmet-theme.css ](project-files/css/emmet-theme.css) provided and see how far you can get through these exercises in 10 minutes. *Note you will have to link the CSS file first.*
 
 - make an unordered HTML list of the following animals:  
-
 	- mouse  
 	- canary  
 	- penguin  
@@ -135,19 +134,17 @@ Using what we've done in class, open the [project-files example.html](project-fi
 	- parakeet  
 	- tuna  
 
-- make all the mammals red, all the birds blue, and all the fish orange using CSS classes
 - apply the following colors to the list using IDs:
-
-    - mouse - <span style = "color: gray">gray</span>
-    - canary - <span style = "color: orangeRed">orangeRed</span>
-    - penguin - <span style = "color: black">black</span>
-    - salmon - <span style = "color: salmon">salmon</span>  
-    - cat - <span style = "color: sienna">sienna</span>
-    - goldfish - <span style = "color: gold">gold</span>  
-    - dog - <span style = "color: tan">tan</span>  
-    - sheep - <span style = "color: steelBlue">steelBlue</span>
-    - parakeet - <span style = "color: lime">lime</span>  
-    - tuna - <span style = "color: purple">purple</span>
+    - mouse  "color: gray"
+    - canary "color: orangeRed"
+    - penguin "color: black"
+    - salmon "color: salmon" 
+    - cat "color: sienna"
+    - goldfish "color: gold"  
+    - dog "color: tan"  
+    - sheep "color: steelBlue"
+    - parakeet "color: lime"  
+    - tuna "color: purple"
 
 - add the following background colors to your existing classes:
     - mammal - lavenderBlush
