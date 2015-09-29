@@ -1,6 +1,6 @@
 # Tuesday Homework!
 
-1. Review <a href="https://github.com/sf-wdi-22-23/modules/edit/master/w01-controlling-the-dom/d2-homework/javascript-primitives.md" target="_blank">JavaScript primitive data types</a>. Attempt some of the exercises.
+1. Review <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d2-homework/javascript-primitives.md" target="_blank">JavaScript primitive data types</a>. Attempt some of the exercises.
 
 1. Look over the <a href="https://github.com/sf-wdi-22-23/modules/tree/w01_d3_dawn_control_flow/w01-controlling-the-dom/d3-dawn-control-flow" target="_blank">lesson notes on control flow</a> for tomorrow morning.  There aren't any exercises included, but try to understand each of the examples for `if/else`, `for` loops, and `while` loops.
 
