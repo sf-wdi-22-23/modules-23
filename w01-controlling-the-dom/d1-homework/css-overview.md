@@ -241,7 +241,7 @@ From outside, in:
 * padding
 * content
 
-![box model diagram](img/box-model.png)
+![box model diagram](https://raw.githubusercontent.com/sf-wdi-22-23/modules/989fac1c97f1de2519f3ce3b9629cbb8fb123e49/w01-controlling-the-dom/d1-homework/img/box-model.png)
 
 **Like a picture frame:**
 
@@ -250,14 +250,14 @@ From outside, in:
 * The frame is the border.
 * And margin? Margin is the distance between one painting and the next.
 
-![picture frame](img/picture-frame.jpg)
+![picture frame](https://raw.githubusercontent.com/sf-wdi-22-23/modules/989fac1c97f1de2519f3ce3b9629cbb8fb123e49/w01-controlling-the-dom/d1-homework/img/picture-frame.jpg)
 
 **Content**
 
 Content can be text, other elments, or nothing at all. The dimensions of your box depends on what you put in it, and whether or not you explicity set a `height` and `width`.
 
 
-![mime in a box](img/marceau-box.jpg)
+![mime in a box](https://raw.githubusercontent.com/sf-wdi-22-23/modules/989fac1c97f1de2519f3ce3b9629cbb8fb123e49/w01-controlling-the-dom/d1-homework/img/marceau-box.jpg)
 
 
 ## CSS Shorthands
