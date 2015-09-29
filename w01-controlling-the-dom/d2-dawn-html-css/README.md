@@ -179,7 +179,7 @@ Modern web developers rarely start from scratch anymore. Many of us use a framew
 
 That said, there's still value in creating your own grid from scratch to solidify some of the most elusive concepts behind writing great HTML and CSS.
 
-Beginning with the example.html, add classes, CSS and content to try to match example-one-solution.html
+Beginning with the [example.html ](project-files/example.html) and [theme.css](project-files/css/theme.css) and then add classes, CSS and content to try to match the example on the screen. *Note: try not to refer to the solutions provided.*
 
 
 ## Conclusion (5 mins)
