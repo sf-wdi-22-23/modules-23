@@ -512,7 +512,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td>Kyrel basics (Travis / Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/kyrel" target="_blank">Kyrel</a> basics (Travis / Brianna)</td>
     <td>Kyrel loops</a> (Ben / Travis)</td>
     <td>Kyrel advanced (Brianna / Travis)</td>
     <td>Assessment (Team)</td>
@@ -520,7 +520,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module 1</td>
     <td>Culture Setting (Team)</td>
-    <td>HTML, CSS, Emmet (Ben / Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dawn-html-css" target="_blank">HTML, CSS, Emmet</a> (Ben / Juliana)</td>
     <td>JS Control Flow (Brianna / Juliana)</td>
     <td>Intro jQuery & DOM (Juliana / Brianna)</td>
     <td>Review (Braus / Ben)</td>
