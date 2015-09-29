@@ -147,8 +147,6 @@ Question: Consider the JS function `sort`, is it a firstclass function?
 
 ##Optional Further Reading
 
-Check out the [refactor_to_functions.js](https://github.com/sf-wdi-22-23/Intro-to-JavaScript-Functions/blob/master/refactor_to_functions.js) file for an example of how functions make life better!
-
 Here are some resources for more advanced JavaScript topics. Feel free to dig in tonight if you feel like stretching yourself, but we will come back to these later in the course. 
 
 * [The 'this' keyword](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) - JavaScriptIsSexy Blog
