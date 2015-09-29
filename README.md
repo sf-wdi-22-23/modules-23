@@ -539,7 +539,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>
       JS Primitives, <br>
       Control Flow, <br>
-      Functions, <br>
+      <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d2-homework/functions-overview.md">Review Functions Doc</a> for tomorrows Dusk lecture, start excercises, <br>
       <a href="https://www.youtube.com/watch?v=DNN6G9EuPT0">Sublime Keyboard Shortcuts (screencast!)</a>
     </td>
     <td>jQuery (Ben)</td>
