@@ -167,3 +167,16 @@ We discuss these concepts at a later date. They are related, but more advanced. 
 * [Recursion](http://www.codecademy.com/courses/javascript-lesson-205/0/1) — Code Academy lesson
 
 ---
+
+##Starter Challenges
+
+1. Write a 'sayHello' function that logs 'Hello' to the console.
+  
+2. Rewrite 'sayHello' to accept a name as a parameter, and logs 'Hello' + the name to the console.
+
+3. Write a `multiply` function that finds the product of two numbers.
+
+  ```js
+  multiply(5, 7) => 35
+  ```
+3. Write a 'negative' function that takes an integer, and if that integer is positive, it turns it into a negative integer and returns that integer. 
