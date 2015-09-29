@@ -282,7 +282,7 @@ p {
 
 ##More WDI Readings with Exercises
 
-*[More on CSS Basics](more-basic-css.md)
+*[More on CSS Basics](more-basic-css.md)   
 *[More on the Box Model](more-box-model.md)
 
 ## Other CSS Resources
