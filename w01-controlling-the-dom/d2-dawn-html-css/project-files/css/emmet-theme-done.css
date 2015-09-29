@@ -1,8 +1,11 @@
 body {	
+	background-color: #f2f2f2;
 }
 ul li {
+	padding:1.5em;
+	list-style-type: none;
+	max-width:200px;
 }
-
 /*******************
 *			 *
 * animal-specific IDs    *
@@ -10,24 +13,34 @@ ul li {
 *******************/
 
 #mouse{
+	color: gray;
 }
 #canary{
+	color:orangered;
 }
 #penguin{
+	color:black;
 }
 #salmon{
+	color: salmon;
 }
 #cat{
+	color:sienna;
 }
 #goldfish{
+	color: gold;
 }
 #dog{
+	color:tan;
 }
 #sheep{
+	color:steelblue;
 }
 #parakeet{
+	color: lime;
 }
 #tuna{
+	color:purple;
 }
 
 
@@ -38,9 +51,11 @@ ul li {
 ***********************/
 
 .bird{
+	background-color: lightgray;
 }
 .fish{
+	background-color: lightyellow;
 }
 .mammal{
-
+	background-color: lavenderblush;
 }
