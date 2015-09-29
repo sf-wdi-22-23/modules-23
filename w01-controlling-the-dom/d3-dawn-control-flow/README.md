@@ -40,6 +40,10 @@ typeof(false)   // boolean
 
 ## Conditinals
 
+
+
+![commuter flow chart](https://camo.githubusercontent.com/f545891799690188cd2d25b1d06687af66627ab1/687474703a2f2f63646e2e746865626f6c646974616c69632e636f6d2f7061706572636c69702f68746d6c5f696d616765732f33353130382f696d616765732f6f726967696e616c2f77696c6c2d796f752d62652d6c6174655f66696e616c2e706e67)
+
 ### `if/else`
 
 The boolean expression inside an `if`'s parentheses will always be evaluated as truthy or falsy to determine what will happen next. 
@@ -102,17 +106,23 @@ if ( hasBike ) {
 
 ### Nested `if`s
 
+A strategy for choosing what to drink:
+
 ```js
 var drink;
 
-if (isSleepy) {
-  if (likesCoffee) {
+if (tooSleepy) {
+  if (before5pm) {
     drink = "coffee";
   } else {
     drink = "black tea";
   }
 } else {
-  drink = "water";
+  if (isHungry){
+    drink = "smoothie";
+  } else {  
+    drink = "water";
+  }
 }
 ```
 
@@ -141,6 +151,64 @@ switch (row){
 }			
 ```
 
+
+##Conditional Control Flow Tricks
+
+**Loose Control Flow** (watch out for edge cases!)
+
+```js
+if ( username ) {
+	// submit signup form
+}
+
+// same as
+
+if ( username.length > 0) {
+	// submit signup form
+}
+```
+
+**Ternary operator**
+
+```js
+var username = last_name ? first_name + last_name : first_name;
+
+// same as
+
+var username = first_name;
+if ( last_name ) {
+	username = first_name + last_name;
+}
+```
+
+**Conditional assignment: `||` as Default Operator**
+
+```js
+var bestCity = yourCity || "San Francisco";
+
+// same as
+
+var bestCity = "San Francisco";
+if ( yourCity ) {
+	bestCity = yourCity;
+}
+
+```
+
+**Conditional Execution: `&&` as Guard Operator**
+
+```js
+badThing && alert("Uh oh!")
+
+// same as
+
+if ( badThing ) {
+	alert("Uh oh!");
+}
+
+```
+
+
 ## Loops
 
 Whenever we want to repeat something in code, we use a loop.  We can think of every loop as three parts: initial setup, continue condition(s), and update expression(s).
@@ -148,24 +216,30 @@ Whenever we want to repeat something in code, we use a loop.  We can think of ev
 
 ### `while` loops
 
+
+![endless pizza cartoon](http://38.media.tumblr.com/7d49b42da305f9d6302110c50ac6894e/tumblr_mmz3qo9q1N1rdutw3o1_400.gif)  
+_While pizza is available, take pizza!_
+
 In while loops, the initial setup happens before the loop. The continue condition goes inside the parentheses. The update expressions happen inside the loop. 
 
+
+
 ```js
-var minutesBeforeWork = 80;     // wake up early... or not
-while (minutesBeforeWork > 30) { 
-  minutesBeforeWork = minutesBeforeWork - 5;  // hit snooze!
+var minutesBeforeWork = 80;                    // setup:  plan to wake up early
+while (minutesBeforeWork > 30) {               // continue condition: leave enough time to get day clothes on
+  minutesBeforeWork = minutesBeforeWork - 5;   // update: hit snooze!
 }
 ```
 
 ### `for` loops
 
-For loops allow the setup, continue condition, and update expression inside the for loop parentheses. They only really need a continue condition (or the loop will never end!); We can also do setup before the loop and extra updating inside the loop. In this way, a for loop can look a lot like a while loop.
+For loops allow the setup, continue condition, and update expression inside the for loop parentheses. 
 
 ```js
-var minutesBeforeWork = 540;
-for( ; minutesBeforeWork > 30; ) {
-  minutesBeforeWork = minutesBeforeWork - 5;
+for (var count = 1; count <= 3; count = count+1){
+  console.log(count);
 }
+console.log("Go Team!");
 ```
 
 
@@ -191,7 +265,46 @@ for (key in movieData){
 ```
 
 
-## Docs & Resources
+
+For loops only really need a continue condition (or the loop will never end!). We can do setup before the loop and updating inside the loop. In this way, a for loop can look a lot like a while loop.
+
+```js
+var minutesBeforeWork = 540;
+for( ; minutesBeforeWork > 30; ) {
+  minutesBeforeWork = minutesBeforeWork - 5;
+}
+```
+
+<!--For loops in JavaScript are very flexible and can be a lot of fun to play with. -->
+
+<!--```js-->
+<!--for (var height=48, yearlyGrowth=1, age=8; age<18; height += yearlyGrowth){-->
+<!--  if (growthSpurt){-->
+<!--    yearlyGrowth = 6;-->
+<!--  } else {-->
+<!--    yearlyGrowth = 1;-->
+<!--  }-->
+<!--}-->
+<!--```-->
+
+### `break`
+
+The key word `break` will break us out of a loop immediately.  When you experiment more with loops inside functions, you'll see that `return`ing from inside a loop (inside a function) also immediately breaks the loop.
+
+```js
+for (var i = 0; i < 10; i+=2) {
+  console.log(i);
+  break;
+}
+
+var j=0;
+while (j < 10) {
+  console.log(j);
+  break;
+}
+```
+
+## Resources
 
 [Loops - JSforcats](http://jsforcats.com/#loops)
 </br>
@@ -199,8 +312,5 @@ for (key in movieData){
 </br>
 [Loops - CodeAcademy](http://www.codecademy.com/glossary/javascript/loops)
 </br>
-
-### External Reading and Tutorials
-
 [Javascripting](https://github.com/sethvincent/javascripting)
 </br>
