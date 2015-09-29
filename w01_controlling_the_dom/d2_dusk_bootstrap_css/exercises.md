@@ -10,7 +10,7 @@
 
 1. Using the bootstrap grid, make a grid that is six columns wide with with a offset of three columns on the left -- except for on mobile where there is just 1 column.
 
-1. Using the bootstrap grid, make a three column grid that is 3-6-3 on desktop (lg), 2-6-2 with 1 offset on tablet (sm), and one column on mobile (xs) with the left most column is hidden.
+1. Using the bootstrap grid, make a three column grid that is 3-6-3 on desktop (lg), or 2-6-2 with 1 offset on tablet (sm). On mobile (xs), it should show as one column, and the leftmost column should be hidden.
 
 # Stretch
 
