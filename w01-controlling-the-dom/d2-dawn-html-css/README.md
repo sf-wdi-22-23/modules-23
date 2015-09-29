@@ -136,20 +136,20 @@ Using what we've done in class, open the [project-files emmet-basics.html](proje
 
 - apply the following colors to the list using IDs:
     - mouse  "color: gray"
-    - canary "color: orangeRed"
+    - canary "color: orangered"
     - penguin "color: black"
     - salmon "color: salmon" 
     - cat "color: sienna"
     - goldfish "color: gold"  
     - dog "color: tan"  
-    - sheep "color: steelBlue"
+    - sheep "color: steelblue"
     - parakeet "color: lime"  
     - tuna "color: purple"
 
 - add the following background colors to your existing classes:
-    - mammal - lavenderBlush
-    - bird - lightGray
-    - fish - lightYellow
+    - mammal - lavenderblush
+    - bird - lightgray
+    - fish - lightyellow
 
 
 ## More Independent Practice - Using CSS to select class and id attributes (Optional - 10 minutes)
