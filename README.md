@@ -512,9 +512,9 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td>Kyrel basics (Brianna / Travis)</td>
-    <td>Kyrel loops</a> (Alex / Travis)</td>
-    <td>Kyrel advanced (Alex / Travis)</td>
+    <td>Kyrel basics (Travis / Brianna)</td>
+    <td>Kyrel loops</a> (Ben / Travis)</td>
+    <td>Kyrel advanced (Brianna / Travis)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
@@ -527,18 +527,23 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Module 2</td>
-    <td>Assessment (Team)</td>
-    <td>Bootstrap (Braus / Alex)</td>
+    <td>Assessment (Team) <br><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d1-dusk-the-internet">What is the Internet?</a> (Juliana / Alex)</td>
+    <td>Bootstrap Grid & Navbar (Braus / Brianna)</td>
     <td>Functions & Arguments (Alex / Braus)</td>
     <td>DOM Context & Event Binding (Braus / Ben)</td>
-    <td>Flash Cards (Brianna)</td>
+    <td>Weekend Lab (Brianna)</td>
   </tr>
   <tr>
     <td>HW</td>
-    <td>Control Flow & <a href="https://github.com/sf-wdi-18/notes/tree/27877620c965067f2a50822c267459c122f88989/lectures/week-01/day_4_dom_and_context/dusk_css">CSS</a></td>
-    <td>Functions & JS Primitives</td>
-    <td>jQuery</td>
-    <td>jQuery for the DOM</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d1-homework" target="_blank">HTML, CSS</a></td>
+    <td>
+      JS Primitives, <br>
+      Control Flow, <br>
+      Functions, <br>
+      <a href="https://www.youtube.com/watch?v=DNN6G9EuPT0">Sublime Keyboard Shortcuts (screencast!)</a>
+    </td>
+    <td>jQuery (Ben)</td>
+    <td>jQuery for the DOM (Alex)</td>
     <td></td>
   </tr>
 </table>
