@@ -234,7 +234,7 @@ while (minutesBeforeWork > 30) {               // continue condition: leave enou
 For loops allow the setup, continue condition, and update expression inside the for loop parentheses. 
 
 ```js
-for (var count = 1; count <= 3; count = count+1){
+for (var count = 1; count <= 3; count++){
   console.log(count);
 }
 console.log("Go Team!");
