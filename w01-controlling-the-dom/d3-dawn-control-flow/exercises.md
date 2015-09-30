@@ -29,8 +29,9 @@
 
 ## Conditionals!
 
+Remember, you can work in a file (like controlFlow.js) in Sublime Text to keep your code.  Run it from the terminal by typing `node controlFlow.js`, or copy and paste sections into the Chrome developer console.
 
-1. Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
+Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
 
 For starters, it costs 5 tokens. Here's how we might code that:
 
@@ -56,7 +57,7 @@ Edit the code above to check the following additional Requirements:
 
 2. Log to the console "This is awesome!" 25 times.
 
-Create a new variable that is an array of 4 phrases: `"Howdy there"`, `"OMG"`, `"javascript"`, and `"Pair Programming"`.
+1. Create a new variable that is an array of 4 phrases: `"Howdy there"`, `"OMG"`, `"javascript"`, and `"Pair Programming"`.
 
 5. Loop over the array and log each phrase to the console.
  
