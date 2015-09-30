@@ -13,7 +13,7 @@
 
 1. Inside your  `22-homework/GITHUB_NAME` or `23-homework/GITHUB_NAME` repo, create a file called `day3.html`.  
 
-1. Add bootstrap's CSS CDN link, the viewport meta tag, and the charset meta tag to get bootstrap styles in your HTML. In the body, create a `container` div with a `row` div inside it.  Create a `col-md-6 col-offset-3` div inside the `row`. That column is where you'll add your content.
+1. Add bootstrap's CSS CDN link, the viewport meta tag, and the charset meta tag to get bootstrap styles in your HTML. In the body, create a `container` div with a `row` div inside it.  Create a `col-md-6 col-md-offset-3` div inside the `row`. That column is where you'll add your content.
 
 1. Import jQuery in `day3.html`, and use HTML to create some content: at least one paragraph of text and at least one image. Add three `<button>`s.  Use the `on` method to give each button a `click` event handler. Attach a different effect to each button.  For instance, you might have one button hide the image, one button show the image, and one button animate a change of the paragraph's font color. (Can you implement methods not listed above? Of course! But please make sure the user can SEE something unique change on your page for each button press.)
 
