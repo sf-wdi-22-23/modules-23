@@ -1,0 +1,204 @@
+#The DOM and jQuery
+
+| Objectives |
+| :--- |
+| Manipulate the DOM using jQuery |
+| Select DOM elements using jQuery selector functions |
+| Detect DOM events with event listeners and trigger changes |
+| Detect form submissions and display submitted data |
+
+### Motivation (Why?)
+
+jQuery is a commonly used, powerful and convenient library.
+Long story short, it will make your life easier.
+
+### Analogy (What?)
+
+jQuery is your toolbox. It provides a ton of helpful methods that make life easier.
+Would you rather use a handsaw or a chainsaw? A screwdriver or a drill?
+
+![toolbox](http://westsideinternalmed.com/wp-content/uploads/2015/02/Toolbox.jpg)
+
+jQuery takes common operations in Javascript and makes them easier to write and read the same way power tools
+make construction tasks easier.
+
+### Demo (How?)
+
+#### Include JavaScript scripts (including jQuery) in your project
+
+```html
+<html>
+<head>
+  <title>Your Site</title>
+  <!-- LOCAL SCRIPTS -->
+  <script src="scripts.js"></script>
+
+  <!-- REMOTE SCRIPT (FROM CONTENT DELIVERY NETWORK (CDN)) -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</script>
+</head>
+<body>
+  <!-- YOUR HTML -->
+</body>
+</html>
+```
+
+#### Select Elements
+
+Get the first matching DOM element by selector
+```
+var h1Element = $("h1") // or jQuery('h1')
+var myId = $("#myId") // or jQuery('#myId')
+```
+
+Get all matching DOM elements by selector
+```
+var primaryButtons = $(".btn-primary");
+```
+
+--------------------------------------------------------
+
+Get DOM element by id
+```javascript
+// Javascript
+var el = document.getElementById("myId");
+// jQuery
+var el = $('#myId');
+```
+
+Get DOM elements by class
+```javascript
+// Javascript
+var arr = document.getElementsByClassName("myclass");
+// jQuery
+var arr = $('.myclass');
+```
+
+Get DOM elements by HTML tag
+```javascript
+// Javascript
+var el = document.getElementsByTagName("h1");
+// jQuery
+var el = $('h1');
+```
+
+#### Add Dynamic Changes to Events with Functions
+Add a function
+```javascript
+// Javascript
+el.addEventListener("click", function() {
+  alert("you clicked the element this listener is attached to");
+});
+
+// jQuery
+el.on('click', function() {
+  alert("Your click triggered this listener!");
+})
+
+// Other Event Listeners
+// "mouseenter"
+// "mouseleave"
+// "submit"
+```
+
+Change or add a style attribute value
+```javascript
+// Javascript
+var arr = document.getElementsByClassName('text-good');
+// console.log(arr)
+
+for(i = 0; i < arr.length; i++) {
+    console.log(i)
+    console.log(arr[i]);
+    arr[i].style.color = "green"
+    // arr[i].style.display= "none" // hide the element
+}
+
+// jQuery
+var arr = $('text-good');
+arr.each(function(index) {
+  $(this).text("number " + index);
+  $(this).css("color", "blue");
+})
+```
+
+Change text
+```javascript
+// Javascript
+el.innerText = "New Text!"
+
+// jQuery
+el.text("New text!")
+```
+
+Add class
+```javascript
+// Javascript
+el.classList.add("danger");
+
+// jQuery
+el.addClass("danger");
+```
+
+Prevent Default Behavior
+```javascript
+// Javascript
+var button = document.querySelector("a#san-francisco_cta");
+button.onclick = function(e){
+    event.preventDefault(); // SUPER IMPORTANT PART
+    alert("Hahah! Now you get me instead")
+};
+
+// jQuery
+var button = $('a#san-francisco_cta');
+button.on('click', function(e) {
+    event.preventDefault(); // SUPER IMPORTANT PART
+    console.log("if you see this message in your Dev Tools console, then your prevent default is working");
+})
+```
+
+#Challenges
+
+### Docs & Resources
+
+* [Document Object Model docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
+* [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
+* [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+### Basic Challenges:
+1. Navigate to Craigslist SF.
+2. Type "document" in the console. Examine this tree-structured object.
+3. Use a snippet for the rest of the basic challenges.
+4. Use jQuery to change the text of the craigslist logo to "CL Disco"
+5. Add an event listener to the craigslist logo that when you click it changes the font color of links to green. (hint: make sure to prevent the default behavior)
+6. Make it so when you click the logo it changes the link color randomly to either blue, red, green, or yellow. (Cragslist DISCO!). (remember [#GTS](https://www.google.com/search?q=return+a+random+array+element+javascript&oq=return+a+random+array+element+javascript&aqs=chrome..69i57j0.13214j0j1&sourceid=chrome&es_sm=91&ie=UTF-8))
+7. Make it so when you click any link a popup comes up with the link's text.
+8. When you mouse over links, make their background color turn to pink. Can you make it turn back to white when the mouse is not hovering over the element?
+
+### Stretch Challenges & Homework - Making your Portfolio Site Dynamic
+
+1. Switch to your portfolio you built earlier this week and add a link to a `scripts.js` file.
+2. Add a contact form (email, subject, messasge) to your portfolio project. Remember to use Bootstrap's input styling.
+3. When the form is submitted make an alert display the text that is typed into the text field. Do you need to prevent the default behavior?
+4. Add an "about me", "projects", and "background" buttons to your site. When they are clicked let a different corresponding section appear and hide the other two without reloading the page. This is called "pill tabs."
+5. For extra credit: Add two more dynamic elements to your portfolio site.
+
+**Important note:**
+
+Any code we put in our `scripts.js` will be run as soon as the page loads.
+The browser needs a little extra time to get the DOM ready for us.
+You'll see the following error in the JS console if you attempt to add an event listener to a DOM element before the DOM is ready:
+
+    Cannot read property 'addEventListener' of null
+
+jQuery gives us an event called ```.ready``` that can help us get around this issue. Try putting all of your code inside a block like this:
+
+    $(document).ready(function() {
+      // all code goes here
+    })
+
+Now the code won't run until the browser finishes setting up the DOM for us.
+
+# Further Reading
+
+  * [Getting started with selectors [MDN]](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
+  * [Selectors with multiple classes and ids [CSS Tricks]](https://css-tricks.com/multiple-class-id-selectors/)
