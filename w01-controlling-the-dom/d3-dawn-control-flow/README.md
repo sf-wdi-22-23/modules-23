@@ -11,7 +11,7 @@
 
 ## Motivation
 
-"Control flow" refers to the way our computers move through a program's code.   Understanding control flow allows us to trace the flow of a program based on its code. This skill is essential for programming in every language and paradigm.  In particular, conditionals and loops are fundamental to understanding modern programming languages.
+"Control flow" refers to the way our computers move through a program's code.   Understanding control flow allows us to trace the flow of a program based on its code. This skill is essential for programming in every language and paradigm.  In particular, **conditionals** and **loops** are fundamental to understanding modern programming languages.
 
 ## Boolean Logic
 
@@ -209,7 +209,7 @@ if ( badThing ) {
 
 ## Loops
 
-Whenever we want to repeat something in code, we use a loop.  We can think of every loop as three parts: initial setup, continue condition(s), and update expression(s).
+Whenever we want to repeat something in code, we use a loop.  We can think of every loop as three parts: initial setup, continue condition, and update expression(s).
 
 
 ### `while` loops
@@ -246,7 +246,7 @@ For loops for arrays usually use a counter variable to move through the indices 
 ```js
 var friends = ["Bill", "Nicki", "Kelly"]
 for (var i = 0; i < m.length; i++) {
-  console.log(m[i] + " is a nice person")
+  console.log(m[i] + " is a nice person");
 }
 
 ```
@@ -299,6 +299,7 @@ var j=0;
 while (j < 10) {
   console.log(j);
   break;
+  j += 2;
 }
 ```
 
