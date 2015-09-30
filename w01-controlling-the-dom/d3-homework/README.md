@@ -9,6 +9,8 @@
   * <a href="http://try.jquery.com/levels/3/sections/2" target="_blank">3.2 "Manipulating the DOM"</a>
   * <a href="http://try.jquery.com/levels/3/sections/7" target="_blank">3.7 "Acting on Interaction"</a>
 
+>(remember you can watch videos at x1.5 speed!)
+
 1. Check out the <a href="http://api.jquery.com/" target="_blank">jQuery Documentation</a>. Read the `.append()`, `.css()` and `.html()` core method documentation (click each function name in the docs to see more detailed information and examples). Under Effects, please read `.hide()`, `.show()` and `.animate()`. (Can you read more than this? Of course! But these are very useful and relatively easy to implement.)
 
 1. Inside your  `22-homework/GITHUB_NAME` or `23-homework/GITHUB_NAME` repo, create a file called `day3.html`.  
