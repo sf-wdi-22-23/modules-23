@@ -529,7 +529,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module 2</td>
     <td>Assessment (Team) <br><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d1-dusk-the-internet">What is the Internet?</a> (Juliana / Alex)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dusk-bootstrap-css">Bootstrap Grid & Navbar</a> (Braus / Brianna)</td>
-    <td>Functions & Arguments (Alex / Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3_dusk_functions">Functions & Arguments</a> (Alex / Braus)</td>
     <td>DOM Context & Event Binding (Braus / Ben)</td>
     <td>Weekend Lab (Brianna)</td>
   </tr>
