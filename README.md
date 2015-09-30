@@ -514,7 +514,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Course Overview (Ali / Team)</td>
     <td><a href="https://github.com/sf-wdi-22-23/kyrel" target="_blank">Kyrel basics</a> basics (Travis / Brianna)</td>
     <td><a href="https://github.com/sf-wdi-22-23/kyrel/blob/master/challenges/day2.md" target="_blank">Kyrel Loops and Conditionals</a> (Ben / Travis)</td>
-    <td><a href="https://github.com/sf-wdi-22-23/kyrel/blob/master/challenges/day3.md">Kyrel advanced</a> (Brianna / Travis)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/kyrel/blob/master/challenges/day3.md">Kyrel advanced</a> (Ben / Travis)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
