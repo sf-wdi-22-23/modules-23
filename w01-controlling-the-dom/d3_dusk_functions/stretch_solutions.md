@@ -1,4 +1,4 @@
-## Stretch Challenges
+## Stretch Challenges - These are pretty flippin' advanced.
 
 1. Write a `getMax` function that finds the maximum number in an array.
 
@@ -124,12 +124,73 @@ Write a function that counts the number of times each letter occurs in a given s
 
 Create a function called `numSquare` that will return an array of all perfect square numbers up to, but not exceeding a max number.
 
+  ```
+  function numSquare(max){
+      var perfectSquares = []
+      var i;
+  
+      for(i = 2; i <= max; i++){
+          if(isPerfectSquare(i)){
+              perfectSquares.push(i);
+          }
+      }
+      return perfectSquares;
+  }
+  
+  function isPerfectSquare(i){
+      return Math.round(Math.sqrt(i)) === Math.sqrt(i)
+  };
+
+  console.log(numSquare(1000));
+  ```
+
 ## Extra-Stretch Challenges
 
 1. isPrime(num)
 
 Create a function that returns `true` if the number passed in is a prime number and `false` if not.
+  ```
+  function isPrime(value) {
+      var limit = Math.sqrt(value);
+      var i;
+      for(i = 2; i < limit; i++) {
+          if(value % i === 0) {
+              return false;
+          }
+      }
+      return value > 1;
+  }
+  
+  console.log(isPrime(11))
+
+  ```
 
 2. primes(max)
 
 Using your `isPrime` function, create a function `primes` that will return an array of all prime numbers up to, but not exceeding a max number.
+
+  ```
+  function isPrime(value) {
+      var limit = Math.sqrt(value);
+      var i;
+      for(i = 2; i < limit; i++) {
+          if(value % i === 0) {
+              return false;
+          }
+      }
+      return value > 1;
+  }
+  
+  function primes(max) {
+      var primos = [];
+      var i;
+      for(i = 2; i <= max; i++){
+          if(isPrime(i)){
+              primos.push(i);
+          }
+      }
+      return primos;
+  }
+  
+  console.log(primes(100))
+  ```

@@ -1,5 +1,9 @@
 ## Challenges
 
+### Instructions
+
+>Create a new directory in your dev folder called javascript-functions. CD into this directory and create a new JavaScript file by running 'touch functions.js' in your terminal. Open this file in Sublime. This is where you will be writing all of your functions! You can run your code by typing 'node functions.js' in your terminal so long as you are still in the same directory. Make sure to call your functions as well as define them! This is how you will test your code. To avoid calling every function that you write every time, comment out where you have called the function on your functions.js document. Rock on. 
+
 1. Write a 'sayHello' function that logs 'Hello' to the console.
   
 2. Rewrite 'sayHello' to accept a name as a parameter, and logs 'Hello' + the name to the console.
