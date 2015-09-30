@@ -12,6 +12,8 @@
 jQuery is a commonly used, powerful and convenient library.
 Long story short, it will make your life easier.
 
+The slogan for jQuery is "Write less, do more", and this Javascript library delivers. A craftsman needs tools. jQuery is a great toolbox that provides a lot of convenient functions that are easy to use (as opposed to handwriting them in vanilla Javascript).
+
 ### Analogy (What?)
 
 jQuery is your toolbox. It provides a ton of helpful methods that make life easier.
@@ -21,26 +23,6 @@ Would you rather use a handsaw or a chainsaw? A screwdriver or a drill?
 
 jQuery takes common operations in Javascript and makes them easier to write and read the same way power tools
 make construction tasks easier.
-
-### Demo (How?)
-
-#### Include JavaScript scripts (including jQuery) in your project
-
-```html
-<html>
-<head>
-  <title>Your Site</title>
-  <!-- LOCAL SCRIPTS -->
-  <script src="scripts.js"></script>
-
-  <!-- REMOTE SCRIPT (FROM CONTENT DELIVERY NETWORK (CDN)) -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</script>
-</head>
-<body>
-  <!-- YOUR HTML -->
-</body>
-</html>
-```
 
 #### Select Elements
 
@@ -156,7 +138,53 @@ button.on('click', function(e) {
 })
 ```
 
-#Challenges
+### Demo (set up new project and adding jQuery CDN)
+
+1. Make a new directory: ```mkdir intro-jquery```
+2. Change directories to the one you just made: ```cd intro-jquery```
+3. Create three files: ```index.html```, ```styles.css```, and ```scripts.js```. Use the ```touch``` command followed by the file name, like this: ```touch index.html```.
+4. Add the jQuery CDN link to the ```<head>``` tag in your ```index.html``` file. Use a script tag to include it like this:
+```<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">```
+
+  It should look like this:
+
+    ```html
+    <html>
+    <head>
+      <title>Your Page</title>      
+      <!-- BOOTSTRAP -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+      <!-- LOCAL CSS -->
+      <link rel="stylesheet" href="styles.css">
+
+      <!-- REMOTE SCRIPT (FROM CONTENT DELIVERY NETWORK (CDN)) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      <!-- LOCAL SCRIPTS -->
+      <script src="scripts.js"></script>
+    </head>
+    <body>
+      <!-- YOUR HTML with CSS classes and ids -->
+    </body>
+    </html>
+    ```
+1. Add this code to your `scripts.js`:
+  ```js
+  $(document).ready(function(){
+    //Your custom jQuery goes here
+    //This function will fire when your DOM is finished loading
+  });
+  ```
+5. Add some basic HTML with ids and classes to your ```index.html``` file. *Don't worry about styling it, you can do that later.*
+6. Open your page in the browser from your terminal using ```open index.html```
+7. Play around with jQuery by selecting and manipulating DOM elements. You can do this directly in the Developer Tools console.
+```js
+$('div').append("<p>This string was appended.</p>");
+$('div').css("color", "blue");
+```
+
+# Exercises
 
 ### Docs & Resources
 
@@ -164,7 +192,14 @@ button.on('click', function(e) {
 * [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
 * [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-### Basic Challenges:
+### Exercise 1:
+1. Put some DOM elements in your `index.html`. Make sure they have classes and/or ids.
+1. Manipulate one of these elements using `.append()`.
+1. Manipulate a different element using `.css()`.
+1. Use `.hide()` to make elements disappear. Inspect this element in dev tools. What is this method doing to the css?
+1. Go to the [jQuery docs](http://api.jquery.com/) and pick 3 functions we haven't covered yet. Implement them in your app!
+
+### Exercise 2:
 1. Navigate to Craigslist SF.
 2. Type "document" in the console. Examine this tree-structured object.
 3. Use a snippet for the rest of the basic challenges.
@@ -173,30 +208,6 @@ button.on('click', function(e) {
 6. Make it so when you click the logo it changes the link color randomly to either blue, red, green, or yellow. (Cragslist DISCO!). (remember [#GTS](https://www.google.com/search?q=return+a+random+array+element+javascript&oq=return+a+random+array+element+javascript&aqs=chrome..69i57j0.13214j0j1&sourceid=chrome&es_sm=91&ie=UTF-8))
 7. Make it so when you click any link a popup comes up with the link's text.
 8. When you mouse over links, make their background color turn to pink. Can you make it turn back to white when the mouse is not hovering over the element?
-
-### Stretch Challenges & Homework - Making your Portfolio Site Dynamic
-
-1. Switch to your portfolio you built earlier this week and add a link to a `scripts.js` file.
-2. Add a contact form (email, subject, messasge) to your portfolio project. Remember to use Bootstrap's input styling.
-3. When the form is submitted make an alert display the text that is typed into the text field. Do you need to prevent the default behavior?
-4. Add an "about me", "projects", and "background" buttons to your site. When they are clicked let a different corresponding section appear and hide the other two without reloading the page. This is called "pill tabs."
-5. For extra credit: Add two more dynamic elements to your portfolio site.
-
-**Important note:**
-
-Any code we put in our `scripts.js` will be run as soon as the page loads.
-The browser needs a little extra time to get the DOM ready for us.
-You'll see the following error in the JS console if you attempt to add an event listener to a DOM element before the DOM is ready:
-
-    Cannot read property 'addEventListener' of null
-
-jQuery gives us an event called ```.ready``` that can help us get around this issue. Try putting all of your code inside a block like this:
-
-    $(document).ready(function() {
-      // all code goes here
-    })
-
-Now the code won't run until the browser finishes setting up the DOM for us.
 
 # Further Reading
 
