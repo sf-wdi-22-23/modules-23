@@ -521,7 +521,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module 1</td>
     <td>Culture Setting (Team)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dawn-html-css" target="_blank">HTML, CSS, Emmet</a> (Ben / Juliana)</td>
-    <td>JS Control Flow (Brianna / Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3-dawn-control-flow" target="_blank">JS Control Flow</a> (Brianna / Juliana)</td>
     <td>Intro jQuery & DOM (Juliana / Brianna)</td>
     <td>Review (Braus / Ben)</td>
   </tr>
