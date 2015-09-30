@@ -1,4 +1,4 @@
-## Stretch Challenges
+## Stretch Challenges - These are pretty flippin' advanced.
 
 1. Write a `getMax` function that finds the maximum number in an array.
 
