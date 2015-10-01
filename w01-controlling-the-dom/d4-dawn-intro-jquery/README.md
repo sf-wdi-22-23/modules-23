@@ -184,31 +184,6 @@ $('div').append("<p>This string was appended.</p>");
 $('div').css("color", "blue");
 ```
 
-# Exercises
-
-### Docs & Resources
-
-* [Document Object Model docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
-* [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
-* [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
-
-### Exercise 1:
-1. Put some DOM elements in your `index.html`. Make sure they have classes and/or ids.
-1. Manipulate one of these elements using `.append()`.
-1. Manipulate a different element using `.css()`.
-1. Use `.hide()` to make elements disappear. Inspect this element in dev tools. What is this method doing to the css?
-1. Go to the [jQuery docs](http://api.jquery.com/) and pick 3 functions we haven't covered yet. Implement them in your app!
-
-### Exercise 2:
-1. Navigate to Craigslist SF.
-2. Type "document" in the console. Examine this tree-structured object.
-3. Use a snippet for the rest of the basic challenges.
-4. Use jQuery to change the text of the craigslist logo to "CL Disco"
-5. Add an event listener to the craigslist logo that when you click it changes the font color of links to green. (hint: make sure to prevent the default behavior)
-6. Make it so when you click the logo it changes the link color randomly to either blue, red, green, or yellow. (Cragslist DISCO!). (remember [#GTS](https://www.google.com/search?q=return+a+random+array+element+javascript&oq=return+a+random+array+element+javascript&aqs=chrome..69i57j0.13214j0j1&sourceid=chrome&es_sm=91&ie=UTF-8))
-7. Make it so when you click any link a popup comes up with the link's text.
-8. When you mouse over links, make their background color turn to pink. Can you make it turn back to white when the mouse is not hovering over the element?
-
 # Further Reading
 
   * [Getting started with selectors [MDN]](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
