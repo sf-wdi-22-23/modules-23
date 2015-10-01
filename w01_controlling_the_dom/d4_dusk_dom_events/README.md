@@ -36,7 +36,7 @@ Let's listen for a click on our `greeting` div:
 ``` javascript
 $("#greeting").on("click", function handleClick(event){
   alert("Clicked!!");
-};
+});
 ```
 
 We can also listen for other types of events like hovering (but do we want "mouseover", "mouseenter", or "mouseleave"!?):
@@ -44,13 +44,13 @@ We can also listen for other types of events like hovering (but do we want "mous
 ``` javascript
 $("#greeting").on("mouseover", function handleMouseover(event){
   console.log("You hovered on", this);
-};
+});
 
 ```
 
 So long as we know the name of the event we're listening for, we can "attach" or "bind" an event listener to our elment!
 
-[Here's a list.](LINK-NEEDED)
+[Here's a list.](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 ### Callbacks & Event Listeners
 When you pass a function a function, we call the second function a "callback" function. This is a scary and confusing way of saying, "here are some instructions for you to follow later". This pattern is used a lot in jQuery.
@@ -102,7 +102,7 @@ Try this on the [GA homepage](https://generalassemb.ly/):
 var $links = $("a"); // every link on the page
 $links.on("click", function handleClick(event){
     alert("You just clicked a link. You are about to be redirected.");
-};
+});
 ```
 
 Redirecting to a new page is the *default behavior* of anchor tags (`a` elements). How would we stop this behavior? What if we need to "prevent (the) default"?
@@ -115,7 +115,7 @@ We have two options: we can `return false` or we can use a special method called
 $("a").on("click", function handleClick(event){
     event.preventDefault();
     // more code down here
-};
+});
 ```
 
 **`return false`** (this works too!):
@@ -124,7 +124,7 @@ $("a").on("click", function handleClick(event){
 $("a").on("click", function handleClick(event){
     // more code up here
     return false;
-};
+});
 ```
 
 
