@@ -1,4 +1,4 @@
-#Intro to jQuery and the DOM
+#jQuery and the DOM
 
 | Objectives |
 | :---- |
