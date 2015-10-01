@@ -1,4 +1,4 @@
-##Please use the homework submission instructions from the 22-homework or 23-homework repo to submit two to five sentences about something cool you learned about jquery from the homework below.
+####Please use the homework submission instructions from the 22-homework or 23-homework repo to submit two to five sentences about something cool you learned about jquery from the homework below.
 
 #jQuery and the DOM
 
