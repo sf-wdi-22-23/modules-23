@@ -1,4 +1,4 @@
-#The DOM and jQuery
+# The DOM and jQuery
 
 | Objectives |
 | :--- |
@@ -24,7 +24,15 @@ Would you rather use a handsaw or a chainsaw? A screwdriver or a drill?
 jQuery takes common operations in Javascript and makes them easier to write and read the same way power tools
 make construction tasks easier.
 
-#### Select Elements
+### Another Analogy (What?)
+
+* HTML = Skeleton
+* Javascript = Muscles, Brain, and Organs
+* CSS = Skin and Clothes
+
+![muscles](https://github.com/sf-wdi-19-20/modules/blob/master/w1_d4_2_dom_vanilla_js/muscles.jpg?raw=true)
+
+### Select Elements
 
 Get the first matching DOM element by selector
 ```
@@ -140,6 +148,7 @@ button.on('click', function(e) {
 
 ### Demo (set up new project and adding jQuery CDN)
 
+1. `cd ~/dev`
 1. Make a new directory: ```mkdir intro-jquery```
 2. Change directories to the one you just made: ```cd intro-jquery```
 3. Create three files: ```index.html```, ```styles.css```, and ```scripts.js```. Use the ```touch``` command followed by the file name, like this: ```touch index.html```.
