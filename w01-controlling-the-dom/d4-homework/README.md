@@ -1,3 +1,5 @@
+##Please use the homework submission instructions from the 22-homework or 23-homework repo to submit two to five sentences about something cool you learned about jquery from the homework below.
+
 #jQuery and the DOM
 
 | Objectives |
@@ -22,7 +24,7 @@ We use jQuery because it's:
 - Modern: brings javascript DOM manipulation into the 21st century.
 - Popular: 26.95% of all sites use jQuery! (see Builtwith.com).
 
-But some would argue, [you might not need jQuery](http://youmightnotneedjquery.com/)! It can be overkill, depending on what you're doing!
+But some would argue, [you might not need jQuery](http://youmightnotneedjquery.com/)! It can be overkill, depending on what you're doing! (Optional reading)
 
 #### How to get jQuery
 You can only use jQuery if it's included in your page.
@@ -70,7 +72,7 @@ Check out the `.text()` and `.css()` methods in the jQuery API Documentation: [t
 - Pay close attention in the documentation: there's one section that talks about how to "get" text, and there's another section that talks about how to "set" text.
 - `.text()` and `.css()` are not native javascript methods! They only work on jQuery-wrapped DOM Elements (that's what that `$` is doing).
 
-For more cool DOM manipulation tricks, you'll need to hit the docs:
+For more cool DOM manipulation tricks, you'll need to hit the docs (Max 25 min):
 - jQuery API [Documentation]([jquery.com](jquery.com))
     - [Manipulation Methods](http://api.jquery.com/category/manipulation/)
     - [Tree Traversal Methods](http://api.jquery.com/category/traversing/)
