@@ -539,8 +539,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>
       <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d2-homework/README.md">Javascript readings and Sublime Keyboard Shortcuts</a>
     </td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d3-homework/README.md">jQuery Reading</a> & <a href="https://github.com/sf-wdi-22-23/events_lab">Events Lab</a></td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d4-homework/README.md">jQuery for the DOM </a>(Alex)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d3-homework/README.md">jQuery Reading</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d4-homework/README.md">jQuery for the DOM </a> & <a href="https://github.com/sf-wdi-22-23/events_lab">Events Lab</a> (Alex)</td>
     <td></td>
   </tr>
 </table>
