@@ -104,7 +104,7 @@ for(i = 0; i < arr.length; i++) {
 }
 
 // jQuery
-var arr = $('text-good');
+var arr = $('.text-good');
 arr.each(function(index) {
   $(this).text("number " + index);
   $(this).css("color", "blue");
