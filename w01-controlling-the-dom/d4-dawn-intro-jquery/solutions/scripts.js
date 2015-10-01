@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
   // `toDos` array is our model (holds our data)
   // contains test (or "seed") data
