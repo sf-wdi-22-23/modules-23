@@ -522,7 +522,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Culture Setting (Team)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dawn-html-css" target="_blank">HTML, CSS, Emmet</a> (Ben / Juliana)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3-dawn-control-flow" target="_blank">JS Control Flow</a> (Brianna / Juliana)</td>
-    <td>Intro jQuery & DOM (Juliana / Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d4-dawn-intro-jquery">Intro jQuery & DOM</a> (Juliana / Brianna)</td>
     <td>Review (Braus / Ben)</td>
   </tr>
   <tr>
@@ -530,7 +530,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Assessment (Team) <br><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d1-dusk-the-internet">What is the Internet?</a> (Juliana / Alex)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dusk-bootstrap-css">Bootstrap Grid & Navbar</a> (Braus / Brianna)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3_dusk_functions">Functions & Arguments</a> (Alex / Braus)</td>
-    <td>DOM Context & Event Binding (Braus / Ben)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d4_dusk_dom_events">DOM Context & Event Binding</a> (Braus / Ben)</td>
     <td>Weekend Lab (Brianna)</td>
   </tr>
   <tr>
@@ -539,8 +539,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>
       <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d2-homework/README.md">Javascript readings and Sublime Keyboard Shortcuts</a>
     </td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d3-homework/README.md">jQuery</a> (Ben)</td>
-    <td>jQuery for the DOM (Alex)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d3-homework/README.md">jQuery Reading</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d4-homework/README.md">jQuery for the DOM </a> & <a href="https://github.com/sf-wdi-22-23/events_lab">Events Lab (optional)</a></td>
     <td></td>
   </tr>
 </table>
