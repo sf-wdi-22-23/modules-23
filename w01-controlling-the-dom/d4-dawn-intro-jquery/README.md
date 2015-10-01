@@ -179,6 +179,7 @@ button.on('click', function(e) {
     </html>
     ```
 1. Add this code to your `scripts.js`:
+
   ```js
   $(document).ready(function(){
     //Your custom jQuery goes here
