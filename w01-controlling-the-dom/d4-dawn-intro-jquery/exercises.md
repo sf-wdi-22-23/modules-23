@@ -24,7 +24,8 @@
 Use the same project that you used for Exercise 1. Remember to use Bootstrap classes so that it looks nice!
 1. Create 2 text input elements: one for the todo title, the other for description. *Hint: create a todo object in your js that has title and description attribute.*
 1. Add a submit button. *Hint: giving your element an id or class will make it easier to select with jQuery*
-1. Add an event listener to the submit button with a callback function that appends the input text to the page when the button is clicked. Discuss with a partner: What arguments does the callback need to take, and why?
+1. Add an event listener to the submit button with a callback function that appends the input text to the page when the button is clicked. *Hint:* use `.val()` to get text from the input.
+1. Discuss with a partner: What arguments does the callback need to take, and why?
 1. Add an event listener to the element you are appending so that it gets crossed out when clicked. *Hint: use a CSS class for this*
 1. After appending the new todo, clear the input fields. *Hint:* `.reset()`
 
