@@ -21,11 +21,14 @@
 1. Go to the [jQuery docs](http://api.jquery.com/) and pick 3 functions we haven't covered yet. Implement them in your app!
 
 ### Exercise 2: Make a ToDo List
-1. Create a text input element with a submit button. *Hint: giving your element an id or class will make it easier to select with jQuery*
-1. Add an event listener to the submit button with a callback function that appends the input text to the page when the button is clicked. What arguments does the callback need to take, and why?
+Use the same project that you used for Exercise 1. Remember to use Bootstrap classes so that it looks nice!
+1. Create 2 text input elements: one for the todo title, the other for description. *Hint: create a todo object in your js that has title and description attribute.*
+1. Add a submit button. *Hint: giving your element an id or class will make it easier to select with jQuery*
+1. Add an event listener to the submit button with a callback function that appends the input text to the page when the button is clicked. Discuss with a partner: What arguments does the callback need to take, and why?
 1. Add an event listener to the element you are appending so that it gets crossed out when clicked. *Hint: use a CSS class for this*
+1. After appending the new todo, clear the input fields. *Hint:* `.reset()`
 
 ### Stretch Challenges
-1. Change your callback to append a HTML string containing the input text and a delete button. Does your delete button work? Why or why not?
-1. Add an event listener to handle delete buttons being clicked.
+1. Change your callback to append a HTML string containing the input text and a delete button.
+1. Make your delete button work! Add an event listener to handle delete buttons being clicked.
 1. Revise your function that appends text to empty the text box with each submit.
