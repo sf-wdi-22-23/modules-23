@@ -78,5 +78,5 @@ For more cool DOM manipulation tricks, you'll need to hit the docs:
 The more you struggle with this kind of documentation, the stronger your coding-chops will become!
 
 ## Exercises
-- Try this fun little introduction to jQuery: [Learning jQuery with Street Fighter and Hadoukens](https://www.thinkful.com/learn/intro-to-jquery)
+- Try this fun little introduction to jQuery: [Learning jQuery with Street Fighter and Hadoukens](https://www.thinkful.com/learn/intro-to-jquery) (maximum 30 minutes)
 - Bonus: [CSS Diner](https://flukeout.github.io) the CSS Selector Game.
