@@ -531,7 +531,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dusk-bootstrap-css">Bootstrap Grid & Navbar</a> (Braus / Brianna)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3_dusk_functions">Functions & Arguments</a> (Alex / Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d4_dusk_dom_events">DOM Context & Event Binding</a> (Braus / Ben)</td>
-    <td>Weekend Lab (Brianna)</td>
+    <td><a gref="https://github.com/sf-wdi-22-23/tic-tac-toe" target="_blank">Weekend Lab</a> (Brianna)</td>
   </tr>
   <tr>
     <td>HW</td>
