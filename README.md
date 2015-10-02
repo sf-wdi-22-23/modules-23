@@ -2,7 +2,6 @@
 
 Look here for all things related to lesson notes, exercises, and solutions as well as the schedule.
 
-[HW Submission Form](https://docs.google.com/forms/d/1zSklHtCYKg_NhkLdjlQaCXFrHJQ4Io266cKUs9_Dg8I/viewform)
 
 <!-- ##Week 12 -->
 <!-- <table>
@@ -513,33 +512,37 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Course Overview (Ali / Team)</td>
-    <td><a href="week-01/drills.md">Kyrel basics</a> (Brianna / Prof. X)</td>
-    <td><a href="week-01/drills.md">Kyrel loops</a> (Alex / Prof. X)</td>
-    <td><a href="week-01/drills.md">Kyrel advanced</a> (Alex / Prof. X)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/kyrel" target="_blank">Kyrel basics</a> basics (Travis / Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/kyrel/blob/master/challenges/day2.md" target="_blank">Kyrel Loops and Conditionals</a> (Ben / Travis)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/kyrel/blob/master/challenges/day3.md">Kyrel advanced</a> (Alex / Travis)</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
-    <td>Module1</td>
+    <td>Module 1</td>
     <td>Culture Setting (Team)</td>
-    <td>HTML, CSS, Emmet (Ben / Juliana)</td>
-    <td>Control Flow (Brianna / Juliana)</td>
-    <td>Intro jQuery & DOM (Juliana / Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dawn-html-css" target="_blank">HTML, CSS, Emmet</a> (Ben / Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3-dawn-control-flow" target="_blank">JS Control Flow</a> (Brianna / Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d4-dawn-intro-jquery">Intro jQuery & DOM</a> (Juliana / Brianna)</td>
     <td>Review (Braus / Ben)</td>
   </tr>
   <tr>
-    <td>Module2</td>
-    <td>Assessment (Team)</td>
-    <td>Bootstrap (Braus / Alex)</td>
-    <td>Functions & Arguments (Alex / Braus)</td>
-    <td>DOM Context & Event Binding (Braus / Ben)</td>
-    <td>Flash Cards (Brianna)</td>
+    <td>Module 2</td>
+    <td>Assessment (Team) <br><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d1-dusk-the-internet">What is the Internet?</a> (Juliana / Alex)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d2-dusk-bootstrap-css">Bootstrap Grid & Navbar</a> (Braus / Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d3_dusk_functions">Functions & Arguments</a> (Alex / Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d4_dusk_dom_events">DOM Context & Event Binding</a> (Braus / Ben)</td>
+    <td>Weekend Lab (Brianna)</td>
   </tr>
   <tr>
     <td>HW</td>
-    <td><a href="week-01/day-2-control-flow/dawn-control-flow/README.md">Control Flow & <a href="week-01/day-3-functions%2BCSS/dusk-modular-css/readme.md">CSS</a></a></td>
-    <td><a href="week-01/day-3-functions%2BCSS/dawn-functions/reading.md">Functions</a> & <a href="week-01/day-1-intro/reading/1_javascript_primitives.md">JS Primitives</a></td>
-    <td>Code Academy jQuery</td>
-    <td><a href="week-01/day-4-DOM/dawn-intro-dom-jquery/README.md">jQuery & DOM</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d1-homework" target="_blank">HTML, CSS</a></td>
+    <td>
+      <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d2-homework/README.md">Javascript readings and Sublime Keyboard Shortcuts</a>
+    </td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d3-homework/README.md">jQuery Reading</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w01-controlling-the-dom/d4-homework/README.md">jQuery for the DOM </a> & <a href="https://github.com/sf-wdi-22-23/events_lab">Events Lab (optional)</a></td>
     <td></td>
   </tr>
 </table>
+
+[JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
