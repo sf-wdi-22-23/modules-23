@@ -2,6 +2,7 @@
 
 Look here for all things related to lesson notes, exercises, and solutions as well as the schedule.
 
+[JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
 
 <!-- ##Week 12 -->
 <!-- <table>
@@ -544,5 +545,3 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td></td>
   </tr>
 </table>
-
-[JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
