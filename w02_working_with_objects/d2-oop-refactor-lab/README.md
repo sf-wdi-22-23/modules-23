@@ -2,9 +2,8 @@
 
 | Objectives |
 | :--- |
-| Use constructors to refactor (DRY) your code by making it object-oriented |
-|  |
-|  |
+| DRY up your code by creating reusable constructor functions |
+| Demonstrate algorithmic problem solving by restructuring code step-by-step |
 
 ## What are functions?
 
@@ -13,13 +12,16 @@
 **OOP (abstract):**
 
 ```
-A deck, composed of card, with methods for manipulating the cards such as shuffle and peek.
+A car, with methods for manipulating the cards such as shuffle and peek.
 ```
 
 **OOP (concrete):**
 
 ```js
-
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
 ```
 
 #### Analogy:
