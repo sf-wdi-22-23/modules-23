@@ -486,7 +486,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>OOP Tic-Tac-Toe Refactor Lab (Brianna, Matt)</td>
     <td>Intro to AJAX: Giphy Lab (Alex, Braus)</td>
     <td>Geoquakes Lab (Juliana, Ben)</td>
-    <td><a href="week-02/day-05/weekend_project_refactor_spec.md">OOP Racing Game</a> (Nathan)</td>
+    <td>OOP Todo (Alex)</td>
   </tr>
   <tr>
     <td>HW</td>
