@@ -454,50 +454,50 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 
 
-<!--##Week 2 - Working with Objects-->
-<!--<table>-->
-<!--  <tr>-->
-<!--    <th></th>-->
-<!--    <th>Monday</th>-->
-<!--    <th>Tuesday</th>-->
-<!--    <th>Wednesday</th>-->
-<!--    <th>Thursday</th>-->
-<!--    <th>Friday</th>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Drills</td>-->
-<!--    <td><a href="week-02/drills.md">Extend Kyrel</a> (Nathan)</td>-->
-<!--    <td><a href="week-02/drills.md">HTML Strings</a> (Justin)</td>-->
-<!--    <td><a href="week-02/drills.md">HTML Strings</a> (Justin)</td>-->
-<!--    <td><a href="week-02/drills.md">Frequency Counter</a> (Ilias)</td>-->
-<!--    <td>Assessment (Team)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Module1</td>-->
-<!--    <td><a href="week-02/day-01-arrays%2BIterators/dawn-arrayMethods">Array Methods</a> (Justin)</td>-->
-<!--    <td><a href="week-02/day-02-forms+AJAX/dawn-forms">Forms & JSON</a> (Nathan)</td>-->
-<!--    <td><a href="week-02/day-03-jquery-templating/html-templating/readme.md">HTML Templating</a> (Ilias)</td>-->
-<!--    <td><a href="week-02/day-04-Objects-and-OOP/dawn-objects/readme.md">Objects (Justin)</a></td>-->
-<!--    <td>Review (Team)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Module2</td>-->
-<!--    <td><a href="week-02/day-01-arrays%2BIterators/dusk-iteratorsLab">Implementing Iterators</a> (Ilias)</td>-->
-<!--    <td><a href="week-02/day-02-forms+AJAX/dusk-ajax">Intro AJAX</a> (Nathan)</td>-->
-<!--    <td><a href="week-02/day-03-jquery-templating/dusk-ajax-google-maps">AJAX & Google Maps</a> (Nathan)</td>-->
-<!--    <td><a href="week-02/day-04-Objects-and-OOP/dusk-object-drills/readme.md">OOP Drills (Justin)</a></td>-->
-<!--    <td><a href="week-02/day-05/weekend_project_refactor_spec.md">OOP Racing Game</a> (Nathan)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>HW</td>-->
-<!--    <td><a href="week-02/day-02-forms%2BAJAX/dawn-forms/readme.md">HTML Forms</a> (Ilias)</td>-->
-<!--    <td><a href="week-02/day-03-jquery-templating/howTheInternetWorks.md">How the Internet Works</a> (Ilias)</td>-->
-<!--    <td><a href="week-02/day-04-Objects-and-OOP/dawn-objects">OOP Reading</a> (Justin)</td>-->
-<!--    <td><a href="https://github.com/airbnb/javascript/tree/master/es5">JS Style Guide</a> (Nathan)</td>-->
-<!--    <td></td>-->
+##Week 2 - Working with Objects
+<table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>Drills</td>
+    <td>Extend Kyrel (Brianna, Braus)</td>
+    <td>HTML Strings (Ben, Matt)</td>
+    <td>HTML Strings (Matt, Alex)</td>
+    <td>Frequency Counter (Matt, Brianna)</td>
+    <td>Assessment (Juliana, Brianna)</td>
+  </tr>
+  <tr>
+    <td>Module1</td>
+    <td>Array & Object Drills (Brianna, Braus)</td>
+    <td>OOP Constructors & Prototypes (Alex, Braus)</td>
+    <td>Forms & JSON (Ben, Juliana)</td>
+    <td>Bootstrap Components (Braus, Alex)</a></td>
+    <td>Review (Matt, Brianna)</td>
+  </tr>
+  <tr>
+    <td>Module2</td>
+    <td>Functions, Callbacks, Closures, Loops (Ben, Juliana)</td>
+    <td>OOP Tic-Tac-Toe Refactor Lab (Brianna, Matt)</td>
+    <td>Intro to AJAX: Giphy Lab (Alex, Braus)</td>
+    <td>Geoquakes Lab (Juliana, Ben)</td>
+    <td><a href="week-02/day-05/weekend_project_refactor_spec.md">OOP Racing Game</a> (Nathan)</td>
+  </tr>
+  <tr>
+    <td>HW</td>
+    <td>OOP Reading (Brianna)</td>
+    <td>Forms and Zapier API Reading (Juliana)</td>
+    <td>Google Maps API (Ben)</td>
+    <td><a href="https://github.com/airbnb/javascript/tree/master/es5">Airbnb JS Style Guide</a> (Alex)</td>
+    <td></td>
 
-<!--  </tr>-->
-<!--</table>-->
+  </tr>
+</table>
 
 
 ##Week 1 - Controlling the DOM
