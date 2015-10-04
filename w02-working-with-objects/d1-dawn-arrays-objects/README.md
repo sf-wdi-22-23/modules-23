@@ -46,7 +46,7 @@ You should recognize **object literals**, which are enclosed in curly braces:
 
 ## Objects
 
-Objects are composed of key-value pairs.  Keys are usually properties of an object type.   An object representing a person, for instance, might have keys like `name`, `height`, `age`.  Values are the actual value of a key for a particular object, like `'Bill', `'5 feet, 9 inches'`, `34`. 
+Objects are composed of key-value pairs.  Keys are usually properties of an object type.   An object representing a person, for instance, might have keys like `name`, `height`, `age`.  Values are the actual value of a key for a particular object, like `'Bill'`, `'5 feet, 9 inches'`, `34`. 
 
 Here's how we'd create a few objects using "object literal syntax" -- that is, writing out all the key-value pairs:
 
@@ -175,7 +175,7 @@ arr[2] = 'sea';
 // arr is now ['a', 'b', 'sea', 'd']
 ```
 
-The method we'll usually use to **D**elete data from an array is called `splice`.  The `splice` method has to take in a start index and a number of things to remove. It returns the element(s) it removed.
+The method we'll usually use to **D**elete data from the middle of an array is called `splice`.  The `splice` method requires a start index and a number of things to remove. It returns a new array with the element(s) it removed.
 
 ```js
 // arr is now ['a', 'b', 'sea', 'd']
@@ -205,4 +205,4 @@ arr.shift();
 
 ### Other Array Methods
 
-Check out Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> for more information on arrays. In particular, all of the methods listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_instances" target="_blank">Array instances</a> section are available to use with JavaScript arrays.
+Check out Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> for more information on arrays. In particular, all of the methods listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_instances" target="_blank">Array instances</a> section are available to use with JavaScript arrays. Commonly used ones include `indexOf`, `sort`, and `join`.
