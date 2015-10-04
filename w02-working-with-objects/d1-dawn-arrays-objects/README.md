@@ -1,12 +1,11 @@
 # Objects and Arrays 
 
-@TODO: table version of objectives
-
-Students will be able to:
-- Articulate the basic difference between primitive and reference data types.
-- CRUD data inside arrays.
-- CRUD data inside objects.
-- Iterate (loop) over objects and arrays.
+| Students will be able to... |
+| :--- |
+| Explain the difference between primitive and reference data types |
+| CRUD data inside arrays |
+| CRUD data inside objects |
+| Iterate (loop) over objects and arrays |
 
 CRUD stands for **C**reate, **R**ead, **U**pdate, **D**elete.
 
@@ -15,17 +14,17 @@ CRUD stands for **C**reate, **R**ead, **U**pdate, **D**elete.
 
 When your computer looks up the value of a variable, you can think of that like asking a librarian for some information.  
 
-If the librarian knows the answer "off the top of their head," they'll give it to you immediately. Computer programming languages purposefuly store some types of variables so that they'll immediately know what to give you when you access a variable. These are called the "primitive data types" of the languague. 
+If the librarian knows the answer "off the top of their head," they'll give it to you immediately. Computer programming languages purposefully store some types of variables so that they'll immediately know what to give you when you access a variable. These are called the "primitive data types" of the language. 
 
 If a librarian doesn't know the answer to your question, they'll tell you where to look it up.  Computer programming languages purposefully store some types of variables this way -- so your computer doesn't know the exact value but knows where to look up the information. These are called the "reference types" of a computer programming language.  
 
 ###Primitive Data Types in JavaScript
 
-  * Boolean
-  * Null (no value - a placeholder)
-  * Undefined (empty/unassigned)
-  * Number (integers and floating point values: 3, 9.5, -0.288)
-  * String (words in quotes: "hello", "AWESOME!")
+  * Boolean (just `true` or `false`)
+  * Null (no value - a placeholder: just `null`)
+  * Undefined (empty/unassigned: just `undefined`)
+  * Number (integers and floating point values: like `3`, `9.5`, `-0.288`)
+  * String (words in quotes: like `"hello"`, `"AWESOME!"`)
   * _Symbol (coming in the next version of JavaScript, known as ES6)_
 
   Many students wonder about the difference between null and undefined. As a rule of thumb, you should let JavaScript decide when something is undefined (and use conditionals to check if something might be undefined).  You should use null wherever you want to "blank out" a variable so that it has no value. 
@@ -131,7 +130,7 @@ One way to loop through objects in JavaScript is to use `for ... in` loops:
       console.log(key, ": ", person1[key]);
     }
   }
-  // the order is not guarenteed, but this console logs:
+  // the order is not guaranteed, but this console logs:
   //   'name': 'Bill'
   //   'height': '5 feet, 9 inches'
   //   'age': 34
@@ -176,7 +175,7 @@ arr[2] = 'sea';
 // arr is now ['a', 'b', 'sea', 'd']
 ```
 
-The method we'll usually use to **D**elete data from an array is called `splice`.  The `splice` method has to take in a start index and a number of things to remove. It returns the elment(s) it removed.
+The method we'll usually use to **D**elete data from an array is called `splice`.  The `splice` method has to take in a start index and a number of things to remove. It returns the element(s) it removed.
 
 ```js
 // arr is now ['a', 'b', 'sea', 'd']
@@ -207,4 +206,3 @@ arr.shift();
 ### Other Array Methods
 
 Check out Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> for more information on arrays. In particular, all of the methods listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_instances" target="_blank">Array instances</a> section are available to use with JavaScript arrays.
-
