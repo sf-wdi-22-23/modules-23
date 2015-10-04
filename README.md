@@ -467,7 +467,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Extend Kyrel (Brianna, Braus)</td>
-    <td>HTML Strings (Ben, Matt)</td>
+    <td>JS built in Objects: Math, Date, Array, String (Ben, Matt)</td>
     <td>HTML Strings (Matt, Alex)</td>
     <td>Frequency Counter (Matt, Brianna)</td>
     <td>Assessment (Juliana, Brianna)</td>
