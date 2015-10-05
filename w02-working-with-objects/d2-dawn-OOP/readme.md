@@ -73,7 +73,8 @@ Declaring variables and defining them as portions of a larger object helps us cr
 ###Quick Challenge
 - Copy the object above and save it to a javaScript file, `data.js`
 - Add some properties that logically fit into an object describing our class (address, floor number, and a list of instructors.
-- Try to access your new data properties from the console to make sure they work.
+- Run your file using 'node data.js' in your console.
+- Add some lines to 'data.js' to console.log some of your new properties!
 
 If everything worked out, you should have a fully functioning data object, only now with even MORE properties with us to play with!
 
