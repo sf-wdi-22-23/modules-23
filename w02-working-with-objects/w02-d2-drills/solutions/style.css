@@ -8,8 +8,9 @@ body h1, h3, h4, p{
 }
 input{
 	border-radius: 0.5em;
-	padding:1em;
+	padding: 0.75em 1em;
 	width: 280px;
+	font-size: 0.85em;
 }
 #container {
 	padding-top: 1em;
