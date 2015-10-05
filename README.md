@@ -482,7 +482,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Module2</td>
-    <td>Functions, Callbacks, Closures, Loops (Ben, Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dusk-functions">Functions, Callbacks, Closures, Loops</a> (Ben, Juliana)</td>
     <td>OOP Tic-Tac-Toe Refactor Lab (Brianna, Matt)</td>
     <td>Intro to AJAX: Giphy Lab (Alex, Braus)</td>
     <td>Geoquakes Lab (Juliana, Ben)</td>
