@@ -3,9 +3,8 @@
 | Students will be able to... |
 | :--- |
 | Identify primitive and reference data types in JavaScript |
-| CRUD data inside arrays |
-| CRUD data inside objects |
-| Iterate (loop) over objects and arrays |
+| Manipulate data inside arrays and objects |
+| Use iteration methods to loop over objects and arrays |
 
 
 ## Primitive and Reference Data Types
@@ -23,9 +22,9 @@ If a librarian doesn't know the answer to your question, they'll tell you where 
   * Undefined (empty/unassigned: just `undefined`)
   * Number (integers and floating point values: like `3`, `9.5`, `-0.288`)
   * String (words in quotes: like `"hello"`, `"AWESOME!"`)
-  * _Symbol (coming in the next version of JavaScript, known as ES6)_
+  * Symbol (coming in the next version of JavaScript, known as ES6)
 
-  Many students wonder about the difference between null and undefined. As a rule of thumb, you should let JavaScript decide when something is undefined (and use conditionals to check if something might be undefined).  You should use null wherever you want to "blank out" a variable so that it has no value. 
+  Many students wonder about the difference between `null` and `undefined`. As a rule of thumb, you should let JavaScript decide when something is `undefined`.  You should use `null` wherever you want to "blank out" a variable so that it has no value. 
 
 ### Reference Data Types in JavaScript
 
@@ -44,10 +43,7 @@ You should recognize **object literals**, which are enclosed in curly braces:
 
 ## Objects
 
-Objects are composed of key-value pairs.  Keys usually represent properties of an object type.   An object representing a person, for instance, might have keys like `name`, `height`, `age`.  Values are the actual value of a key for a particular object, like `'Bill'`, `'5 feet, 9 inches'`, `34`. 
-
-
-In JavaScript Objects, keys are always converted to strings.
+Objects are composed of key-value pairs.  Keys usually represent properties of an object type.   An object representing a person, for instance, might have keys like `name`, `height`, `age`.  Values are the actual value of a key for a particular object, like `'Bill'`, `'5 feet, 9 inches'`, `34`. In JavaScript Objects, keys are always converted to strings.
 
 
 #### Object Method Basics
@@ -80,16 +76,16 @@ person.hairColor = 'green';
 // { name: 'Bill', height: '5 feet, 9 inches', age: 34, hairColor: 'green' }
 
 
-**Semi-removing** a **value**:  
+**Semi-removing** a value:  
 
-Use `null` as a marker for an empty value.
+There's not a way to remove just a value. Use `null` as a marker for an empty value.
 
 ```js
 person.hairColor = null;
 ``` 
 
 
-**Removing** a key-value pair:
+**Fully removing** a key-value pair:
 
 ```js
 delete person.height;
@@ -175,7 +171,7 @@ fruits.push("Kiwi"); // 12
 fruits.shift(); // "Apricot"
 ```
 
-**Removing** an element to the **end**:  
+**Removing** an element from the **end**:  
 
 ```js
 fruits.pop(); // "Kiwi"
@@ -193,7 +189,7 @@ fruits[9]; // "Jackfruit"
 var cherryPos = fruits.indexOf("Cherry");
 fruits[cherryPos] = "Cantaloupe";
 // ["Apple", "Banana", "Cantaloupe", "Durian", "Elderberry", 
-"Fig", "Guava", "Huckleberry", "Ice plant", "Jackfruit"];
+// "Fig", "Guava", "Huckleberry", "Ice plant", "Jackfruit"];
 ```
 
 **Removing** an element by index position:  
@@ -201,7 +197,17 @@ fruits[cherryPos] = "Cantaloupe";
 ```js
 var huckleBerryPos = fruits.indexOf("HuckleBerry");
 var removedItem = fruits.splice(huckleBerryPos, 1); 
-// ["Apple", "Banana", "Cantaloupe", "Durian", "Elderberry", "Fig", "Guava", "Ice plant", "Jackfruit"];
+// ["Apple", "Banana", "Cantaloupe", "Durian", "Elderberry", 
+// "Fig", "Guava", "Ice plant", "Jackfruit"]
+```
+
+**Copying** elements:
+
+```js
+var commonFruits = fruits.slice(0,4);
+// commonFruits is ["Apple", "Banana", "Cantaloupe"]
+// fruits is ["Apple", "Banana", "Cantaloupe", "Durian", 
+// "Elderberry", "Fig", "Guava", "Ice plant", "Jackfruit"]
 ```
 
 ![img](http://www.frusion.com/media/1011/fruit-row.png)
@@ -210,9 +216,9 @@ var removedItem = fruits.splice(huckleBerryPos, 1);
 
 JavaScript has quite a few helper functions that implement common patterns.  "Iteration methods" follow the pattern of looping through an array and do something with each element.  Iteration methods take a function as one of their arguments. This "callback" function says what should be done with each element of the array.
 
-Iteration methods are useful becuase they're generic and reusable. We don't have to write the same pattern over and over again, becuase the iteration methods take care of the details.
+Iteration methods are useful because they're generic and reusable. We don't have to write the same pattern over and over again, because the iteration methods take care of the details.
 
-The most common iteration methods might be `each`/`forEach`, `map`, and `reduce`.  
+The most well-known iteration methods are `each`/`forEach`, `map`, and `reduce`.  
 
 The `map` iteration method does something to each element of the array, and forms a new array made up of the results.  Here's how we'd use JavaScript's built-in `map`:
 
@@ -222,11 +228,15 @@ Fruity Example - pluralize all of our fruits
 
 var pluralize = function(word){
   // if word ends in 'y', remove 'y' and add 'ies' to the end
-  var lastLetter = element[element.length -1];
+  word = word.split('');  // turn the string into an array
+  var lastLetter = word[word.length -1];
   if (lastLetter === 'y') { 
-    element = element.slice(0,element.length-1) + 'ie';
+    word.pop();  // remove y
+    word.push('i', 'e');  // add i and e
   } 
-  return element + 's';
+  word.push('s');
+  word = word.join('');  // convert back to a string
+  return word;
 }
 
 fruits = fruits.map(pluralize);
@@ -250,10 +260,10 @@ numbers.map(square);
 ```
 
 
-Here's how a custom `map` method might be coded in JavaScript:
+Here's how another version of a `map` iteration method might be coded in JavaScript:
 
 ```js
-
+// define the myMap function
 var myMap = function(arr, callback){
   var outputArray = [];  // create a new array to hold output
   for (var i=0; i<arr.length; i++){
@@ -262,9 +272,15 @@ var myMap = function(arr, callback){
   return outputArray;
 };
 
+// call the myMap function
+myMap(fruits, pluralize); 
+// [ "Apples", "Bananas", "Cantaloupes", "Durians", "Elderberries",
+//   "Figs", "Guavas", "Ice plants", "Jackfruits" ] 
+myMap(numbers, square);
+// [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
 
 
 ### Other Array Methods
 
-Check out Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> for more information on arrays. In particular, all of the methods listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_instances" target="_blank">Array instances</a> section are available to use with JavaScript arrays. Commonly used ones include `indexOf`, `sort`, and `join`.
+Check out Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> for more information on arrays. In particular, all of the methods listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_instances" target="_blank">Array instances</a> section are available to use with JavaScript arrays. Commonly used ones include `slice`, `join`, and `sort`.
