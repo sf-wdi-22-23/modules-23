@@ -86,6 +86,19 @@ For the following exercises, start from the `clubs` variable.
 
 	```
 
+1. `getPairs(names)`
+
+	Write a function called `getPairs` that takes in an array of names and outputs random pairs of names. How could you use this to generate pairs of students for pair programming?
+		
+	```js
+	// Example of getPairs!
+	
+	// Get Names
+	var names = ["Johnny", "Emily A", "Ling"];
+	getPair(names);
+	// returns [["Emily A", "Ling"], ["Johnny"]]
+	```
+	
 
 1. `partition(arr, truthTest)`
 
