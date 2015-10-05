@@ -104,7 +104,6 @@ We already practiced something similar this morning, but it bears repeating. **(
 
 **Exercise 2. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested**
 
-```
 The ```for each in``` loop has been deprecated and is no longer recommended for using in Javascript.
 
 There are some useful Array methods that can help refactor crufty code. I recommend you read up on the following when you have time:
@@ -116,8 +115,6 @@ There are some useful Array methods that can help refactor crufty code. I recomm
 ```
 
 ...all can be found in the Mozilla Developer Network <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> link referenced this morning.
-
-```
 
 
 ### Writing better Functions

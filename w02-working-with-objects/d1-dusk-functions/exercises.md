@@ -35,21 +35,21 @@ Write a function that takes a number as it’s only argument, let’s name the p
 
 
 ####Closure Exercise 2:
-**Step 1. Create an Animal object
-**Step 2. Give the Animal a name attribute and a string value.
-**Step 3. Give the Animal a 'speak' method and a string value.
-**Step 4. Instantiate several Animals and call their speak methods, returning different values for each.
+**Step 1. Create an Animal object**
+**Step 2. Give the Animal a name attribute and a string value.**
+**Step 3. Give the Animal a 'speak' method and a string value.**
+**Step 4. Instantiate several Animals and call their speak methods, returning different values for each.**
 
 
 ####Closure Exercise 3:
 Imagine we are coding a demolition derby-style driving game. In the following exercises, we will create a Car object and give it a variety of attributes, including functions, then we will make callbacks to those internal functions.
 
-**Step 1. Create a new Object and assign it to the variable 'Car'
-**Step 1. Give 'Car' a 'brand' attribute and assign it a string
-**Step 1. Give 'Car' a 'year' attribute and assign it a Number (or a Date() if you know how!)
-**Step 1. Give 'Car' a 'horsepower' attribute and assign it a Number, such as 350
-**Step 1. Add anything else you think would be cool to track in your game. You might enjoy classic game attributes such as speed, hit points, armor, shields, ammunition... or maybe you'd prefer to do something a little more peaceful.
-**Step 1. Now write two functions to change the values of a car object.
-**Step 1. Finally, create two instances of the Car object and call their internal functions (methods).
-**Step 1. Stretch. Can you pass in an argument for one to act on the other and let them battle it out in the console?
+**Step 1. Create a new Object and assign it to the variable 'Car'**
+**Step 1. Give 'Car' a 'brand' attribute and assign it a string**
+**Step 1. Give 'Car' a 'year' attribute and assign it a Number (or a Date() if you know how!)**
+**Step 1. Give 'Car' a 'horsepower' attribute and assign it a Number, such as 350**
+**Step 1. Add anything else you think would be cool to track in your game. You might enjoy classic game attributes such as speed, hit points, armor, shields, ammunition... or maybe you'd prefer to do something a little more peaceful.**
+**Step 1. Now write two functions to change the values of a car object.**
+**Step 1. Finally, create two instances of the Car object and call their internal functions (methods).**
+**Step 1. Stretch. Can you pass in an argument for one to act on the other and let them battle it out in the console?**
 
