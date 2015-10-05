@@ -12,28 +12,45 @@
 **OOP (abstract):**
 
 ```
-A car, with methods for manipulating the cards such as shuffle and peek.
+A die that has sides and that you can roll.
 ```
 
 **OOP (concrete):**
 
 ```js
-function Car(make, model) {
-  this.make = make;
-  this.model = model;
+function Die(sides) {
+  this.sides = sides;
+  this.currentSide = 0;
+
 }
+
+Die.prototype.roll = function() {
+  this.currentSide = Math.floor((Math.random()*this.sides)+1);
+  return this.currentSide;
+}
+
+var die = new Die(6);
+var d20 = new Die(20);
 ```
 
 #### Analogy:
 
+Refactoring is like revising a novel – it's already written, and now you get to make improvements. Maybe there's a character or scene that isn't necessary, so you cut it. Maybe the protagonist isn't likeable enough, or the theme or moral doesn't impact the reader as much as you'd hoped. It's a process of iteration that one comes back to again and again.
 
 ```js
 
 ```
 
-## Why use functions?
+## Why refactor?
 
-Inspirational quote from a book.
+>*" Refactoring
+…is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior.
+
+Its heart is a series of small behavior preserving transformations. Each transformation (called a “refactoring”) does little, but a sequence of transformations can produce a significant restructuring. Since each refactoring is small, it’s less likely to go wrong. The system is kept fully working after each small refactoring, reducing the chances that a system can get seriously broken during the restructuring." - Martin Fowler, [Refactoring](http://refactoring.com/)*
+
+> *"Code is never finished, only abandoned." - paraphase of [Paul Valéry](https://en.wikiquote.org/wiki/Paul_Val%C3%A9ry)*
+
+> *"It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove." - Antoine de Saint Exupéry*
 
 #### Benefits of Using Object-oriented Programming
 
