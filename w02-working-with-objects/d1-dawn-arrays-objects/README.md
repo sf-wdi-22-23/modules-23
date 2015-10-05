@@ -72,8 +72,11 @@ person.hairColor = 'blonde';
 ```
 
 **Changing** the value for a key:
+
+```js
 person.hairColor = 'green';
 // { name: 'Bill', height: '5 feet, 9 inches', age: 34, hairColor: 'green' }
+```
 
 
 **Semi-removing** a value:  
