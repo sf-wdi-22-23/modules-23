@@ -43,7 +43,7 @@ It is very common to see for...in like this:
 ```js
 var randomHomeDetailsObject = {"style": "Eichler", "sqft": 1800, "oven": "electric", "date built": 1952, "garage": false}
 
-for (key in randomHomeDetailsObject){
+for (var key in randomHomeDetailsObject){
         console.log("My house " + key + " is " + randomHomeDetailsObject[key]);
 }
 
