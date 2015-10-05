@@ -16,7 +16,7 @@
 
 #### This morning we reviewed looping through Objects and Arrays.
 
-```
+```js
 var someArray = new Array("zero", "one", "two", "etc");
 for (var i = 0; i < someArray.length; i++) {
     console.log("The object at index " + [i] + " is " + someArray[i]);
@@ -28,7 +28,7 @@ for (var i = 0; i < someArray.length; i++) {
 
 ####The for...in statement shows us how to loop through an Object literal:
 
-```
+```js
 for (name in object){
     // Douglas Crockford recommends wrapping every internal statement in an if() 
     // to filter out unwanted parts of the inheritance chain:
@@ -40,7 +40,7 @@ for (name in object){
 
 It is very common to see for...in like this:
 
-```
+```js
 var randomHomeDetailsObject = {"style": "Eichler", "sqft": 1800, "oven": "electric", "date built": 1952, "garage": false}
 
 for (key in randomHomeDetailsObject){
@@ -50,7 +50,7 @@ for (key in randomHomeDetailsObject){
 ```
 ####The do while statement:
 
-```
+```js
 var i = 0;
 do {
    i += 1;
@@ -73,7 +73,7 @@ do {
 What is JSON? JavaScript Object Notation. It's a series of nested objects and arrays.
 You can traverse complex JSON data structures by combining array and object looping techniques.
 
-```
+```js
 var myFirstJSON = 
 	{"language basics":
 		[{"Spanish":
@@ -98,17 +98,17 @@ var myFirstJSON =
 	};
 ```
 
-We already practiced something similar this morning, but it bears repeating. **(These exercises may add 10 - 20 minutes to the lecture.)**
+We already practiced something similar this morning, but it bears repeating. _(These exercises may add 10 - 20 minutes to the lecture.)_
 
-**Exercise 1. Loop through the ```"Spanish" "letters"```.**
+*Exercise 1. Loop through the ```"Spanish" "letters"```.
 
-**Exercise 2. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested**
+*Exercise 2. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested
 
 The ```for each in``` loop has been deprecated and is no longer recommended for using in Javascript.
 
 There are some useful Array methods that can help refactor crufty code. I recommend you read up on the following when you have time:
 
-```
+```js
 .forEach()
 .map()
 .reduce()
@@ -122,7 +122,7 @@ There are some useful Array methods that can help refactor crufty code. I recomm
 
 Last week we talked about *global* versus *local* scope. Here it is again:
 
-```
+```js
 // Block scope
 var inBlock = false;
 
@@ -142,7 +142,7 @@ Now let's look at some more advanced scoping concepts in Javascript:
 Read the code below.
 Which alert will show first?
 
-```
+```js
 var g = "global";
 
 function go() { 
@@ -158,7 +158,7 @@ alert(g, " outside go");
 #### Hoisting
 In the function bugHunter(), what value do you expect to be returned? Run it to find out
 
-```
+```js
 var bugHunter = function(){
     var butterfly = 1;
     var bees = 5;
@@ -173,7 +173,7 @@ Next move the last line ```bees = bees * bees;``` up two lines. What is the expe
 ####Recursion
 Is a technique where a function calls itself to do the same repetitive task on smaller versions of the original argument. This is an important concept to understand the power of callbacks.
 
-```
+```js
 var bottles = function(c){
     if (c > 0){
         console.log( c + ' bottles of beer on the wall, ' + c + ' bottles of beer! Take one down, pass it around, ' + (c-1) + ' bottles of beer on the wall!');
@@ -186,7 +186,7 @@ var bottles = function(c){
 ```
 How does this compare with writing the same function in a do...while loop?
 
-```
+```js
 var countR = function(num){
     console.log(num);
     if(num > 0)countR(num-1);
@@ -203,7 +203,7 @@ A closure happens when you nest one function inside another function. This creat
 4. return that function from inside the parent function
 
 
-```
+```js
 var makeStopwatch = function(n){
     console.log('initialized');
     var elapsed = 0;
@@ -239,7 +239,7 @@ The functions are not defined.
 
 Closure is also very useful for embuing Objects with 
 
-```
+```js
 function counter() {
     var n = 0;
     return {
