@@ -45,7 +45,7 @@ var data = {
  	- How many of the properties are Arrays?
  	- If there is an array, what is the array data type?
 
-The `data` object is a grouping of key & value pairs (known as properties) that describe our class, WDI21.  
+The `data` object is a grouping of key & value pairs (known as properties) that describe our class, WDI21.
   
 ```javascript 
 school: "General Assembly"
@@ -58,7 +58,7 @@ To access this property, we can use dot-notation or bracket-notation on the key 
  var GA = data.school //General Assembly
  ```
  
-`GA` has the value `General Assembly`.  
+`GA` has the value `General Assembly`.
  
 To access an array within an object,  the method is similar to accessing any other property.  The property `students` is an array of Objects.  To access that array and assign it to a variable, we simply perform the following:
  
@@ -66,20 +66,20 @@ To access an array within an object,  the method is similar to accessing any oth
  var studentArray = data.students //students
  ```
 The `data.students` array is now accessible  by using `studentArray` instead.
-Declaring variables and defining them as portions of a larger object helps us create readable and followable code.  
+Declaring variables and defining them as portions of a larger object helps us create readable and followable code.
 
-*We can assume that an Object is a collection of properties (key & value pairs) that all have some sort of relationship and are connected logically to one another.*  
+*We can assume that an Object is a collection of properties (key & value pairs) that all have some sort of relationship and are connected logically to one another.* 
 
 ###Quick Challenge
-- Make a copy of `data.js` and rename it to `enhancedData.js`
+- Copy the object above and save it to a javaScript file, `data.js`
 - Add some properties that logically fit into an object describing our class (address, floor number, and a list of instructors.
 - Try to access your new data properties from the console to make sure they work.
 
-If everything worked out, you should have a fully functioning data object, only now with even MORE properties with us to play with!  
+If everything worked out, you should have a fully functioning data object, only now with even MORE properties with us to play with!
 
 
 ##Creating an object
-For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `data.js` and `enhancedData.js`.  This is known as a *Literal* object definition.  
+For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `data.js`.  This is known as a *Literal* object definition.
 Here. I'll make you a flower using the *Literal* method:
 
 ```javascript
@@ -168,7 +168,7 @@ function Flower(){
 }
 ```
 
-We now have a method inside our flower object called `sniff`.  When we call it, the console will display "Sniff Sniff Sniff!" as predicted.  
+We now have a method inside our flower object called `sniff`.  When we call it, the console will display "Sniff Sniff Sniff!" as predicted.
 
 Lets add another method that takes an argument and returns a response.
 
