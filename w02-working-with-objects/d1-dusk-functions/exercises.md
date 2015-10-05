@@ -25,29 +25,41 @@ var myFirstJSON =
 		}]
 	};
 ```
-Exercise 1. Loop through the ```"Spanish" > "letters"```.
-Exercise 1. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested
+1. Loop through the ```"Spanish" > "letters"```.
+
+1. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested
 
 ####Closure Exercise 1:
 Write a function that takes a number as it’s only argument, let’s name the parameter firstNum and include one function inside. Have the inner function take one number as it’s argument, let’s name that one secondNum. Now in the inner function, add firstNum and secondNum. See closure recipe for step-by-step guidance!
 
 
 ####Closure Exercise 2:
-Step 1. Create an Animal object
-Step 1. Give the Animal a name attribute and a string value.
-Step 1. Give the Animal a 'speak' method and a string value.
-Step 1. Instantiate several Animals and call their speak methods, returning different values for each.
+*  Create an Animal object
+
+*  Give the Animal a name attribute and a string value.
+
+*  Give the Animal a 'speak' method and a string value.
+
+*  Instantiate several Animals and call their speak methods, returning different values for each.
 
 
 ####Closure Exercise 3:
 Imagine we are coding a demolition derby-style driving game. In the following exercises, we will create a Car object and give it a variety of attributes, including functions, then we will make callbacks to those internal functions.
 
-Step 1. Create a new Object and assign it to the variable 'Car'
-Step 1. Give 'Car' a 'brand' attribute and assign it a string
-Step 1. Give 'Car' a 'year' attribute and assign it a Number (or a Date() if you know how!)
-Step 1. Give 'Car' a 'horsepower' attribute and assign it a Number, such as 350
-Step 1. Add anything else you think would be cool to track in your game. You might enjoy classic game attributes such as speed, hit points, armor, shields, ammunition... or maybe you'd prefer to do something a little more peaceful.
-Step 1. Now write two functions to change the values of a car object.
-Step 1. Finally, create two instances of the Car object and call their internal functions (methods).
-Step 1. Stretch. Can you pass in an argument for one to act on the other and let them battle it out in the console?
+* Create a new Object and assign it to the variable 'Car'
+
+* Give 'Car' a 'brand' attribute and assign it a string
+
+* Give 'Car' a 'year' attribute and assign it a Number (or a Date() if you know 
+how!)
+
+*  Give 'Car' a 'horsepower' attribute and assign it a Number, such as 350
+
+*  Add anything else you think would be cool to track in your game. You might enjoy classic game attributes such as speed, hit points, armor, shields, ammunition... or maybe you'd prefer to do something a little more peaceful.
+
+*  Now write two functions to change the values of a car object.
+
+*  Finally, create two instances of the Car object and call their internal functions (methods).
+
+*  Stretch. Can you pass in an argument for one to act on the other and let them battle it out in the console?
 
