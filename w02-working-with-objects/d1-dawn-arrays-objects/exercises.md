@@ -12,7 +12,7 @@ var clubs =  [
 	        { first: 'Joe', last: 'Lakin' },
 	        { first: 'Evalyn', last: 'Bradtke' },
 			{ first: 'Samuel', last: 'Black' }
-	    ], 
+	    ],
         teacher: 'James Friar'
     },
     {
@@ -22,7 +22,7 @@ var clubs =  [
         	{ first: 'Cora', last: 'Thompson' },
 			{ first: 'Samuel', last: 'Ziemann' },
 			{ first: 'Alana', last: 'Cortez'}
-	    ], 
+	    ],
         teacher: 'Luther Richards'
     },
     {
@@ -32,13 +32,13 @@ var clubs =  [
 			{ first: 'Samuel', last: 'Black' },
 			{ first: 'Alana', last: 'Cortez'},
 			{ first: 'Joe', last: 'Lakin' }
-	    ], 
+	    ],
         teacher: 'Carol Darby'
     }
 ];
 ```
 
-For the following exercises, start from the `clubs` variable. 
+For the following exercises, start from the `clubs` variable.
 
 1. Read and console log the following:  
 	* the array that contains all the student club data
@@ -48,9 +48,9 @@ For the following exercises, start from the `clubs` variable.
 	* the array of students in the second team  
 	* the last name of the second student on the third team  
 
-1. Create an object literal representing a student with your name, and assign it to a variable. 
+1. Create an object literal representing a student with your name, and assign it to a variable.
 
-1. Add yourself to one of the clubs as a student member.  Add a comment saying which club you're joining. 
+1. Add yourself to one of the clubs as a student member.  Add a comment saying which club you're joining.
 
 1. Create an object literal representing a new club, and assign it to a variable. Make sure it has values for name, students, and teacher.
 
@@ -62,22 +62,22 @@ For the following exercises, start from the `clubs` variable.
 1. Oops, the school is losing extracurricular funding.  Remove one of the clubs from the array. Add a comment to say which club has been defunded.
 
 
-## Stretch: Array Manipulation Practice 
+## Stretch: Array Manipulation Practice
 
 1. `getPairs(names)`
 
 	Write a function called `getPairs` that takes in an array of names and outputs random pairs of names. How could you use this to generate pairs of students for pair programming?
-		
+
 	```js
 	// Example of getPairs!
-	
+
 	// set up names argument
 	var students = ["Johnny", "Emily A", "Ling", "Jason", "Franchesca"];
 	// call getPairs function
 	getPair(students);
 	// returns [["Emily A", "Ling"], ["Franchesca", "Jason"] , ["Johnny"]]
 	```
-	
+
 
 ## Iteration Methods
 
@@ -98,7 +98,7 @@ JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `ar
 		console.log("The next number is..... " + element + "!");
 	}
 
-	each(lottoNumbers, logMessage); 
+	each(lottoNumbers, logMessage);
 	// logs to the console:
 	//   "The next number is..... 18!"
 	//   "The next number is..... 14!"
@@ -111,7 +111,7 @@ JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `ar
 
 1. `partition(arr, truthTest)`
 
-	
+
     _corresponding javascript method: `arr.forEach(callback)`_
 
 
@@ -144,12 +144,11 @@ JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `ar
 	var grandparents = [
 		{first: "June", last: "Crane", age: 74},
 		{first: "Jim", last: "Crane", age:76},
-		{first: "Linda", "Fuentes", age: 62},
-		{first: "Panfilo", "Fuentes", age: 76}
+		{first: "Linda", last: "Fuentes", age: 62},
+		{first: "Panfilo", last: "Fuentes", age: 76}
 		];
 
 	// call the pluck function, asking for the key 'first'
 	pluck(grandparents, 'first');
 	// returns ["June", "Jim", "Linda", "Panfilo"]
 	```
-
