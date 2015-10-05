@@ -44,7 +44,7 @@ It is very common to see for...in like this:
 var randomHomeDetailsObject = {"style": "Eichler", "sqft": 1800, "oven": "electric", "date built": 1952, "garage": false}
 
 for (key in randomHomeDetailsObject){
-        console.log("My house " + key + " is " + someObject[key]);
+        console.log("My house " + key + " is " + randomHomeDetailsObject[key]);
 }
 
 ```
