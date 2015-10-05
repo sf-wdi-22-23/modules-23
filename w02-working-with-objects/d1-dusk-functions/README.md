@@ -1,4 +1,12 @@
-#First Draft of my notes.
+# Callbacks, Closures and Loops
+
+| Students will be able to... |
+| :--- |
+| Call functions with a variety of parameters |
+| Identify JSON objects  |
+| Loop through nested data structures |
+| Leverage scope concepts for precedence, hoisting, basic recursion and closure |
+| Write better functions |
 
 ## Review of loops from this morning. 10 min
 
@@ -25,7 +33,7 @@ for (name in object){
     // Douglas Crockford recommends wrapping every internal statement in an if() to filter out unwanted parts of the inheritance chain:
 
     if (object.hasOwnProperty(name)){
-
+        //...
     }
 
 }
@@ -44,7 +52,6 @@ for (key in randomHomeDetailsObject){
 ```
 ####The do while statement:
 
-
 ```
 var i = 0;
 do {
@@ -60,10 +67,13 @@ do {
    i -= 1;
 } while (i >80);
 
+```
 
-// What is JSON? JavaScript Object Notation. It's a series of nested objects and arrays
-// You can easily create and traverse complex JSON data structures by combining array and object looping techniques
+#### JSON
+What is JSON? JavaScript Object Notation. It's a series of nested objects and arrays.
+You can traverse complex JSON data structures by combining array and object looping techniques.
 
+```
 var myFirstJSON = 
 	{"language basics":
 		[{"Spanish":
@@ -80,17 +90,17 @@ var myFirstJSON =
 		}]
 	};
 ```
+
+We already practiced something similar this morning, but it bears repeating.
+
 Exercise 1. Loop through Spanish and show us the letters
-
-
-Exercise 1. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested
+Exercise 2. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested
 
 
 ### Writing better Functions:
 
 We've talked about global versus local scope. Here it is again:
 ```
-
 // Block scope
 var inBlock = false;
 
@@ -104,7 +114,7 @@ if(inBlock){
 
 ```
 
-Now let's look at some cool scoping concepts in Javascript:
+Now let's look at some more advanced scoping concepts in Javascript:
 
 ####Precedence
 
@@ -115,15 +125,14 @@ Which alert will show first?
 var g = "global";
 
 function go() { 
-var l = "local";
-var g = "in here!";
-alert(g, "inside go");
+    var l = "local";
+    var g = "in here!";
+    alert(g, " inside go");
 }
 go();
-alert(g, "outside go")
+alert(g, " outside go");
 
 ```
-
 
 #### Hoisting
 
@@ -139,12 +148,12 @@ var bugHunter = function(){
     bees = bees * bees;
 };
 ```
-Next move the last line "bees = bees * bees;" up two lines. What is the new result?
+Next move the last line ```bees = bees * bees;``` up two lines. What is the expected result?
 
 
 ####Recursion
 
-Is a technique where a function calls itself to do the same repetitive task on smaller versions of the original argument.
+Is a technique where a function calls itself to do the same repetitive task on smaller versions of the original argument. This is an important concept to understand the power of callbacks.
 
 ```
 var bottles = function(c){
@@ -167,12 +176,9 @@ var countR = function(num){
 };
 ```
 
-
 ####Closure
 
-A closure happens when you nest a function inside another function. This creates a private function.
-The inside functions can then access the arguments and variables of outside, parent functions, but the parent functions cannot touch inside the child function.
-Something really special happens when you return that function inside another function. Let’s take a look!
+A closure happens when you nest one function inside another function. This creates a private function. The inside functions can then access the arguments and variables of outside, parent functions, but the parent functions cannot touch inside the child function. Something really special happens when you return that function inside another function. Let’s take a look!
 
 
 ```
@@ -183,18 +189,17 @@ function counter() {
         reset: function() { n = 0; }
     };
 }
-var c = counter(), d = counter(); c.count()
-d.count()
-c.reset()
-c.count()
-d.count()
+var c, d = counter();
+c.count();
+d.count();
+c.reset();
+c.count();
+d.count();
+
 ```
+####Exercises:
+This week's theme is working with Objects, so if you only learn one new approach, make it closure.
 
-This week's theme is working with Objects, so closure is the most important concept
+*Exercise 1. Imagine we are writing a game.
 
-//exercise:
 
-// create an object with keys to functional values
-
-// example:
-// var myCarObject = { }
