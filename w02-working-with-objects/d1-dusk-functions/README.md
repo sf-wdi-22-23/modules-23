@@ -30,7 +30,7 @@ for (var i = 0; i < someArray.length; i++) {
 
 ```js
 for (name in object){
-    // Douglas Crockford recommends wrapping every internal statement in an if() 
+    // Douglas Crockford recommends wrapping every internal statement in an if()
     // to filter out unwanted parts of the inheritance chain:
     if (object.hasOwnProperty(name)){
         //...
@@ -61,8 +61,8 @@ do {
 
 var i = 99;
 do {
-   console.log( i + ' bottles of beer on the wall, ' + 
-                    i + ' bottles of beer! Take one down, pass it around, ' + 
+   console.log( i + ' bottles of beer on the wall, ' +
+                    i + ' bottles of beer! Take one down, pass it around, ' +
                    (i-1) + ' bottles of beer on the wall!');
    i -= 1;
 } while (i >80);
@@ -74,7 +74,7 @@ What is JSON? JavaScript Object Notation. It's a series of nested objects and ar
 You can traverse complex JSON data structures by combining array and object looping techniques.
 
 ```js
-var myFirstJSON = 
+var myFirstJSON =
 	{"language basics":
 		[{"Spanish":
 			{
@@ -145,7 +145,7 @@ Which alert will show first?
 ```js
 var g = "global";
 
-function go() { 
+function go() {
     var l = "local";
     var g = "in here!";
     alert(g, " inside go");
@@ -196,8 +196,8 @@ var countR = function(num){
 ####Closure
 A closure happens when you nest one function inside another function. This creates a private function. The inside functions can then access the arguments and variables of outside, parent functions, but the parent functions cannot touch inside the child function.
 
-**A recipe for closure:
-1. create your parent function 
+##### A recipe for closure:
+1. create your parent function
 2. define some variables in the parent’s local scope (this can be accessed by the child function)
 3. define a function inside the parent function. We call this a child.
 4. return that function from inside the parent function
@@ -212,16 +212,16 @@ var makeStopwatch = function(n){
     var stopwatch = function(){  
         console.log('stopwatch');
         if(elapsed < n){
-            return elapsed; 
+            return elapsed;
         } else {
             console.log(elapsed + ' seconds elapsed');
             return;
         }
     };
 
-    var increase  = function(){ 
+    var increase  = function(){
         if(elapsed < n){
-            elapsed++; 
+            elapsed++;
         }
     };
 
@@ -237,7 +237,7 @@ Here you can see makeStopwatch() calls increase() and returns stopwatch()
 But if we try to call either function outside of makeStopwatch, we will get the Uncaught Reference Error.
 The functions are not defined.
 
-Closure is also very useful for embuing Objects with 
+Closure is also very useful for embuing Objects with
 
 ```js
 function counter() {
@@ -259,4 +259,3 @@ d.count();
 ```
 
 This week's theme is working with Objects, so if you only learn one new approach, make it closure.
-

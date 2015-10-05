@@ -2,7 +2,7 @@
 Begin with the JSON object from the lecture:
 
 ```js
-var myFirstJSON = 
+var myFirstJSON =
 	{"language basics":
 		[{"Spanish":
 			{
@@ -27,10 +27,10 @@ var myFirstJSON =
 ```
 1. Loop through the ```"Spanish" > "letters"```.
 
-1. Write a function languageBasics() that will take a language and a type and return a list stating the first, next and last values of the data requested
+1. Write a function languageBasics() that will take a language and a type (ex. languageBasics("Japanese", "numbers")) and return a list of all the data requested.
 
 ####Closure Exercise 1:
-Write a function that takes a number as it’s only argument, let’s name the parameter firstNum and include one function inside. Have the inner function take one number as it’s argument, let’s name that one secondNum. Now in the inner function, add firstNum and secondNum. See closure recipe for step-by-step guidance!
+Write a function that takes a number as it’s only argument, let’s name the parameter firstNum and include one function inside. Have the inner function take one number as it’s argument, let’s name that one secondNum. Now in the inner function, add firstNum and secondNum. See closure recipe in the README for this lesson for step-by-step guidance!
 
 
 ####Closure Exercise 2:
@@ -50,7 +50,7 @@ Imagine we are coding a demolition derby-style driving game. In the following ex
 
 * Give 'Car' a 'brand' attribute and assign it a string
 
-* Give 'Car' a 'year' attribute and assign it a Number (or a Date() if you know 
+* Give 'Car' a 'year' attribute and assign it a Number (or a Date() if you know
 how!)
 
 *  Give 'Car' a 'horsepower' attribute and assign it a Number, such as 350
@@ -62,4 +62,3 @@ how!)
 *  Finally, create two instances of the Car object and call their internal functions (methods).
 
 *  Stretch. Can you pass in an argument for one to act on the other and let them battle it out in the console?
-
