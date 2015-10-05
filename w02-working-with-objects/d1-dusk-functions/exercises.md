@@ -25,12 +25,12 @@ var myFirstJSON =
 		}]
 	};
 ```
-1. Loop through the ```"Spanish" > "letters"```.
+1. Loop through the ```"Spanish" > "letters"``` and `console.log()` them.
 
-1. Write a function languageBasics() that will take a language and a type (ex. languageBasics("Japanese", "numbers")) and return a list of all the data requested.
+1. Write a function languageBasics() that will take a language and a type (ex. `languageBasics('Japanese', 'numbers'`)) and return a list of all the data requested.
 
 ####Closure Exercise 1:
-Write a function that takes a number as it’s only argument, let’s name the parameter firstNum and include one function inside. Have the inner function take one number as it’s argument, let’s name that one secondNum. Now in the inner function, add firstNum and secondNum. See closure recipe in the README for this lesson for step-by-step guidance!
+Write a function that takes a number as it’s only argument, let’s name the parameter firstNum (ex. `var closeCall = function(firstNum){};`) and include one function inside. Have the inner function take one number as it’s argument, let’s name that one secondNum. Now in the inner function, add firstNum and secondNum being sure that secondNum is scoped inside of the parent. See closure recipe in the README for this lesson for step-by-step guidance!
 
 
 ####Closure Exercise 2:
