@@ -1,6 +1,6 @@
 # Arrays and Objects Exercises
 
-## Array and Object CRUD
+## Manipulate Data in Objects and Arrays
 
 Copy the following code into your console.
 
@@ -36,6 +36,7 @@ var clubs =  [
         teacher: 'Carol Darby'
     }
 ];
+```
 
 For the following exercises, start from the `clubs` variable. 
 
@@ -62,7 +63,6 @@ For the following exercises, start from the `clubs` variable.
 
 ## Iterators
 
-"Iterators" in JavaScript are function that loop through an array and do something with each element.
 
 1. `each(arr, callback)`
 
