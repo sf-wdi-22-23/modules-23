@@ -1,4 +1,4 @@
-/*  */
+/* Manipulate Data in Objects and Arrays */
 
 var clubs =  [
 	{
@@ -78,6 +78,35 @@ clubs[2].students[1].first = 'Sam';
 
 // remove one of the clubs from the array
 clubs.shift(); // sorry yearbook!
+
+
+
+/* Array Manipulation Practice */
+// takes in an array of names and outputs random pairs of names
+// Note that this method does not produce a 100% perfectly random answer...
+// but it's good enough for now!
+var getPairs = function(namesArr){
+  var outputArr = [];
+  // pick random pairs and add to the output
+  while (namesArr.length >= 2){
+    outputArr.push([spliceRandom(namesArr), spliceRandom(namesArr)]);
+  }
+  // if we had an odd number, one will be left over
+  // add it to the output alone
+  if (namesArr.length === 1){
+    outputArr.push(namesArr);
+  }
+  return outputArr;
+};
+
+// helper function to splice out and return a random value from the array
+var spliceRandom = function(arr){
+  var randomIndex = Math.random() * arr.length;
+  var randomlyRemoved = arr.splice(randomIndex, 1);
+  return randomlyRemoved[0];
+};
+
+
 
 /* Iterators */
 

@@ -61,15 +61,36 @@ For the following exercises, start from the `clubs` variable.
 
 1. Oops, the school is losing extracurricular funding.  Remove one of the clubs from the array. Add a comment to say which club has been defunded.
 
-## Iterators
 
+## Stretch: Array Manipulation Practice 
 
-1. `each(arr, callback)`
+1. `getPairs(names)`
+
+	Write a function called `getPairs` that takes in an array of names and outputs random pairs of names. How could you use this to generate pairs of students for pair programming?
+		
+	```js
+	// Example of getPairs!
+	
+	// set up names argument
+	var students = ["Johnny", "Emily A", "Ling", "Jason", "Franchesca"];
+	// call getPairs function
+	getPair(students);
+	// returns [["Emily A", "Ling"], ["Franchesca", "Jason"] , ["Johnny"]]
+	```
+	
+
+## Iteration Methods
+
+JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `arr.reduce(callback)`. The array being worked on is in front, and the callback function that says what to do is inside the parentheses. We don't know the syntax to create that setup quite yet, so we'll make the array an argument of our homemade iteration methods.
+
+1. `each(arr, callback)`   
+
+    _corresponding javascript method: `arr.forEach(callback)`_
 
 	Write a function called `each` that takes in an array argument (called `arr`) and a function argument (called `callback`). The function argument should itself take two arguments: one element from the array, and the index of that element.  The `each` function should loop through all elements in the array and call `cb` on each one. After the loop, `each` should return `arr`, the original array that was passed in.
 
 	```js
-	// Example of how to use each!
+	// Example of how to use OUR each!
 
 	// set up variables for arguments
 	var lottoNumbers = [18, 14, 15];             // our arr
@@ -86,21 +107,12 @@ For the following exercises, start from the `clubs` variable.
 
 	```
 
-1. `getPairs(names)`
 
-	Write a function called `getPairs` that takes in an array of names and outputs random pairs of names. How could you use this to generate pairs of students for pair programming?
-		
-	```js
-	// Example of getPairs!
-	
-	// Get Names
-	var names = ["Johnny", "Emily A", "Ling"];
-	getPair(names);
-	// returns [["Emily A", "Ling"], ["Johnny"]]
-	```
-	
 
 1. `partition(arr, truthTest)`
+
+	
+    _corresponding javascript method: `arr.forEach(callback)`_
 
 
 	Write a function called `partition` that takes in an array and another function (a truth test).  `partition` should split the array into two groups: one whose elements all pass the truth test and one whose elements all fail. It should return a new array with the two groups nested inside.
