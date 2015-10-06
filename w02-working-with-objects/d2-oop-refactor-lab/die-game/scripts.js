@@ -33,7 +33,7 @@ function DieHandler() {
 DieHandler.prototype.addListeners = function() {
     $('#roller button.roll').on('click', this.rollDice.bind(this));
     $('#roller button.add').on('click', this.addDie.bind(this));
-}
+};
 
 DieHandler.prototype.addDie = function() {
     // add die to dice array

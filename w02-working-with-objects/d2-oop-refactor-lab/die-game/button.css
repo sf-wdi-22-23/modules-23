@@ -1,0 +1,28 @@
+/* styles for the toggle button */
+
+div.button-container {
+    float: right;
+}
+
+.die {
+    text-align: center;
+    float: left;
+    border: 1px solid black;
+    padding: 40px;
+}
+
+.clicked {
+    color: white;
+    background-color: red;
+    border-radius: 30px;
+    width: 100px;
+    height: 30px;
+}
+
+button {
+    color: yellow;
+    background-color: blue;
+    border-radius: 15px;
+    width: 75px;
+    height: 40px;
+}
