@@ -81,16 +81,18 @@ For the following exercises, start from the `clubs` variable.
 
 ## Iteration Methods
 
-JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `arr.reduce(callback)`. The array being worked on is in front, and the callback function that says what to do is inside the parentheses. We don't know the syntax to create that setup quite yet, so we'll make the array an argument of our homemade iteration methods.
+JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `arr.reduce(callback)`. The array being worked on is in front, and the callback function that says what to do is inside the parentheses. We don't know the syntax to create that setup quite yet, so we'll make the array an argument of our homemade iteration methods.  We'll also implement a few that don't come built in to JavaScript: `pluck` and `partition`.
 
-1. `each(arr, callback)`   
-
-    _corresponding javascript method: `arr.forEach(callback)`_
-
-	Write a function called `each` that takes in an array argument (called `arr`) and a function argument (called `callback`). The function argument should itself take two arguments: one element from the array, and the index of that element.  The `each` function should loop through all elements in the array and call `cb` on each one. After the loop, `each` should return `arr`, the original array that was passed in.
+1. Write a function called `each` that takes in an array argument (called `arr`) and a function argument (called `callback`). This will be our version of JavaScript's `forEach`. The function argument (`callback`) should take two arguments: one element from the array, and the index of that element.  The `each` function should loop through the array and call `callback` once for each element. After the loop, `each` should return `arr`, the original array that was passed in.  
 
 	```js
-	// Example of how to use OUR each!
+	// starter structure for OUR each
+	var each = function(arr, callback){
+	// YOUR CODE IN HERE!
+	
+	
+	
+	}
 
 	// set up variables for arguments
 	var lottoNumbers = [18, 14, 15];             // our arr
@@ -109,16 +111,16 @@ JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `ar
 
 
 
-1. `partition(arr, truthTest)`
-
-
-    _corresponding javascript method: `arr.forEach(callback)`_
-
-
-	Write a function called `partition` that takes in an array and another function (a truth test).  `partition` should split the array into two groups: one whose elements all pass the truth test and one whose elements all fail. It should return a new array with the two groups nested inside.
+1. Write a function called `partition` that takes in an array and another function (a callback).  The callback should take in an element and an index and return `true` or `false`. `partition` should split the array into two groups: one whose elements all resulted in `true` and one whose elements all resulted in `false`. It should return a new array with the two groups nested inside.
 
 	```js
-	// Example of how to use partition!
+	// starter structure for our partition
+	var partition = function(arr, callback){
+	// YOUR CODE IN HERE!
+	
+	
+	
+	}
 
 	// set up variables for arguments
 	var nums = [0, 1, 2, 3, 4, 5];	// our arr
@@ -133,12 +135,16 @@ JavaScript's built-in iteration methods look like `arr.forEach(callback)` or `ar
 
 
 
-1. `pluck(arr, key)`
-
-	Write a function called `pluck` that takes in an array of objects and a key. `pluck` should iterate through the array, pick out the value each object has associated with the given key, and return a new array containing those values.
+1. Write a function called `pluck` that takes in an array of objects and a string that is one of their keys. `pluck` should iterate through the array, pick out the value each object has associated with the given key, and return a new array containing those values.  This iteration method won't use a callback.
 
 	```js
-	// Example of how to use pluck function!
+	// starter structure for our pluck
+	var pluck = function(arr, key){
+	// YOUR CODE IN HERE!
+	
+	
+	
+	}
 
 	// set up variable for arguments
 	var grandparents = [

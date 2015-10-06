@@ -490,7 +490,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td>OOP Reading (Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-homework" target="_blank">OOP Reading</a> (Brianna)</td>
     <td>Forms and Zapier API Reading (Juliana)</td>
     <td>Google Maps API (Ben)</td>
     <td><a href="https://github.com/airbnb/javascript/tree/master/es5">Airbnb JS Style Guide</a> (Alex)</td>
