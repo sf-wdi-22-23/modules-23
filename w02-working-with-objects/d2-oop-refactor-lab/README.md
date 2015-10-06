@@ -2,65 +2,74 @@
 
 | Objectives |
 | :--- |
-| DRY up existing code by creating reusable constructor functions |
+| Create reusable constructor functions to DRY up code |
 | Restructure code step-by-step |
 
 ## What is Object-oriented Programming?
 
-[**Object-oriented programming**](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP) is a programming paradigm based on the concept of "objects", which are data structures that contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.
+[**Object-oriented programming**](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP) is a programming paradigm based on the concept of "objects", which are data structures that contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.  
 
+Object-oriented programming is a way to store and manage data. OOP lets us encapsulate data and behavior in a single place (generally a class or module). 
 
+### Analogy
 
-#### Analogy:
+Think of it like creating a character in a game or when writing a story. What can they do? What attributes do they have? Using objects in JS groups details together similarly -- instead of having to write a paragraph of explanation about a character every time you refer to them, you can just refer to that character's name.  
 
-Object-oriented programming is a way to store and manage data. OOP is a way to encapsulate data and behavior in a single place (generally a class or module). Think of it like creating a character in a game or when writing a story. What can they do? What attributes do they have? Instead of having to write a paragraph of explanation about a character every time you refer to them, you can just refer to that character's name.
+When we use constructors and prototypes to define an object type, we take it one step further. That's like creating a race of characters. Instead of explaining every time we meet an elf that the character is a tall, slender humanoid with pointy ears, we can just say "an elf."  
 
-#### Benefits of Using Object-oriented Programming
+![elves from some Lord of the Rings film](http://usercontent1.hubimg.com/2383594.jpg)
+
+### Benefits of Using Object-oriented Programming
 
 * **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
 
 * **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function / object!
 
-#### Example
+### Example
 
-**Non-OOP - without objects!**
+####Non-OOP - without objects  
 
 ```js
-var petNames = ["Morocco", "FlufferNutter", "Mr. Bubbles"];
-var petSpecies = ["dog", "gerbil", "fish"];
+var petNames = ["FlufferNutter", "Mr. Bubbles"];
+var petSpecies = ["gerbil", "fish"];
+
+petNames.push("Morocco");
+petSpecies.push("dog");
 
 function describe(name, species){
   console.log(name + " is a " + species + ".");
 }
 
-describe(petNames[0], petSpecies[0]);
+describe(petNames[2], petSpecies[2]);
 // ^ logs "Morocco is a dog."
 ```
 
-**Non-OOP - with objects!**
+####Non-OOP - with objects
 
 ```js
 var pets = [
-            {name: "Morocco", species: "dog"},
             {name: "FlufferNutter", species: "gerbil"}, 
             {name: "Mr. Bubbles", species:"fish"}
             ];
+
+var morocco = {name: "Morocco", species: "dog"};
+pets.push(morocco);
 
 function describe(pet){
   console.log(pet["name"] + " is a " + pet["species"] + ".");
 }
 
-describe(pets[0]);
+describe(pets[2]);
 // ^ logs "Morocco is a dog."
 ```
 
-**OOP - constructor only**
+####OOP - constructor only
 
 ```js
 function Pet(name, species){
   this.name = name;
   this.species = species;
-  this.introduce = function(){
+  this.describe = function(){
     console.log(this.name + " is a " + this.species + ".");
   }
 }
@@ -70,7 +79,10 @@ morocco.describe();
 // ^ logs "Morocco is a dog."
 ```
 
-**OOP - with prototype**
+####OOP - with prototype
+
+Features on the prototype are shared, so 
+
 
 ```js
 function Pet(name, species){
