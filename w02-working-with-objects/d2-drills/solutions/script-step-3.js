@@ -21,9 +21,9 @@ function daysLeft() {
 }
 
 
-$("#datepicker").on("change", function(){
+$("#datepicker").on("change", function(a){
 	daysLeft();
-	console.log( a );
+	console.log(a);
 });
 
 
