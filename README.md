@@ -475,7 +475,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module1</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dawn-arrays-objects" target="_blank">Array & Object Drills</a> (Brianna, Braus)</td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/w02_d02_dawn_OOP/w02-working-with-objects/d2-dawn-OOP/readme.md">OOP Constructors & Prototypes</a> (Alex, Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-dawn-OOP">OOP Constructors & Prototypes</a> (Alex, Braus)</td>
     <td>Forms & JSON (Ben, Juliana)</td>
     <td>Bootstrap Components (Braus, Alex)</a></td>
     <td>Review (Matt, Brianna)</td>
