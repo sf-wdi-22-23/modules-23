@@ -79,8 +79,6 @@ There are two ways to use labels correctly:
 [file]:   https://raw.github.com/h4w5/html_form_cheatsheet_images/master/input-file.png
 [submit]: https://raw.github.com/h4w5/html_form_cheatsheet_images/master/input-submit.png
 
-More Inputs! [Dive In To HTML5](http://diveintohtml5.info/forms.html)
-
 ### Important Attributes
 
 All input types (including `<textarea>`s):
