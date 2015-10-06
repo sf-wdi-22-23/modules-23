@@ -146,4 +146,4 @@ MDN has a number of exhaustive resources on HTML forms and inputs. It can be a l
 * [HTML Form Reference](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms) is a great resource and has been distilled below.
 * [HTML Input Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 * [Native Form Widgets](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets)
-* [Form Validation] [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation).
+* [Form Validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation).

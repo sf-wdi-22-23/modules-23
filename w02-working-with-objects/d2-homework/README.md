@@ -4,7 +4,7 @@
 Read [this doc](forms.md) on HTML forms.
 
 ## API Reading
-Read [Zapier API's](https://zapier.com/learn/apis/) chapters 1-3. Do the homework at the end of chapters 2+3!
+Read [Zapier API's](https://zapier.com/learn/apis/) chapters 1-3. Do the homework at the end of chapters 2+3! (It's quick and fun)
 
 ## Submission
 
