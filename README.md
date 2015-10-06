@@ -466,8 +466,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Drills</td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/drills" target="_blank">Extend Kyrel</a> (Brianna, Braus)</td>
-    <td>JS built in Objects: Math, Date, Array, String (Ben, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-drills" target="_blank">Extend Kyrel</a> (Brianna, Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-drills">JS built in Objects: Math, Date, Array, String</a> (Ben, Matt)</td>
     <td>HTML Strings (Matt, Alex)</td>
     <td>Frequency Counter (Matt, Brianna)</td>
     <td>Assessment (Juliana, Brianna)</td>
@@ -475,7 +475,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module1</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dawn-arrays-objects" target="_blank">Array & Object Drills</a> (Brianna, Braus)</td>
-    <td>OOP Constructors & Prototypes (Alex, Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-dawn-OOP">OOP Constructors & Prototypes</a> (Alex, Braus)</td>
     <td>Forms & JSON (Ben, Juliana)</td>
     <td>Bootstrap Components (Braus, Alex)</a></td>
     <td>Review (Matt, Brianna)</td>
