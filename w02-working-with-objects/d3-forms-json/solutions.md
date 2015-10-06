@@ -1,34 +1,5 @@
 **Forms & Queries** -- Solutions
 
-## Query Parameters
-
-#### convertToObject(query_parameter_string)
-``` javascript
-// var string = "a=apple&b=banana&c=cola&d=duck&e=egads&f=fancy";
-function convertToObject(qp) {
-    var output = {};
-    if (!qp) { return output; }
-    qp.split("&").forEach(function(sub_str){
-        var pair = sub_str.split("=");
-        output[pair[0]] = pair[1];
-    })
-    return output;
-}
-// convertToObject(string);
-```
-
-#### convertToQueryParameter(object)
-``` javascript
-// var object = {first: "alpha", last: "omega"};
-function convertToQueryParameter(o) {
-    var pairs = Object.keys(o).map(function(key){
-        return key + "=" + o[key];
-    });
-    return pairs.join("&");
-}
-// convertToQueryParameter(object);
-```
-
 ## Forms
 
 ####Login Form

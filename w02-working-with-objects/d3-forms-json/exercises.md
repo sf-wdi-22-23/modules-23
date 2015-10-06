@@ -2,34 +2,37 @@
 
 Please clone and use this [blank template](https://github.com/sf-wdi-22-23/blank_template) as your starting point.
 
-### Query Parameters -- [solutions](solutions.md)
-
-0. Create a function that converts a string into an object, using the following principle:  
-    - A `=` separates a `key` on the left from a `value` on the right.
-    - An `&` separates key-value pairs from each other.
-    - The string may not contain spaces.
-
-Here's how your conversion function should work:
-
-```
-var qp = "first=alpha&last=omega";
-convertToObject(qp); // {first: "alpha", last: "omega"}
-```
-
-Keep in mind that the string could be very long:
-
-```
-var qp = "a=apple&b=banana&c=cola&d=duck&e=egads&f=fancy";
-```
-
-Bonus: create the reverse function:
-```
-var o = {first: "alpha", last: "omega"};
-convertToQueryParameter(o); // "first=alpha&last=omega";
-```
-
-###Forms -- [solutions](solutions.md)
+## Forms -- [solutions](solutions.md)
 For the following exercises, please ONLY use html.
+
+These javascript functions will come in handy:
+
+#### convertToObject(query_parameter_string)
+``` javascript
+// var string = "a=apple&b=banana&c=cola&d=duck&e=egads&f=fancy";
+function convertToObject(qp) {
+    var output = {};
+    if (!qp) { return output; }
+    qp.split("&").forEach(function(sub_str){
+        var pair = sub_str.split("=");
+        output[pair[0]] = pair[1];
+    })
+    return output;
+}
+// convertToObject(string);
+```
+
+#### convertToQueryParameter(object)
+``` javascript
+// var object = {first: "alpha", last: "omega"};
+function convertToQueryParameter(o) {
+    var pairs = Object.keys(o).map(function(key){
+        return key + "=" + o[key];
+    });
+    return pairs.join("&");
+}
+// convertToQueryParameter(object);
+```
 
 0. **Login Form**. Create an html `form` with two inputs: one for a username (named "username"), the other for password (named "password") (normally you don't see your password when you type it, so make sure it's blocked out!). What happens when you click submit?
 
