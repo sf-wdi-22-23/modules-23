@@ -1,9 +1,6 @@
-**Forms & Queries** -- Exercises
+# Forms -- Exercises
 
 Please clone and use this [blank template](https://github.com/sf-wdi-22-23/blank_template) as your starting point.
-
-## Forms -- [solutions](solutions.md)
-For the following exercises, please ONLY use html.
 
 These javascript functions will come in handy:
 
@@ -34,6 +31,9 @@ function convertToQueryParameter(o) {
 // convertToQueryParameter(object);
 ```
 
+### Base Exercises
+For the following exercises, please ONLY use html.
+
 0. **Login Form**. Create an html `form` with two inputs: one for a username (named "username"), the other for password (named "password") (normally you don't see your password when you type it, so make sure it's blocked out!). What happens when you click submit?
 
 1. **Doomed Yet?** Create an html `form` that, on submit, sends the user to "hasthelargehadroncolliderdestroyedtheworldyet.com". Hint: what's the form action? Bonus: Can you change the submit button to say "Are we doomed?".
@@ -49,4 +49,8 @@ function convertToQueryParameter(o) {
 
 4. **Movie Search**. Create an html `form` that searches for movies on the OMDB API by title and by year. You will need to take care to use the correct query parameters. The only way to find out what they are is to [read their documentation](http://omdbapi.com/#usage).
 
-6. Stretch: **Return of the Movie Search**. It's great that we can find data about movies using the Open Movie Database, but it's not very helpful having all that data *somewhere else*. It would be awesome if we could "pull in" that data and use it on our webpage. It's time to learn about AJAX! Your goal is to figure out how to use [jQuery's `get` method](api.jquery.com/jQuery.get/) to request information (JSON) about the movie "Primer". Can you console.log the movie description? HINT: start by hitting the endpoint directly, then figure out how to "drill down" through the json object to get to the data you want.
+### Stretch Exercise
+
+You will need to use javascript for this exercise.
+
+6. **Return of the Movie Search**. It's great that we can find data about movies using the Open Movie Database, but it's not very helpful having all that data *somewhere else*. It would be awesome if we could "pull in" that data and use it on our webpage. It's time to learn about AJAX! Your goal is to figure out how to use [jQuery's `get` method](api.jquery.com/jQuery.get/) to request information (JSON) about the movie "Primer". Can you console.log the movie description? HINT: start by hitting the endpoint directly, then figure out how to "drill down" through the json object to get to the data you want.
