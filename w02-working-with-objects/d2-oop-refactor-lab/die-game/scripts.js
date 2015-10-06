@@ -30,16 +30,29 @@ function DieHandler() {
     this.dice = [];
 }
 
+// add event listeners (to interact with DOM)
 DieHandler.prototype.addListeners = function() {
+    console.log('this in addListeners: ', this);
+    // The bind method lets us say what a function should use
+    // for its context, what its 'this' will be. 
+    // We'll bind this -- the instance of DieHandler -- to the rollDice 
+    // and addDie methods so they remember to affect the dice handler
+    // instead of the button that was clicked.
     $('#roller button.roll').on('click', this.rollDice.bind(this));
     $('#roller button.add').on('click', this.addDie.bind(this));
+
+    // THESE DO NOT WORK because it assumes we want to call 
+    // rollDice with the button that was clicked
+    // $('#roller button.roll').on('click', this.rollDice);
+    // $('#roller button.add').on('click', this.addDie);
 };
 
 DieHandler.prototype.addDie = function() {
+    console.log('this in addDie: ', this);
     // add die to dice array
     this.dice.push(new Die());
     // add die to DOM
-    $('.dice').append('<div class="die"> 0 </div>');
+    $('.dice-container').append('<div class="die"> 0 </div>');
 };
 
 DieHandler.prototype.rollDice = function() {
@@ -51,83 +64,3 @@ DieHandler.prototype.rollDice = function() {
         $('.die')[i].innerHTML = this.dice[i].currentSide;
     }
 }
-
-// // // Solution
-// // $(document).ready(function() {
-// //   new DieController();
-// // });
-// //
-// // // Controller
-// // // => Listens for clicks
-// // // => Tell View to render
-// // // => Tell Model to roll die
-// // // => Tell Model to add die
-// // function DieController() {
-// //   this.model = new DieModel();
-// //   // this.model refers to object being created & can use methods of DieModel
-// //   this.view = new DieView();
-// //   // this.view refers to the object being created & can use methods of DieView
-// //   this.listenAddDie();
-// //   this.listenRollDice();
-// // }
-// //
-// // DieController.prototype.addDie = function() {
-// //   this.model.addDie();
-// //   this.view.renderDie();
-// // };
-// //
-// // DieController.prototype.rollDice = function() {
-// //   this.model.rollDice();
-// //   this.view.updateDice(this.model.diceArray);
-// // };
-// //
-// // DieController.prototype.listenAddDie = function() {
-// //   $('#roller button.add').on('click', this.addDie.bind(this));
-// // };
-// //
-// // DieController.prototype.listenRollDice = function() {
-// //   $('#roller button.roll').on('click', this.rollDice.bind(this));
-// // };
-// //
-// //
-// // // Model ////////////////////////////
-// // // => store current value of each die
-// // // => store collection of dice
-// // function DieModel() {
-// //   this.diceArray = [];
-// // }
-// //
-// // DieModel.prototype.addDie = function() {
-// //   this.diceArray.push(new Die());
-// // };
-// //
-// // DieModel.prototype.rollDice = function() {
-// //   for (var i = 0; i < this.diceArray.length; i++) {
-// //     console.log("in roll dice loop");
-// //     this.diceArray[i].roll();
-// //   }
-// // };
-// // // each Die object stores value of its current side
-// // function Die() {
-// //   this.currentSide = 0;
-// // }
-// //
-// // Die.prototype.roll = function() {
-// //   this.currentSide = Math.floor((Math.random()*6)+1);
-// // };
-// //
-// // // View /////////////////////////////////////
-// // function DieView() {
-// // }
-// // // => Render Board (based on info controller provides from model)
-// // DieView.prototype.renderDie = function() {
-// //   $('.dice').append('<div class="die"> 0 </div>');
-// // };
-// //
-// // DieView.prototype.updateDice = function(data) {
-// //   for (var i = 0; i < data.length; i++) {
-// //   console.log('in updateDice loop');
-// //      $('.die')[i].innerHTML = data[i].currentSide;
-// //      console.log(data[i].currentSide);
-// //   }
-// // };

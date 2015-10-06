@@ -25,7 +25,9 @@ When we use constructors and prototypes to define an object type, we take it one
 
 * **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function / object!
 
-### Example
+## Examples
+
+### Pets
 
 ####Non-OOP - without objects  
 
@@ -81,7 +83,7 @@ morocco.describe();
 
 ####OOP - with prototype
 
-Features on the prototype are shared, so 
+Features on the prototype are shared! 
 
 
 ```js
@@ -100,38 +102,6 @@ morocco.describe();
 
 **Non-OOP **
 
-```js
-var board = [ ["", "", ""], [""], [""], [""] ];
-
-var currentPlayer = "X"
-
-var makeMove = function(currentPlayer) {
-  if (currentPlayer === "X") {
-    // logic determining how to edit board based on clicked square
-    gameWon();
-    currentPlayer = "O"
-    makeMove(currentPlayer);
-  } else {
-    // logic determining how to edit board based on clicked square
-    gameWon();
-    currentPlayer = "X"
-    makeMove(currentPlayer);
-  }
-}
-
-var checkBoard = function(board) {
-  // logic to check board
-  // return "X" / "O" or "neither"
-};
-
-var gameWon = function(playerName) {
-  if (checkBoard() === "neither") {
-    return false;
-  } else {
-    return "Player " + playerName + " wins!";
-  }
-};
-```
 
 **OOP (abstract):**
 
