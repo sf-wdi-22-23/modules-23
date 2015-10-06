@@ -2,7 +2,7 @@
 
 ## Tuesday Lab: JS built-in Objects: Math, Date, etc.
 
-This exercise will take you through a series of exercises. You will be provided
+This morning's drills will take you through a series of exercises. You will be provided
 a series of JavaScript files, each of which has new activities that build on what
 you did in the last one. The files are located in the solutions directory.
 
