@@ -466,36 +466,6 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Drills</td>
-<<<<<<< HEAD
-    <td>Extend Kyrel (Brianna, Professor X)</td>
-    <td>JS built in Objects: Math, Date, etc.(Ben, Professor X)</td>
-    <td>HTML Strings (Professor X, Alex)</td>
-    <td>Merging w/ “Assertions” (Professor X)</td>
-    <td>Assessment (Juliana)</td>
-  </tr>
-  <tr>
-    <td>Module1</td>
-    <td>Array + Object Drills (Brianna, Braus)</td>
-    <td>OOP: Constructors & Prototypes (Alex, Braus)</td>
-    <td>Forms & JSON (Ben, Juliana)</td>
-    <td>Bootstrap Components/JS (dropdowns, nav) (Braus, Alex)</td>
-    <td>Review (Juliana, Brianna)</td>
-  </tr>
-  <tr>
-    <td>Module2</td>
-    <td>Functions: Recursion, Callbacks and Closures (Juliana, Ben)</td>
-    <td>OOP Game Refactor Lab (Brianna, Professor X)</td>
-    <td>Intro AJAX: Giphy Lab (Alex, Braus)</td>
-    <td>Geoquakes Lab (Juliana, Ben)</td>
-    <td>Weekend Lab: OOP To Do List, Stretch: API - wunderground (Alex)</td>
-  </tr>
-  <tr>
-    <td>HW</td>
-    <td>OOP Reading (Brianna)</td>
-    <td>HTML form + mdn inputs reading (Braus), zapier api reading</td>
-    <td><a href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps API (Ben)</td>
-    <td>AirBnb JS Style Guide (Alex)</td>
-=======
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/drills" target="_blank">Extend Kyrel</a> (Brianna, Braus)</td>
     <td>JS built in Objects: Math, Date, Array, String (Ben, Matt)</td>
     <td>HTML Strings (Matt, Alex)</td>
@@ -524,7 +494,6 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Forms and Zapier API Reading (Juliana)</td>
     <td>Google Maps API (Ben)</td>
     <td><a href="https://github.com/airbnb/javascript/tree/master/es5">Airbnb JS Style Guide</a> (Alex)</td>
->>>>>>> 0bf1d3b721285afc76e9a1170b8f46f1dc23e70e
     <td></td>
 
   </tr>
