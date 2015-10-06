@@ -1,4 +1,6 @@
-function Button() {
+// ToggleButton - a more abstract example of an object type
+// that interacts with the DOM. 
+function ToggleButton() {
   var buttonState = "not clicked";
 
   this.handleClick = function() {
@@ -16,13 +18,13 @@ function Button() {
       $(this).removeClass("clicked");
       $(this).text("Click me!");
     }
-  }
-};
+  };
+}
 
 $(document).ready(function() {
   // when the document is ready
-  // Make an instance of a Button
-  var myButton = new Button();
+  // Make an instance of a ToggleButton
+  var myButton = new ToggleButton();
   console.log(myButton);
   // and attach this event listener to it
   $('#my-button').on('click', myButton.handleClick);
