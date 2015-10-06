@@ -102,6 +102,31 @@ morocco.describe();
 
 **Non-OOP **
 
+```js
+$(document).ready(function() {
+  // when the document is ready
+  // set up a variable to track whether button is clicked
+  var buttonState = 'not clicked';
+
+  // attach this event listener to button
+  $('#my-button').on('click', function(){
+      console.log(buttonState);
+      if (buttonState === "not clicked") {
+        console.log("unclicked button was clicked");
+        buttonState = "clicked";
+        // clicked is a class that changes the button's CSS
+        $(this).addClass("clicked");
+        $(this).text("Unclick me!");
+      } else if (buttonState === "clicked") {
+        console.log("clicked button was unclicked");
+        buttonState = "not clicked";
+        // clicked is a class that changes the button's CSS
+        $(this).removeClass("clicked");
+        $(this).text("Click me!");
+      }
+    });
+});
+```
 
 **OOP (abstract):**
 
@@ -117,36 +142,42 @@ A button that has two states: clicked and not clicked, as well as a function tha
 
 ```js
 // button.js
-function Button() {
-  // variable inside closure scope of Button constructor function
-  // not accessible outside of the function
+
+// ToggleButton - a more abstract example of an object type
+// that interacts with the DOM. 
+function ToggleButton() {
   var buttonState = "not clicked";
 
   this.handleClick = function() {
+    console.log(buttonState);
     if (buttonState === "not clicked") {
+      console.log("unclicked button was clicked");
       buttonState = "clicked";
       // clicked is a class that changes the button's CSS
       $(this).addClass("clicked");
       $(this).text("Unclick me!");
     } else if (buttonState === "clicked") {
+      console.log("clicked button was unclicked");
       buttonState = "not clicked";
       // clicked is a class that changes the button's CSS
       $(this).removeClass("clicked");
       $(this).text("Click me!");
     }
-  }
-};
-
+  };
+}
 
 $(document).ready(function() {
   // when the document is ready
-  // Make an instance of a Button
-  var myButton = new Button();
-  // and attach this event listener to the corresponding DOM element
+  // Make an instance of a ToggleButton
+  var myButton = new ToggleButton();
+  console.log(myButton);
+  // and attach this event listener to it
   $('#my-button').on('click', myButton.handleClick);
   // passing the button's click handling function as a callback
 });
 ```
+
+### Dice
 
 ```js
 // Pile of JavaScript
