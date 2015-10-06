@@ -79,7 +79,7 @@ There are two ways to use labels correctly:
 [file]:   https://raw.github.com/h4w5/html_form_cheatsheet_images/master/input-file.png
 [submit]: https://raw.github.com/h4w5/html_form_cheatsheet_images/master/input-submit.png
 
-[Dive In To HTML5 — More inputs!](http://diveintohtml5.info/forms.html#type-email)
+More Inputs! [Dive In To HTML5](http://diveintohtml5.info/forms.html)
 
 ### Important Attributes
 
@@ -147,11 +147,11 @@ You may need the user to enter a specific amount of characters. Let's say you ne
 ```
 
 
-##Further Reading
+##Further Reading (optional)
 
 MDN has a number of exhaustive resources on HTML forms and inputs. It can be a lot to absorb, so look for patterns and try to grasp the big picture.
 
 * [HTML Form Reference](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms) is a great resource and has been distilled below.
 * [HTML Input Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 * [Native Form Widgets](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets)
-* [Form Validation] [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation).
+* [Form Validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation).
