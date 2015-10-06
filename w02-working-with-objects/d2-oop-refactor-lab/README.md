@@ -2,12 +2,89 @@
 
 | Objectives |
 | :--- |
-| DRY up your code by creating reusable constructor functions |
+| DRY up existing code by creating reusable constructor functions |
 | Restructure code step-by-step |
 
 ## What is Object-oriented Programming?
 
 [**Object-oriented programming**](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP) is a programming paradigm based on the concept of "objects", which are data structures that contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.
+
+
+
+#### Analogy:
+
+Object-oriented programming is a way to store and manage data. OOP is a way to encapsulate data and behavior in a single place (generally a class or module). Think of it like creating a character in a game or when writing a story. What can they do? What attributes do they have? Instead of having to write a paragraph of explanation about a character every time you refer to them, you can just refer to that character's name.
+
+#### Benefits of Using Object-oriented Programming
+
+* **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
+
+* **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function / object!
+
+#### Example
+
+**Non-OOP - without objects!**
+
+```js
+var petNames = ["Morocco", "FlufferNutter", "Mr. Bubbles"];
+var petSpecies = ["dog", "gerbil", "fish"];
+
+function describe(name, species){
+  console.log(name + " is a " + species + ".");
+}
+
+describe(petNames[0], petSpecies[0]);
+// ^ logs "Morocco is a dog."
+```
+
+**Non-OOP - with objects!**
+
+```js
+var pets = [
+            {name: "Morocco", species: "dog"},
+            {name: "FlufferNutter", species: "gerbil"}, 
+            {name: "Mr. Bubbles", species:"fish"}
+            ];
+
+function describe(pet){
+  console.log(pet["name"] + " is a " + pet["species"] + ".");
+}
+
+describe(pets[0]);
+// ^ logs "Morocco is a dog."
+```
+
+**OOP - constructor only**
+
+```js
+function Pet(name, species){
+  this.name = name;
+  this.species = species;
+  this.introduce = function(){
+    console.log(this.name + " is a " + this.species + ".");
+  }
+}
+
+var morocco = new Pet("Morocco", "dog");
+morocco.describe();
+// ^ logs "Morocco is a dog."
+```
+
+**OOP - with prototype**
+
+```js
+function Pet(name, species){
+  this.name = name;
+  this.species = species;
+}
+Pet.prototype.describe = function(){
+    console.log(this.name + " is a " + this.species + ".");
+}
+
+var morocco = new Pet("Morocco", "dog");
+morocco.describe();
+// ^ logs "Morocco is a dog."
+```
 
 **Non-OOP **
 
@@ -88,17 +165,6 @@ $(document).ready(function() {
   // passing the button's click handling function as a callback
 });
 ```
-
-#### Analogy:
-
-Object-oriented programming is a way to store and manage data. OOP is a way to encapsulate data and behavior in a single place (generally a class or module). Think of it like creating a character in a game or when writing a story. What can they do? What attributes do they have? Instead of having to write a paragraph of explanation about a character every time you refer to them, you can just refer to that character's name.
-
-#### Benefits of Using Object-oriented Programming
-
-* **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
-
-* **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function / object!
-
 
 ```js
 // Pile of JavaScript
@@ -214,29 +280,6 @@ Its heart is a series of small behavior preserving transformations. Each transfo
 
 ## Break Time
 
-### 15 minutes
+### 10 minutes
 
 <img src="http://i.giphy.com/wsEX8uMrTRDoI.gif" style="width: 250px;">
-
-
----
-
----
-
-##Further Reading
-
-Curious for more? Looking for more information? Check out these resources:
-
-* [Article name](url) - Source
-* [Article name](url) - Source
-* [Article name](url) - Source
-
----
-
-## Starter Challenges
-
-1.
-
-2.
-
-3.
