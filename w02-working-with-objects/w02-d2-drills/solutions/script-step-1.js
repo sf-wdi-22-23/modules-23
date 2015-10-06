@@ -1,4 +1,4 @@
-// Before you begin, take a good look at date-object.html
+// Before you begin, take a good look at index.html
 // You don't have to make any changes to that file, but you should be familiar with the structure of the file--especially its id's.
 
 // Our first challenge is to display the current day, month and year in an HTML string, like this:
