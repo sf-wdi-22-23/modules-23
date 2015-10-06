@@ -228,4 +228,4 @@ $(document).ready(function() {
 });
 ```
 
-Refactor!
+Refactor! Follow the directions in exercises.md to refactor the code in starter-code.
