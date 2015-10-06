@@ -100,9 +100,17 @@ morocco.describe();
 // ^ logs "Morocco is a dog."
 ```
 
-**Non-OOP **
+### Button
+
+####Non-OOP
+
+```html
+<!--index.html-->
+<button id="my-button">Click Me</button>
+```
 
 ```js
+//button.js
 $(document).ready(function() {
   // when the document is ready
   // set up a variable to track whether button is clicked
@@ -128,15 +136,16 @@ $(document).ready(function() {
 });
 ```
 
-**OOP (abstract):**
+####OOP (abstract)
 
 ```
 A button that has two states: clicked and not clicked, as well as a function that fires when clicked.
 ```
 
-**OOP (concrete):**
+####OOP (concrete)
 
 ```html
+<!--index.html-->
 <button id="my-button">Click Me</button>
 ```
 
@@ -177,104 +186,14 @@ $(document).ready(function() {
 });
 ```
 
-### Dice
-
-```js
-// Pile of JavaScript
-$(document).ready(function() {
-  $('#roller button.add').on('click', function() {
-    console.log("Button clicked");
-    $('.dice').append('<div class="die">0</div>');
-  });
-
-  $('#roller button.roll').on('click', function() {
-    $('.die').each(function(k, die) {
-      var value = Math.floor((Math.random()*6)+1);
-      $(die).text(value);
-    });
-  });
-});
-
-// Object-oriented refactor
-$(document).ready(function() {
-  new DieController();
-});
-
-// Controller
-// => Listens for clicks
-// => Tell View to render
-// => Tell Model to roll die
-// => Tell Model to add die
-function DieController() {
-  this.model = new DieModel();
-  // this.model refers to object being created & can use methods of DieModel
-  this.view = new DieView();
-  // this.view refers to the object being created & can use methods of DieView
-  this.listenAddDie();
-  this.listenRollDice();
-}
-
-DieController.prototype.addDie = function() {
-  this.model.addDie();
-  this.view.renderDie();
-};
-
-DieController.prototype.rollDice = function() {
-  this.model.rollDice();
-  this.view.updateDice(this.model.diceArray);
-};
-
-DieController.prototype.listenAddDie = function() {
-  $('#roller button.add').on('click', this.addDie.bind(this));
-};
-
-DieController.prototype.listenRollDice = function() {
-  $('#roller button.roll').on('click', this.rollDice.bind(this));
-};
 
 
-// Model ////////////////////////////
-// => store current value of each die
-// => store collection of dice
-function DieModel() {
-  this.diceArray = [];
-}
+## Break Time
 
-DieModel.prototype.addDie = function() {
-  this.diceArray.push(new Die());
-};
+### 10 minutes
 
-DieModel.prototype.rollDice = function() {
-  for (var i = 0; i < this.diceArray.length; i++) {
-    console.log("in roll dice loop");
-    this.diceArray[i].roll();
-  }
-};
-// each Die object stores value of its current side
-function Die() {
-  this.currentSide = 0;
-}
+<img src="http://i.giphy.com/wsEX8uMrTRDoI.gif" style="width: 250px;">
 
-Die.prototype.roll = function() {
-  this.currentSide = Math.floor((Math.random()*6)+1);
-};
-
-// View /////////////////////////////////////
-function DieView() {
-}
-// => Render Board (based on info controller provides from model)
-DieView.prototype.renderDie = function() {
-  $('.dice').append('<div class="die"> 0 </div>');
-};
-
-DieView.prototype.updateDice = function(data) {
-  for (var i = 0; i < data.length; i++) {
-  console.log('in updateDice loop');
-     $('.die')[i].innerHTML = data[i].currentSide;
-     console.log(data[i].currentSide);
-  }
-};
-```
 
 ## Why refactor?
 
@@ -291,8 +210,24 @@ Its heart is a series of small behavior preserving transformations. Each transfo
 
 ---
 
-## Break Time
 
-### 10 minutes
+## Dice!
 
-<img src="http://i.giphy.com/wsEX8uMrTRDoI.gif" style="width: 250px;">
+```js
+// Pile of JavaScript
+$(document).ready(function() {
+  $('#roller button.add').on('click', function() {
+    console.log("Button clicked");
+    $('.dice').append('<div class="die">0</div>');
+  });
+
+  $('#roller button.roll').on('click', function() {
+    $('.die').each(function(k, die) {
+      var value = Math.floor((Math.random()*6)+1);
+      $(die).text(value);
+    });
+  });
+});
+```
+
+Refactor!
