@@ -1,0 +1,15 @@
+.clicked {
+  color: white;
+  background-color: red;
+  border-radius: 30px;
+  width: 100px;
+  height: 30px;
+}
+
+button {
+  color: yellow;
+  background-color: blue;
+  border-radius: 15px;
+  width: 75px;
+  height: 40px;
+}
