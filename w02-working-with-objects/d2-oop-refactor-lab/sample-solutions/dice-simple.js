@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 function Die() {
-    this.currentSide = 0;
+    this.currentSide = 1;
 }
 
 Die.prototype.roll = function() {
@@ -37,8 +37,9 @@ DieHandler.prototype.addDie = function() {
     console.log('this in addDie: ', this);
     // add die to dice array
     this.dice.push(new Die());
-    // add die to DOM
-    $('.dice-container').append('<div class="die"> 0 </div>');
+    // add die to DOM, with current side matching Die's constructor
+    // (note: could be more encapsulated... next time we refactor!)
+    $('.dice-container').append('<div class="die"> 1 </div>');
 };
 
 DieHandler.prototype.rollDice = function() {
@@ -47,6 +48,6 @@ DieHandler.prototype.rollDice = function() {
     }
 
     for (var i = 0; i < this.dice.length; i++) {
-        $('.die')[i].innerHTML = this.dice[i].currentSide;
+        $('.die').eq(i).html(this.dice[i].currentSide);
     }
 }
