@@ -200,9 +200,7 @@ $(document).ready(function() {
 "If it ain't broke, don't fix it" doesn't apply to software development. Sloppy or confusing code will cause not only you, but your teammates, coworkers, and possibly customers, headaches down the road. Programming is about managing complexity, and allowing difficult to read or inefficient code to stay in the code base is like letting dishes pile up in the sink.
 
 >*" Refactoring
-…is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior.
-
-Its heart is a series of small behavior preserving transformations. Each transformation (called a “refactoring”) does little, but a sequence of transformations can produce a significant restructuring. Since each refactoring is small, it’s less likely to go wrong. The system is kept fully working after each small refactoring, reducing the chances that a system can get seriously broken during the restructuring." - Martin Fowler, [Refactoring](http://refactoring.com/)*
+…is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior. <br><br> Its heart is a series of small behavior preserving transformations. Each transformation (called a “refactoring”) does little, but a sequence of transformations can produce a significant restructuring. Since each refactoring is small, it’s less likely to go wrong. The system is kept fully working after each small refactoring, reducing the chances that a system can get seriously broken during the restructuring." - Martin Fowler, [Refactoring](http://refactoring.com/)*
 
 > *"Code is never finished, only abandoned." - paraphase of [Paul Valéry](https://en.wikiquote.org/wiki/Paul_Val%C3%A9ry)*
 
