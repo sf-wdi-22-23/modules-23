@@ -483,7 +483,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dusk-functions">Functions, Callbacks, Closures, Loops</a> (Ben, Juliana)</td>
-    <td>OOP Tic-Tac-Toe Refactor Lab (Brianna, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/w02_d2_oop_refactor_lab/w02-working-with-objects/d2-oop-refactor-lab">OOP Tic-Tac-Toe Refactor Lab</a> (Brianna, Matt)</td>
     <td>Intro to AJAX: Giphy Lab (Alex, Braus)</td>
     <td>Geoquakes Lab (Juliana, Ben)</td>
     <td>OOP Todo (Alex)</td>
@@ -491,7 +491,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>HW</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-homework" target="_blank">OOP Reading</a> (Brianna)</td>
-    <td>Forms and Zapier API Reading (Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-homework">Forms and Zapier API Reading</a> (Juliana)</td>
     <td>Google Maps API (Ben)</td>
     <td><a href="https://github.com/airbnb/javascript/tree/master/es5">Airbnb JS Style Guide</a> (Alex)</td>
     <td></td>
