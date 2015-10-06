@@ -1,4 +1,4 @@
-### HTML Strings - [solution](drills_solutions.md#html-strings)
+### HTML Strings - [solution](https://github.com/sf-wdi-22-23/modules/blob/d3-drills/w02-working-with-objects/d3-drills/solutions.md)
 
 For the following challanges, please use this [data object](https://gist.github.com/awhit012/63fa69eb5241da9fe678).
 
