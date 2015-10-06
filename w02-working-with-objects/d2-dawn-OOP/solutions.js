@@ -56,7 +56,6 @@ function Flower(petals){
 				lovesMeNot = lovesMeNot.toUpperCase() + "!!!!";
 			}
 			var oddOrEven = n % 2
-			console.log(oddOrEven)
 			switch(oddOrEven){
 				case 0:
 					console.log(lovesMe);
@@ -90,7 +89,6 @@ bud.countDown('She');
 // 			lovesMeNot = lovesMeNot.toUpperCase() + "!!!!";
 // 		}
 // 		var oddOrEven = n % 2
-// 		console.log(oddOrEven)
 // 		switch(oddOrEven){
 // 			case 0:
 // 				console.log(lovesMe);
