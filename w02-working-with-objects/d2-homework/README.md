@@ -11,7 +11,7 @@ Read [Zapier API's](https://zapier.com/learn/apis/) chapters 1-3. Do the homewor
 1. Create a new `w02-d2.html` file inside your `2x-homework/username` directory.
 
 1. Answer the following questions inside that file:
-   - List three input types with real world examples of when you might use them.
+   - List three input types and give real world examples of when you might use each of them. (ex. password inputs can be used for login forms)
    - In your own words, write definitions (no more than one sentence) for client, server, and API.
 
 1. List other questions you have from the reading!
