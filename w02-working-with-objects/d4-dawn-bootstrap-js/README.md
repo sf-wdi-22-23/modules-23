@@ -33,12 +33,9 @@ Bootstrap is virtually universal today and its JS components simplify many commo
 $('.dropdown-toggle').dropdown();
 ```
 
-##In-Class Exercise: Modal Window
-- Let's take a look at a neat plugin called the modal window.
-- Try with a partner to implement a modal window that is triggered via a button on the page.
-- **Bonus:** Try to open the window using the two possible methods - data attributes and via JavaScript directly.
-
-##Challenges
+##In-Class Exercise: Tooltips
+- Let's take a look at a neat plugin called the tooltips.
+- Try with a partner to implement a tooltip on some lists.
 
 ### Docs & Resources
 
