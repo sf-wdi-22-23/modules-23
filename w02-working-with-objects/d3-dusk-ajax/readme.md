@@ -25,7 +25,8 @@ BONUS points if you can include a search bar that returns 25 gifs from Giphy bas
 
 #### Starter Code
 
-Clone the Blank Template from here: https://github.com/sf-wdi-22-23/blank_template
+- Clone the Blank Template from here: https://github.com/sf-wdi-22-23/blank_template
+- You will be using this a lot! Once you clone it, lets rename that folder "Giphy-Lab"
 
 #### Thinking Like An Engineer
 
@@ -47,7 +48,7 @@ Here's some steps to follow to help get you in this mindset:
 	- Try http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC
 	- What did you get back? It looks like a mess! But that is because it isn't meant to come back human-readable. Its just an Object!
 
-3. Crack open your blank template. We want to write JavaScript that returns that same object when we open our index.html! BUT HOW DO I AJAX!!??
+3. Crack open your blank template. We first want to write JavaScript that returns that same object we got back using curl when we open our index.html! BUT HOW DO I AJAX!!??
 	- Skim this explanation of AJAX using jQuery: http://www.sitepoint.com/use-jquerys-ajax-function/
 	- Pay extra attention to the example. Think about what you would change to GET the data you want from the URL you want. 
 
@@ -57,7 +58,12 @@ Here's some steps to follow to help get you in this mindset:
 	- First log those strings to the console, and make sure they look like you think they sould. THEN append them into the DOM!
 	- Don't forget about your friend the javaScript 'debugger' keyword. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 
-5. Be A Maze. Ing. 
+5. Can you bonus? Get a little search box to make a different AJAX call to the search URL. 
+	- Does a search box button have a default action? What do we want do with that?
+	- Are we just appending more and more gifs to the dom? Do we need to clear previous gifs before loading more?
+	- OMG are you making a one page app using AJAX like a boss? Yes. Yes you are. 
+
+	<img src="http://giphy.com/gifs/party-excited-birthday-YTbZzCkRQCEJa">
 
 
 #### Deliverable
