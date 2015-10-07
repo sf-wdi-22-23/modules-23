@@ -478,7 +478,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-dawn-OOP">OOP Constructors & Prototypes</a> (Alex, Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dawn-forms">Forms & JSON</a> (Ben, Juliana)</td>
     <td>Bootstrap Components (Braus, Alex)</a></td>
-    <td>Review (Matt, Brianna)</td>
+    <td>Review (Matt, Brianna) OOP Todo (Alex)</td>
   </tr>
   <tr>
     <td>Module2</td>
@@ -486,7 +486,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/w02_d2_oop_refactor_lab/w02-working-with-objects/d2-dusk-oop-refactor-lab">OOP Tic-Tac-Toe Refactor Lab</a> (Brianna, Matt)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax">Intro to AJAX: Giphy Lab</a> (Alex, Braus)</td>
     <td>Geoquakes Lab (Juliana, Ben)</td>
-    <td>OOP Todo (Alex)</td>
+    <td></td>
   </tr>
   <tr>
     <td>HW</td>
