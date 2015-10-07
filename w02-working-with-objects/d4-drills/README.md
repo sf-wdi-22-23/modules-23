@@ -2,7 +2,7 @@
 
 ## `console.log()`
 
-Often when debugging, you might write:
+Often when debugging, you might write code that console logs information so you can visually check it:
 
 ```js
 function greatest(a, b){
@@ -17,7 +17,9 @@ console.log("testing greatest");
 console.log(greatest(50, 50));
 ```
 
-1. Write an `assertEqual` function that takes in a test expression, an expected output, and a message. If the output of the test expression is equal to the expected output, the `assertEqual` function should log the word "Pass", log the message, and return `true`.  If the output of the test expression is not the expected output, the function should log the word "Fail", log the message, and return `false`.
+Let's make a reusable function that will make it a little faster to do these simple tests.
+
+Write an `assertEqual` function that takes in a test expression, an expected output, and a message. If the output of the test expression is equal to the expected output, the `assertEqual` function should log the word "Pass", log the message, and return `true`.  If the output of the test expression is not the expected output, the function should log the word "Fail", log the message, and return `false`.
 
  	Your task is to **define** the `assertEqual` function.  Here's how we would **use** the `assertEqual` function:
 
@@ -31,8 +33,6 @@ console.log(greatest(50, 50));
 	// returns false
 	// console logs: "Fail: four plus ten is sixteen"
 	```
-
-1. 
 
 
 ## `debugger` 
@@ -73,7 +73,7 @@ If you'd like your dev tools in a separate window from your browser, click and h
 
 
 
-1. Use the chrome dev tools and `debugger` to diagnose a problem with the following code snippet:
+Use the chrome dev tools and `debugger` to diagnose a problem with the following code snippet:
 
 
 	```js
@@ -91,7 +91,6 @@ If you'd like your dev tools in a separate window from your browser, click and h
 	}
 	```
 
-1.
 
 ### Node.js
 
@@ -103,5 +102,5 @@ node debug script.js
 
 You don't have a GUI in the Terminal, so you'll have to enter debugger text commands. A full list of commands and more information on how to use `debugger` with Node.js is avaiable in the <a href="https://nodejs.org/api/debugger.html" target="_blank">Node.js debugger documentation</a>.
 
-## Conditional Breakpoints in Chrome Dev Tools
+<!--## Conditional Breakpoints in Chrome Dev Tools-->
 
