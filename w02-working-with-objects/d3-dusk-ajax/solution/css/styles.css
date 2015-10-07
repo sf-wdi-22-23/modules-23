@@ -9,8 +9,8 @@ h1 {
   text-align: center;
 }
 
-img {
+img, form {
 	display: inline-table;
 	text-align: center;
-	margin: 1em;
+	margin: 2em;
 }
