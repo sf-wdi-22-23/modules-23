@@ -1,0 +1,15 @@
+#map-canvas {
+  border-style: outset;
+  height: 500px;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+}
+
+.container {
+  background-color: lightblue;
+}
+
+.infowindow {
+  background-color: lightgrey;
+}
