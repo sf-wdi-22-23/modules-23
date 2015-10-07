@@ -1,0 +1,60 @@
+body {
+	background-color: #3A3427;
+	margin: 0;
+}
+body h1, h3, h4, p{
+	color: #3A3427;
+	font-family: 'Open Sans', sans-serif;
+}
+input{
+	border-radius: 0.5em;
+	padding: 0.75em 1em;
+	width: 280px;
+	font-size: 0.85em;
+}
+#container {
+	padding-top: 1em;
+	width: 100%;
+}
+#answer{
+	font-weight: bold;
+}
+
+#banner{
+	background-color: #CC4A14;
+}
+
+#banner h4{
+	border-bottom: 1px dotted #777;
+}
+
+#banner h4, #banner h3{
+	margin-top:-1em;
+}
+#calendar{
+	background-color: #99583D;
+}
+
+#banner p, #calendar p{
+	margin-bottom: 5px;
+}
+#banner, #calendar {
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	padding:1em 2em 2em 2em;
+	position: relative;
+	width: 308px;
+}
+#result{
+	font-weight: bold;
+}
+
+.showResult{
+	border: 1px solid black;
+	padding: 1.5em;
+}
+
+#todayDate {
+	font-weight: bold;
+}
