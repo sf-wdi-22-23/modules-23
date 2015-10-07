@@ -32,7 +32,7 @@ function convertToQueryParameter(o) {
 ```
 
 ### Base Exercises
-For the following exercises, please ONLY use html.
+For the following exercises, please ONLY use html. As a bonus, include [Bootstrap form classes](http://getbootstrap.com/css/#forms) to make it look nice. 
 
 0. **Login Form**. Create an html `form` with two inputs: one for a username (named "username"), the other for password (named "password") (normally you don't see your password when you type it, so make sure it's blocked out!). What happens when you click submit?
 
