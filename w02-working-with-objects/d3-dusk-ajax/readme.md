@@ -63,8 +63,6 @@ Here's some steps to follow to help get you in this mindset:
 	- Are we just appending more and more gifs to the dom? Do we need to clear previous gifs before loading more?
 	- OMG are you making a one page app using AJAX like a boss? Yes. Yes you are. 
 
-	<img src="http://gph.is/18Bev0r">
-
 #### Deliverable
 
 Take a screenshot of your app and post it to Funny Biz! 
