@@ -2,38 +2,18 @@
 
 ## `console.log()`
 
-Often when debugging, you might write code that console logs information so you can visually check it:
+Tips for console logging:
+
+* Write descriptive log messages.
+* Don't reuse the same log message in multiple places; it will be hard to tell where messages came from.
+* Use a comma instead of a plus sign to add an object to a log message that is a string.
 
 ```js
-function greatest(a, b){
-	console.log(a, " vs ", b);
-	if (a > b){
-		return a;
-	} else {
-		return b;
-	}
-}
-console.log("testing greatest");
-console.log(greatest(50, 50));
+//BAD
+console.log("test " + this);
+//GOOD
+console.log("inside add button click event - this is ", this);
 ```
-
-Let's make a reusable function that will make it a little faster to do these simple tests.
-
-Write an `assertEqual` function that takes in a test expression, an expected output, and a message. If the output of the test expression is equal to the expected output, the `assertEqual` function should log the word "Pass", log the message, and return `true`.  If the output of the test expression is not the expected output, the function should log the word "Fail", log the message, and return `false`.
-
- 	Your task is to **define** the `assertEqual` function.  Here's how we would **use** the `assertEqual` function:
-
-	```js
-	assertEqual(Math.round(-1.5), -1, "Math.round rounds up from -1.5");
-	// returns false
-	// console logs: "Pass : Math.round rounds up from -1.5"
-
-
-	assertEqual(4+10, 16, "four plus ten is sixteen");
-	// returns false
-	// console logs: "Fail: four plus ten is sixteen"
-	```
-
 
 ## `debugger` 
 
