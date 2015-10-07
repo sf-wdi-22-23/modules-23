@@ -65,9 +65,11 @@ You don't have a GUI in the Terminal, so you'll have to enter debugger text comm
 
 ## Conditional Breakpoints in Chrome Dev Tools
 
-Chrome dev tools also lets you set "conditional breakpoints" that pause whenever some trigger occurs, like "pause whenever a click event fires" or "pause whenever a request is made". You set these through the Sources tab, in the breakpoint dropdowns.  More details (and images!) are available in Google's <a href="https://developers.google.com/web/tools/javascript/breakpoints/add-breakpoints?hl=en#create-conditional-breakpoints" target="_blank>how to add breakpoints</a>.
+Chrome dev tools also lets you set "conditional breakpoints" that pause whenever some trigger occurs, like "pause whenever a click event fires" or "pause whenever a request is made". You set these through the Sources tab, in the breakpoint dropdowns.  More details (and images!) are available in Google's <a href="https://developers.google.com/web/tools/javascript/breakpoints/add-breakpoints?hl=en#create-conditional-breakpoints" target="_blank">how to add breakpoints</a>.
 
+## More Resources
 
+* Google's <a href="https://developers.google.com/web/tools/javascript/index?hl=en" target="_blank">guide to debugging JavaScript with Chrom Dev Tools</a>
 
 ## Drills!
 
