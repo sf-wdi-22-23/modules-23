@@ -72,4 +72,3 @@ Take a screenshot of your app and post it to Funny Biz!
 - [http://youmightnotneedjquery.com](http://youmightnotneedjquery.com/)
 - [jQuery AJAX Docs](http://api.jquery.com/jquery.ajax/)
 - [Some useful jQuery DOM Manipulation Docs](http://api.jquery.com/prepend/)
-- [The Official Doughnut API](https://www.doughnuts.ga/)
