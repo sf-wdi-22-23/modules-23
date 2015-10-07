@@ -1,8 +1,10 @@
 #Google Maps API Homework
 
-The following samples provide a broad overview of some of the most useful features of the Google Maps Javascript API.
+The following samples provide a broad overview of some of the most useful features of the Google Maps Javascript API. Take a look at them one at a time, but don't feel like you have to copy and recreate them.
 
-For your homework, choose any six (6) of the following examples and combine them into one project. The hardest thing is putting your code in order. Pay special attention to what happens inside the initialize function, versus what happens outside of the function.
+For your homework, you have been given a directory of code called 'starter-project'. By default this code points to scripts.js which includes the Javascript for the first example, Simple Map.
+
+Your assignment is to read through the samples below and choose any six (6) to combine into one project. In some cases you don't have to understand everything that's happening if you copy and paste the code carefully. However, you do have to understand enough to know what data is needed for each function, method or object and making sure the variable storing that data is passed around properly. Pay special attention to what happens inside the initialize function, versus what happens outside of that function. Also know that some features, such as geolocation will not work unless you can upload the code to a webserver. Google Maps API logs lots of warnings and errors in the console, so make sure to check it often.
 
 
 ####simple map:
