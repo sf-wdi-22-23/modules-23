@@ -1,15 +1,20 @@
+body{
+  background-color: cornsilk;
+}
+
+h1{
+  color: #555;
+}
+
 #map-canvas {
   border-style: outset;
   height: 500px;
   margin: auto;
   padding: 0;
-  width: 90%;
+  width: 100%;
 }
 
 .container {
-  background-color: lightblue;
-}
-
-.infowindow {
-  background-color: lightgrey;
+  padding-bottom: 2em;
+  width:100%;
 }
