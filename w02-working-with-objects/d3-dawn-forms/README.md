@@ -2,7 +2,6 @@
 
 | Objectives |
 | :--- |
-| Discover query parameters in the wild |
 | Explore HTML Forms and Inputs |
 | Understand the difference between a `method` and an `action` |
 | Create forms that utilize parameters |
