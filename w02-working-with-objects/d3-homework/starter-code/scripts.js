@@ -11,10 +11,10 @@ $(document).ready(function() {
         // the center of the map and level of zoom
         map = new google.maps.Map(document.getElementById('map-canvas'), {
             center: {
-                lat: -34.397,
-                lng: 150.644
+                lat: 37.783465, 
+                lng: -122.447585
             },
-            zoom: 8
+            zoom: 13
         });
     }
     // invoke function to create map
@@ -27,8 +27,8 @@ $(document).ready(function() {
     // passing Javascript object to configure the marker's position, which map to place it on, and what image to use for the marker icon
     var newMarker = new google.maps.Marker({
         position: {
-            lat: -33.890,
-            lng: 151.274
+            lat: 37.790841, 
+            lng: -122.401280
         },
         map: map,
         icon: image
@@ -61,7 +61,7 @@ $(document).ready(function() {
     // swap in 'pos' after restructuring code to find location
     // before initializing map, or reload map in geolocation callback
     var markerWithInfoWindow = new google.maps.Marker({
-        position: {lat: 40.674, lng: -73.946}, // pos
+        position: {lat: 37.790841, lng: -122.401280}, // pos
         map: map,
         title: "General Assembly"
     });
