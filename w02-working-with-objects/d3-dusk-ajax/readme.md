@@ -63,8 +63,7 @@ Here's some steps to follow to help get you in this mindset:
 	- Are we just appending more and more gifs to the dom? Do we need to clear previous gifs before loading more?
 	- OMG are you making a one page app using AJAX like a boss? Yes. Yes you are. 
 
-	<iframe src="//giphy.com/embed/YTbZzCkRQCEJa" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/party-excited-birthday-YTbZzCkRQCEJa">via GIPHY</a></p>
-
+	<img src="http://gph.is/18Bev0r">
 
 #### Deliverable
 
