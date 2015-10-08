@@ -33,7 +33,7 @@ console.log("inside add button click event - this is ", this);
 Chrome's "Sources" tab provides a nice Graphical User Interface, or GUI (pronounced "gooey") for the debugger tool. 
 
 
-![chrome dev tools sources tab](sources.png)
+> ![chrome dev tools sources tab](sources.png)
 
 Here's an example you can use to explore recursion with `debugger`:
 
@@ -84,6 +84,6 @@ Chrome dev tools also lets you set "conditional breakpoints" that pause whenever
 
 The code in script.js has comments that list some problems with the sample project website. There are currently some bugs, but it should look like this:
 
-![count es and link a lot site screenshot](result.png)
+<img src="result.png" width="60%" alt="count es and link a lot site screenshot">
 
 Update the project code to fix the problems described in the comments. Note: the last one (alerting) is a stretch.
