@@ -42,4 +42,4 @@ $(document).ready(function(){
     }
 
     addLinks();
-});
+};

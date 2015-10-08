@@ -55,4 +55,6 @@ $(document).ready(function(){
     }
 
     addLinks();
+    
+// there was a missing ) on the last line!
 });
