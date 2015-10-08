@@ -95,6 +95,9 @@ Chrome dev tools also lets you set "conditional breakpoints" that pause whenever
 
 ## Drills!
 
+
+A copy of the starter code is available to fork and clone in <a href="https://github.com/sf-wdi-22-23/debug-drills" target="_blank">the class debug-drills repo</a>.
+
 The code in script.js has comments that list some problems with the sample project website. There are currently some bugs, but it should look like this:
 
 <img src="img/result.png" width="60%" alt="count es and link a lot site screenshot">
