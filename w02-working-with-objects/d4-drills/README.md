@@ -77,27 +77,11 @@ Chrome dev tools also lets you set "conditional breakpoints" that pause whenever
 
 ## More Resources
 
-* Google's <a href="https://developers.google.com/web/tools/javascript/index?hl=en" target="_blank">guide to debugging JavaScript with Chrom Dev Tools</a>
+* Google's <a href="https://developers.google.com/web/tools/javascript/index?hl=en" target="_blank">guide to debugging JavaScript with Chrome Dev Tools</a>
+
 
 ## Drills!
 
+The code in script.js has comments that list some problems with the sample project website. There are currently some bugs, but it should look like this:
 
-
-
-Use the chrome dev tools and `debugger` to diagnose a problem with the following code snippet:
-
-
-	```js
-	function addLinks () {
-		var $link;
-		var $body = $('body');
-	    for (var i=0; i<5; i++) {
-	        $link = $('a');
-	        $link.html('Link '+i);
-	        $link.on('click', function () {
-	            alert(i);
-	        });
-	        $body.append($link);
-	    }
-	}
-	```
+![count es and link a lot site screenshot](result.png)
