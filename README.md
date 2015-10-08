@@ -493,7 +493,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-homework" target="_blank">OOP Reading</a> (Brianna)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-homework">Forms and Zapier API Reading</a> (Juliana)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-homework">Google Maps API</a> (Ben)</td>
-    <td><a href="https://github.com/airbnb/javascript/tree/master/es5">Airbnb JS Style Guide</a> (Alex)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d4-homework">Airbnb JS Style Guide</a> (Alex)</td>
     <td></td>
 
   </tr>
