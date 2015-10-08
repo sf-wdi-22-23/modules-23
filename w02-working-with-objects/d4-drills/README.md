@@ -4,7 +4,7 @@
 
 Sometimes error messages are awesome. Sometimes not so much.  Be aware that in the chrome dev tools console, the right hand side of an error line often shows you the file name and line number that the error came from.
 
-![erorr message in chrome dev tools console](error.png)  
+![erorr message in chrome dev tools console](img/error.png)  
 
 _The error source above was script.js, line 18._
 
@@ -33,7 +33,7 @@ console.log("inside add button click event - this is ", this);
 Chrome's "Sources" tab provides a nice Graphical User Interface, or GUI (pronounced "gooey") for the debugger tool. 
 
 
-> ![chrome dev tools sources tab](sources.png)
+> ![chrome dev tools sources tab](img/sources.png)
 
 Here's an example you can use to explore recursion with `debugger`:
 
@@ -57,7 +57,7 @@ count(3);
 
 If you'd like your dev tools in a separate window from your browser, click and hold the dev tools positioning icon to undock them.  
 
-<img src="undock.png" width="300px" alt="dev tools positioning">
+<img src="img/undock.png" width="300px" alt="dev tools positioning">
 
 
 
@@ -84,6 +84,6 @@ Chrome dev tools also lets you set "conditional breakpoints" that pause whenever
 
 The code in script.js has comments that list some problems with the sample project website. There are currently some bugs, but it should look like this:
 
-<img src="result.png" width="60%" alt="count es and link a lot site screenshot">
+<img src="img/result.png" width="60%" alt="count es and link a lot site screenshot">
 
 Update the project code to fix the problems described in the comments. Note: the last one (alerting) is a stretch.
