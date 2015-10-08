@@ -31,7 +31,7 @@ To change the styles, go to Snazzy Maps, pick a style you like, and replace the 
 
 #### Step 2. Add a Marker
 
-Create a variable gaMarker and assign a `new new google.maps.Marker()` using the code linked below. At minimum you need a `position`, `map` and `title`
+Create a variable gaMarker and assign a `new google.maps.Marker()` using the code linked below. At minimum you need a `position`, `map` and `title`
 
 <a href="https://developers.google.com/maps/documentation/javascript/examples/marker-simple">Simple Markers</a>
 
