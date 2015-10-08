@@ -1,5 +1,13 @@
 # Debugging JavaScript
 
+## Error messages
+
+Sometimes error messages are awesome. Sometimes not so much.  Be aware that in the chrome dev tools console, the right hand side of an error line often shows you the file name and line number that the error came from.
+
+![erorr message in chrome dev tools console](error.png)  
+
+_The error source above was script.js, line 18._
+
 ## `console.log()`
 
 Tips for console logging:
