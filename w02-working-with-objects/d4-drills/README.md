@@ -85,3 +85,5 @@ Chrome dev tools also lets you set "conditional breakpoints" that pause whenever
 The code in script.js has comments that list some problems with the sample project website. There are currently some bugs, but it should look like this:
 
 ![count es and link a lot site screenshot](result.png)
+
+Update the project code to fix the problems described in the comments. Note: the last one (alerting) is a stretch.
