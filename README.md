@@ -469,7 +469,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-drills" target="_blank">Extend Kyrel</a> (Brianna, Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-drills">JS built in Objects: Math, Date, Array, String</a> (Ben, Matt)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-drills">HTML Strings (Matt, Alex)</a></td>
-    <td>Debugging (Matt, Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/debug-drills" target="_blank">Debugging</a> (Matt, Brianna)</td>
     <td>Assessment (Juliana, Brianna)</td>
   </tr>
   <tr>
