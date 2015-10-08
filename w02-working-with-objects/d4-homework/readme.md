@@ -7,7 +7,7 @@
 ###Why?
 - AirBnB's style guide is very well fleshed out. It is also open source. This is why we picked it.
 - Why look at a style guide?
-  - For one thing, this is going to show you a lot of basic JavaScript patterns! Some will be review, some will be new.
+  - You are going to be looking at a lot of basic JavaScript patterns! Some will be review, some will be new.
   - Its a great thing to look at LOTS of code. It will make you more familliar with the patterns.
 
 ###Things to think about:
