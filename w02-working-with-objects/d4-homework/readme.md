@@ -1,7 +1,7 @@
 #Thursday Homework!
 
 ##Read/Skim some of <a href="https://github.com/airbnb/javascript/tree/master/es5">AirBnB's JavaScript Style Guide</a>
-- Spend a max of an hour looking at this.
+- Spend aabout an hour looking at this.
 - Use any extra time you have to review concepts we covered so far this week.
 
 ###Why?
