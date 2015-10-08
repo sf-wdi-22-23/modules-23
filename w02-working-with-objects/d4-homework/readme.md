@@ -21,3 +21,7 @@
 ## Submission
 
 1. None tonight.
+
+## Bonus Reading:
+
+1. <a href="https://medium.com/misc-misc/review-sandi-metz-s-poodr-ch-1-4-wip-d4daac417665">This </a>blog about what a non-ruby programmer learned from POODR. It's a bit abstract for you now, but will help reinforce the ideas behind OOP. 
