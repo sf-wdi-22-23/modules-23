@@ -468,7 +468,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Drills</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-drills" target="_blank">Extend Kyrel</a> (Brianna, Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-drills">JS built in Objects: Math, Date, Array, String</a> (Ben, Matt)</td>
-    <td>HTML Strings (Matt, Alex)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-drills">HTML Strings (Matt, Alex)</a></td>
     <td>Debugging (Matt, Brianna)</td>
     <td>Assessment (Juliana, Brianna)</td>
   </tr>
@@ -476,23 +476,23 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module1</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dawn-arrays-objects" target="_blank">Array & Object Drills</a> (Brianna, Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-dawn-OOP">OOP Constructors & Prototypes</a> (Alex, Braus)</td>
-    <td>Forms & JSON (Ben, Juliana)</td>
-    <td>Bootstrap Components (Braus, Alex)</a></td>
-    <td>Review (Matt, Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dawn-forms">Forms & JSON</a> (Ben, Juliana)</td>
+    <td>Bootstrap Components & JS (Braus, Alex)</a></td>
+    <td>Review (Matt, Brianna) <br> OOP Todo (Alex)</td>
   </tr>
   <tr>
     <td>Module2</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dusk-functions">Functions, Callbacks, Closures, Loops</a> (Ben, Juliana)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/w02_d2_oop_refactor_lab/w02-working-with-objects/d2-dusk-oop-refactor-lab">OOP Tic-Tac-Toe Refactor Lab</a> (Brianna, Matt)</td>
-    <td>Intro to AJAX: Giphy Lab (Alex, Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax">Intro to AJAX: Giphy Lab</a> (Alex, Braus)</td>
     <td>Geoquakes Lab (Juliana, Ben)</td>
-    <td>OOP Todo (Alex)</td>
+    <td></td>
   </tr>
   <tr>
     <td>HW</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-homework" target="_blank">OOP Reading</a> (Brianna)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-homework">Forms and Zapier API Reading</a> (Juliana)</td>
-    <td>Google Maps API (Ben)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-homework">Google Maps API</a> (Ben)</td>
     <td><a href="https://github.com/airbnb/javascript/tree/master/es5">Airbnb JS Style Guide</a> (Alex)</td>
     <td></td>
 
