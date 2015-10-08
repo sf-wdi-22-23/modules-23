@@ -3,6 +3,15 @@ console.log("Sanity Check: JS is working!");
 $(document).ready(function(){
 	console.log("The DOM is ready!");
 
+	// squash the bugs isn't showing up 
+	function addSubHeader() {
+		var subHeader = $('<small>&nbsp&nbspsquash the bugs!</small>')
+		$('h1').append(subHeader);
+	}
+
+	addSubHeader;
+
+
 	// the form redirects when it should just update the count of "E"s
 	$('form').on('submit', function(e){
 		console.log('form submitted');
@@ -19,13 +28,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// squash the bugs isn't showing up 
-	function addSubHeader() {
-		var subHeader = $('<small>&nbsp&nbspsquash the bugs!</small>')
-		$('h1').append(subHeader);
-	}
-
-	addSubHeader;
 
 	// all the links alert 5 :(
 	function addLinks () {
