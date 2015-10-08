@@ -40,15 +40,16 @@ $(document).ready(function(){
 
 	// all the links alert 5 :(
 	function addLinks () {
-		// fix - create a closure (@MATT - I still need to change this)
+		// fix - use .bind to save the scope 
 	    var $link;
 	    var $ul = $('ul');
 	    for (var i=0; i<5; i++) {
 	        $link = $('<a href="#"></a>');
 	        $link.html('Link '+i);
-	        $link.on('click', function () {
-	            alert(i);
-	        });
+	        $link.on('click', (function(index){
+	        	console.log('this, ', this)
+		        alert(index);
+			}).bind(this, i));
 	        $ul.append($link);
 	    }
     }
