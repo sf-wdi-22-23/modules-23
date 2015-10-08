@@ -483,7 +483,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d1-dusk-functions">Functions, Callbacks, Closures, Loops</a> (Ben, Juliana)</td>
-    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/w02_d2_oop_refactor_lab/w02-working-with-objects/d2-dusk-oop-refactor-lab">OOP Tic-Tac-Toe Refactor Lab</a> (Brianna, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-dusk-oop-refactor-lab">OOP Refactor Lab</a> (Brianna, Matt)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax">Intro to AJAX: Giphy Lab</a> (Alex, Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d4-dusk-geoquakes">Geoquakes Lab</a> (Juliana, Ben)</td>
     <td></td>
