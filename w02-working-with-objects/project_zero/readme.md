@@ -28,6 +28,8 @@ Imagine you want to let people write really short public blog posts. The homepag
 * Add `comments` on `posts`.
 * These get tricky, but you DO have a long weekend. :)
 
+* [The Solution](https://github.com/sf-wdi-22-23/Project-0-Solution/tree/master) lives here. "Wait until you have a hole in your brain the shape of the answer, before you look at the answer." Optimize for your own learning, NOT for "getting an A" that doesn't exist. 
+
 ## Submit by Tuesday Morning 9:09am
 
 Push your project to a public repo, and share the link on our bizness Slack. 
