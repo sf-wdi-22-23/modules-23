@@ -4,6 +4,10 @@
 
 Imagine you want to let people write really short public blog posts. The homepage of your microblog app should be a list of these micro-posts with a form to add a new one. We don't have a backend yet, so we won't be worrying about login, users, followers, and all of that good stuff quite yet. But we can create new blog posts, have them added to the page!
 
+Something like this:
+
+![alt tag](https://github.com/sf-wdi-22-23/Project-0-Solution/blob/master/screen_shot.png)
+
 ## Basic Requirements
 
 | Concepts | Tools |
