@@ -2,7 +2,7 @@
 
 ## Summary
 
-Imagine you want to let people write really short public blog posts. The homepage of your microblog app should be a list of these micro-posts with a form to add a new one. We don't have a backend yet, so we won't be worrying about login, users, follwers, and all of that good stuff quite yet. But we can create new blog posts, have them added to the page!
+Imagine you want to let people write really short public blog posts. The homepage of your microblog app should be a list of these micro-posts with a form to add a new one. We don't have a backend yet, so we won't be worrying about login, users, followers, and all of that good stuff quite yet. But we can create new blog posts, have them added to the page!
 
 ## Basic Requirements
 
@@ -13,7 +13,7 @@ Imagine you want to let people write really short public blog posts. The homepag
 1. Make your basic <a href="https://en.wikipedia.org/wiki/User_story">user narrative</a>, <a href="http://www.re-vision.com/webwork/p27wireframes/drawing_small.jpg">wireframe</a>, and Kanban board. These are required!
 2. Start by cloning the basic template and renaming the folder to micro-blog. CD into micro-blog and than run 'git init'. Then run "git commit -m 'initial commit'". Create a new public repo on your github, and DO NOT create the readme. Follow the instructions to push an existing repository from the command line.
 
-3. Make frequent commits and pushes (every hour or so). Add a very short README.md that outlines what your app does and the libraries you are using.
+3. Make frequent commits and pushes (every hour or so). You should commit every time you add a new feature, and it is working! A feature can be something as small as adding a little style. Add a very short README.md that outlines what your app does and the libraries you are using.
 3. Make your initial layout. Use default Bootstrap classes with minimal custom CSS.
 4. Make a list of `posts` using HTML strings, JavaScript and jQuery (and Object Oriented Programming!).
 5. Make a form to add new `posts` to the list using jQuery.
