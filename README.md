@@ -486,7 +486,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d2-dusk-oop-refactor-lab">OOP Refactor Lab</a> (Brianna, Matt)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax">Intro to AJAX: Giphy Lab</a> (Alex, Braus)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d4-dusk-geoquakes">Geoquakes Lab</a> (Juliana, Ben)</td>
-    <td>[Reading for Monday - HTTP Basics](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)</td>
+    <td>Reading for Monday: <a href="http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177">HTTP Basics</a></td>
   </tr>
   <tr>
     <td>HW</td>
