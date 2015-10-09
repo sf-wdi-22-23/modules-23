@@ -1,20 +1,42 @@
-#Intro to Express
+# Bootstrap's Javascript
 
 | Objectives |
 | :--- |
-| Use npm (node package manager) to install node modules |
-| Write a local NodeJS web server with Express |
+| Utilize Bootstrap's JavaScript components |
 
-### Motivation (Why?)
+## Motivation (Why?)
 
-Express is an unopinionated server-side javascript MVC framework that runs on a NodeJS server. It is a very, very popular and trending framework with a bevy of modules you can add to it.
+Bootstrap is virtually universal today and its JS components simplify many common UX/UI patterns.
 
-### Request Response Cycle
+##Using jQuery Plugins with Bootstrap
+- One of the most powerful aspects of jQuery is that its functionality can be extended by plugins.
+- You can write your own plugins which is pretty straightforward or you can use a wide variety of plugins created by other people.
+- Bootstrap provides a number of plugins that help you with your development.
+- You can see a good list of what they provide [here](http://getbootstrap.com/javascript/).
+- Some of the plugins can be manipulated through data- attributes instead of having to write any JavaScript, like the dropdown plugin:
 
+```
+<div class="dropdown">
+	<button id="dLabel" type="button" data-toggle="dropdown">
+		Dropdown trigger
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a href="#">Link 1</a></li>
+	</ul>
+</div>
+```
 
+- Most of these plugins can also be triggered via JavaScript as well. For example the dropdown menus again:
 
-### NPM
+```
+$('.dropdown-toggle').dropdown();
+```
 
+##In-Class Exercise: Tooltips
+- Let's take a look at a neat plugin called the tooltips.
+- Try with a partner to implement a tooltip on some lists.
 
+### Docs & Resources
 
-### Express
+[Bootstrap JavaScript Docs](http://getbootstrap.com/javascript/)
