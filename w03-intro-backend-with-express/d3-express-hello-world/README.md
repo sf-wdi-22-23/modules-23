@@ -14,3 +14,11 @@ Express is an unopinionated server-side javascript MVC framework that runs on a 
 
 
 ### NPM
+
+
+### Docs, Resources, Further Reading
+
+1. [Starting an Express Project](http://expressjs.com/starter/installing.html)
+1. [Express Hello World](http://expressjs.com/starter/hello-world.html)
+1. [Express Static Files](http://expressjs.com/starter/static-files.html)
+1. [Express res.render()](http://expressjs.com/4x/api.html#res.render)
