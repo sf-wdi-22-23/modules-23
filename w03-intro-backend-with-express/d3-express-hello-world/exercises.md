@@ -43,6 +43,7 @@
   > **Hint**: `process.env.PORT || 3000` means "in production use the production port, otherwise use 3000 (for development)".
 
 1. run `node server.js` and visit `http://localhost:3000/`. You should see "Hello World!"
+1. Console log the req and the res object inside of the `app.get` method.
 
 **Add a Template Engine - EJS**
 1. Install `ejs` with npm
