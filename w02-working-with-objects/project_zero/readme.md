@@ -36,7 +36,7 @@ Something like this:
 
 ## Submit by Tuesday Morning 9:09am
 
-Push your project to a public repo, and share the link on our bizness Slack. 
+Push your project to a public repo, and share the link this Google Form: http://goo.gl/forms/NNBMwSJ2XW
 
 
 ### Need more to do?
