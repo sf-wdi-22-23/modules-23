@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
 
-// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
+
+var myName = 'Web Development';
 
 var paintings = [
   { title: 'Ladies d\'Avignon', artist: 'Pabolo Picasso', imgUrl: "https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d\'Avignon.jpg" },
@@ -13,7 +14,7 @@ var paintings = [
 ]
 
 app.get('/', function (req, res) {
-  res.render('index', { paintings: paintings });
+  res.render('index', {  name: myName, paintings: paintings });
 });
 
 
@@ -30,8 +31,7 @@ app.get('/api/taquerias', function (req, res) {
 
 
 var server = app.listen(3000, function () {
-  var host = server.address().address;
   var port = server.address().port;
 
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log('Example app listening on port %s', port);
 });
