@@ -25,7 +25,7 @@ var taquerias = [
 
 app.get('/api/taquerias', function (req, res) {
 
-  res.json('index', taquerias);
+  res.json(taquerias);
 });
 
 

@@ -13,7 +13,7 @@
   <ul>
     <% for(var i=0; i<paintings.length; i++) { %>
       <li>
-        <h6><%= paintings[i].title %></h6>
+        <h6><%= paintings[i].title %> -- by <%= paintings[i].artist %></h6>
         <img src="<%= paintings[i].imgUrl %>" width="250px"/>
       </li>
     <% } %>  

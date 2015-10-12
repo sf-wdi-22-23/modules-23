@@ -163,11 +163,11 @@ We're making a weird app. Paintings and taquerias.
     ]
 
     app.get('/api/taquerias', function (req, res) {
-      res.json('index', taquerias);
+      res.json(taquerias);
     });
   ```
 
-1. Navigate to http://localhost:3000/api/taquerias (remember to restart your server first!).
+1. Navigate to http://localhost:3000/api/taquerias (remember to restart your server first!) and check that the data is showing up. 
 
 ![Zoidberg hooray gif](http://31.media.tumblr.com/tumblr_l9y7wqbkag1qzjefho1_500.gif#hooray%20gif%20483x500)
 
