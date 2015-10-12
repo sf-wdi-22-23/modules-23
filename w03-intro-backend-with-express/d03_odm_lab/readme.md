@@ -6,38 +6,45 @@ Objectives|
 |Explain the difference between SQL and NOSQL databases
 |Build a simple ODM implementation that stores Javascript objects
 
-### da·ta·base <br>
-	#### noun <br>
-	a structured set of data held in a computer, especially one that is accessible in various ways.
+### da·ta·base
+noun.
+    
+a structured set of data held in a computer, especially one that is accessible in various ways.
 
 ## What is MongoDB?
 ### MongoDB is a NoSQL database.
-	  - NoSQL is a class of database management systems (DBMS) that do not follow all of the rules of a relational DBMS and cannot use traditional SQL to query data. 
-	  - It stores data in a database using nested documents and objects, rather than the rows and collumns of a traditional database
+ - NoSQL is a class of database management systems (DBMS) that do not follow all of the rules of a relational DBMS and cannot use traditional SQL to query data. 
+ - It stores data in a database using nested documents and objects, rather than the rows and collumns of a traditional database
 
 <img src="http://dataconomy.com/wp-content/uploads/2014/07/SQL-vs.-NoSQL.png">
 
 ## Express with MongoDB
 
 ### Lets get a quick express app together and connect it to MongoDB. 
- 	- It should:
- 		- Run an app.js file which:
- 		- establishes a connection with MongoDB
- 		- Be able to add items to the database
- 		- be able to log all items in the database
+- It should:
+  - Run an app.js file which:
+  - establishes a connection with MongoDB
+  - Be able to add items to the database
+  - be able to log all items in the database
 
 My solution: https://github.com/awhit012/pure-mongo
 
 Additional Resources: 
-	mongoDB-node repo: https://github.com/mongodb/node-mongodb-native
-	express hello-word: http://expressjs.com/starter/hello-world.html
+
+mongoDB-node repo: 
+
+    https://github.com/mongodb/node-mongodb-native
+express hello-word: 
+    
+    http://expressjs.com/starter/hello-world.html
 
 
 
 
 ## What is an ODM?
-	An ODM (Object-Document Mapper) is a tool that lets you query and manipulate data from a non-relational database using an object paradigm.
-	Like a librarian that knows a bunch of things, so you don't have to.
+An ODM (Object-Document Mapper) is a tool that lets you query and manipulate data from a non-relational database using an object paradigm.
+
+Kind of like a librarian that knows a bunch of things, so you don't have to.
 
 ## Express with Mongoose
 
@@ -46,7 +53,7 @@ Additional Resources:
 My solution: https://github.com/awhit012/mongoose-express-demo
 
 Additional Resources: 
-	Mongoose Quick Start: http://mongoosejs.com/docs/3.5.x/docs/index.html
+  Mongoose Quick Start: http://mongoosejs.com/docs/3.5.x/docs/index.html
 
 
 
@@ -56,6 +63,7 @@ Additional Resources:
 #### Mongoose is not magic! Its just a JavaScript Library! It has built in methods so you can do this:
 
 '''
+
   var MongoClient = require('mongodb').MongoClient
     , assert = require('assert');
 
@@ -68,6 +76,7 @@ Additional Resources:
   });
 
 '''
+
 with this:
 
 '''
@@ -96,7 +105,7 @@ with this:
 
 '''
   this.Kitten.find({}, function(err, kitten){
-    	console.log(kitten)
+      console.log(kitten)
     });
 '''
 
