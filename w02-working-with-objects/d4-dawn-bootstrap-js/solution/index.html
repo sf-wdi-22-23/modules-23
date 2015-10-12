@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		.jumbotron {
+			margin:0;
+		}
+
+		.affix {
+			top:0;
+			z-index: 100;
+			width:100%;
+			/*height:60px;*/
+		}
+		.nav-wrapper
+		{
+		    min-height:50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Welcome to SpaceBook</h1>
+			<div class="lead">Where Space Meets your Face</div>			
+		</div>
+	</div>
+	<div class="nav-wrapper">
+		<nav class="navbar navbar-default" data-spy="affix" data-offset-top="245">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Brand</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+		        <li><a href="#">Link</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">One more separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      <form class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </form>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</div>
+	<div class="container">
+		<div>
+
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Tabs</a></li>
+		    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">List Items</a></li>
+<!-- 		    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+		    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+ -->		  </ul>
+
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		    <div role="tabpanel" class="tab-pane active" id="home">
+
+		    	<div class="row">
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	  <div class="col-sm-6 col-md-4">
+		    	    <div class="thumbnail">
+		    	      <img src="http://placehold.it/350x150" alt="...">
+		    	      <div class="caption">
+		    	        <h3>Thumbnail label</h3>
+		    	        <p>...</p>
+		    	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	</div>
+
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="profile">
+		    	<div class="list-group">
+		    		<a href="#" class="list-group-item">Hello</a>
+		    		<a href="#" class="list-group-item">Hello</a>
+		    		<a href="#" class="list-group-item">Hello</a>
+		    		<a href="#" class="list-group-item">Hello</a>
+		    	</div>
+		    </div>
+<!-- 		    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+		    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+ -->		  </div>
+
+		</div>
+	</div>
+	
+
+
+	<div class="modal fade" id="loginModal">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Login</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<form class="form-group">
+	      		<div class="form-group">
+	      			<label for="">Email</label>
+	      			<input type="text" class="form-control" placeholder="email"/>	
+	      		</div>
+	      		<div class="form-group">
+	      			<label for="">Password</label>
+	      			<input type="password" class="form-control" placeholder="password"/>
+	      		</div>
+	      		
+	      	</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button class="btn btn-primary">Login</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</body>
+</html>

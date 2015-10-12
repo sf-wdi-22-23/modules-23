@@ -1,4 +1,4 @@
-### HTML Strings - [solution](https://github.com/sf-wdi-22-23/modules/blob/d3-drills/w02-working-with-objects/d3-drills/solutions.md)
+### HTML Strings - [solution](https://github.com/sf-wdi-22-23/modules/blob/master/w02-working-with-objects/d3-drills/solution.md)
 
 For the following challanges you are going to use the template from https://github.com/sf-wdi-22-23/blank_template
 
@@ -7,7 +7,7 @@ For the following challanges you are going to use the template from https://gith
 4. Open this up in Sublime
 5. Paste the data object into the JS file.
 6. Type your solution into the document.ready method.
-8. You should console.log your solutions 
+8. You should console.log your solutions
 7. Run your file by opening your index.html page in Chrome
 8. Rejoice!
 
