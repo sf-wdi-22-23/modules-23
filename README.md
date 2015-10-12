@@ -408,53 +408,53 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!--</table>-->
 
 
-<!--##Week 3 - REST & CRUD-->
-<!--<table>-->
-<!--  <tr>-->
-<!--    <th></th>-->
-<!--    <th>Monday</th>-->
-<!--    <th>Tuesday</th>-->
-<!--    <th>Wednesday</th>-->
-<!--    <th>Thursday</th>-->
-<!--    <th>Friday</th>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Drills</td>-->
-<!--    <td>Game Show (Team)</td>-->
-<!--    <td><a href='https://github.com/sf-wdi-21/linked-list'>Linked Lists</a> (Justin)</td>-->
-<!--    <td><a href='https://github.com/sf-wdi-21/linked-list'>Linked Lists</a> (Justin)</td>-->
-<!--    <td><a href='https://github.com/sf-wdi-21/linked-list'>Linked Lists</a> (Justin)</td>-->
-<!--    <td>Assessment (Team)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Module1</td>-->
-<!--    <td><a href='week-03/day-01-bootstrap-orm/dawn-bootstrap/readme.md'>Bootstrap, Bower</a> (Nathan)</td>-->
-<!--    <td>Intro Express: <a href="week-03/day-02-intro-express/dawn-routing">Routing</a> (Nathan)</td>-->
-<!--    <td><a href="week-03/day-03-crud-express/dawn-to-eatly">Todo Lab</a>: CR (Ilias)</td>-->
-<!--    <td><a href='week-03/day-04-mongo-crud/dawn-mongo/readme.md'>Mongo CRUD</a> (Justin)</td>-->
-<!--    <td>Review (Team)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Module2</td>-->
-<!--    <td><a href='week-03/day-01-bootstrap-orm/dusk-orm-lab/readme.md'>ORM Lab</a> (Justin)</td>-->
-<!--    <td>Intro Express: <a href="week-03/day-02-intro-express/dusk-assets">Static Assets</a> (Nathan)</td>-->
-<!--    <td><a href="week-03/day-03-crud-express/dawn-to-eatly">Todo Lab</a>: UD (Ilias)</td>-->
-<!--    <td><a href="https://github.com/sf-wdi-21/bite_me_mongo_express">Express Mongo Lab</a> (Nathan)</td>-->
-<!--    <td><a href="week-03/day-05">Catchphrase Project</a></td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>HW</td>-->
-<!--    <td><a href="week-03/day-02-intro-express/dawn-routing/README.md">Express Hello World</a> (Nathan)</td>-->
-<!--    <td><a href="week-03/day-03-crud-express/rest.md">RESTful convention</a> (Ilias)</td>-->
-<!--    <td><a href="week-03/day-04-mongo-crud/dawn-mongo/readme.md">Mongo CRUD</a>(Justin)</td>-->
-<!--    <td><a href="https://vimeo.com/36579366">Bret Victor: Inventing on Principle</a> (Ilias)</td>-->
-<!--    <td></td>-->
-<!--  </tr>-->
-<!--</table>-->
+##Week 3 - Building a RESTful Server with Express
+<table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>Drills</td>
+    <td></td>
+    <td>Science Fair</td>
+    <td>White Boarding</td>
+    <td></td>
+    <td>Assessment (Team)</td>
+  </tr>
+  <tr>
+    <td>Module1</td>
+    <td></td>
+    <td>Express Hello World (Adam, Brianna)</td>
+    <td>Todo Lab (Juliana, Ben)</td>
+    <td>ODM Lab Mini-Mongoose (Alex, Matt)</td>
+    <td>Review (Alex, Matt)</td>
+  </tr>
+  <tr>
+    <td>Module2</td>
+    <td></td>
+    <td>Intro Express Routes & Params (Matt, Ben)</td>
+    <td>Todo Lab Part 2 (Brianna, Juliana)</td>
+    <td>Mongoose & Express (Ben, Braus)</td>
+    <td>Catchphrase Project (Brianna)</td>
+  </tr>
+  <tr>
+    <td>HW</td>
+    <td></td>
+    <td>RESTful Conventions (Alex)</td>
+    <td>ODMs (Brianna)</td>
+    <td>JS Event Stack (Braus)</td>
+    <td>Mongoose Relationships</td>
+  </tr>
+</table>
 
 
 
-##Week 2 - Working with Objects
+##Week 2 - Working with APIs and Objects
 <table>
   <tr>
     <th></th>
