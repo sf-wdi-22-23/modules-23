@@ -6,12 +6,12 @@ Objectives|
 |Explain the difference between SQL and NOSQL databases
 |Build a simple ODM implementation that stores Javascript objects
 
-da·ta·base
-	noun
+### da·ta·base <br>
+	#### noun <br>
 	a structured set of data held in a computer, especially one that is accessible in various ways.
 
 ## What is MongoDB?
-	### MongoDB is a NoSQL database.
+### MongoDB is a NoSQL database.
 	  - NoSQL is a class of database management systems (DBMS) that do not follow all of the rules of a relational DBMS and cannot use traditional SQL to query data. 
 	  - It stores data in a database using nested documents and objects, rather than the rows and collumns of a traditional database
 
@@ -36,8 +36,8 @@ Additional Resources:
 
 
 ## What is an ODM?
-	- An ODM (Object-Document Mapper) is a tool that lets you query and manipulate data from a non-relational database using an object paradigm.
-	- like a librarian that knows a bunch of things, so you don't have to.
+	An ODM (Object-Document Mapper) is a tool that lets you query and manipulate data from a non-relational database using an object paradigm.
+	Like a librarian that knows a bunch of things, so you don't have to.
 
 ## Express with Mongoose
 
@@ -56,23 +56,23 @@ Additional Resources:
 #### Mongoose is not magic! Its just a JavaScript Library! It has built in methods so you can do this:
 
 '''
-var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+  var MongoClient = require('mongodb').MongoClient
+    , assert = require('assert');
 
-var url = 'mongodb://localhost:27017/myproject';
+  var url = 'mongodb://localhost:27017/myproject';
 
-MongoClient.connect(url, function(err, db) {
-  assert.equal(null, err);
-    db.close();
+  MongoClient.connect(url, function(err, db) {
+    assert.equal(null, err);
+      db.close();
+    });
   });
-});
 
 '''
 with this:
 
 '''
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+  var mongoose = require('mongoose');
+  mongoose.connect('mongodb://localhost/test');
 '''
 
 Nice right!
@@ -80,24 +80,24 @@ Nice right!
 Not only that, but you can also do this:
 
 '''
-var findDocuments = function(db, callback) {
-  // Get the documents collection 
-  var collection = db.collection('documents');
-  // Find some documents 
-  collection.find({}).toArray(function(err, docs) {
-    assert.equal(err, null);f
-    console.dir(docs);
-    callback(docs);
-  });
-}
+  var findDocuments = function(db, callback) {
+    // Get the documents collection 
+    var collection = db.collection('documents');
+    // Find some documents 
+    collection.find({}).toArray(function(err, docs) {
+      assert.equal(err, null);f
+      console.dir(docs);
+      callback(docs);
+    });
+  }
 '''
 
 with this:
 
 '''
-this.Kitten.find({}, function(err, kitten){
-  	console.log(kitten)
-  });
+  this.Kitten.find({}, function(err, kitten){
+    	console.log(kitten)
+    });
 '''
 
 This is the beauty of Mongoose's build in functions. 
