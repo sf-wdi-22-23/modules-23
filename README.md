@@ -423,7 +423,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td></td>
     <td>Science Fair</td>
     <td>White Boarding</td>
-    <td></td>
+    <td>Bubble Sort</td>
     <td>Assessment (Team)</td>
   </tr>
   <tr>
@@ -432,7 +432,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Express Hello World (Adam, Brianna)</td>
     <td>Todo Lab (Juliana, Ben)</td>
     <td>ODM Lab Mini-Mongoose (Alex, Matt)</td>
-    <td>Review (Alex, Matt)</td>
+    <td>Review & Intro Project 0 (Alex, Matt)</td>
   </tr>
   <tr>
     <td>Module2</td>
@@ -440,7 +440,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Intro Express Routes & Params (Matt, Ben)</td>
     <td>Todo Lab Part 2 (Brianna, Juliana)</td>
     <td>Mongoose & Express (Ben, Braus)</td>
-    <td>Catchphrase Project (Brianna)</td>
+    <td>Outcomes Programming (Neda)</td>
   </tr>
   <tr>
     <td>HW</td>
