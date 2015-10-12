@@ -6,7 +6,7 @@
 
 1. You should have Node.js and NPM installed from installfest. Run the Terminal commands `which node` and `which npm` to check that they are installed. If they are installed, you will see a file path after each command, like `/usr/local/bin/node`.
 
-1. *Only if you do not have node and npm installed*: 
+1. **Only if you do not have node and npm installed**: 
   Install Node & NPM   
   * Standalone installer: [https://nodejs.org/download/](https://nodejs.org/download/)   
   * Homebrew: [http://blog.teamtreehouse.com/install-node-js-npm-mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)  
@@ -55,11 +55,16 @@
 
 1. Run `node server.js` in the Terminal, and visit `http://localhost:3000/` in your browser. You should see "Hello World!"   
 
-1. Console log the req and the res object inside your server code's `app.get` method.
+1. Console log the `req` (request) and the `res` (response) objects inside your server code's `app.get` method for the `/` path. (The `/` path is often called the "root" path.) Restart the server and briefly check out what the `req` and `res` are.
 
-**Add a Template Engine - EJS**
 
-Server-side HTML templating basically lets us put data into our HTML file before the server sends it over to the client. The template is like a version of an HTML file with blanks, and we let the view engine know how to fill them in.
+**Add Server-Side HTML Templating**
+
+All of the files and data for a website usually live on its server(s) and are sent to clients when they request it.  So, even files like HTML and CSS that are only front end related have to get to our users through our server.
+
+We could just send along a lot of static files -- and we'll look at how to do that with Express a little later today. In that case, we'd make a separate jQuery AJAX request for any of our data we wanted to display.
+
+For HTML, though, we're going to take advantage of something called server-side templating.  Server-side HTML templating basically lets us put data into an HTML file before the server sends it over to the client. The template is like a version of an HTML file with blanks, and we let a server-side "view engine" know how to fill them in with the server's data.
 
 
 1. Install the templating system `ejs` for this project using the Terminal:
@@ -68,9 +73,9 @@ Server-side HTML templating basically lets us put data into our HTML file before
      npm install ejs --save
   ```
 
-1. Create a new folder `views` with a file `index.ejs` inside. `index.ejs` should just say `<h1>General Assembly Rocks!</h1>`.
+1. Create a new folder `views` with a file `index.ejs` inside. The `index.ejs` file will be our template, and ejs will translate it into HTML before sending it to clients. Our `index.ejs` can look exactly like an HMTL file.  For now, it should just say `<h1>General Assembly Rocks!</h1>` (or a custom message of your choice).
 
-1. Set the project's view engine to ejs.
+1. Set the project's view engine to ejs. This lets express know what module should render the template (i.e., fill in the blanks). 
 
   ```js
     // server.js
@@ -85,10 +90,33 @@ Server-side HTML templating basically lets us put data into our HTML file before
 1. Visit `http://localhost:3000/` in your browser. You should see "General Assembly Rocks!"
 
   > **Hint**: Remember to stop and restart your server from the Terminal to view any changes. Hit `control + c` to stop your server, and run `node server.js` again to restart it.
+  
+1. If our `index.ejs` is just plain HTML, we're not taking advantage of templating.  Add the following header to your `index.ejs` jumbotron:
+
+  ```html
+  <h1><%= name %> is awesome!</h1>
+  ```
+
+1. Restart your server and refresh your page. What do you see?
+
+1. EJS uses `<%` ... `%>` to figure out what to interpret as a template. The areas where a template has blanks that need to be filled in with some data are inside `<%=` and `%>`.  So, `<%= name %>` makes ejs think there should be some `name` data available for it to use to fill in this blank.  Let's get some name data set up. In your server.js file, define a `myName` variable and assign your name to it as a string.
+
+1. The `myName` variable is holding on to your name data on the server.  Now, we need to let ejs know to use that variable to fill in the `name` blank. To have this data show up on the page, we'll need to pass it to the render method. Update the `app.get` method for the `/` path:
+
+  ```js
+    // server.js
+    app.get('/', function (req, res) {
+      res.render('index', { name: myName });
+    });
+  ```
+  
+  Note that `name` is what the template looks for to fill the blank, and `myName` is the name of the variable storing that data. 
 
 **Add Some Data on the Server**
 
-1. Add some starter data  (often called "seed data") to serve when the users view '/'.
+Now that we see how ejs uses simple data to fill in blanks, let's do something a little more complex -- ejs using JavaScript logic to loop over a list of data.
+
+1. Add some starter data  (often called "seed data") to serve when the users view '/'. (They're not technically all paintings, but that's okay.)
 
 
   ```js
@@ -100,19 +128,13 @@ Server-side HTML templating basically lets us put data into our HTML file before
       ]
   ```
 
-1.  To have this data show up on the page, we'll need to pass it to the render method. Update the app.get method again:
+1.  To have this data show up on the page, we'll need to pass it to the render method. Update the `app.get` method for `/` again so it can also render the `paintings` data with the ejs template. 
 
-  ```
-    // server.js
-    app.get('/', function (req, res) {
-      res.render('index', { paintings: paintings });
-    });
-  ```
+  > **Hint**: Add a key-value pair to the object we're already passing to the `render` method.
 
 1. We also need to put a blank in our html template where the data will be filled in. 
 
-
-  ```ejs
+  ```html
   <!-- index.ejs -->
   <ul>
     <% for(var i=0; i<paintings.length; i++) { %>
@@ -123,12 +145,13 @@ Server-side HTML templating basically lets us put data into our HTML file before
   </ul>
   ```
 
+1. Restart your server and refresh the page. You should see a list of artwork titles.
 
 1. Modify the basic template above so that the artist name is also shown with the title of each painting.  
 
 1. Modify the template so that the painting images are displayed as well.
 
-  > **Hint**: Use `<img src=""/>`.
+  > **Hint**: Use `<img src="">`.
 
 **Add Static Files (CSS, JS, Images)**
 
@@ -149,10 +172,11 @@ Server-side HTML templating basically lets us put data into our HTML file before
 
 **Send Just JSON Data (with No Template)**
 
-We're making a weird app. Paintings and taquerias.
+So far, we've been using server-side HTML templating with ejs to put the painting data directly into our HTML before we send it.  Now, we'll add an API route that sends back raw JSON data instead of a filled-in HTML page.
 
-1. Add a route to your server side javascript where clients will get taqueria data.  The route's path should be `/api/taquerias`. Add some seed taqueria data to your server file as well.
+We're making a weird app. Paintings and taquerias.  Treat your senses.  
 
+1. Add some taqueria seed data to your server file.
 
   ```js
     // server.js
@@ -161,7 +185,12 @@ We're making a weird app. Paintings and taquerias.
       { name: "El Farolito" },
       { name: "Taqueria Cancun" }
     ]
+  ```
 
+1. Add a route to your server side javascript that clients can use to get taqueria data.  The route's path should be `/api/taquerias`.  Instead of `res.send` (for simple strings) or `res.render` (for HTML templates), this route will use `res.json`.
+
+
+  ```
     app.get('/api/taquerias', function (req, res) {
       res.json(taquerias);
     });
@@ -187,7 +216,7 @@ We're making a weird app. Paintings and taquerias.
     app.use(express.static('vendor'));
   ```
 
-1. Add an image to your `public/images` folder and display it in `index.ejs`.
+1. Add an image to your `public/images` folder and display it in `index.ejs`. Note: this is where Ganesh is coming from in the solutions. 
 
 <!-- 1. Add a post method to `/api/taquerias` and push a new taqueria into the array.
 
