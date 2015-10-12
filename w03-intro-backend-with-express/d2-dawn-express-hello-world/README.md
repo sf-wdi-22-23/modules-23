@@ -63,6 +63,18 @@ Let's look at a basic `get` method in an express app.
 
 Note that the `app` object has a method called `.get()` which takes two arguments: a url and a callback function. The callback takes two arguments. The `req`, and `res`. These stand for "Request" and "Response" from the request response cycle. We'll be console logging these objects in the exercises.
 
+### Game Plan
+
+Today's exercises are set up a bit like a tutorial to walk you through:
+
+  * creating a new project with Node and Express
+  * creating routes for clients to make requests to your server
+  * using server-side HTML templates to send responses with data and HTML at the same time
+  * storing data on the server
+  * responding to GET requests with simple strings (`res.send`), HTML templates (`res.render`), or JSON data (`res.json`)
+  * serving static files (images, css...)
+
+
 ### Docs, Resources, Further Reading
 
 1. [Starting an Express Project](http://expressjs.com/starter/installing.html)
