@@ -62,6 +62,8 @@ Say we want to create an API similar to the one above, that returns data about i
 
 Write Pseudocode like the above. Be creative, and follow RESTful conventions and best practices. 
 
+### Deliverables
+
 Submit this pseudocode in a markdown or text file via Github. 
 
 
