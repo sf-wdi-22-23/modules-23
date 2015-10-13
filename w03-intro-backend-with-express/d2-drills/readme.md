@@ -1,12 +1,4 @@
-todo: solutions, better instructions, data.json
-
-1. We do findById
-2. You do DeleteByID 
-3. You do Where that returns array of all objects with the attribute
-Bonus: 
-4. Where with limit of how many
-5. refactor Where to accept multiple values to check for 
-
+todo: solutions, change instructions to reflect actual data, data.json
 # Week 3
 
 ## Tuesday Lab: Whiteboarding Queries
@@ -49,14 +41,14 @@ and this should return something like this:
 
 ### Bonus:
 1. Refactor your 'where' function to accept a limit parameter, so
-```
-where(arrayOfObjects, {course: "WDI"}, 5);
-```
-should return an array with a maximum of 5 objects in it. 
+	```
+	where(arrayOfObjects, {course: "WDI"}, 5);
+	```
+	should return an array with a maximum of 5 objects in it. 
 
-Can you get it to work with OR without that parameter?
+	Can you get it to work with OR without that parameter?
 2. Refactor your 'where' so it can accept more than one property so 
-```
-where(arrayOfObjects, {course: "WDI"}, {something: "thing"});
-```
-returns an array of objects that have BOTH a course property of "WDI" AND a something property of "thing"
+	```
+	where(arrayOfObjects, {course: "WDI"}, {something: "thing"});
+	```
+	returns an array of objects that have BOTH a course property of "WDI" AND a something property of "thing"
