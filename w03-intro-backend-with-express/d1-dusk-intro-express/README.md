@@ -1,8 +1,10 @@
-# Intro to Web Frameworks: Express.js
+# Intro to Express continued:
 ## Routes, Params, and Queries
 
 | Objectives |
 | :---- |
+| Understand??? the usefulness of middleware (flexible, handles common problems like auth, parsing, etc.) |
+| Understand??? using bodyParsing  and parsing URL params to generate dynamic routes (b/c hardcoding is awful) |
 | Review and discuss the request and response cycle |
 | Describe the parts of an HTTP request and url  |
 | Apply routing knowledge to build an express application |
@@ -48,7 +50,7 @@
 Let's start with a simple **Express** application.
 
 * Make a directory and `index.js`  
-	
+
 	``` bash
 	mkdir quick_example
 	cd quick_example/
@@ -82,7 +84,7 @@ Now we need write some code for our simple application.
 // requirements
 var express = require('express'),
 	app = express();
-	
+
 // a "GET" request to "/" will run the function below
 app.get("/", function (req, res) {
 	// send back the response: 'Hello World'
@@ -96,19 +98,19 @@ app.listen(3000, function () {
 
 ```
 
-Now you can start the server: 
+Now you can start the server:
 
 ``` bash
 node index.js
 ```
 
 
-###Viewing Our Server 
+###Viewing Our Server
 
 Go to `localhost:3000` in your browser.
 
 * This sends a request to the server that looks like:
-	
+
 	```
 	GET / HTTP/1.1
 	Host: localhost:3000
@@ -122,14 +124,14 @@ Go to `localhost:3000` in your browser.
 	```
 
 * The Server sends back something like the following:
-	
+
 	```
 	HTTP/1.1 200 OK
 	X-Powered-By: Express
 	ETag: W/"b-4a17b156"
 	Date: Mon, 11 May 2015 00:20:24 GMT
 	Connection: keep-alive
-	
+
 	Hello World
 	```
 
@@ -141,12 +143,12 @@ We can verify this with the [cURL](http://curl.haxx.se/) command: `curl -I local
 
 ## Routing
 
-Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**. 
+Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**.
 
 | Request Type | Request Path | Response
 | :--- | :--- | :--- |
 | `GET` | `/` | `Hello World` |
-| `GET` | `/burgers` | `Hamburger`, `Cheese Burger`, `Dble Cheese Burger` | 
+| `GET` | `/burgers` | `Hamburger`, `Cheese Burger`, `Dble Cheese Burger` |
 | `GET` | `/tacos` | `Soft Taco`, `Crunchy Taco`, `Super Taco` |
 
 
@@ -157,19 +159,19 @@ Let's build these into our application:
 ``` javascript
 var express = require('express'),
 	app = express();
-	
+
 var burgers = [
 				"Hamburger",
 				"Cheese Burger",
 				"Dble Cheese Burger"
 			   ];
-			   
+
 var tacos = [
 				"Soft Taco",
 				"Crunchy Taco",
 				"Super Taco"
 			   ];
-	
+
 app.get("/", function (req, res) {
 	res.send("Hello World");
 });
@@ -233,7 +235,7 @@ Reset your server and go to [localhost:3000/thank?name=jane](localhost:3000/than
 
 ## Summary
 
-We learned about 
+We learned about
 
 * Routing to different resources, i.e. `/burgers` and `/tacos`
 * Using dynamic parameters, i.e. `/burgers/:index` and `/tacos/:index` to request specific data
