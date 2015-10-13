@@ -15,7 +15,7 @@ Something like this:
 | User Stories, OOP | Bootstrap, jQuery, Git, Kanban Board |
 
 1. Make your basic <a href="https://en.wikipedia.org/wiki/User_story">user narrative</a>, <a href="http://www.re-vision.com/webwork/p27wireframes/drawing_small.jpg">wireframe</a>, and Kanban board. These are required!
-2. Start by cloning the [basic template](https://github.com/sf-wdi-22-23/blank_template) and renaming the folder to micro-blog. CD into micro-blog and than run 'git init'. Then run "git commit -m 'initial commit'". Create a new public repo on your github, and DO NOT create the readme. Follow the instructions to push an existing repository from the command line.
+2. Start by cloning the [basic template](https://github.com/sf-wdi-22-23/blank_template) and renaming the folder to micro-blog. CD into micro-blog and than run 'git remote rm origin'. This will remove the connection between this git repo and the basic-template Github repo. Create a new public repo on your github, and DO NOT create the readme. Follow the instructions to push an existing repository from the command line, connecting your micro-blog to a new Github repo you own.
 
 3. Make frequent commits and pushes (every hour or so). You should commit every time you add a new feature, and it is working! A feature can be something as small as adding a little style. Add a very short README.md that outlines what your app does and the libraries you are using.
 3. Use default Bootstrap classes with minimal custom CSS.
@@ -36,7 +36,7 @@ Something like this:
 
 ## Submit by Tuesday Morning 9:09am
 
-Push your project to a public repo, and share the link on our bizness Slack. 
+Push your project to a public repo, and share the link this Google Form: http://goo.gl/forms/NNBMwSJ2XW
 
 
 ### Need more to do?
