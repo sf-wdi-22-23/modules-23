@@ -429,7 +429,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module1</td>
     <td></td>
-    <td>Express Hello World (Adam, Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a> (Adam, Brianna)</td>
     <td>Todo Lab (Juliana, Ben)</td>
     <td>ODM Lab Mini-Mongoose (Alex, Matt)</td>
     <td>Review & Intro Project 0 (Alex, Matt)</td>
