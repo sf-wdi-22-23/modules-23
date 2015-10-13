@@ -3,11 +3,9 @@
 
 | Objectives |
 | :---- |
-| Understand??? the usefulness of middleware (flexible, handles common problems like auth, parsing, etc.) |
-| Understand??? using bodyParsing  and parsing URL params to generate dynamic routes (b/c hardcoding is awful) |
-| Review and discuss the request and response cycle |
-| Describe the parts of an HTTP request and url  |
-| Apply routing knowledge to build an express application |
+| Explain parsing URL params |
+| Apply routing knowledge to build an Express application with dynamic routes |
+| Explain the usefulness of middleware (e.g., `body-parser`) |
 
 ## Pre-reading
 
@@ -16,18 +14,15 @@
 ## Terminology
 
 * HTTP
-* TCP
 * Resource path
 * Query string
 * HTTP verb
 * Status code
-* Network packet
-* W3C
 
 ## Outline
 
-* Intro to Express
-	* A Hello World App
+* Intro (continued) to Express
+	* Middleware
 * Routing
 	* HTTP GET  
 	* Request Params
@@ -62,6 +57,7 @@ Let's start with a simple **Express** application.
 	``` bash
 	echo {} > package.json		#puts an empty object into a new `package.json`
 	npm install --save express
+	npm install --save ejs # if you want to use the templating
 	subl .
 	```
 The folder structure will be as follows:
@@ -232,6 +228,9 @@ app.get("/thank", function (req, res) {
 
 Reset your server and go to [localhost:3000/thank?name=jane](localhost:3000/thank?name=jane). Note how we can now define parameters in the url after a `?`.
 
+## Middleware (body parser)
+
+... example using body parser instead of regular `req.params.varName` and why it is more useful (show passing parseUrlencoding handler to app.routeName calls)
 
 ## Summary
 
