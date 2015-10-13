@@ -8,6 +8,7 @@ Building a single page todo-style application.
   * Front-end Javascript
   * jQuery
   * Express
+  * ejs
   * Restful routing
 
 ## Instructions
