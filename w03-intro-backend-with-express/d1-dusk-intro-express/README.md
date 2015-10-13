@@ -1,11 +1,11 @@
-# Intro to Web Frameworks: Express.js
+# Intro to Express continued:
 ## Routes, Params, and Queries
 
 | Objectives |
 | :---- |
-| Review and discuss the request and response cycle |
-| Describe the parts of an HTTP request and url  |
-| Apply routing knowledge to build an express application |
+| Explain parsing URL params and using query string params |
+| Apply routing knowledge to build an Express application with dynamic routes |
+| Explain the usefulness of middleware (e.g., `body-parser`) |
 
 ## Pre-reading
 
@@ -14,41 +14,39 @@
 ## Terminology
 
 * HTTP
-* TCP
 * Resource path
 * Query string
 * HTTP verb
 * Status code
-* Network packet
-* W3C
+* Middleware
 
 ## Outline
 
-* Intro to Express
-	* A Hello World App
+* Intro (continued) to Express
 * Routing
 	* HTTP GET  
 	* Request Params
 * Query Params
+	* Middleware
 * Calculator App
 
-##Express Intro (15m)
+## What Can We Do with Express?
 
-**Background**
+**Core Concepts and Brainstorming**
 
-* We already know that [Node.js](https://github.com/sf-wdi-18/notes/blob/master/lectures/week-02/day_3_node/dawn/node-intro.md)
-	* **is a tool to run JavaScript outside the browser, directly on your OS.**
-* But what is a *web application framework*?
-	* **A tool for handling middleware integration, routing, and other relevant concerns.**
-* How about [Express](http://expressjs.com/)?
-	* **A configurable, minimal web framework for Node.**
+* Server-side JS
+	* Instead of DOM manipulation, we are interacting with the request / response cycle
+* (B.Y.O.A.) Build your own API
+	* What kind of data do you want to work with?
 
-###Setup
+
+
+### Setup
 
 Let's start with a simple **Express** application.
 
 * Make a directory and `index.js`  
-	
+
 	``` bash
 	mkdir quick_example
 	cd quick_example/
@@ -60,6 +58,7 @@ Let's start with a simple **Express** application.
 	``` bash
 	echo {} > package.json		#puts an empty object into a new `package.json`
 	npm install --save express
+	npm install --save ejs # if you want to use the templating
 	subl .
 	```
 The folder structure will be as follows:
@@ -82,7 +81,7 @@ Now we need write some code for our simple application.
 // requirements
 var express = require('express'),
 	app = express();
-	
+
 // a "GET" request to "/" will run the function below
 app.get("/", function (req, res) {
 	// send back the response: 'Hello World'
@@ -96,57 +95,20 @@ app.listen(3000, function () {
 
 ```
 
-Now you can start the server: 
+Now you can start the server:
 
 ``` bash
 node index.js
 ```
 
+## What is Routing?
 
-###Viewing Our Server 
-
-Go to `localhost:3000` in your browser.
-
-* This sends a request to the server that looks like:
-	
-	```
-	GET / HTTP/1.1
-	Host: localhost:3000
-	Connection: keep-alive
-	Cache-Control: max-age=0
-	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-	User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36
-	Accept-Encoding: gzip, deflate, sdch
-	Accept-Language: en-US,en;q=0.8
-	If-None-Match: W/"b-4a17b156"
-	```
-
-* The Server sends back something like the following:
-	
-	```
-	HTTP/1.1 200 OK
-	X-Powered-By: Express
-	ETag: W/"b-4a17b156"
-	Date: Mon, 11 May 2015 00:20:24 GMT
-	Connection: keep-alive
-	
-	Hello World
-	```
-
-We can verify this with the [cURL](http://curl.haxx.se/) command: `curl -I localhost:3000`.
-
-###A request/response cycle
-![simple_server](imgs/simple_express.gif)
-
-
-## Routing
-
-Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**. 
+Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**.
 
 | Request Type | Request Path | Response
 | :--- | :--- | :--- |
 | `GET` | `/` | `Hello World` |
-| `GET` | `/burgers` | `Hamburger`, `Cheese Burger`, `Dble Cheese Burger` | 
+| `GET` | `/burgers` | `Hamburger`, `Cheese Burger`, `Dble Cheese Burger` |
 | `GET` | `/tacos` | `Soft Taco`, `Crunchy Taco`, `Super Taco` |
 
 
@@ -157,19 +119,19 @@ Let's build these into our application:
 ``` javascript
 var express = require('express'),
 	app = express();
-	
+
 var burgers = [
 				"Hamburger",
 				"Cheese Burger",
 				"Dble Cheese Burger"
 			   ];
-			   
+
 var tacos = [
 				"Soft Taco",
 				"Crunchy Taco",
 				"Super Taco"
 			   ];
-	
+
 app.get("/", function (req, res) {
 	res.send("Hello World");
 });
@@ -190,13 +152,26 @@ app.listen(3000, function () {
 
 ```
 
-## Url Parameters
+## Request (Url) Parameters
 
 What if we want to create an app that can dynamically say hello to anyone?
 
 * Using **url parameters** add a dynamic route to the application, indicated by `:` and the variable name you want to use, we'll use `:name` for the example below.
 
 ``` javascript
+// another example of some simple middleware
+// call this function on every route with the param of 'name'
+app.param('name', function(request, response, next) {
+	// get name from params
+  var name = request.params.name;
+	// capitalize the name
+  var capitalizedName = name[0].toUpperCase() + name.slice(1).toLowerCase();
+	// set the value of the name to the capitalized version
+  request.params.name = capitalizedName;
+	// pass control to the next middleware function
+  next();
+})
+
 app.get("/greet/:name", function (req, res) {
 	res.send( "Hello, " + req.params.name );
 });
@@ -211,7 +186,7 @@ Here we are seeing the first introduction to parameters that the application can
 
 ## Query Params
 
-Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
+Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
 
 Let's see query params in action. Go to [https://google.com/search?q=kittens&tbm=isch](https://google.com/search?q=kittens&tbm=isch)
 
@@ -230,14 +205,74 @@ app.get("/thank", function (req, res) {
 
 Reset your server and go to [localhost:3000/thank?name=jane](localhost:3000/thank?name=jane). Note how we can now define parameters in the url after a `?`.
 
+## Middleware
+
+What is middleware? [In terms of Express](http://expressjs.com/guide/using-middleware.html), middleware is a function with access to the request object (req), the response object (res), and the next middleware in the application’s request-response cycle, commonly denoted by a variable named next.
+
+Middleware can:
+
+* Execute any code.
+* Make changes to the request and the response objects.
+* End the request-response cycle.
+* Call the next middleware in the stack.
+
+You can create your own middleware, or use third-party modules. That's right, there are tons of useful middlewares that are already out there which you can use to handle common challenges like authentication, validations, and parsing.
+
+The [`body-parser`](https://github.com/expressjs/body-parser) module is an example of some middleware that makes Express awesome. You can use it to parse out params from the POST'd form. This provides a different way to collect data instead of relying on URL or query params.
+
+`server.js`
+```javascript
+var express = require('express');
+var app = express();
+
+var ejs = require('ejs');
+var bodyParser = require('body-parser');
+// bodyParser.urlencoded() returns a function that will be called later in the app.post() route
+var parseUrlencoded = bodyParser.urlencoded({extended: false});
+
+// store for cities in memory (as long as server is running)
+var cities = [];
+
+app.get('/cities', function(req, res) {
+    res.render('cities', {cities: cities});
+})
+
+// passing multiple middleware functions to this route; they are executed sequentially.
+app.post('/cities', parseUrlencoded, function (request, response) {
+  var city;
+  var name = request.body.name;
+  var description = request.body.description;
+  city = { name: name, description: description}
+  cities.push(city);
+	// passing local variables to be used in EJS template
+  response.render('cities', { cities: cities});
+});
+```
+
+`cities.ejs`
+```html
+<h1>Cities</h1>
+<ul>
+<% for(var i = 0; i< cities.length; i++) {%>
+   <li><%= cities[i].name %> <%= cities[i].description %></li>
+<% } %>
+</ul>
+
+<form action="/cities" method="POST">
+  <input type="text" name="name">
+  <input type="text" name="description">
+  <input type="submit" value="submit">
+</form>
+```
 
 ## Summary
 
-We learned about 
+We learned about
 
 * Routing to different resources, i.e. `/burgers` and `/tacos`
 * Using dynamic parameters, i.e. `/burgers/:index` and `/tacos/:index` to request specific data
 * Using query parameters for dynamic requests to serve up dynamic responses
+* What middleware is and why it is helpful
 
 
 This will be essential knowledge for building and interacting with applications that contain multiple resources, such as users, posts, comments, etc.
