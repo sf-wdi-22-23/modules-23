@@ -1,3 +1,10 @@
+1. We do findById
+2. You do DeleteByID 
+3. You do Where that returns array of all objects with the attribute
+Bonus: 
+4. Where with limit of how many
+5. refactor Where to accept multiple values to check for 
+
 # Week 3
 
 ## Tuesday Lab: Whiteboarding a where() query
