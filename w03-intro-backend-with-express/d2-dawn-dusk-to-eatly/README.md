@@ -58,17 +58,11 @@ Follow the instructions of each of the sprints below. If/when you get stuck, che
 
 [Reference lesson](https://github.com/sf-wdi-21/notes/tree/master/week-02/day-02-forms+AJAX/dawn-forms)
 
-## Sprint Five: Set the table
-
-* Create a function called `pageLoad` that does everything already being done when the page is loaded. Call it once when the page is loaded.
-
-* Load the foods in reverse order so that the most recent one appears at the top.
+## Sprint Five: Clean up your mess
 
 * Beautify your page to take advantage of Bootstrap styling!
 
-[Reference lesson](https://github.com/sf-wdi-21/notes/blob/master/week-03/day-01-bootstrap-orm/dawn-bootstrap/readme.md)
-
-## Sprint Six: Clean up your mess
+* Load the foods in reverse order so that the most recent one appears at the top.
 
 * Next to each food create a delete button that will send an ajax delete request
    * Use bootstrap's class `.close`
