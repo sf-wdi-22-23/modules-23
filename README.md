@@ -423,9 +423,9 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Drills</td>
     <td></td>
     <td>Science Fair</td>
-    <td>White Boarding</td>
-    <td>Bubble Sort</td>
-    <td>Assessment (Team)</td>
+    <td>White Boarding (Alex, Matt)</td>
+    <td>Bubble Sort (Brianna, Braus)</td>
+    <td>Assessment (Matt, Alex)</td>
   </tr>
   <tr>
     <td>Module1</td>
