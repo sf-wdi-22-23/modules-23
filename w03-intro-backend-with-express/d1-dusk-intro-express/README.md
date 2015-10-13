@@ -29,7 +29,7 @@
 * Query Params
 * Calculator App
 
-##Express Intro (15m)
+## Express Intro (15m)
 
 **Background**
 
@@ -40,7 +40,7 @@
 * How about [Express](http://expressjs.com/)?
 	* **A configurable, minimal web framework for Node.**
 
-###Setup
+### Setup
 
 Let's start with a simple **Express** application.
 
