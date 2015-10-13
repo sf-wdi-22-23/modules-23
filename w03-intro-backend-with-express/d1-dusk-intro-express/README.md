@@ -3,7 +3,7 @@
 
 | Objectives |
 | :---- |
-| Explain parsing URL params |
+| Explain parsing URL params and using query string params |
 | Apply routing knowledge to build an Express application with dynamic routes |
 | Explain the usefulness of middleware (e.g., `body-parser`) |
 
@@ -18,15 +18,16 @@
 * Query string
 * HTTP verb
 * Status code
+* Middleware
 
 ## Outline
 
 * Intro (continued) to Express
-	* Middleware
 * Routing
 	* HTTP GET  
 	* Request Params
 * Query Params
+	* Middleware
 * Calculator App
 
 ## Express Intro (15m)
@@ -151,13 +152,26 @@ app.listen(3000, function () {
 
 ```
 
-## Url Parameters
+## Request (Url) Parameters
 
 What if we want to create an app that can dynamically say hello to anyone?
 
 * Using **url parameters** add a dynamic route to the application, indicated by `:` and the variable name you want to use, we'll use `:name` for the example below.
 
 ``` javascript
+// another example of some simple middleware
+// call this function on every route with the param of 'name'
+app.param('name', function(request, response, next) {
+	// get name from params
+  var name = request.params.name;
+	// capitalize the name
+  var capitalizedName = name[0].toUpperCase() + name.slice(1).toLowerCase();
+	// set the value of the name to the capitalized version
+  request.params.name = capitalizedName;
+	// pass control to the next middleware function
+  next();
+})
+
 app.get("/greet/:name", function (req, res) {
 	res.send( "Hello, " + req.params.name );
 });
@@ -172,7 +186,7 @@ Here we are seeing the first introduction to parameters that the application can
 
 ## Query Params
 
-Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
+Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
 
 Let's see query params in action. Go to [https://google.com/search?q=kittens&tbm=isch](https://google.com/search?q=kittens&tbm=isch)
 
@@ -193,7 +207,18 @@ Reset your server and go to [localhost:3000/thank?name=jane](localhost:3000/than
 
 ## Middleware
 
-Use `body-parser` to parse out params from the POST'd form. This provides a different way to collect data instead of using URL or query params.
+What is middleware? [In terms of Express](http://expressjs.com/guide/using-middleware.html), middleware is a function with access to the request object (req), the response object (res), and the next middleware in the application’s request-response cycle, commonly denoted by a variable named next.
+
+Middleware can:
+
+* Execute any code.
+* Make changes to the request and the response objects.
+* End the request-response cycle.
+* Call the next middleware in the stack.
+
+You can create your own middleware, or use third-party modules. That's right, there are tons of useful middlewares that are already out there which you can use to handle common challenges like authentication, validations, and parsing.
+
+The [`body-parser`](https://github.com/expressjs/body-parser) module is an example of some middleware that makes Express awesome. You can use it to parse out params from the POST'd form. This provides a different way to collect data instead of relying on URL or query params.
 
 `server.js`
 ```javascript
@@ -202,20 +227,24 @@ var app = express();
 
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
+// bodyParser.urlencoded() returns a function that will be called later in the app.post() route
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
 
+// store for cities in memory (as long as server is running)
 var cities = [];
 
 app.get('/cities', function(req, res) {
     res.render('cities', {cities: cities});
 })
 
+// passing multiple middleware functions to this route; they are executed sequentially.
 app.post('/cities', parseUrlencoded, function (request, response) {
   var city;
   var name = request.body.name;
   var description = request.body.description;
   city = { name: name, description: description}
   cities.push(city);
+	// passing local variables to be used in EJS template
   response.render('cities', { cities: cities});
 });
 ```
@@ -243,6 +272,7 @@ We learned about
 * Routing to different resources, i.e. `/burgers` and `/tacos`
 * Using dynamic parameters, i.e. `/burgers/:index` and `/tacos/:index` to request specific data
 * Using query parameters for dynamic requests to serve up dynamic responses
+* What middleware is and why it is helpful
 
 
 This will be essential knowledge for building and interacting with applications that contain multiple resources, such as users, posts, comments, etc.
