@@ -10,13 +10,13 @@ First we will do a function findById together. Calling findById an array of obje
 In other words, we should be able to call 
 
 ```
-	findByID(arrayOfObjects, 12);
+	findByID(data, 4);
 ```
 
 and this should return something like this:
 
 ```
-	{id: 12, course: "WDI", instructors:["Alex", "Ben", "Brianna"], students: [{name: "Angelo"}, {name:"Brian"}]}
+	{id: 4, name: "Lorraine Baines McFly", known-from: "Back to the Future" }
 ```
 
 ### Now it's your turn! 
@@ -30,25 +30,31 @@ This time we want to allow our function to findBy ANY ATTRIBUTE WE WANT! That is
 We should be able to call:
 
 ```
-	where(arrayOfObjects, {course: "WDI"});
+	where(data, {known-from: "Back to the Future"});
 ```
 
 and this should return something like this:
 
 ```
-	{course: "WDI", instructors:["Alex", "Ben", "Brianna"], students: [{name: "Angelo"}, {name:"Brian"}]}
+	[{id: 0, name: "Dr. Emmett Brown", known-from: },
+	{id: 1, name: "Marty McFly, known-from: "Back to the Future" },
+	{id: 2, name: "Biff Tannen", known-from: "Back to the Future" },
+	{id: 3, name: "Jennifer Parker, known-from: "Back to the Future" },
+	{id: 4, name: "Lorraine Baines McFly", known-from: "Back to the Future" },
+	{id: 5, name: "George McFly, known-from: "Back to the Future"}]
 ```
 
 ### Bonus:
 1. Refactor your 'where' function to accept a limit parameter, so
 	```
-	where(arrayOfObjects, {course: "WDI"}, 5);
+	where(data, {known-from: "Back to the Future"}, 3);
 	```
 	should return an array with a maximum of 5 objects in it. 
 
 	Can you get it to work with OR without that parameter?
+	
 2. Refactor your 'where' so it can accept more than one property so 
 	```
-	where(arrayOfObjects, {course: "WDI"}, {something: "thing"});
+	where(data, {known-from: "Back to the Future"}, {something: "thing"});
 	```
 	returns an array of objects that have BOTH a course property of "WDI" AND a something property of "thing"
