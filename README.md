@@ -431,7 +431,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td></td>
     <td>Express Hello World (Adam, Brianna)</td>
     <td>Todo Lab (Juliana, Ben)</td>
-    <td>[ODM Lab Mini-Mongoose](https://github.com/sf-wdi-22-23/modules/tree/d03_odm_lab/w03-intro-backend-with-express) (Alex, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/d03_odm_lab/w03-intro-backend-with-express"> ODM Lab Mini-Mongoose</a> (Alex, Matt)</td>
     <td>Review & Intro Project 0 (Alex, Matt)</td>
   </tr>
   <tr>
