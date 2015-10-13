@@ -31,6 +31,7 @@ If we wanted trending GIFS, we went to one URL. If we wanted GIFS by a keyword, 
 Say we want to create our own RESTful API that for comedy video objects, much like our GIF objects. 
 
 We want urls that can return the following resources:
+
 1. all videos in our database
 1. an individual video based on the video ID
 1. info on all comedians
