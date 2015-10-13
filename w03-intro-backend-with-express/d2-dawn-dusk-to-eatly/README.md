@@ -23,6 +23,8 @@ Follow the instructions of each of the sprints below. If/when you get stuck, che
 
 * Send foods data with your `index.html`
 
+* Create an API GET route to send food data. While we won't be using this route in this app, it's a good idea to include it so that other clients can use your API.
+
 * Create a `ul` with the id `#food-ul` to display your foods data in.
 
 * Create a template inside `#food-ul` that displays each food item as an `li` with both the food's `name` and `yumminess`.
