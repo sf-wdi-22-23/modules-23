@@ -30,16 +30,17 @@
 	* Middleware
 * Calculator App
 
-## Express Intro (15m)
+## What Can We Do with Express?
 
-**Background**
+**Core Concepts and Brainstorming**
 
-* We already know that [Node.js](https://github.com/sf-wdi-18/notes/blob/master/lectures/week-02/day_3_node/dawn/node-intro.md)
-	* **is a tool to run JavaScript outside the browser, directly on your OS.**
-* But what is a *web application framework*?
-	* **A tool for handling middleware integration, routing, and other relevant concerns.**
-* How about [Express](http://expressjs.com/)?
-	* **A configurable, minimal web framework for Node.**
+* Server-side JS
+	* **Instead of DOM manipulation, we are interacting with the request / response cycle
+
+* (B.Y.O.A.) Build your own API
+	* **What kind of data do you want to work with?
+
+
 
 ### Setup
 
