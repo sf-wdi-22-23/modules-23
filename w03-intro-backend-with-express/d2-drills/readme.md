@@ -1,3 +1,5 @@
+todo: solutions, better instructions, data.json
+
 1. We do findById
 2. You do DeleteByID 
 3. You do Where that returns array of all objects with the attribute
