@@ -62,8 +62,7 @@ Additional Resources:
 
 #### Mongoose is not magic! Its just a JavaScript Library! It has built in methods so you can do this:
 
-'''
-
+```
   var MongoClient = require('mongodb').MongoClient
     , assert = require('assert');
 
@@ -74,21 +73,20 @@ Additional Resources:
       db.close();
     });
   });
-
-'''
+```
 
 with this:
 
-'''
+```
   var mongoose = require('mongoose');
   mongoose.connect('mongodb://localhost/test');
-'''
+```
 
 Nice right!
 
 Not only that, but you can also do this:
 
-'''
+```
   var findDocuments = function(db, callback) {
     // Get the documents collection 
     var collection = db.collection('documents');
@@ -99,15 +97,15 @@ Not only that, but you can also do this:
       callback(docs);
     });
   }
-'''
+```
 
 with this:
 
-'''
+```
   this.Kitten.find({}, function(err, kitten){
       console.log(kitten)
     });
-'''
+```
 
 This is the beauty of Mongoose's build in functions. 
 
