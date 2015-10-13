@@ -425,7 +425,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Science Fair</td>
     <td>White Boarding (Alex, Matt)</td>
     <td>Bubble Sort (Brianna, Braus)</td>
-    <td>Assessment (Matt, Alex)</td>
+    <td>Assessment (Juliana (Matt, Alex))</td>
   </tr>
   <tr>
     <td>Module1</td>
