@@ -40,6 +40,13 @@ app.get("/pickanumber", function (req, res) {
 * When the user goes to `/pickanumber?number=10` the server should respond with either "Too High", "Too Low" or "Nailed it!"
 
 
+### Building Cities
+
+* Write a route that serves a template which shows all of the cities.
+* Write a route that allows you to add a new city to the list of cities. **Hint: use a form.**
+* Write a route that allows you to delete a city from your list. What will you need to do this? **Hint: you'll need to handle the specific cities in both the HTML and in the server-side JS code.**
+
+## Stretch Exercises
 ### Calculator app (Using Query Parameters) -- [solutions](solutions.md)
 
 * Create a `/multiply` route that uses query params `x` and `y` to multiple two numbers and send the result back: `"10 is the result"`.
