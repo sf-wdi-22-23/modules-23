@@ -35,10 +35,9 @@
 **Core Concepts and Brainstorming**
 
 * Server-side JS
-	* **Instead of DOM manipulation, we are interacting with the request / response cycle
-
+	* Instead of DOM manipulation, we are interacting with the request / response cycle
 * (B.Y.O.A.) Build your own API
-	* **What kind of data do you want to work with?
+	* What kind of data do you want to work with?
 
 
 
