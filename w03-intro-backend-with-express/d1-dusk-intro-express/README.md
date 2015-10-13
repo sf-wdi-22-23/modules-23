@@ -100,44 +100,7 @@ Now you can start the server:
 node index.js
 ```
 
-
-###Viewing Our Server
-
-Go to `localhost:3000` in your browser.
-
-* This sends a request to the server that looks like:
-
-	```
-	GET / HTTP/1.1
-	Host: localhost:3000
-	Connection: keep-alive
-	Cache-Control: max-age=0
-	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-	User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36
-	Accept-Encoding: gzip, deflate, sdch
-	Accept-Language: en-US,en;q=0.8
-	If-None-Match: W/"b-4a17b156"
-	```
-
-* The Server sends back something like the following:
-
-	```
-	HTTP/1.1 200 OK
-	X-Powered-By: Express
-	ETag: W/"b-4a17b156"
-	Date: Mon, 11 May 2015 00:20:24 GMT
-	Connection: keep-alive
-
-	Hello World
-	```
-
-We can verify this with the [cURL](http://curl.haxx.se/) command: `curl -I localhost:3000`.
-
-###A request/response cycle
-![simple_server](imgs/simple_express.gif)
-
-
-## Routing
+## What is Routing?
 
 Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**.
 
@@ -228,9 +191,50 @@ app.get("/thank", function (req, res) {
 
 Reset your server and go to [localhost:3000/thank?name=jane](localhost:3000/thank?name=jane). Note how we can now define parameters in the url after a `?`.
 
-## Middleware (body parser)
+## Middleware
 
-... example using body parser instead of regular `req.params.varName` and why it is more useful (show passing parseUrlencoding handler to app.routeName calls)
+Use `body-parser` to parse out params from the POST'd form. This provides a different way to collect data instead of using URL or query params.
+
+`server.js`
+```javascript
+var express = require('express');
+var app = express();
+
+var ejs = require('ejs');
+var bodyParser = require('body-parser');
+var parseUrlencoded = bodyParser.urlencoded({extended: false});
+
+var cities = [];
+
+app.get('/cities', function(req, res) {
+    res.render('cities', {cities: cities});
+})
+
+app.post('/cities', parseUrlencoded, function (request, response) {
+  var city;
+  var name = request.body.name;
+  var description = request.body.description;
+  city = { name: name, description: description}
+  cities.push(city);
+  response.render('cities', { cities: cities});
+});
+```
+
+`cities.ejs`
+```html
+<h1>Cities</h1>
+<ul>
+<% for(var i = 0; i< cities.length; i++) {%>
+   <li><%= cities[i].name %> <%= cities[i].description %></li>
+<% } %>
+</ul>
+
+<form action="/cities" method="POST">
+  <input type="text" name="name">
+  <input type="text" name="description">
+  <input type="submit" value="submit">
+</form>
+```
 
 ## Summary
 
