@@ -437,7 +437,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td></td>
-    <td>Intro Express Routes & Params (Matt, Ben)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dusk-intro-express">Intro Express Routes & Params</a> (Matt, Ben)</td>
     <td>Todo Lab Part 2 (Brianna, Juliana)</td>
     <td>Mongoose & Express (Ben, Braus)</td>
     <td>Outcomes Programming (Neda)</td>
