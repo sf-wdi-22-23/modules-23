@@ -28,12 +28,9 @@ Example: https://github.com/awhit012/pure-mongo
 
 Additional Resources:
 
-mongoDB-node repo:
+mongoDB-node repo: https://github.com/mongodb/node-mongodb-native
 
-  https://github.com/mongodb/node-mongodb-native
-express hello-word:
-
-  http://expressjs.com/starter/hello-world.html
+express hello-word: http://expressjs.com/starter/hello-world.html
 
 
 ## What is an ODM?
