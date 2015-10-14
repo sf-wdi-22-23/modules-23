@@ -3,7 +3,8 @@
 Look here for all things related to lesson notes, exercises, and solutions as well as the schedule.
 
 [JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
-
+<br>
+[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8)
 <!-- ##Week 12 -->
 <!-- <table>
   <tr>
@@ -422,22 +423,22 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Drills</td>
     <td></td>
     <td>Science Fair</td>
-    <td>White Boarding</td>
-    <td>Bubble Sort</td>
-    <td>Assessment (Team)</td>
+    <td>White Boarding (Alex, Matt)</td>
+    <td>Bubble Sort (Brianna, Braus)</td>
+    <td>Assessment (Juliana (Matt, Alex))</td>
   </tr>
   <tr>
     <td>Module1</td>
     <td></td>
-    <td>Express Hello World (Adam, Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a> (Adam, Brianna)</td>
     <td>Todo Lab (Juliana, Ben)</td>
-    <td>ODM Lab Mini-Mongoose (Alex, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/d03_odm_lab/w03-intro-backend-with-express"> ODM Lab Mini-Mongoose</a> (Alex, Matt)</td>
     <td>Review & Intro Project 0 (Alex, Matt)</td>
   </tr>
   <tr>
     <td>Module2</td>
     <td></td>
-    <td>Intro Express Routes & Params (Matt, Ben)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dusk-intro-express">Intro Express Routes & Params</a> (Matt, Ben)</td>
     <td>Todo Lab Part 2 (Brianna, Juliana)</td>
     <td>Mongoose & Express (Ben, Braus)</td>
     <td>Outcomes Programming (Neda)</td>
@@ -445,7 +446,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>HW</td>
     <td></td>
-    <td>RESTful Conventions (Alex)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/day-1-homework.md">RESTful Conventions</a> (Alex)</td>
     <td>ODMs (Brianna)</td>
     <td>JS Event Stack (Braus)</td>
     <td>Mongoose Relationships</td>
