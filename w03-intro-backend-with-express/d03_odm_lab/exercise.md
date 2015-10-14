@@ -4,12 +4,16 @@
 
 In this exercise you will be implementing your own version of Mongoose in order to understand how an object-document-mapper (ODM) works under the hood. This exercise will consist of building a constructor function and adding several functions that mimic Mongoose's functionality to the constructor's prototype.
 
-1.  Create an object constructor called Model.
-  - The model will have these properties:
-    - has a parameter called `name`
-    - has a property `type` that is assigned the parameter `name`
-    - has an empty array named data
-    - has an identification number `_id` assigned to 0.
+### Base Challenges
+
+**Create an object constructor called Model**
+
+  1.  Define a function called Model. The model will have these properties:
+      - has a parameter called `name`
+      - has a property `type` that is assigned the parameter `name`
+      - has an empty array named data
+      - has an identification number `_id` assigned to 0.
+  2. Set the model's prototype to an empty `{}` (object literal).
 
    ```js
    // constructor function with name parameter
@@ -21,16 +25,23 @@ In this exercise you will be implementing your own version of Mongoose in order 
      // property '_id' assigned to 0
      this._id = 0;
    }
+
+   Model.prototype = {};
+
+   function ourCallback(object) {
+     return object;
+   }
    ```
 
-2. Add a create method to Model's prototype which:
-    - has the parameters `configObj` and `callbackFunc`
-    - creates a variable object_container that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate
-    - Give our objectContainer a property '_id' and assign to it our Model's '_id'
-    - Increment our Model's '_id' property after assigning it.
-    - Give our object-container a 'timeStamp' property with the current date assigned to it
-    - Push our objectContainer into our Model.data array
-    - Lastly this function calls our callback. Our callback should simple return any object passed-in as an argument
+**Add a create method to Model's prototype:**
+
+  1. The `create()` function has the parameters `configObj` and `callbackFunc`
+  2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate
+  3. Give `objectContainer` a property `_id` and assign to it our Model's `_id`
+  4. Increment our Model's `_id` property after assigning it.
+  5. Give our `objectContainer` a `timeStamp` property with the current date assigned to it *Hint: use the Date constructor*
+  6. Push our `objectContainer` into our Model.data array
+  7. Lastly this function returns our callback. Our callback should simply return any object passed-in as an argument
 
     ```js
     // add create function as property to Model prototype, passing an object for configuration and a callback function
@@ -52,10 +63,11 @@ In this exercise you will be implementing your own version of Mongoose in order 
     }
     ```
 
-3. Add a findById method to Model's prototype which:
-    - has the parameters 'objectId' and 'callback'
-    - Searches the Model `data` array for a matching object that has the same `object_id`
-    - Returns the matching object within a callback call
+**Add a `findById` method to Model's prototype which:**
+
+  1. has the parameters 'objectId' and 'callback'
+  2. Searches the Model `data` array for a matching object that has the same `object_id`
+  3. Returns the matching object within a callback call
     <br><br>
     ```js
     // define function as property 'findById' on Model prototype, passing objectId (an integer, and a callback function)
@@ -75,11 +87,12 @@ In this exercise you will be implementing your own version of Mongoose in order 
     }
     ```
 
-3. Add a update method to Model's prototype which:
-    - has the parameters `object_id`, `update_object`, and `callback`
-    - Searches the Model `data` array for a matching object that has the same `object_id`
-    - Updates that matching object's data property
-    - Returns the matching object within a callback call
+**Add a update method to Model's prototype which:**
+
+    1. has the parameters `object_id`, `update_object`, and `callback`
+    2. Searches the Model `data` array for a matching object that has the same `object_id`
+    3. Updates that matching object's data property
+    4. Returns the matching object within a callback call
     <br><br>
 
     ```js
@@ -103,11 +116,12 @@ In this exercise you will be implementing your own version of Mongoose in order 
     }
     ```
 
-  - destroy:
-    - Method that has the parameters `object_id`, and `callback`
-    - Searches the Model `data` array for a matching object that has the same `object_id`
-    - Removes the matching object from the Model `data` array
-    - Returns the matching object within a callback call
+**Add a destroy method to Model's prototype which:**
+
+  1. Method that has the parameters `object_id`, and `callback`
+  2. Searches the Model `data` array for a matching object that has the same `object_id`
+  3. Removes the matching object from the Model `data` array
+  4. Returns the matching object within a callback call
 
     ```js
     Model.prototype.delete: function(objectId, callback) {
@@ -131,7 +145,11 @@ In this exercise you will be implementing your own version of Mongoose in order 
     ```
 
 4. STREEEEETCHHHHH
-  - hook up your new hand-made database to some routes using Express and EJS to render templates of your data retrieved from the database
+  **Hook up your new hand-made database to some routes using Express and EJS to render templates of your data retrieved from the database**
+  1. Spin up an Express app using `npm init` and `npm install`
+  2. Write routes that correspond to each of your Model constructor's functions
+  3. Use what you know of routing params, query strings, or body parser to populate EJS templates with the appropriate information from the queried object
+
   - check out this tutorial on how to https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library
   - and/ or this blog post: https://quickleft.com/blog/creating-and-publishing-a-node-js-module/
   - create a nodeJS module that is downloadable via npm install, just like Mongoose is.
