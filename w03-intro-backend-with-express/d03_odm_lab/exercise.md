@@ -13,7 +13,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
       - has a property `type` that is assigned the parameter `name`
       - has an empty array named data
       - has an identification number `_id` assigned to 0.
-  2. Set the model's prototype to an empty `{}` (object literal).
+  2. Create a function called `returnThis` which takes a parameter `object`. Have the callback return the passed-in object.
 
    ```js
    // constructor function with name parameter
@@ -26,119 +26,115 @@ In this exercise you will be implementing your own version of Mongoose in order 
      this._id = 0;
    }
 
-   Model.prototype = {};
+   console.log(Model); // [Function: Model]
+   console.log(Model.prototype); // {}
 
-   function ourCallback(object) {
+   // callback function we can use to return an object
+   // this is similar to how Mongoose operates
+   function returnThis(object) {
      return object;
    }
    ```
 
-**Add a create method to Model's prototype:**
+**Add a create method to the Model's prototype:**
 
-  1. The `create()` function has the parameters `configObj` and `callbackFunc`
-  2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate
-  3. Give `objectContainer` a property `_id` and assign to it our Model's `_id`
-  4. Increment our Model's `_id` property after assigning it.
-  5. Give our `objectContainer` a `timeStamp` property with the current date assigned to it *Hint: use the Date constructor*
-  6. Push our `objectContainer` into our Model.data array
-  7. Lastly this function returns our callback. Our callback should simply return any object passed-in as an argument
+  1. Define a `create()` function as a property on the Model's prototype which accepts the parameters `configObj` and `callbackFunc`. The `configObj` is the Javascript object literal that will be used to build the new instance of `Model` and `callbackFunc` is a function that will be called later.
+  2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate.
+  3. Give `objectContainer` a property `_id` and assign to it our Model's `_id` incremented by 1.
+  4. Assign the `objectContainer`'s `subData` property to the `configObj`.
+  5. Give our `objectContainer` a `timeStamp` property with the current date assigned to it. *Hint: use the Date constructor*
+  6. Push our `objectContainer` into our Model.data array.
+  7. Lastly this function returns our callback. Our callback should simply return any object passed-in as an argument.
 
     ```js
     // add create function as property to Model prototype, passing an object for configuration and a callback function
     Model.prototype.create = function(configObj, callbackFunc) {
       // set an empty object as your objectContainer (what is this meant to be? Better name?)
       var objectContainer = {};
-      // define subData property of objectContainer, set it to passed in object
+      // define a property of '_id' on objectContainer
+      // assign objectContainer's '_id' property to the Model's `_id` property (incremented!)
+      objectContainer._id = this._id++;
+      // define subData property of objectContainer, set it to passed-in configObj
       objectContainer.subData = configObj;
-      // define a property of '_id' on objectContainer, assign value of configObj's '_id' property
-      objectContainer._id = configObj._id;
-      // increment the Model instance's '_id' property by 1
-      this._id++;
-      // define the timestamp property of the objectContainer, assign it to
-      objectContainer.timestamp = new Date() || Date.now(); // do we want to the Unix timestamp?
-      // add the objectContainer to our the Model instance's data array
+      // define timestamp property of objectContainer, assign it to new instance of Date object
+      objectContainer.timestamp = new Date();
+      // add the objectContainer to the Model instance's data array
       this.data.push(objectContainer);
-
-      return callback(objectContainer);
+      // return the output of the passed-in callback executing
+      return callbackFunc(objectContainer);
     }
     ```
 
-**Add a `findById` method to Model's prototype which:**
+**Add a `findById` method to the Model's prototype:**
 
-  1. has the parameters 'objectId' and 'callback'
-  2. Searches the Model `data` array for a matching object that has the same `object_id`
-  3. Returns the matching object within a callback call
+  1. Define a `findById()` function as a property on the Model's prototype which accepts the parameters `objectId` (an integer) and `callback` (a function to be called later).
+  2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
+  3. Return the matching object using the passed-in callback.
     <br><br>
     ```js
     // define function as property 'findById' on Model prototype, passing objectId (an integer, and a callback function)
     Model.prototype.findById = function(objectId, callback) {
-      // set var found for later use;
-      var found;
       // iterate over data array of Model instance
       this.data.forEach(function(object) {
         // if the current object being iterated over has an _id matching the objectId
         if (object._id === objectId) {
-          //found to the result of the callback function
-          found = callback(object);
+          // return the matching result using the callback function
+          return callback(object);
         }
       })
-      // return found object
-      return found;
     }
     ```
 
-**Add a update method to Model's prototype which:**
+**Add a update method to the Model's prototype:**
 
-    1. has the parameters `object_id`, `update_object`, and `callback`
-    2. Searches the Model `data` array for a matching object that has the same `object_id`
-    3. Updates that matching object's data property
-    4. Returns the matching object within a callback call
+    1. Define an `update()` function as a property on the Model's prototype which accepts the parameters `objectId`, `updateObject`, and `callback`
+    2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
+    3. Update the matching object's subData property by assigning it to the passed-in `updateObject`.
+    4. Return the matching object within a callback call.
     <br><br>
 
     ```js
     // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
     Model.prototype.update: function(objectId, updateObject, callback) {
-        // define 'update' for later use
-        var update;
         // iterate over data array of Model instance
-        this.data.forEach(function (objectContainer) {
-          // if the objectContainer currently being iterated over
+        this.data.forEach(function(object) {
+          // if the object currently being iterated over
           // has an '_id' that matches the objectId
-          if(objectContainer._id === objectId){
-            // set that objectContainer's subData property to the updateObject
-            objectContainer.subData = updateObject;
-            // set update to be the objectContainer
-            update = objectContainer;
+          if(object._id === objectId){
+            // set that object's subData property to the updateObject
+            object.subData = updateObject;
+            // return the updated objectContainer using callback function
+            return callback(objectContainer);
           }
         });
-        // return the update
-        return update;
     }
     ```
 
-**Add a destroy method to Model's prototype which:**
+**Add a destroy method to the Model's prototype:**
 
-  1. Method that has the parameters `object_id`, and `callback`
-  2. Searches the Model `data` array for a matching object that has the same `object_id`
-  3. Removes the matching object from the Model `data` array
-  4. Returns the matching object within a callback call
+  1. Define a `destroy()` function as a property on the Model's prototype which takes the parameters `objectId`, and `callback`.
+  2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
+  3. Remove the matching object from the Model `data` array.
+  4. Return the matching object within a callback call.
 
     ```js
     Model.prototype.delete: function(objectId, callback) {
         // set variables for later use
         var position, marked;
         // iterate over data array of Model instance
-        this.data.forEach(function (objectContainer, index) {
-          // if the current objectContainer being iterated over
-          // has an '_id' equal to the objectId
-          if(objectContainer._id === objectId){
-            // set marked to the objectContainer and position to the index
-            marked = objectContainer;
+        this.data.forEach(function(object, index) {
+        // object is the item currently being iterated over
+        // index is that item's position in the data array
+
+        // if the current object being iterated over has an '_id' equal to the objectId
+          if(object._id === objectId){
+        // set marked to the object and position to the index
+            marked = object;
             position = index;
           }
         });
         // splice one item from the array at the index of position
-        this.data.splice(position,1);
+        this.data.splice(position, 1);
         // return marked object using callback
         return callback(marked);
     }
