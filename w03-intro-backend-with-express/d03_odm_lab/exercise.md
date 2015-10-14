@@ -47,7 +47,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
   7. Lastly this function returns our callback. Our callback should simply return any object passed-in as an argument.
 
     ```js
-    // add create function as property to Model prototype, passing an object for configuration and a callback function
+    // add create function as property to Model prototype, passing a properties object (to specify the details of the Model being created) and a callback function
 
     Model.prototype.create = function(objectProperties, callbackFunction) {
       // assign a variable objectContainer to an empty object
@@ -84,11 +84,25 @@ In this exercise you will be implementing your own version of Mongoose in order 
     }
     ```
 
-**Add a where method like similar to what we made in drills which:**
-1. has a parameter 'properties' that looks will look like this: {first_name: "Jillian"}
-1. has a parameter 'callback' that takes a function
-1. iterates over this.data instead of a passed in array
-1. returns an array of objects that match the properties passed in passed into a call back like this: return callback(output)
+**Add a where method like (what we made in drills yesterday):**
+  1. Define a function `where()` that accepts a parameter 'properties', that looks will look like this: `{last_name: "Ever", first_name: "Greatest"}`
+  2. `where()` should also accept a parameter `callback`, which will be a function.
+  3. Iterate over `this.data` (the array referenced by Model's data property). *Note: We are doing this instead of passing in an array*
+  4. Return an array of objects that match the passed-in properties to a callback like this: `return callback(output)`
+  <br><br>
+
+  ```js
+  // define function as property 'where' on Model prototype, passing properties
+  Model.prototype.where = function(properties) {
+    // iterate over array of Model instance data property
+
+    // compare the value of the property of the object that is being iterated over
+    // with the value of that same property from the properties object
+    // add matching objects to a collection
+
+    // return matching objects using callback function
+  }
+  ```
 
 **Add a update method to the Model's prototype:**
 
@@ -100,7 +114,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
   ```js
     // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
-    Model.prototype.update: function(objectId, updateObject, callback) {
+    Model.prototype.update = function(objectId, updateObject, callback) {
       // iterate over data array of Model instance
 
       // if the object currently being iterated over has an '_id' that matches the objectId
