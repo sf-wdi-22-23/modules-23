@@ -62,10 +62,9 @@ In this exercise you will be implementing your own version of Mongoose in order 
 1. has the parameters 'objectId' and 'callback'
 2. Searches the Model `data` array for a matching object that has the same `object_id`
 3. Returns the matching object within a callback call
->>>>>>> 49afa3d9683c229c033d4e6533af972bd8efe66a
     <br><br>
     ```js
-    // define function as property 'findById' on Model prototype, passing objectId (an integer, and a callback function)
+    // define function as property 'findById' on Model prototype, passing objectId (an integer), and a callback function
     Model.prototype.findById = function(objectId, callback) {
       // set var found for later use;
       var found;
