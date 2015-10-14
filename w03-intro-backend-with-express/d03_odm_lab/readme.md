@@ -32,9 +32,6 @@ Additional Resources:
 
 - mongoDB-node repo: https://github.com/mongodb/node-mongodb-native
 
-- express hello-word: http://expressjs.com/starter/hello-world.html
-
-
 ## What is an ODM?
 An ODM (Object-Document Mapper) is a tool that lets you query and manipulate data from a non-relational database using an object paradigm.
 
