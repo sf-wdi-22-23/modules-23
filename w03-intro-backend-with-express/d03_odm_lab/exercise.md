@@ -74,7 +74,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
     <br><br>
 
     ```js
-    // define function as property 'findById' on Model prototype, passing objectId (an integer, and a callback function)
+    // define function as property 'findById' on Model prototype, passing objectId (an integer), and a callback function
     Model.prototype.findById = function(objectId, callback) {
       // iterate over data array of Model instance
 
