@@ -1,0 +1,15 @@
+data = [
+	{id: 0, name: "Dr. Emmett Brown", known-from: "Back to the Future" , hair-color: "grey"},
+	{id: 1, name: "Marty McFly", known-from: "Back to the Future", hair-color: "brown"},
+	{id: 2, name: "Biff Tannen", known-from: "Back to the Future" , hair-color: "blonde"},
+	{id: 3, name: "Jennifer Parker", known-from: "Back to the Future" , hair-color: "blonde"},
+	{id: 4, name: "Lorraine Baines McFly", known-from: "Back to the Future" , hair-color: "brown"},
+	{id: 5, name: "George McFly", known-from: "Back to the Future" , hair-color: "brown"},
+	{id: 6, name: "Morty Smith", known-from: "Rick and Morty" , hair-color: "brown"},
+	{id: 7, name: "Summer Smith", known-from: "Rick and Morty" , hair-color: "red" },
+	{id: 6, name: "Beth Smith", known-from: "Rick and Morty" , hair-color: "blonde"},
+	{id: 7, name: "Jerry Smith", known-from: "Rick and Morty" , hair-color: "brown"},
+	{id: 8, name: "Rich Sanchez", known-from: "Rick and Morty" , hair-color: "grey"},
+	{id: 9, name: "Mr. Meeseeks", known-from: "Rick and Morty" , hair-color: "NA"},
+	{id: 10, name: "Birdperson", known-from: "Rick and Morty" , hair-color: "NA"},
+]
