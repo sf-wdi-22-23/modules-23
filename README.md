@@ -423,7 +423,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Drills</td>
     <td></td>
     <td>Science Fair</td>
-    <td>White Boarding (Alex, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d2-drills">White Boarding</a> (Alex, Matt)</td>
     <td>Bubble Sort (Brianna, Braus)</td>
     <td>Assessment (Juliana (Matt, Alex))</td>
   </tr>
