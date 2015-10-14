@@ -20,15 +20,11 @@ a structured set of data held in a computer, especially one that is accessible i
 
 ## Express with MongoDB
 
-### Let's get a quick Express app together and connect it to MongoDB.
-TODO: break this down into steps with some sample code
-- It should:
-  - Run an app.js file which:
-  - establishes a connection with MongoDB
-  - Be able to add items to the database
-  - be able to log all items in the database
+### You can use Express with MongoDB without Mongoose. But it is not nice. 
+Lines of code to connect to MongoDB WITHOUT Mongoose: 11
+Lines of code to connect to MongoDB WITH Mongoose:    2
 
-My solution: https://github.com/awhit012/pure-mongo
+Example: https://github.com/awhit012/pure-mongo
 
 Additional Resources:
 
