@@ -2,7 +2,7 @@
 
 We'll start working with databases tomorrow! Yay!
 
-![](http://giphy.com/gifs/community-annie-D76YOxpdvXne8)
+![](https://media.giphy.com/media/D76YOxpdvXne8/giphy.gif)
 
 Remember how our data got reset every time we restarted our servers over the past few days? Databases help us store data *persistently* longer than we could if we just stored data in an array in our server code. That's because, usually, we leave our database on and running even when we restart our server.  
 
