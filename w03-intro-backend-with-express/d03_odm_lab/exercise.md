@@ -8,12 +8,12 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Create an object constructor called Model**
 
-  1.  Define a function called Model. The model will have these properties:
-      - has a parameter called `name`
-      - has a property `type` that is assigned the parameter `name`
-      - has an empty array named data
-      - has an identification number `_id` assigned to 0.
-  2. Set the model's prototype to an empty `{}` (object literal).
+1.  Define a function called Model. The model will have these properties:
+  - has a parameter called `name`
+  - has a property `type` that is assigned the parameter `name`
+  - has an empty array named data
+  - has an identification number `_id` assigned to 0.
+2. Set the model's prototype to an empty `{}` (object literal).
 
    ```js
    // constructor function with name parameter
@@ -35,13 +35,13 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Add a create method to Model's prototype:**
 
-  1. The `create()` function has the parameters `configObj` and `callbackFunc`
-  2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate
-  3. Give `objectContainer` a property `_id` and assign to it our Model's `_id`
-  4. Increment our Model's `_id` property after assigning it.
-  5. Give our `objectContainer` a `timeStamp` property with the current date assigned to it *Hint: use the Date constructor*
-  6. Push our `objectContainer` into our Model.data array
-  7. Lastly this function returns our callback. Our callback should simply return any object passed-in as an argument
+1. The `create()` function has the parameters `configObj` and `callbackFunc`
+2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate
+3. Give `objectContainer` a property `_id` and assign to it our Model's `_id`
+4. Increment our Model's `_id` property after assigning it.
+5. Give our `objectContainer` a `timeStamp` property with the current date assigned to it *Hint: use the Date constructor*
+6. Push our `objectContainer` into our Model.data array
+7. Lastly this function returns our callback. Our callback should simply return any object passed-in as an argument
 
     ```js
     // add create function as property to Model prototype, passing an object for configuration and a callback function
@@ -65,9 +65,9 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Add a `findById` method to Model's prototype which:**
 
-  1. has the parameters 'objectId' and 'callback'
-  2. Searches the Model `data` array for a matching object that has the same `object_id`
-  3. Returns the matching object within a callback call
+1. has the parameters 'objectId' and 'callback'
+2. Searches the Model `data` array for a matching object that has the same `object_id`
+3. Returns the matching object within a callback call
     <br><br>
     ```js
     // define function as property 'findById' on Model prototype, passing objectId (an integer, and a callback function)
@@ -89,13 +89,13 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Add a update method to Model's prototype which:**
 
-    1. has the parameters `object_id`, `update_object`, and `callback`
-    2. Searches the Model `data` array for a matching object that has the same `object_id`
-    3. Updates that matching object's data property
-    4. Returns the matching object within a callback call
-    <br><br>
+1. has the parameters `object_id`, `update_object`, and `callback`
+2. Searches the Model `data` array for a matching object that has the same `object_id`
+3. Updates that matching object's data property
+4. Returns the matching object within a callback call
+<br><br>
 
-    ```js
+  ```js
     // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
     Model.prototype.update: function(objectId, updateObject, callback) {
         // define 'update' for later use
@@ -114,14 +114,14 @@ In this exercise you will be implementing your own version of Mongoose in order 
         // return the update
         return update;
     }
-    ```
+ ```
 
 **Add a destroy method to Model's prototype which:**
 
-  1. Method that has the parameters `object_id`, and `callback`
-  2. Searches the Model `data` array for a matching object that has the same `object_id`
-  3. Removes the matching object from the Model `data` array
-  4. Returns the matching object within a callback call
+1. Method that has the parameters `object_id`, and `callback`
+2. Searches the Model `data` array for a matching object that has the same `object_id`
+3. Removes the matching object from the Model `data` array
+4. Returns the matching object within a callback call
 
     ```js
     Model.prototype.delete: function(objectId, callback) {
