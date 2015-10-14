@@ -55,6 +55,6 @@ and this should return something like this:
 	
 2. Refactor your 'where' so it can accept more than one property so 
 	```
-	where(data, {known-from: "Back to the Future"}, {something: "thing"});
+	where(data, {known-from: "Back to the Future"}, {hair-color: "brown"});
 	```
-	returns an array of objects that have BOTH a course property of "WDI" AND a something property of "thing"
+	returns an array of objects that have BOTH a known-from property of "Back to the Future" AND a hair-color property of "brown".
