@@ -16,7 +16,7 @@ But for tonight!  Let's think about what we would want from an ODM.
 
 ## Homework!
 
-1. Continue the toEatly lab from today. If you have getting posts, creating posts, and deleting posts done, you're in a really good place. 
+1. Continue the toEatly lab from today. If you have showing all foods on the index, creating new foods, and deleting foods done, you're in a really good place.  We'll continue on with this tomorrow starting from the sprint-three branch, so take a look.
 
 1. In your `2x-homework/username` directory, create a `w03-d2-data-mapper.md` file.  Include your thoughts about the following questions in that file.
 
