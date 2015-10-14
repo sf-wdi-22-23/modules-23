@@ -16,18 +16,19 @@ function findAndDeleteById(arr, id){
 }
 
 function where(arr, properties){
-  var output;
+  var output = [];
   var obj;
   for (var i=0; i<arr.length; i++){
     obj = arr[i];
     for (var key in obj){
       if (obj[key] === properties[key]){
-          output = obj;
+          output.push(obj);
       }
     }
   }
   return output;
 }
+
 
 var data = [
   {id: 0, name: "Dr. Emmett Brown", knownFrom: "Back to the Future" , hairColor: "grey"},
