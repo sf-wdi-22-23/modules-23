@@ -63,7 +63,6 @@ Additional Resources:
 #### Mongoose is not magic! Its just a JavaScript Library! It has built in methods so you can do this:
 
 '''
-
   var MongoClient = require('mongodb').MongoClient
     , assert = require('assert');
 
