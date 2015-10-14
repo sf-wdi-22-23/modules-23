@@ -10,25 +10,25 @@ function findAndDeleteById(arr, id){
   var output;
   for (var i=0; i<arr.length; i++){
     if(arr[i].id == id){
-      output = arr.splice(i, 1);
+      return arr.splice(i, 1)[0];
     }
   }
-  return output
 }
 
 function where(arr, properties){
-  var output;
+  var output = [];
   var obj;
   for (var i=0; i<arr.length; i++){
     obj = arr[i];
     for (var key in obj){
       if (obj[key] === properties[key]){
-          output = obj;
+          output.push(obj);
       }
     }
   }
   return output;
 }
+
 
 var data = [
   {id: 0, name: "Dr. Emmett Brown", knownFrom: "Back to the Future" , hairColor: "grey"},
