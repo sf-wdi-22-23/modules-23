@@ -21,7 +21,9 @@ a structured set of data held in a computer, especially one that is accessible i
 ## Express with MongoDB
 
 ### You can use Express with MongoDB without Mongoose. But it is not nice. 
+
 Lines of code to connect to MongoDB WITHOUT Mongoose: 11
+
 Lines of code to connect to MongoDB WITH Mongoose:    2
 
 Example: https://github.com/awhit012/pure-mongo
