@@ -24,15 +24,15 @@ a structured set of data held in a computer, especially one that is accessible i
 
 Lines of code to connect to MongoDB WITHOUT Mongoose: 11
 
-Example: https://github.com/awhit012/pure-mongo
+- Example: https://github.com/awhit012/pure-mongo
 
 Lines of code to connect to MongoDB WITH Mongoose:    2
 
 Additional Resources:
 
-mongoDB-node repo: https://github.com/mongodb/node-mongodb-native
+- mongoDB-node repo: https://github.com/mongodb/node-mongodb-native
 
-express hello-word: http://expressjs.com/starter/hello-world.html
+- express hello-word: http://expressjs.com/starter/hello-world.html
 
 
 ## What is an ODM?
