@@ -13,9 +13,8 @@ In this exercise you will be implementing your own version of Mongoose in order 
   - a property `type` that is assigned the parameter `name`
   - an empty array named data
   - an identification number `_id` assigned to 0.
-2. Set the model's prototype to an empty `{}` (object literal).
 
-   ```js
+ ```js
    // constructor function with name parameter
    function Model(name) {
      // property 'type' assigned to parameter 'name'
@@ -25,17 +24,11 @@ In this exercise you will be implementing your own version of Mongoose in order 
      // property '_id' assigned to 0
      this._id = 0;
    }
-
-   Model.prototype = {};
-
-   function ourCallback(object) {
-     return object;
-   }
-   ```
+ ```
 
 **Add a create method to Model's prototype:**
 
-1. The `create()` function has the parameters `configObj` and `callbackFunc`
+1. The `create` function has the parameters `objectProperties` and `callbackFunction`
 2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate
 3. Give `objectContainer` a property `_id` and assign to it our Model's `_id`
 4. Increment our Model's `_id` property after assigning it.
@@ -45,21 +38,22 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
     ```js
     // add create function as property to Model prototype, passing an object for configuration and a callback function
-    Model.prototype.create = function(configObj, callbackFunc) {
-      // set an empty object as your objectContainer (what is this meant to be? Better name?)
-      var objectContainer = {};
-      // define subData property of objectContainer, set it to passed in object
-      objectContainer.subData = configObj;
-      // define a property of '_id' on objectContainer, assign value of configObj's '_id' property
-      objectContainer._id = configObj._id;
-      // increment the Model instance's '_id' property by 1
-      this._id++;
-      // define the timestamp property of the objectContainer, assign it to
-      objectContainer.timestamp = new Date() || Date.now(); // do we want to the Unix timestamp?
-      // add the objectContainer to our the Model instance's data array
-      this.data.push(objectContainer);
 
-      return callback(objectContainer);
+    Model.prototype.create = function(objectProperties, callbackFunction) {
+      // assign a variable objectContainer to an empty object 
+
+      // define a subData property on objectContainer and assign the passed in objectProperties object to it
+     
+      // define a property of '_id' on objectContainer, assign value of objectProperties's '_id' property
+      
+      // increment the Model instance's '_id' property by 1
+      
+      // define the timestamp property of the objectContainer, assign it to
+      objectContainer.timestamp = new Date()
+      
+      // add the objectContainer to our the Model instance's data array
+
+      // return the invoked allback with the objectContainer as a parameter
     }
     ```
 

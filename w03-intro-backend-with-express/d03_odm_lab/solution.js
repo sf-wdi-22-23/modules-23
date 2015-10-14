@@ -4,30 +4,6 @@ function Model(name){
   this._id = 0;
 }
 
-
-// ZOMG! This is a JavaScript pattern you may not have seen. 
-// Don't freak out. It is the same as doing this:
-// Model.prototype.aMethod = function(object, callback){
-  // ...
-// }
-// for each method. 
-
-Model.prototype.where = function(properties){
-  var output = [];
-  var length = this.data.length;
-  var obj;
-  for (var i=0; i<length; i++){
-    obj = this.data[i];
-    for (var key in obj.subData){
-      if (obj.subData[key] === properties[key]){
-          output.push(obj);
-      }
-    }
-  }
-  return output;
-}
-
-
 Model.prototype.create = function(object, callback){
   var objectContainer = {};
   objectContainer._id = this._id++;
@@ -45,6 +21,21 @@ Model.prototype.findByID = function(objectId, callback){
     }
   });
   return found;
+};
+
+Model.prototype.where = function(properties){
+  var output = [];
+  var length = this.data.length;
+  var obj;
+  for (var i=0; i<length; i++){
+    obj = this.data[i];
+    for (var key in obj.subData){
+      if (obj.subData[key] === properties[key]){
+          output.push(obj);
+      };
+    };
+  };
+  return output;
 };
 
 Model.prototype.update = function(objectId, updateObject, callback) {
