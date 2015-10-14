@@ -42,14 +42,14 @@ Kind of like a librarian that knows a bunch of things, so you don't have to.
 
 ## Express with Mongoose
 
-### Let's create another Express app that connects to MongoDB, but this time using Mongoose.
+### Let's create an Express app that connects to MongoDB, using Mongoose.
 
-TODO: step-by-step instructions (with some code samples)
+**How do we do that?**
 
-My solution: https://github.com/awhit012/mongoose-express-demo
+1. Go step by step through the [Express "Hello World"](http://expressjs.com/starter/hello-world.html) instructions. 
+2. Go step by step through the [Mongoose Quick Start](http://mongoosejs.com/docs/3.5.x/docs/index.html) instructions
+3. Take a look at [my solution](https://github.com/awhit012/mongoose-express-demo) if you need help. 
 
-Additional Resources:
-  Mongoose Quick Start: http://mongoosejs.com/docs/3.5.x/docs/index.html
 
 ## Exercises:
 ### Building an ODM!
