@@ -9,13 +9,13 @@ In this exercise you will be implementing your own version of Mongoose in order 
 **Create an object constructor called Model**
 
   1.  Define a function called Model. The model will have these properties:
-      - has a parameter called `name`
-      - has a property `type` that is assigned the parameter `name`
-      - has an empty array named data
-      - has an identification number `_id` assigned to 0.
+      - a parameter called `name`
+      - a property `type` that is assigned the parameter `name`
+      - an empty array named data
+      - an identification number `_id` assigned to 0.
   2. Create a function called `returnThis` which takes a parameter `object`. Have the callback return the passed-in object.
 
-   ```js
+ ```js
    // constructor function with name parameter
    function Model(name) {
      // property 'type' assigned to parameter 'name'
@@ -38,7 +38,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Add a create method to the Model's prototype:**
 
-  1. Define a `create()` function as a property on the Model's prototype which accepts the parameters `configObj` and `callbackFunc`. The `configObj` is the Javascript object literal that will be used to build the new instance of `Model` and `callbackFunc` is a function that will be called later.
+  1. Define a `create()` function as a property on the Model's prototype which accepts the parameters `objectProperties` and `callbackFunction`. The `objectProperties` is the Javascript object literal that will be used to build the new instance of `Model` and `callbackFunction` is a function that will be called later.
   2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate.
   3. Give `objectContainer` a property `_id` and assign to it our Model's `_id` incremented by 1.
   4. Assign the `objectContainer`'s `subData` property to the `configObj`.
@@ -48,20 +48,21 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
     ```js
     // add create function as property to Model prototype, passing an object for configuration and a callback function
-    Model.prototype.create = function(configObj, callbackFunc) {
-      // set an empty object as your objectContainer (what is this meant to be? Better name?)
-      var objectContainer = {};
-      // define a property of '_id' on objectContainer
-      // assign objectContainer's '_id' property to the Model's `_id` property (incremented!)
-      objectContainer._id = this._id++;
-      // define subData property of objectContainer, set it to passed-in configObj
-      objectContainer.subData = configObj;
-      // define timestamp property of objectContainer, assign it to new instance of Date object
-      objectContainer.timestamp = new Date();
-      // add the objectContainer to the Model instance's data array
-      this.data.push(objectContainer);
-      // return the output of the passed-in callback executing
-      return callbackFunc(objectContainer);
+
+    Model.prototype.create = function(objectProperties, callbackFunction) {
+      // assign a variable objectContainer to an empty object
+
+      // define a subData property on objectContainer and assign the passed in objectProperties object to it
+
+      // increment the Model instance's '_id' property by 1
+
+      // define a property of '_id' on objectContainer, assign value of objectProperties's '_id' property
+
+      // define the timestamp property of the objectContainer, assign it to
+
+      // add the objectContainer to our the Model instance's data array
+
+      // return the invoked callback with the objectContainer as a parameter
     }
     ```
 
@@ -71,19 +72,23 @@ In this exercise you will be implementing your own version of Mongoose in order 
   2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
   3. Return the matching object using the passed-in callback.
     <br><br>
+
     ```js
     // define function as property 'findById' on Model prototype, passing objectId (an integer, and a callback function)
     Model.prototype.findById = function(objectId, callback) {
       // iterate over data array of Model instance
-      this.data.forEach(function(object) {
-        // if the current object being iterated over has an _id matching the objectId
-        if (object._id === objectId) {
-          // return the matching result using the callback function
-          return callback(object);
-        }
-      })
+
+      // if the current object being iterated over has an _id matching the objectId
+
+      // return the matching result using the callback function
     }
     ```
+
+**Add a where method like similar to what we made in drills which:**
+1. has a parameter 'properties' that looks will look like this: {first_name: "Jillian"}
+1. has a parameter 'callback' that takes a function
+1. iterates over this.data instead of a passed in array
+1. returns an array of objects that match the properties passed in passed into a call back like this: return callback(output)
 
 **Add a update method to the Model's prototype:**
 
@@ -93,22 +98,18 @@ In this exercise you will be implementing your own version of Mongoose in order 
     4. Return the matching object within a callback call.
     <br><br>
 
-    ```js
+  ```js
     // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
     Model.prototype.update: function(objectId, updateObject, callback) {
-        // iterate over data array of Model instance
-        this.data.forEach(function(object) {
-          // if the object currently being iterated over
-          // has an '_id' that matches the objectId
-          if(object._id === objectId){
-            // set that object's subData property to the updateObject
-            object.subData = updateObject;
-            // return the updated objectContainer using callback function
-            return callback(objectContainer);
-          }
-        });
+      // iterate over data array of Model instance
+
+      // if the object currently being iterated over has an '_id' that matches the objectId
+
+      // set that object's subData property to the updateObject
+
+      // return the updated objectContainer using callback function
     }
-    ```
+ ```
 
 **Add a destroy method to the Model's prototype:**
 
@@ -116,27 +117,21 @@ In this exercise you will be implementing your own version of Mongoose in order 
   2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
   3. Remove the matching object from the Model `data` array.
   4. Return the matching object within a callback call.
+  <br><br>
 
     ```js
     Model.prototype.delete: function(objectId, callback) {
-        // set variables for later use
-        var position, marked;
-        // iterate over data array of Model instance
-        this.data.forEach(function(object, index) {
-        // object is the item currently being iterated over
-        // index is that item's position in the data array
+        // set position and marked variables for later use
+
+        // iterate over the array of the Model instance's data property
 
         // if the current object being iterated over has an '_id' equal to the objectId
-          if(object._id === objectId){
+
         // set marked to the object and position to the index
-            marked = object;
-            position = index;
-          }
-        });
+
         // splice one item from the array at the index of position
-        this.data.splice(position, 1);
+
         // return marked object using callback
-        return callback(marked);
     }
     ```
 

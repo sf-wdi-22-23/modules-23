@@ -59,7 +59,7 @@ Additional Resources:
 ## Exercises:
 ### Building an ODM!
 
-#### Mongoose is not magic! It's just a JavaScript Library! It has built-in methods so you can do this:
+#### Mongoose is not magic! Its just a JavaScript Library! It has built in methods so you can do this:
 
 ```
   var MongoClient = require('mongodb').MongoClient
