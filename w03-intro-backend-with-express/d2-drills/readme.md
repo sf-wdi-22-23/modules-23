@@ -1,4 +1,3 @@
-todo: solutions, change instructions to reflect actual data, data.json
 # Week 3
 
 ## Tuesday Lab: Whiteboarding Queries
