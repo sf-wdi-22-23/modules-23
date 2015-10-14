@@ -10,10 +10,9 @@ function findAndDeleteById(arr, id){
   var output;
   for (var i=0; i<arr.length; i++){
     if(arr[i].id == id){
-      output = arr.splice(i, 1);
+      return arr.splice(i, 1)[0];
     }
   }
-  return output
 }
 
 function where(arr, properties){
