@@ -9,10 +9,10 @@ In this exercise you will be implementing your own version of Mongoose in order 
 **Create an object constructor called Model**
 
 1.  Define a function called Model. The model will have these properties:
-  - has a parameter called `name`
-  - has a property `type` that is assigned the parameter `name`
-  - has an empty array named data
-  - has an identification number `_id` assigned to 0.
+  - a parameter called `name`
+  - a property `type` that is assigned the parameter `name`
+  - an empty array named data
+  - an identification number `_id` assigned to 0.
 2. Set the model's prototype to an empty `{}` (object literal).
 
    ```js
