@@ -47,7 +47,7 @@ Kind of like a librarian that knows a bunch of things, so you don't have to.
 **How do we do that?**
 
 1. Go step by step through the [Express "Hello World"](http://expressjs.com/starter/hello-world.html) instructions. 
-2. Go step by step through the [Mongoose Quick Start](http://mongoosejs.com/docs/3.5.x/docs/index.html) instructions
+2. Go step by step through the **the first three steps** of the [Mongoose Quick Start](http://mongoosejs.com/docs/3.5.x/docs/index.html) instructions 
 3. Take a look at [my solution](https://github.com/awhit012/mongoose-express-demo) if you need help. 
 
 
