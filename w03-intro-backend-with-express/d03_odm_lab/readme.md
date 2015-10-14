@@ -24,9 +24,9 @@ a structured set of data held in a computer, especially one that is accessible i
 
 Lines of code to connect to MongoDB WITHOUT Mongoose: 11
 
-Lines of code to connect to MongoDB WITH Mongoose:    2
-
 Example: https://github.com/awhit012/pure-mongo
+
+Lines of code to connect to MongoDB WITH Mongoose:    2
 
 Additional Resources:
 
