@@ -15,7 +15,7 @@ Building a single page todo-style application.
 
 Fork & clone this [app](https://github.com/sf-wdi-22-23/toEatly)
 
-Follow the instructions of each of the sprints below. If/when you get stuck, checkout the solution. For example if I want to see the solution to sprint three I can: `git checkout branch sprint-three`.
+Follow the instructions of each of the sprints below. If/when you get stuck, checkout the solution. For example if I want to see the solution to sprint three I can: `git checkout sprint-three`.
 
 ## Sprint One
 
@@ -52,16 +52,16 @@ Modify your `index.ejs`:
 ## Sprint Three
 
 * Modify the template in `index.ejs` to include a delete button next to each food item.
-   * Give the button a `data-id` attribute with the id of the food 
+   * Give the button a `data-id` attribute with the id of the food
    * Use bootstrap's class `.close` to style the button
- 
+
 * In your client side JavaScript code, create a `deleteFood` function that has a `context` parameter.  The context will be one of the delete buttons.  Your `deleteFood` function should:
   * Use the context that the `deleteFood` function has received to grab the food's id (remember it exists as a data attribute), aka `$(context).data().id`
   * Make an AJAX DELETE request to `/api/foods/:id` for the id of the food whose delete button was passed in as the context.
   * After the DELETE request succeeds, use jQuery to <a href="https://api.jquery.com/remove/" target="_blank"> `remove` </a> the deleted food's list item from the DOM. (Hint: it will probably be the <a href="https://api.jquery.com/closest/" target="_blank">`closest`</a> list item.)
 
 * In your client side JavaScript code, add a click event listener to the `document` that filters to events on one of your delete buttons.  
-   * Use event delegation from the `document` object.  That is, use <a href="http://api.jquery.com/on/" target="_blank"> jQuery's `on` method</a> with three arguments -- the event type as usual, *a selector to filter the event targets*, and an event handler function as usual. 
+   * Use event delegation from the `document` object.  That is, use <a href="http://api.jquery.com/on/" target="_blank"> jQuery's `on` method</a> with three arguments -- the event type as usual, *a selector to filter the event targets*, and an event handler function as usual.
    * The event handler should call the `deleteFood` function with `this` (the context) as its argument. `this` will be the button itself.
 
 * In the server's `server.js` file, create a parameterized API delete route for `/api/foods/:id` that removes the food item with that id from the array.  [Documentation](http://expressjs.com/api.html#app.delete.method) - Express' delete method.
@@ -79,9 +79,9 @@ Modify your `index.ejs`:
 ## Sprint Four
 
 * Modify the template in `index.ejs` so that each food's list item also has a form to update the food.
-   * Give the form a `data-id` attribute with the id of the food 
+   * Give the form a `data-id` attribute with the id of the food
    * Include inputs for the food's new name and yumminess, and use html `name` attributes for the text inputs
- 
+
 * In your client side JavaScript code, create an `updateFood` function that has a `context` parameter.  The context will be one of the food update forms.  Your `updateFood` function should:
   * Use the context that the `updateFood` function has received to grab the food's id.
   * Make an AJAX PATCH request to `/api/foods/:id` for the id of the food whose update form was passed in as the context.
@@ -92,7 +92,7 @@ Modify your `index.ejs`:
   * Use jQuery to <a href="http://api.jquery.com/replacewith/" target="_blank">replace</a> the old list item with the new one
 
 * In your client side JavaScript code, add a submit event listener to the `document` that filters to events on one of your food update forms.  
-   * Use event delegation from the `document` object.  That is, use <a href="http://api.jquery.com/on/" target="_blank"> jQuery's `on` method</a> with three arguments -- the event type as usual, *a selector to filter the event targets*, and an event handler function as usual. 
+   * Use event delegation from the `document` object.  That is, use <a href="http://api.jquery.com/on/" target="_blank"> jQuery's `on` method</a> with three arguments -- the event type as usual, *a selector to filter the event targets*, and an event handler function as usual.
    * The event handler should call the `updateFood` function with `this` (the context) as its argument. `this` will be the form that was just submitted.
 
 * In the server's `server.js` file, create a parameterized API patch route for `/api/foods/:id`. The route should:
@@ -104,5 +104,3 @@ Modify your `index.ejs`:
 * In your client side JavaScript code, modify the `makeHTMLString` method to add an update form to any new food items that are created.  Remember, the function structure will look similar to your template in `index.ejs`.
    * Consider moving the update form part of the HTML string into a separate function to keep it readable.  
    * Hint: add a newline (`\n`) in your HTML string to match the spacing of a template from `index.ejs` that uses multiple lines.
-
-
