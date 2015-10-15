@@ -12,7 +12,7 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
 
 ### View routes
 
-1. A route to show an index page view.
+1. A route to show an index page view.  
 1. Ejs templating to show post data in the index.
 
 
@@ -80,7 +80,13 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
 
     Your client-side code should have a lot of the functionality requirements already, except that data isn't passed between the server and client.
 
-1. Add an AJAX request to each event handler. Your requests should use a RESTful route (HTTP verb + path) and send along any data required.
+**Modify your client-side code**
+
+1. Add a template to your `index.ejs` to display the posts. You can put it in a separate `ul` from any seed data you're currently displaying, if you'd like to keep the seed data around a little longer.
+
+1. Add an AJAX request to each event handler. Your requests should use a RESTful route (HTTP verb + path). The request for your new post form should send along the data required. 
+
+1. The request for your delete buttons probably doesn't have an id to use yet, since the posts on the front end only microblog didn't need an id. Update your HTML template in `index.ejs` and any HTML strings that create new posts in your client-side JavaScript so that each post has its id stored with it in the HTML.
 
 1. In the `success` method of your AJAX requests, just `console.log` the server's response for now.
 
@@ -89,9 +95,6 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
 1. Since your client-side event handlers are going to make AJAX requests, let's tell the server to expect those kinds of requests.  In the routes section of your server code, add skeletons for all of the RESTful routes listed above. 
 
 1. Don't fully fill in the function that says how the server should respond to each type of request, just start with a comment that says how the route *will* respond when you're done, and a `res.sendStatus(200)`. 
-
-1. Fill in the parts of your client code that.
-
 
 **Move data to the database**
 
@@ -107,20 +110,29 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
 
 **Connect database to server routes**
 
-1. In your server code, with the other requires, add one to bring in your database models: `var db = require("./models")`. This should make your post model available with `db.Post`. 
+1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. This should make your post model available with `db.Post`.
 
+1. Update your `GET '/'` route to render `index.ejs` with the data from your database. Test your route with Postman, then try to request it from the browser. If you still have seed data in your client-side JavaScript file, be sure to remove it now!
 
+1. Fill in the `POST '/api/posts'` skeleton API route you created earlier. Test it with Postman. 
 
-**Test all your routes via Postman** before trying to request them from your client.
+1. One by one, fill in the other skeleton routes you created. **Test each route with Postman** before you try to request it from your client.
 
-6. Submit the link to your finished project on GitHub in the <a href="https://docs.google.com/a/generalassemb.ly/forms/d/14rNXnDaq5X5Rvda-1BRZCl9YmkOoZzf7oxGBEZG_YJE/viewform" target="_blank">homework submission form</a>.
+**Use server responses on the client!**
+
+At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those reponses to the console.
+
+1. Modify the code in your new post form submit event handler so that it takes the server's response and uses it to add a new post to the page.
+
+1. Modify the code in your delete button click event handler so that it deletes the post from the page once it successfully gets the server's response. 
+
+## Submission @TODO - make form
+
+6. Submit the link to your finished project on GitHub in this homework submission form.
 
 ## Bonus (@TODO)
 
-## Docs & Resources (@TODO)
+## Docs & Resources (@TODO - add lesson links)
 
 * <a href="http://expressjs.com/api.html#app" target="_blank">Express App Docs</a>
-* <a href="https://github.com/sf-wdi-19-20/modules/blob/master/how_tos/express_project_setup.md" target="_blank">How to Set Up an Express Project</a>
-* <a href="https://github.com/sf-wdi-19-20/modules/tree/master/w3_d3_2_update_and_delete" target="_blank">Updating and Deleting Data</a>
-* <a href="https://github.com/sf-wdi-19-20/modules/tree/master/w2_d2_1_underscore_templating" target="_blank">Underscore Templating</a>
-* <a href="https://github.com/sf-wdi-19-20/w3_catchphrasely" target="_blank">Catchphrasely</a> (This is a great example of the type of client-server interaction you'll be building. DO NOT copy any of this code unless you understand exactly what it's doing. You've been warned.)
+* <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEat.ly</a> (This is a great example of the type of client-server interaction you'll be building. DO NOT copy any of this code unless you understand exactly what it's doing. You've been warned.)
