@@ -4,7 +4,7 @@ Sorting is a common problem in interviews and in the real world (sorting books b
 
 So! there are a lot of solutions. The term "algorithm" is used in software development to describe a solution to a problem that will work in all or many programming languages, without going into the specifics of coding it in any particular language. 
 
-<a href="http://www.sorting-algorithms.com/" target="_blank">See with a bunch of different sorting algorithms in action.</a>
+<a href="http://www.sorting-algorithms.com/" target="_blank">See a bunch of different sorting algorithms in action.</a>
 
 ## Why bubble sort?  
 
@@ -28,33 +28,32 @@ Here's the basic idea of the bubble sort algoritm:
 
 ## Visualizations
 
-From wikipedia:
-
-![](https://en.wikipedia.org/wiki/Bubble_sort#/media/File:Bubble-sort-example-300px.gif)   
+<a href="https://en.wikipedia.org/wiki/Bubble_sort#/media/File:Bubble-sort-example-300px.gif" target="_blank">From wikipedia</a>
+   
 
 <a href="https://www.youtube.com/watch?v=lyZQPjUT5B4&t=52" target="_blank">
-From Romania</a> (we recommend you watch on double speed).
+From Romania</a> (you can watch on double speed).
 
 ## Drill!
 
-Work with a partner.
+* Work with a partner.
 
-Write on the whiteboard. No computer code allowed!
+* Write on the whiteboard. No computer code allowed!
 
-Start with pseudocode (English descriptions of what you want to do in the code).
+* Start with pseudocode (English descriptions of what you want to do in the code).
 
-Test your work with the input/output pairs listed below!
+* Test your work with the input/output pairs listed below!
 
-Create a `bubbleSort` function that takes in an array of numbers, uses the bubble sort algorithm on it, and returns the sorted array.
+**Create a `bubbleSort` function that takes in an array of numbers, uses the bubble sort algorithm on it, and returns the sorted array.**
 
 Here are some input/output pairs you can use to test it:
 
 | Input | Expected Output |
 | :--- | :--- |
-| [0,1,2] | [0,1,2] |
-| [8,5,3] | [3,5,8] |
-| []  | []  |
-| [9,4,7,6] |  [4,6,7,9] |
+| `[0,1,2]` | `[0,1,2]` |
+| `[8,5,3]` | `[3,5,8]` |
+| `[]`  | `[]` |
+| `[9,4,7,6]` |  `[4,6,7,9]` |
 
 ## Thought Bubbles
 
