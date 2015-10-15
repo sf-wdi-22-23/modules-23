@@ -423,8 +423,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Drills</td>
     <td></td>
     <td>Science Fair</td>
-    <td>White Boarding (Alex, Matt)</td>
-    <td>Bubble Sort (Brianna, Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d2-drills">White Boarding</a> (Alex, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d3-drills">Bubble Sort</a> (Brianna, Braus)</td>
     <td>Assessment (Juliana (Matt, Alex))</td>
   </tr>
   <tr>
@@ -439,7 +439,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module2</td>
     <td></td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dusk-intro-express">Intro Express Routes & Params</a> (Matt, Ben)</td>
-    <td>Todo Lab Part 2 (Brianna, Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d2-dawn-dusk-to-eatly">Todo Lab Part 2</a> (Brianna, Juliana)</td>
     <td>Mongoose & Express (Ben, Braus)</td>
     <td>Outcomes Programming (Neda)</td>
   </tr>
@@ -449,7 +449,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/day-1-homework.md">RESTful Conventions</a> (Alex)</td>
     <td>ODMs (Brianna)</td>
     <td>JS Event Stack (Braus)</td>
-    <td>Mongoose Relationships</td>
+    <td>Mongoose Relationships (Brianna)</td>
   </tr>
 </table>
 
