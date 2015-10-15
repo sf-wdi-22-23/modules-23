@@ -440,7 +440,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td></td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dusk-intro-express">Intro Express Routes & Params</a> (Matt, Ben)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d2-dawn-dusk-to-eatly">Todo Lab Part 2</a> (Brianna, Juliana)</td>
-    <td>Mongoose & Express (Ben, Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d4-dusk-mongoose">Mongoose & Express</a> (Ben, Braus)</td>
     <td>Outcomes Programming (Neda)</td>
   </tr>
   <tr>
