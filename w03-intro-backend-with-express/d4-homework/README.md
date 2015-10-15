@@ -1,5 +1,10 @@
 #Week 3 - Thursday Homework
 
+We had a tough day on mongoose and and mongo today. You are all doing great! 
+
+### Mongoose Challenges
+1. Complete up to Challenge 8 in this afternoons <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/d4-dusk-mongoose/exercises.md">Mongoose exercises</a>
+
 ### Watch this [AMAZING Video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) and Answer the Following Questions:
 1. What is JavaScript work? ^o^
 1. What is the call stack? Why is it there?
