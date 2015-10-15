@@ -65,7 +65,23 @@ In this exercise you will be implementing your own version of Mongoose in order 
       // return the invoked callback with the objectContainer as a parameter
     }
     ```
+  6. You should be able to add the following code to your js document and "Seed" your model:
+  
+  ```
+    [
+      {first_name: "Mister", last_name: "Robot"},
+      {first_name: "Stanley", last_name: "Steemer"},
+      {first_name: "Action", last_name: "Bronson"},
+      {first_name: "Jillian", last_name: "Murphy"},
+      {first_name: "Nichole", last_name: "DeJarden"}
+    ].forEach( function(person) {
+      user.create(person, function(person){
+        return person;
+      });
+    });
 
+  ```
+  
 **Add a `findById` method to the Model's prototype:**
 
   1. Define a `findById()` function as a property on the Model's prototype which accepts the parameters `objectId` (an integer) and `callback` (a function to be called later).
