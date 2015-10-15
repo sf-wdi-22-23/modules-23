@@ -83,19 +83,19 @@ var user = new Model("user");
 var found = user.findByID(3, function(success) {
     return success;
 });
-// console.log("FounByID:\n", found);
+console.log("FounByID:\n", found);
 
 
 /* Delete object */
 var deleted = user.delete(1, function(success) {
     return success;
 });
-// console.log("Deleted:\n",deleted);
+console.log("Deleted:\n",deleted);
 
 /* Update object properties */
 
 var updated = user.update(2, {first_name: "Joey", last_name: "Michaels"});
-// console.log("Updated:\n", updated);
+console.log("Updated:\n", updated);
 
 /* Create object, Show continuation of id scheme after delete*/
 user.create({first_name: "Billy", last_name: "Bragg"}, function(person){
@@ -106,4 +106,4 @@ console.log(user.where({first_name: "Jillian"}))
 
 
 /* Display data content */
-// console.log(user.data);
+console.log(user.data);
