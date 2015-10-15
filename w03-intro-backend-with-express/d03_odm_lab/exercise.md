@@ -122,11 +122,11 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Add a update method to the Model's prototype:**
 
-    1. Define an `update()` function as a property on the Model's prototype which accepts the parameters `objectId`, `updateObject`, and `callback`
-    2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
-    3. Update the matching object's subData property by assigning it to the passed-in `updateObject`.
-    4. Return the matching object within a callback call.
-    <br><br>
+1. Define an `update()` function as a property on the Model's prototype which accepts the parameters `objectId`, `updateObject`, and `callback`
+2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
+3. Update the matching object's subData property by assigning it to the passed-in `updateObject`.
+4. Return the matching object within a callback call.
+<br><br>
 
   ```js
     // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
