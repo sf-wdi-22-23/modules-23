@@ -38,17 +38,6 @@ Model.prototype.where = function(properties){
   return output;
 };
 
-Model.prototype.update = function(objectId, updateObject, callback) {
-  var update;
-  this.data.forEach( function (objectContainer) {
-    if(objectContainer._id === objectId){
-      objectContainer.subData = updateObject;
-      update = objectContainer;
-    }
-  });
-  return update;
-};
-
 Model.prototype.delete = function(objectId, callback) {
   var pos, marked;
   this.data.forEach( function (objectContainer, index) {
@@ -61,6 +50,16 @@ Model.prototype.delete = function(objectId, callback) {
   return callback(marked);
 };
 
+Model.prototype.update = function(objectId, updateObject, callback) {
+  var update;
+  this.data.forEach( function (objectContainer) {
+    if(objectContainer._id === objectId){
+      objectContainer.subData = updateObject;
+      update = objectContainer;
+    }
+  });
+  return update;
+};
 
 /* Instantiate Model object */
 var user = new Model("user");
@@ -78,6 +77,8 @@ var user = new Model("user");
   });
 });
 
+
+// DRIVER CODE
 
 /* Find object by id */
 var found = user.findByID(3, function(success) {
