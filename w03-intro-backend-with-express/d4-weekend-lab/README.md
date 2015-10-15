@@ -15,8 +15,6 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
 1. A route to show an index page view.  
 1. Ejs templating to show post data in the index.
 
-
-
 ### API routes
 
 1. A route to read all blog posts: `GET /api/posts`
@@ -45,6 +43,22 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
   * An AJAX call to `PATCH` the new post data to your API
   * jQuery and HTML strings to replace the current blog post with the updated version
 
+
+## Submission @TODO - make form
+
+1. Your work must be tracked in a git repository.
+1. Push your local work up to a repostiory on your GitHub account.  
+7. Submit the link to your finished lab on GitHub in <a href="">this homework submission form</a>.
+
+
+## Bonus (@TODO)
+
+## Docs & Resources (@TODO - add lesson links)
+
+* <a href="http://expressjs.com/api.html#app" target="_blank">Express App Docs</a>
+* <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEat.ly</a> (This is a great example of the type of client-server interaction you'll be building. DO NOT copy any of this code unless you understand exactly what it's doing. You've been warned.)
+
+
 ## Sample Work Plan
 
 **Start your server**
@@ -64,9 +78,13 @@ Last week, you learned how to call APIs with AJAX. This week, you built your fir
 **Set up git repo!**
 
 1. In your Express project root directory, from the Terminal, run `git init`.  
+
 2. On your GitHub account, create a new repo for this project. 
+
 3. Copy the clone url from your new repository.
+
 4. Back in your Terminal, run `git remote add origin YOUR_REPO'S_GITHUB_CLONE_URL`. Paste in your GitHub repo's clone url instead of `YOUR_REPO'S_GITHUB_CLONE_URL`.
+
 5. Do our favorite sequence - `git add .`, `git commit -m "initial express server"`, and `git push origin master` to see that your code is up on GitHub. 
 
 **Include your client-side code.**
@@ -151,14 +169,3 @@ At this point, the server should be sending the data you need, but if you're fol
 
 1. Make a new commit. 
 
-## Submission @TODO - make form
-
-1. Push your local work up to your GitHub account.  
-7. Submit the link to your finished lab on GitHub in <a href="">this homework submission form</a>.
-
-## Bonus (@TODO)
-
-## Docs & Resources (@TODO - add lesson links)
-
-* <a href="http://expressjs.com/api.html#app" target="_blank">Express App Docs</a>
-* <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEat.ly</a> (This is a great example of the type of client-server interaction you'll be building. DO NOT copy any of this code unless you understand exactly what it's doing. You've been warned.)
