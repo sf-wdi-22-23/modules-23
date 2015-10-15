@@ -5,8 +5,8 @@ function bubbleSort(arr){
 	var pass; // used as a counter of passes through the array
 	var i; // the index used to loop through the array on each pass
 
-	// we'll need to make at most arr.length passes through the array to sort it
-	for (pass=0; pass<arr.length; pass++){
+	// we'll need to make at most arr.length-1 passes through the array to sort it
+	for (pass=0; pass<arr.length-1; pass++){
 		// to start each pass, we haven't swapped at all
 		swapped = false;
 
@@ -26,6 +26,8 @@ function bubbleSort(arr){
 			// the array is sorted!
 			return arr;
 		}
+		// console.log("number of passes so far: ", pass+1);
+		console.log("array so far: ", arr);
 	}
 	// this return trigger with empty arrays
 	return arr;
