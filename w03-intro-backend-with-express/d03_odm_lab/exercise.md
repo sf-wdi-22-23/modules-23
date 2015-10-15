@@ -147,7 +147,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
 **Before you proceed to the Stretch Challenges**
 
 1. If you haven't already, take a look at the solutions for what you have completed. 
-2. Check out the "Driver Code" at the bottom. This code will run your functions and see if they are working properly. 
+2. Check out the "Driver Code" at the bottom. This code will run a few of your functions and see if they are working properly. 
 3. Paste the Driver Code into the bottom of your JS document, and run your document in the node REPL. 
 
 ###Stretch Challenges
