@@ -7,7 +7,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
 ### Base Challenges
 - In your dev folder, or your week 3 subfolder, create a js document, mini_mongoose.js
 - This is where you will be writing all of your code for this exercise. 
-- 
+
 **Create an object constructor called Model**
 
   1.  Define a function called Model. The model will have these properties:
