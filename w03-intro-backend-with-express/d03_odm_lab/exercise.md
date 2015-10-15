@@ -120,27 +120,6 @@ In this exercise you will be implementing your own version of Mongoose in order 
   }
   ```
 
-**Add a update method to the Model's prototype:**
-
-1. Define an `update()` function as a property on the Model's prototype which accepts the parameters `objectId`, `updateObject`, and `callback`
-2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
-3. Update the matching object's subData property by assigning it to the passed-in `updateObject`.
-4. Return the matching object within a callback call.
-<br><br>
-
-  ```js
-    // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
-    Model.prototype.update = function(objectId, updateObject, callback) {
-      // iterate over data array of Model instance
-
-      // if the object currently being iterated over has an '_id' that matches the objectId
-
-      // set that object's subData property to the updateObject
-
-      // return the updated objectContainer using callback function
-    }
- ```
-
 **Add a destroy method to the Model's prototype:**
 
   1. Define a `destroy()` function as a property on the Model's prototype which takes the parameters `objectId`, and `callback`.
@@ -164,13 +143,32 @@ In this exercise you will be implementing your own version of Mongoose in order 
         // return marked object using callback
     }
     ```
+    
+**Before you proceed to the Stretch Challenges**
 
-4. STREEEEETCHHHHH
-  **Hook up your new hand-made database to some routes using Express and EJS to render templates of your data retrieved from the database**
-  1. Spin up an Express app using `npm init` and `npm install`
-  2. Write routes that correspond to each of your Model constructor's functions
-  3. Use what you know of routing params, query strings, or body parser to populate EJS templates with the appropriate information from the queried object
+1. If you haven't already, take a look at the solutions for what you have completed. 
+2. Check out the "Driver Code" at the bottom. This code will run your functions and see if they are working properly. 
+3. Paste the Driver Code into the bottom of your JS document, and run your document in the node REPL. 
 
-  - check out this tutorial on how to https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library
-  - and/ or this blog post: https://quickleft.com/blog/creating-and-publishing-a-node-js-module/
-  - create a nodeJS module that is downloadable via npm install, just like Mongoose is.
+###Stretch Challenges
+
+**Add a update method to the Model's prototype:**
+
+1. Define an `update()` function as a property on the Model's prototype which accepts the parameters `objectId`, `updateObject`, and `callback`
+2. Iterate over the Model's `data` array for a matching object that has the same `objectId`.
+3. Update the matching object's subData property by assigning it to the passed-in `updateObject`.
+4. Return the matching object within a callback call.
+<br><br>
+
+  ```js
+    // define function as property 'update' on Model prototype, passing objectId (an integer, and a callback function)
+    Model.prototype.update = function(objectId, updateObject, callback) {
+      // iterate over data array of Model instance
+
+      // if the object currently being iterated over has an '_id' that matches the objectId
+
+      // set that object's subData property to the updateObject
+
+      // return the updated objectContainer using callback function
+    }
+ ```
