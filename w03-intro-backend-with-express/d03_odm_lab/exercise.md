@@ -5,7 +5,9 @@
 In this exercise you will be implementing your own version of Mongoose in order to understand how an object-document-mapper (ODM) works under the hood. This exercise will consist of building a constructor function and adding several functions that mimic Mongoose's functionality to the constructor's prototype.
 
 ### Base Challenges
-
+- In your dev folder, or your week 3 subfolder, create a js document, mini_mongoose.js
+- This is where you will be writing all of your code for this exercise. 
+- 
 **Create an object constructor called Model**
 
   1.  Define a function called Model. The model will have these properties:
@@ -148,7 +150,8 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 1. If you haven't already, take a look at the solutions for what you have completed. 
 2. Check out the "Driver Code" at the bottom. This code will run a few of your functions and see if they are working properly. 
-3. Paste the Driver Code into the bottom of your JS document, and run your document in the node REPL. 
+3. Paste the Driver Code into the bottom of your JS document, and run your document in the node REPL by running `node mini_mongoose.js' in your terminal
+4. Make adjustments if it isn't running as expected. 
 
 ###Stretch Challenges
 
