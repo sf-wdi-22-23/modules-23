@@ -2,6 +2,8 @@
 
 _Haha! We made that pun twice!_
 
+Sample answers.
+
 1. Why is it safe to stop looping through the array after you have a full pass through without swaps?  
 
   > You always swap when two elements are out of order relative to each other.  If we go through the whole array and don't have to swap, it means nothing was out of order. So the whole thing was sorted!
@@ -24,4 +26,4 @@ _Haha! We made that pun twice!_
 
 1. What is the worst case scenario for bubble sort?  (What kind of arrays cause it to do the most swaps?)  
 
-	> The worst case scenario input for bubble sort is an array that's in reverse order. It has to make every single possible pass through the array, making multiple swaps to "bubble" every item up.
+	> The worst case scenario input for bubble sort is an array that's in reverse order. It has to make a pass through the array to "bubble" every item up, and most of those passes require multiple swaps.
