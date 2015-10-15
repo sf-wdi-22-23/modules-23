@@ -38,7 +38,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
 
 **Add a create method to the Model's prototype:**
 
-  1. Define a `create()` function as a property on the Model's prototype which accepts the parameters `objectProperties` and `callbackFunction`. The `objectProperties` is the Javascript object literal that will be used to build the new instance of `Model` and `callbackFunction` is a function that will be called later.
+  1. Define a `create` function as a property on the Model's prototype which accepts the parameters `objectProperties` and `callbackFunction`. The `objectProperties` is the Javascript object literal that will be used to build the new instance of `Model` and `callbackFunction` is a function that will be called later.
   2. Defines a variable `objectContainer` that has an empty object assigned to it.  This object will house your passed-in object as well as other meta-data we will generate.
   3. Give `objectContainer` a property `_id` and assign to it our Model's `_id` incremented by 1.
   4. Assign the `objectContainer`'s `subData` property to the `configObj`.
