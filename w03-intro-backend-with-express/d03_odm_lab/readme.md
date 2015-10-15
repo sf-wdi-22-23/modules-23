@@ -39,8 +39,6 @@ Yesterday we whiteboarded a `where()` function similar to Mongoose's `where()`. 
 
 ### Get started building your own Mini-Mongoose!
 
-TODO: fix these links after merging
+Dive into the [exercise.md](https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/d03_odm_lab/exercise.md) file and have fun!
 
-Dive into the [exercise.md](https://github.com/sf-wdi-22-23/modules/blob/d03_odm_lab/w03-intro-backend-with-express/d03_odm_lab/exercise.md) file and have fun!
-
-See the [solution.js](https://github.com/sf-wdi-22-23/modules/blob/d03_odm_lab/w03-intro-backend-with-express/d03_odm_lab/solution.js) if you need help.
+See the [solution.js](https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/d03_odm_lab/solution.js) if you need help.
