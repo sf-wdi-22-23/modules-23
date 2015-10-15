@@ -23,7 +23,7 @@ Here's the basic idea of the bubble sort algoritm:
   2. compare the item you're looking at to the next item in the list
   3. if this item is greater than the next one, swap them
   4. move on to the next item
-  5. repeat steps 1-4 until you go through the whole list without doing any swaps -- that's when you know everything is in order
+  5. repeat steps 1-4 until you go through the whole list without doing any swaps 
 
 
 ## Visualizations
@@ -56,3 +56,16 @@ Here are some input/output pairs you can use to test it:
 | []  | []  |
 | [9,4,7,6] |  [4,6,7,9] |
 
+## Thought Bubbles
+
+_Because we can only make that pun once._
+
+1. Why is it safe to stop looping through the array after you have a full pass through without swaps?  
+
+1. How would you change your function to sort the array in the reverse order?
+
+1. What are some basic requirements for bubble sort to work on an input array?  Would your code on the board with an input array like `["Thursday", 47, ['a','b','c']]`? 
+
+1. Bubble sort is known as a slower sorting algorithm for in many scenarios.   What is the best-case scenario for bubble sort? That is, what characteristic of an array causes bubble sort to do the least amount of swaps?  How many swaps would bubble sort do on one of these arrays?  
+
+1. What is the worst case scenario for bubble sort?  (What kind of arrays cause it to do the most swaps?)  
