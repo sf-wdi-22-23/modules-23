@@ -73,4 +73,4 @@ _Because we can only make that pun once._
 
 
 
-[sample answers](thought-bubbles.js)
+[sample answers](thought-bubbles.md)
