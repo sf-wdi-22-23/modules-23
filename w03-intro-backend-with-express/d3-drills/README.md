@@ -55,6 +55,8 @@ Here are some input/output pairs you can use to test it:
 | `[]`  | `[]` |
 | `[9,4,7,6]` |  `[4,6,7,9]` |
 
+[sample solution](sample-solution.js)
+
 ## Thought Bubbles
 
 _Because we can only make that pun once._
@@ -68,3 +70,7 @@ _Because we can only make that pun once._
 1. Bubble sort is known as a slower sorting algorithm for in many scenarios.   What is the best-case scenario for bubble sort? That is, what characteristic of an array causes bubble sort to do the least amount of swaps?  How many swaps would bubble sort do on one of these arrays?  
 
 1. What is the worst case scenario for bubble sort?  (What kind of arrays cause it to do the most swaps?)  
+
+
+
+[sample answers](thought-bubbles.js)
