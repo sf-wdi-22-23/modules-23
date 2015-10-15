@@ -103,7 +103,7 @@ In this exercise you will be implementing your own version of Mongoose in order 
     ```
 
 **Add a where method like (what we made in drills yesterday):**
-  1. Define a function `where()` that accepts a parameter 'properties', that looks will look like this: `{last_name: "Ever", first_name: "Greatest"}`
+  1. Define a function `where()` that accepts a parameter `properties`, that looks will look like this: `{last_name: "Ever", first_name: "Greatest"}`
   2. `where()` should also accept a parameter `callback`, which will be a function.
   3. Iterate over `this.data` (the array referenced by Model's data property). *Note: We are doing this instead of passing in an array*
   4. Return an array of objects that match the passed-in properties to a callback like this: `return callback(output)`
