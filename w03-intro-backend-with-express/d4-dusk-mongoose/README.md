@@ -9,10 +9,7 @@
 | Execute basic CRUD actions with the the console/REPL
 | Demonstrate the ability to create and modify embedded objects within top level objects in a noSQL database
 
-
-##First things first:  Install Party!
-
-####Caution: At this point, I urge you to simply read and absorb the information provided to see the basic patterns of creating and implementing databases. You do not need to create a new node project to successfully learn from tonight's readings. We'll go over this at a comfortable pace tomorrow :)
+<!-- ##First things first:  Install Party!
 
 We need to use brew to install our new **MongoDB** database system!
 
@@ -38,7 +35,7 @@ From the console:
 sudo chown -R $USER	/data/db
 ```
 
-
+ -->
 ##Terminology:
 - **RDBMS**: (Relational Database Management System)  
  
@@ -218,4 +215,4 @@ findOneAndRemove();
 [MongoDB official site](https://www.mongodb.org/)
 [Friendly Australian explains RDBMS vs noSQL](https://www.youtube.com/watch?v=XPqrY7YEs0A)
 [Google I/O: Battle of the Backends: SQL vs noSQL](https://www.youtube.com/watch?v=rRoy6I4gKWU)	
-	
+
