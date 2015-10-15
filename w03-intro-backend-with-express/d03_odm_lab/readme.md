@@ -20,25 +20,17 @@ a structured set of data held in a computer, especially one that is accessible i
 
 ## Express with MongoDB
 
-### Let's get a quick Express app together and connect it to MongoDB.
-TODO: break this down into steps with some sample code
-- It should:
-  - Run an app.js file which:
-  - establishes a connection with MongoDB
-  - Be able to add items to the database
-  - be able to log all items in the database
+### You can use Express with MongoDB without Mongoose. But it is not nice. 
 
-My solution: https://github.com/awhit012/pure-mongo
+Lines of code to connect to MongoDB WITHOUT Mongoose: 11
+
+- Example: https://github.com/awhit012/pure-mongo
+
+Lines of code to connect to MongoDB WITH Mongoose:    2
 
 Additional Resources:
 
-mongoDB-node repo:
-
-    https://github.com/mongodb/node-mongodb-native
-express hello-word:
-
-    http://expressjs.com/starter/hello-world.html
-
+- mongoDB-node repo: https://github.com/mongodb/node-mongodb-native
 
 ## What is an ODM?
 An ODM (Object-Document Mapper) is a tool that lets you query and manipulate data from a non-relational database using an object paradigm.
@@ -47,14 +39,14 @@ Kind of like a librarian that knows a bunch of things, so you don't have to.
 
 ## Express with Mongoose
 
-### Let's create another Express app that connects to MongoDB, but this time using Mongoose.
+### Let's create an Express app that connects to MongoDB, using Mongoose.
 
-TODO: step-by-step instructions (with some code samples)
+**How do we do that?**
 
-My solution: https://github.com/awhit012/mongoose-express-demo
+1. Go step by step through the [Express "Hello World"](http://expressjs.com/starter/hello-world.html) instructions. 
+2. Go step by step through the **the first three steps** of the [Mongoose Quick Start](http://mongoosejs.com/docs/3.5.x/docs/index.html) instructions 
+3. Take a look at [my solution](https://github.com/awhit012/mongoose-express-demo) if you need help. 
 
-Additional Resources:
-  Mongoose Quick Start: http://mongoosejs.com/docs/3.5.x/docs/index.html
 
 ## Exercises:
 ### Building an ODM!
