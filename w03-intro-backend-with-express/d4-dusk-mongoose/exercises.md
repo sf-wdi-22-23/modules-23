@@ -4,10 +4,11 @@
 
 **Adding Mongoose to toEatly**
 
-1. Clone [this repo](https://github.com/sf-wdi-22-23/toEatly_mongoose/tree/master) as starter code.
-1. Install `nodemon`
-1. `mongo` - follow these instructions
-1. npm install `mongoose` locally to your project. require and connect to your `mongoose` database.
+1. Clone [this repo](https://github.com/sf-wdi-22-23/toEatly_mongoose/tree/master) as starter code. Run `npm install`.
+1. Install `nodemon` globally on your computer
+1. Install `mongo` - follow [these instructions](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
+1. Run mongo on your computer with the `mongod` method.
+1. Install `mongoose` locally to your project with npm. require and connect to your `mongoose` database.
 1. Create a `Food` Model & Schema
 1. Seed your database with `seed.js`
 1. Use your new `Food` model in your Index route to send your foods to the client.
