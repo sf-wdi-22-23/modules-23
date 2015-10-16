@@ -448,7 +448,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td></td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/day-1-homework.md">RESTful Conventions</a> (Alex)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d2-homework">ODMs</a> (Brianna)</td>
-    <td>JS Event Stack (Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d4-homework">JS Event Stack</a> (Braus)</td>
     <td>Mongoose Relationships (Brianna)</td>
   </tr>
 </table>
