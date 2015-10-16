@@ -108,7 +108,7 @@ Ok, honestly we could get by with all our database code in `server.js`. But, as 
     - require your model from the other file
     - add your model to `index.js`'s `module.exports`
 
-1. Optional: Create a `seed.js` file. Move the seed data array from your client-side javascript code into the seed.js file. The seed.js file should remove all posts from the database, then create all the posts from your seed data again. It will need to require your models: `var db = require("./models")`.
+1. Optional: Create a `seed.js` file. Move the seed data array from your client-side JavaScript code into the seed.js file. The seed.js file should remove all posts from the database, then create all the posts from your seed data again. It will need to require your models: `var db = require("./models")`.
 
 1. This seems like a great time for a commit.
 
@@ -118,7 +118,7 @@ Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_b
 
 1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. When we `require` a whole folder, Node looks for an `index.js` in that folder and basically requires it.  So, requiring the models folder should make your post model (and any other models you eventually add) available on a `db` object. For example, the Post model is `db.Post`.
 
-1. Modify your `GET '/'` route to  `console.log` all of the post data from the databse. (Make sure you have `mongod` running.) Since your browser automatically makes a get request when you visit a url, test this by going to `localhost:3000/` in your browser. Check the Terminal for your server-side console log.
+1. Modify your `GET '/'` route to  `console.log` all of the post data from the database. (Make sure you have `mongod` running.) Since your browser automatically makes a get request when you visit a url, test this by going to `localhost:3000/` in your browser. Check the Terminal for your server-side console log.
 
 1. Update your `GET '/'` route to render `index.ejs` with the data from your database. If you still have seed data in your client-side JavaScript file, go ahead and remove it now. Test your route in Postman again, then test it from the browser. 
 
@@ -137,7 +137,7 @@ Reference:
   * <a href="https://github.com/sf-wdi-22-23/toEatly" target="_blank">toEatly</a> (go to the sprint-three branch) for deleting data from the page with jQuery
   *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax" target="_blank">Giphy lab</a> for adding data to the page with jQuery and HTML strings
 
-At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those reponses to the console in the browser.
+At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those responses to the console in the browser.
 
 1. Modify the code in your new post form submit event handler so that it takes the server's response and uses it to add a new post to the page with jQuery and HTML strings.
 
