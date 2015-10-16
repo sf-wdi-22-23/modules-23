@@ -60,11 +60,16 @@ Your client-side code should have a lot of the functionality requirements alread
 
 ##Modify the existing microblog code.
 
-4. In your client-side JavaScript, check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That is, add the event listener to the document itself and use a selector to filter down which dom elements trigger it (an example is available in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>, or the <a  href="https://github.com/sf-wdi-22-23/toEatly/blob/sprint-three/public/js/app.js" target="_blank">client-side code solution for toEatly sprint-three</a>.
+References: 
+  * <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w01-controlling-the-dom/d4_dusk_dom_events" target="_blank">DOM events lesson</a> for DOM events
+  *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a> for templating
+  *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax" target="_blank">Giphy lab</a> and <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d4-dusk-geoquakes" target="_blank">Geoquakes lab</a> for AJAX
+
+4. In your client-side JavaScript, check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That is, add the event listener to the document itself and use a selector to filter down which dom elements trigger it (more info can be found in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>).
 
 1. Add a template to your `index.ejs` to display the posts. You can put it in a separate `ul` from any seed data you're currently displaying, if you'd like to keep the seed data around a little longer.
 
-1. Add an AJAX request to each event handler. Your requests should use a RESTful route (HTTP verb + path). The request for your new post form should send along the data required. 
+1. Add an AJAX request to each event handler. Your requests should use a RESTful route (HTTP verb + path). The request for your new post form should send along the data required. See some examples from <a href="http://api.jquery.com/jquery.ajax/#entry-examples" target="_blank"> the jQuery docs</a>.
 
 1. The request for your delete buttons probably doesn't have an id to use yet, since the posts on the front end only microblog didn't need an id. Update your HTML template in `index.ejs` and any HTML strings that create new posts in your client-side JavaScript so that each post has its id stored with it in the HTML.
 
@@ -73,6 +78,8 @@ Your client-side code should have a lot of the functionality requirements alread
 1. If you haven't yet, make a new git commit. Give it a descriptive commit message.
 
 ##Add routes to the server.
+
+Reference Reading: <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/d1-homework.md" target="_blank"> RESTful routing</a>
  
 1. Since your client-side event handlers are going to make AJAX requests, let's tell the server to expect those kinds of requests.  In the routes section of your server code, add skeletons for all of the RESTful routes listed above. 
 
@@ -81,6 +88,8 @@ Your client-side code should have a lot of the functionality requirements alread
 1. Make another new commit. 
 
 ##Move data to the database.
+
+Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d4-dusk-mongoose" target="_blank">Mongoose</a>
 
 1. Create a `models` directory in the root directory of your Express project. Inside the `models` directory, create an `index.js` file. The `index.js` file should require mongoose and connect to your app's mongoose db.
 
@@ -96,6 +105,8 @@ Your client-side code should have a lot of the functionality requirements alread
 
 ##Connect database to server routes.
 
+Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEatly-mongoose</a>
+
 1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. This should make your post model available with `db.Post`.
 
 1. Update your `GET '/'` route to render `index.ejs` with the data from your database.  Make sure you have `mongod` running.  Test your route with Postman, then try to request it from the browser. If you still have seed data in your client-side JavaScript file, be sure to remove it now!
@@ -109,6 +120,8 @@ Your client-side code should have a lot of the functionality requirements alread
 1. Make another new commit if you haven't yet.
 
 ##Use server responses on the client!
+
+Reference: <a href="https://github.com/sf-wdi-22-23/toEatly" target="_blank">toEatly</a>
 
 At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those reponses to the console.
 
