@@ -70,13 +70,13 @@ References:
   *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a> for templating
   *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax" target="_blank">Giphy lab</a> and <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d4-dusk-geoquakes" target="_blank">Geoquakes lab</a> for AJAX
 
-4. In your client-side JavaScript, check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That is, add the event listener to the document itself and use a selector to filter down which dom elements trigger it (more info can be found in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>).
+4. In your client-side JavaScript, check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That means: add the event listener to a DOM element higher in the DOM tree (like the document itself) and use a selector to filter down which DOM elements actually trigger the function (more info can be found in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>).
 
-1. Add a template to your `index.ejs` to display the posts. You can put it in a separate `ul` from any seed data you're currently displaying, if you'd like to keep the seed data around a little longer.
+1. Add a template to your `index.ejs` to display the posts. You can put it in the same `<ul>` as you're currently using to display displaying, if you'd like to keep the seed data around a little longer. In that case, both will show up until we remove the seed data.
 
 1. Add an AJAX request to each event handler. Your requests should use a RESTful route (HTTP verb + path). The request for your new post form should send along the data required. See some examples from <a href="http://api.jquery.com/jquery.ajax/#entry-examples" target="_blank"> the jQuery docs</a>.
 
-1. The request for your delete buttons probably doesn't have an id to use yet, since the posts on the front end only microblog didn't need an id. Update your HTML template in `index.ejs` and any HTML strings that create new posts in your client-side JavaScript so that each post has its id stored with it in the HTML.
+1. The request for your delete buttons probably doesn't have an `id` to use yet, since the posts on the front end only microblog didn't need an id. Update your HTML template in `index.ejs` and any HTML strings that create new posts in your client-side JavaScript so that each post has its id stored with it in the HTML.
 
 1. In the `success` method of your AJAX requests, just `console.log` the server's response for now.
 
@@ -96,11 +96,13 @@ Reference Reading: <a href="https://github.com/sf-wdi-22-23/modules/blob/master/
 
 Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d4-dusk-mongoose" target="_blank">Mongoose</a>
 
+Ok, honestly we could get by with all our database code in `server.js`. But, as our apps grow and get more complex, we'll want to make our code more modular. The examples we've seen, with `/models/index.js` and `models/foods.js` (etc.) are built to be really modular and work well as we grow.  We'll follow that format.
+
 1. Create a `models` directory in the root directory of your Express project. Inside the `models` directory, create an `index.js` file. The `index.js` file should require mongoose and connect to your app's mongoose db.
 
-1. Create a `post.js` file in the `models` directory. Set up a schema and a model for posts. Set `post.js`'s `module.exports` to be the post model.
+1. Create a `post.js` file in the `models` directory. In the `post.js` file, set up a schema and a model for posts. Set `post.js`'s `module.exports` to be the Post model.
 
-1. Modify `models/index.js` to have it incorporate your post model.  It will need to:
+1. Modify `models/index.js` to have it incorporate your Post model.  It will need to:
     - require your model from the other file
     - add your model to `index.js`'s `module.exports`
 
@@ -112,9 +114,11 @@ Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w
 
 Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEatly-mongoose</a>
 
-1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. This should make your post model available with `db.Post`.
+1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. When we `require` a whole folder, Node looks for an `index.js` in that folder and basically requires it.  So, requiring the models folder should make your post model (and any other models you eventually add) available on a `db` object. For example, the Post model is `db.Post`.
 
-1. Update your `GET '/'` route to render `index.ejs` with the data from your database.  Make sure you have `mongod` running.  Test your route with Postman, then try to request it from the browser. If you still have seed data in your client-side JavaScript file, be sure to remove it now!
+1. Modify your `GET '/'` route to  `console.log` all of the post data from the databse. (Make sure you have `mongod` running.) Since your browser automatically makes a get request when you visit a url, test this by going to `localhost:3000/` in your browser. Check the Terminal for your server-side console log.
+
+1. Update your `GET '/'` route to render `index.ejs` with the data from your database. If you still have seed data in your client-side JavaScript file, go ahead and remove it now. Test your route in Postman again, then test it from the browser. 
 
 1. Once that's working, make a new commit! Give it a descriptive message like "render data in index.ejs" or "kick ejs's butt".
 
@@ -126,15 +130,18 @@ Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_b
 
 ##Use server responses on the client!
 
-Reference: <a href="https://github.com/sf-wdi-22-23/toEatly" target="_blank">toEatly</a>
+Reference: 
 
-At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those reponses to the console.
+  * <a href="https://github.com/sf-wdi-22-23/toEatly" target="_blank">toEatly</a> (go to the sprint-three branch) for deleting data from the page with jQuery
+  *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax" target="_blank">Giphy lab</a> for adding data to the page with jQuery and HTML strings
 
-1. Modify the code in your new post form submit event handler so that it takes the server's response and uses it to add a new post to the page.
+At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those reponses to the console in the browser.
+
+1. Modify the code in your new post form submit event handler so that it takes the server's response and uses it to add a new post to the page with jQuery and HTML strings.
 
 1. Reminder: make a new commit.
 
-1. Modify the code in your delete button click event handler so that it deletes the post from the page once it successfully gets the server's response. 
+1. Modify the code in your delete button click event handler so that it uses jQuery to delete the post from the page once it successfully gets the server's response. 
 
 1. Make a new commit. 
 
