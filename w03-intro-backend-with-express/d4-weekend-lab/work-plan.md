@@ -14,15 +14,15 @@ Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w
 
 1. Use `npm install --save` to add express, ejs, body-parser, and mongoose.
 
-1. At the top of your server.js file, require the modules you've added.  Use `express()` to create your `app` object.
+1. Create your server file from the Terminal (`touch server.js`). At the top of your server.js file, require the express and body-parser modules to get started.  Use `express()` to create your `app` object.
 
 1. At the bottom of your server.js file, use `app.listen` to set up your server to listen on a port. We usually use port 3000.
 
-1. Run `node server.js`, `npm start`, or `nodemon` in the Terminal to start your server. Go to localhost:3000/ to see a message that lets you know your server is listening.
+1. Run `node server.js`, `npm start`, or `nodemon` in the Terminal to start your server. If you gave `app.listen` a callback with a log message, you should see the log message in your Terminal. 
 
-1. In your server code, between the `require`s and the `app.listen`, start a section for routes!  Create a route to handle GET requests at the `/` path. Use a simple `res.send` to test that the route is working.
+3. Go to localhost:3000/ to see another message that lets you know your server is listening (but a bit unhappy). In your server code, between the `require`s and the `app.listen`, start a section for routes!  Create a route to handle GET requests at the `/` path. Use a simple `res.send` to send a message that the route is working. Restart your server, reload the page, and you should see the message you sent as a response. Yay!
 
-##Set up a git repo!
+##Set up a git repo.
 
 Reference: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank">GitHub documentation</a>
 
@@ -33,6 +33,8 @@ Reference: <a href="https://help.github.com/articles/adding-an-existing-project-
 3. Copy the clone url from your new repository.
 
 4. Back in your Terminal, run `git remote add origin YOUR_REPO'S_GITHUB_CLONE_URL`. Paste in your GitHub repo's clone url instead of `YOUR_REPO'S_GITHUB_CLONE_URL`.
+
+1. Before you `git add .`, let's set it up so git will ignore our `node_modules` folder. Anyone who clones our project will be able to `npm install` to get all the dependencies installed just from our `package.json`, so there's no good reason to add all that to our repo.   In the Terminal, `touch .gitignore`.  Add a line to the `.gitignore` file that just says `node_modules`. (You can do this from the Terminal with `echo "node_modules" >> .gitignore`.)
 
 5. Do our favorite sequence - `git add .`, `git commit -m "initial express server"`, and `git push origin master` to see that your code is up on GitHub. 
 
