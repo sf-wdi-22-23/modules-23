@@ -6,7 +6,7 @@ It's hard to know how to approach a project of this size when you've only been w
 
 This sample work plan is intended to help you get started without going into every detail.
 
-**Start your server**
+##Start the server.
 
 1. Make a new directory and initialize your app with `npm init`. Give it the entry point `server.js`. 
 
@@ -20,7 +20,7 @@ This sample work plan is intended to help you get started without going into eve
 
 1. In your server code, between the `require`s and the `app.listen`, start a section for routes!  Create a route to handle GET requests at the `/` path. Use a simple `res.send` to test that the route is working.
 
-**Set up git repo!**
+##Set up a git repo!
 
 1. In your Express project root directory, from the Terminal, run `git init`.  
 
@@ -32,7 +32,7 @@ This sample work plan is intended to help you get started without going into eve
 
 5. Do our favorite sequence - `git add .`, `git commit -m "initial express server"`, and `git push origin master` to see that your code is up on GitHub. 
 
-**Include your client-side code.**
+##Include your existing client-side code.
 
 1. Create a folder called `views` in the root directory of your express app.  Make a copy of your `index.html` from Project 0, rename it `index.ejs`, and put it in the `views` folder.
 
@@ -54,7 +54,7 @@ Your client-side code should have a lot of the functionality requirements alread
     
 
 
-**Modify your client-side code**
+##Modify the client-side code.
 
 1. Add a template to your `index.ejs` to display the posts. You can put it in a separate `ul` from any seed data you're currently displaying, if you'd like to keep the seed data around a little longer.
 
@@ -66,7 +66,7 @@ Your client-side code should have a lot of the functionality requirements alread
 
 1. If you haven't yet, make a new git commit. Give it a descriptive commit message.
 
-**Add routes to server.**
+##Add routes to the server.
  
 1. Since your client-side event handlers are going to make AJAX requests, let's tell the server to expect those kinds of requests.  In the routes section of your server code, add skeletons for all of the RESTful routes listed above. 
 
@@ -74,7 +74,7 @@ Your client-side code should have a lot of the functionality requirements alread
 
 1. Make another new commit. 
 
-**Move data to the database**
+##Move data to the database.
 
 1. Create a `models` directory in the root directory of your Express project. Inside the `models` directory, create an `index.js` file. The `index.js` file should require mongoose and connect to your app's mongoose db.
 
@@ -88,7 +88,7 @@ Your client-side code should have a lot of the functionality requirements alread
 
 1. This seems like a great time for a commit.
 
-**Connect database to server routes**
+##Connect database to server routes.
 
 1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. This should make your post model available with `db.Post`.
 
@@ -102,7 +102,7 @@ Your client-side code should have a lot of the functionality requirements alread
 
 1. Make another new commit if you haven't yet.
 
-**Use server responses on the client!**
+##Use server responses on the client!
 
 At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those reponses to the console.
 
