@@ -42,11 +42,11 @@ You'll also be reading about modeling data relationships in Mongoose to prepare 
   * An AJAX call to `DELETE` the data from your server
   * jQuery to remove the deleted blog post from the view
 
-## Submission (@TODO - make form)
+## Submission
 
 1. Your lab work must be tracked in a git repository.
 1. Push your local lab work up to a repostiory on your GitHub account.  
-7. Submit the link to your finished lab on GitHub in <a href="">this homework submission form</a>.
+7. Submit the link to your finished lab on GitHub in <a href="https://docs.google.com/forms/d/1r8kZSa76l6yEYY9u2fha3snBBtpmLjaTUmrpNBkGr9g/viewform" target="_blank">this homework submission form</a>.
 1. Do the <a href="mongo-relationships.md" target="_blank">pre-reading</a> to prep for Monday.
 
 ## Sample Work Plan
