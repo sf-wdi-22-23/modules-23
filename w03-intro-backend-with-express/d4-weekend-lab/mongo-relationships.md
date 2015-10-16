@@ -54,14 +54,15 @@ Note: Attributes can be represented as line items under a heading (like all of t
 
 While cardinality is often determined by real-world characteristics of a relationship, the decision to embed or reference data is a design decision.
 
-###Embedded Data
 
-**Embedded Data** is stored directly *inside* of other data. Each record has a copy of the data. 
+**Embedded Data** is directly nested *inside* of other data. Each record has a copy of the data.
 
+![](http://docs.mongodb.org/manual/_images/data-model-denormalized.png)
 
-###Referenced Data
+**Referenced Data** is stored as an *id* inside other data. The id can be used to look up the information. All records that reference the same data look up the same copy.
 
-* **Referenced Data** is stored as an *id* inside other data. The id can be used to look up the information. All records that reference the same data look up the same copy.
+![](http://docs.mongodb.org/manual/_images/data-model-normalized.png)
+
 
 
 ###Scenario
