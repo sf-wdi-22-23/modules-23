@@ -8,7 +8,9 @@ This sample work plan is intended to help you get started without going into eve
 
 ##Start the server.
 
-1. Make a new directory and initialize your app with `npm init`. Give it the entry point `server.js`. 
+Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a>
+
+1. Make a new directory and initialize your app inside it with `npm init`. Give it the entry point `server.js`. 
 
 1. Use `npm install --save` to add express, ejs, body-parser, and mongoose.
 
@@ -22,6 +24,8 @@ This sample work plan is intended to help you get started without going into eve
 
 ##Set up a git repo!
 
+Reference: <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank">GitHub documentation</a>
+
 1. In your Express project root directory, from the Terminal, run `git init`.  
 
 2. On your GitHub account, create a new repo for this project. 
@@ -34,11 +38,13 @@ This sample work plan is intended to help you get started without going into eve
 
 ##Include your existing client-side code.
 
-1. Create a folder called `views` in the root directory of your express app.  Make a copy of your `index.html` from Project 0, rename it `index.ejs`, and put it in the `views` folder.
+Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a>
 
-1. In your server code, after your `requrie`s, start a section for config! Configure your app to use ejs as its view engine.
+1. Create a folder called `views` in the root directory of your express app.  Make a copy of your `index.html` from Project 0, rename it `index.ejs`, and put it in the `views` folder. Use the `cp` command from the Terminal to copy the file. It might look a little like this: `cp ~/dev/proj-0/index.html  ./views/index.ejs`.  
 
-1. Update your app's `GET /` route to render  index.ejs as its response. 
+1. In your server code, after your `require`s, start a section for config(uration)! Configure your app to use ejs as its view engine.
+
+1. Update your app's `GET /` route to render index.ejs as its response. 
 
 2. Create a folder called `public` in the root directory of your Express app.  Make copies of your `style.css` and `script.js` from Project 0, and put them in the `public` folder.
 
@@ -46,15 +52,15 @@ This sample work plan is intended to help you get started without going into eve
 
 1. Restart your server and check out your page in the browser.
 
-4. Check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. 
-
 1. If you haven't yet, make a new git commit. Give it a descriptive commit message like `"include client-side microblog code"`.
 
 Your client-side code should have a lot of the functionality requirements already, except that data isn't passed between the server and client.
     
 
 
-##Modify the client-side code.
+##Modify the existing microblog code.
+
+4. In your client-side JavaScript, check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That is, add the event listener to the document itself and use a selector to filter down which dom elements trigger it (an example is available in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>, or the <a  href="https://github.com/sf-wdi-22-23/toEatly/blob/sprint-three/public/js/app.js" target="_blank">client-side code solution for toEatly sprint-three</a>.
 
 1. Add a template to your `index.ejs` to display the posts. You can put it in a separate `ul` from any seed data you're currently displaying, if you'd like to keep the seed data around a little longer.
 
