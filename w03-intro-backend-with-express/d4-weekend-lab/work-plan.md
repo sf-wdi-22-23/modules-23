@@ -36,7 +36,10 @@ Reference: <a href="https://help.github.com/articles/adding-an-existing-project-
 
 1. Before you `git add .`, let's set it up so git will ignore our `node_modules` folder. Anyone who clones our project will be able to `npm install` to get all the dependencies installed just from our `package.json`, so there's no good reason to add all that to our repo.   In the Terminal, `touch .gitignore`.  Add a line to the `.gitignore` file that just says `node_modules`. (You can do this from the Terminal with `echo "node_modules" >> .gitignore`.)
 
+1. Let's also run `npm init` again - it will remember all of our old answers, and it will automatically add our git repo to the `package.json`. Sweet!
+
 5. Do our favorite sequence - `git add .`, `git commit -m "initial express server"`, and `git push origin master` to see that your code is up on GitHub. 
+
 
 ##Include your existing client-side code.
 
@@ -48,11 +51,11 @@ Reference Lesson: <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w
 
 1. Update your app's `GET /` route to render index.ejs as its response. 
 
-2. Create a folder called `public` in the root directory of your Express app.  Make copies of your `style.css` and `script.js` from Project 0, and put them in the `public` folder.
+2. Create a folder called `public` in the root directory of your Express app.  Copy over the rest of the files and folders from your project 0 app, into the public folder. 
 
-3. In your server code's config section, configure your app to serve the static assets from your `public` directory.
+3. In your server code's config section, configure your app to serve the static assets from your `public` directory with `express.static`: `app.use(express.static('public'));`. This makes everything in public available on your client side just as if it were in the same directory as `index.html` (or in our case, `index.ejs`).
 
-1. Restart your server and check out your page in the browser.
+1. Restart your server and check out your page in the browser. If you copied your code exactly into your public folder, and used the `app.use` line above, your files will probably load correctly. But if you see an error in your console, it probably means `href` for the `<link>` for your css, or the `src` for your `<script>` for your js, needs to change in your `index.ejs`.
 
 1. If you haven't yet, make a new git commit. Give it a descriptive commit message like `"include client-side microblog code"`.
 
