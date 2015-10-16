@@ -1,4 +1,3 @@
-README-new.md
 # Reblog - Microblog API Weekend Lab
 
 **Objective:** Build an API for your Microblog app using Node.js, Express, and MongoDB.
