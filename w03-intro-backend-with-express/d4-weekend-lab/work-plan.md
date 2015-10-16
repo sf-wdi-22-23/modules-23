@@ -81,7 +81,7 @@ References:
 
 Reference Reading: <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/d1-homework.md" target="_blank"> RESTful routing</a>
  
-1. Since your client-side event handlers are going to make AJAX requests, let's tell the server to expect those kinds of requests.  In the routes section of your server code, add skeletons for all of the RESTful routes listed above. 
+1. Since your client-side event handlers are going to make AJAX requests, let's tell the server to expect those kinds of requests.  In the routes section of your server code, add skeletons for all of the RESTful routes listed in the requirements in the README. 
 
 1. Don't fully fill in the function that says how the server should respond to each type of request, just start with a comment that says how the route *will* respond when you're done, and a `res.sendStatus(200)`. 
 
