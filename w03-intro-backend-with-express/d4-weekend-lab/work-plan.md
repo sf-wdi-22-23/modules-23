@@ -70,7 +70,9 @@ References:
   *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w03-intro-backend-with-express/d1-dawn-express-hello-world" target="_blank">Express Hello World</a> for templating
   *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax" target="_blank">Giphy lab</a> and <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d4-dusk-geoquakes" target="_blank">Geoquakes lab</a> for AJAX
 
-4. In your client-side JavaScript, check that you have an event handler for the new post form.  Add one if needed.  Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That means: add the event listener to a DOM element higher in the DOM tree (like the document itself) and use a selector to filter down which DOM elements actually trigger the function (more info can be found in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>).
+4. In your client-side JavaScript, check that you have an event handler for submitting the new post form.  Add one if needed. If you're adding one, you can just have it log a message like "form submitted!"
+
+1. Also add an event handler for the delete buttons, if needed. For the delete buttons, use event delegation. That means: add the event listener to a DOM element higher in the DOM tree (like the document itself) and use a selector to filter down which DOM elements actually trigger the function (more info can be found in the <a href="http://api.jquery.com/on/#direct-and-delegated-events" target="_blank">jQuery `on` method documentation</a>).
 
 1. Add a template to your `index.ejs` to display the posts. You can put it in the same `<ul>` as you're currently using to display displaying, if you'd like to keep the seed data around a little longer. In that case, both will show up until we remove the seed data.
 
