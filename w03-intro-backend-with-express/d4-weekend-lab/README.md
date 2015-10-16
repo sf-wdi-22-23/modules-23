@@ -61,6 +61,17 @@ A <a href="work-plan.md" target="_blank">sample work plan</a> is available if yo
   * an AJAX call to `PATCH` the updated post data to your API
   * jQuery and HTML strings to replace the current blog post with the updated version from the server's response
 
+1. **Client Side: Form Validation**
+  Prevent users from submitting posts that are completely blank. You'll need:
+  * a check after the form is submitted but before the request is made that stops the submit if both inputs are blank
+  * an error message for the user to let them know what happened (consider adding a <a href="http://getbootstrap.com/components/#alerts" target="_blank">Bootstrap alert</a> to the page)
+ 
+1. **Database: Data Validation**
+  Even if you've done validation in your form, someone could use a tool like `curl` or `Postman` to bypass your form and submit their own request anyway. Add validation at the database level to validate post content. You'll need:
+  * to check out the <a href="http://mongoosejs.com/docs/validation.html" target="_blank">Mongoose Validation Docs</a> built-in validation section
+  * a validation that makes sure the post's main content is required
+  * a validation that makes sure each post's content is less than a specified length (this is a *micro*blog, after all -- but you decide the length!)
+
 1. **Both Sides: Single Post View**
   It's nice to see all the posts at once, but why not make another view for just one post at a time? You'll need:
   * a wireframe/sketch for your single post view idea
