@@ -65,14 +65,6 @@ While cardinality is often determined by real-world characteristics of a relatio
 
 
 
-###Scenario
-
-How would you design the following?
-
-* A `User` that has many `Tweets`?
-* A `Food` that has many `Ingredients`?
-
-
 ### Tradeoffs
 
 There are tradeoffs of *efficiency* and *consistency* depending on which one you choose.
@@ -80,6 +72,16 @@ There are tradeoffs of *efficiency* and *consistency* depending on which one you
 It's often more *efficient* to embed data because you don't have to make a separate request or a separate database query -- the first request or query gets you all the information you need.
 
 It's easier to stay *consistent* when you reference data because you only keep one copy around. You don't have to worry that you'll forget to update or delete one copy of the data.
+
+
+
+###Scenario
+
+How would you design the following?
+
+* A `User` that has many `Tweets`?
+* A `Food` that has many `Ingredients`?
+
 
 ###Setting Up Relationships with Mongoose
 
