@@ -116,7 +116,7 @@ Ok, honestly we could get by with all our database code in `server.js`. But, as 
 
 Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEatly-mongoose</a>
 
-1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. When we `require` a whole folder, Node looks for an `index.js` in that folder and basically requires it.  So, requiring the models folder should make your post model (and any other models you eventually add) available on a `db` object. For example, the Post model is `db.Post`.
+1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. When we `require` a whole folder, Node looks for an `index.js` in that folder and basically requires it.  So, requiring the models folder should make your post model (and any other models you eventually add) available on a `db` object. For example, the Post model is `db.Post`. (It also runs all of the code in your `index.js` - including the line there that connects us to the database.)
 
 1. Modify your `GET '/'` route to  `console.log` all of the post data from the database. (Make sure you have `mongod` running.) Test this in Postman. Since your browser automatically makes a GET request when you visit a url, you could also test this by going to `localhost:3000/` in your browser. Check the Terminal for your server-side console log.
 
