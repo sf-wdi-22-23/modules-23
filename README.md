@@ -377,9 +377,9 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>Weekend Lab Review (Brianna, Alex)</td>
-    <td>Secret Keys (Alex, Juliana)</a>(Ilias & Justin)</td>
+    <td>Secret Keys (Alex, Juliana)</td>
     <td>Binary Search (Matt, Ben)</td>
-    <td>Project approvals (ALL)</td>
+    <td>Project approvals</td>
     <td>Project 1</td>
   </tr>
   <tr>
