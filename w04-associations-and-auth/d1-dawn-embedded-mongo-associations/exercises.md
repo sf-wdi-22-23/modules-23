@@ -12,7 +12,7 @@ Here's an example where **Monsters have many Broods**:
 1. Write a route to create a new Monster.
 
   ```js
-    app.get('/monsters', function(req, res) {
+    app.post('/monsters', function(req, res) {
       var monster = req.body.monster;
       Monster.create(monster, function (err, monster) {
         res.status(200).json(monster);
