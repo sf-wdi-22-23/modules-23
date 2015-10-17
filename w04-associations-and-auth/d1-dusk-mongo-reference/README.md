@@ -1,5 +1,13 @@
 # Reference Relationships in Mongo(ose)
 
+##Learning Objectives
+
+| Objectives |
+| :---- |
+| Describe one-to-one, one-to-many, and many-to-many data relationships |
+| Write mongoose schemas for referenced data |
+| Build the appropriate queries for nested data relationships using `populate()` |
+
 #### Setup
 ```javascript
 var mongoose = require('mongoose');
