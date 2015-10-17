@@ -1,7 +1,5 @@
 # Reference Relationships in Mongo(ose)
 
-##Learning Objectives
-
 | Objectives |
 | :---- |
 | Describe one-to-one, one-to-many, and many-to-many data relationships |
@@ -165,7 +163,3 @@ I love The Legend of Zelda: Ocarina of Time on the Nintendo 64
 ```
 
 Now, instead of seeing **only** the `ObjectId` that pointed us to the `Console` document, we can see the **entire** `Console` document.  Notice that the `Console` document's `_id` is exactly the same as the `ObjectId` that was previously referencing it. They are one in the same!  
-
-
-## Challenges
-Assemble the above code and refactor it to create your own models that use referenced documents.  Be creative and make it interesting and relevant (easier said than done.)  Create at least 5 'top-level' documents (in my case, five games) and at least 3 referenced documents (in my case, three consoles).  Demonstrate the ability to display the documents with just an ObjectId for the referenced documents.  Finally, call populate() on a query and demonstrate the **full** referenced documents as I did above with the Legend of Zelda: Ocarina of Time and the Nintendo 64.  
