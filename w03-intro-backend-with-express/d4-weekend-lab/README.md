@@ -51,7 +51,13 @@ You'll also be reading about modeling data relationships in Mongoose to prepare 
 
 ## Sample Work Plan
 
+It's hard to know how to approach a project of this size when you've only been working with some of these tools for a few days.  
+
+<img src="http://3.bp.blogspot.com/_Eiwce13X738/TRIoYJgWTUI/AAAAAAAAJEk/PGOtRyA304k/s1600/How_to_Draw_Owl.jpg" alt="two steps to draw an owl - draw a circle, draw the rest of the owl">
+
 A <a href="work-plan.md" target="_blank">sample work plan</a> is available if you're looking for an idea of how to proceed.
+
+
 
 ## Stretch Ideas
 
