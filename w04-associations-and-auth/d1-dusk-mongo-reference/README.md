@@ -62,7 +62,7 @@ Let's make two objects for our Console document and Game document.
  	name: 'Nintendo 64',
  	manufacturer: 'Nintendo',
  	released: 'September 29, 1996'
- }
+};
 ```
 
 ```javascript
@@ -72,7 +72,7 @@ Let's make two objects for our Console document and Game document.
  	developer: 'Nintendo',
  	release: new Date('April 27, 2000'),
  	consoles: []
- }
+};
 ```
 
 Notice that consoles is empty within the Game document.  That will be filled with ObjectIds later on.
