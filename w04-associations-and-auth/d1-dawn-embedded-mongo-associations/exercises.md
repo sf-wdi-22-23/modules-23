@@ -33,7 +33,7 @@ Here's an example where **Monsters have many Broods**:
     })
   ```
 
-**Embedded: Users have many Tweets**
+In the following challenges imagine that **Users have many Tweets**
 
 1. Write a route to create a new User.
 1. Return an array of all the users.
