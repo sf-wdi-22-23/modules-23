@@ -400,7 +400,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td>Cookies & Sessions, [Authorization Reading](https://github.com/sf-wdi-21/notes/blob/master/week-04/day-3-auth/readme.md)</td>
+    <td>Cookies & Sessions, <a href="https://github.com/sf-wdi-21/notes/blob/master/week-04/day-3-auth/readme.md">Authorization Reading</a></td>
     <td>Bcrypt Review</td>
     <td>Project 1 Brainstorm </td>
     <td>Project One</td>
