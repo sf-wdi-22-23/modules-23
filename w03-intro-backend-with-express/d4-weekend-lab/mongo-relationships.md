@@ -13,7 +13,7 @@
 
 Real-world data usually consists of different types of things that are related to each other in some way. A banking app might need to track employees, customers, and accounts. A food ordering app needs to know about restaurants, menus, and its users!  We've seen that when data is very simple, we can combine it all into one model.  When data is more complex or less closely tied together, we often create two or more related models.
 
-Today we'll look at two different ways to think about relationships between two things. The first is *cardinality* - how many of each things participate in the relationship? The second deals with where data is stored. Is it *embedded* in a related data record, or does the related record just have a smaller *reference* (say, to its id)?
+Today we'll look at two different ways to think about relationships between two data records. The first is *cardinality* - how many of each type of thing participate in the relationship? The second deals with where data is stored. Is a complete copy *embedded* in a related data record, or does the related record just have a smaller *reference* (say, to its id)?
 
 ## Cardinality
 
