@@ -23,7 +23,7 @@ Each person has one brain, and each (living human) brain belongs to one person.
 
 <img src="./img/one_to_one.png" alt="one to one erd"  width="250">
 
-One-to-one relationships can sometimes just be modeled with simple attributes. A brain are both complex enough that we might want to have their data in different models, with lots of different attributes on each.
+One-to-one relationships can sometimes just be modeled with simple attributes. A person and a brain are both complex enough that we might want to have their data in different models, with lots of different attributes on each.
 
 
 ###One-to-Many
