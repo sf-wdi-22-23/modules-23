@@ -363,50 +363,50 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!-------->
 <!-------->
 
-<!--##Week 4 - Users-->
+##Week 4 - Users
 
-<!--<table>-->
-<!--  <tr>-->
-<!--    <th></th>-->
-<!--    <th>Monday</th>-->
-<!--    <th>Tuesday</th>-->
-<!--    <th>Wednesday</th>-->
-<!--    <th>Thursday</th>-->
-<!--    <th>Friday</th>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Drills</td>-->
-<!--    <td><a href="week-04/drills.md">Binary Search </a>(Justin)</td>-->
-<!--    <td><a href="week-04/drills.md#day-2---keeping-things-a-secret">Secret Keys </a>(Ilias & Justin)</td>-->
-<!--    <td><a href="week-04/drills.md#day---03-bubble-sort">Bubble Sort!</a>(Justin)</td>-->
-<!--    <td><a href="week-04/drills.md#day---4--merge-sort">Merge Sort</a></td>-->
-<!--    <td>Review (Team)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Module1</td>-->
-<!--    <td><a href="https://github.com/sf-wdi-21/mongo-rel-book-app">Mongo Relationships (Justin)</a></td>-->
-<!--    <td><a href="week-04/day-2-cookies-sessions">Cookies</a> (Nathan)</td>-->
-<!--    <td><a href="week-04/day-3-auth/dawn-express-auth/readme.md">Authorization: Express Bcrypt</a> (Ilias)</td>-->
-<!--    <td><a href="https://github.com/sf-wdi-21/seven_challenges">Seven Challenges Lab</a> (Nathan)</td>-->
-<!--    <td>Review (Team)</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>Module2</td>-->
-<!--    <td><a href="week-04/day-1-mongo-relationships/dusk-referenced-docs">Mongo Relationships</a> (Justin)</td>-->
-<!--    <td><a href="https://github.com/sf-wdi-21/express_form_login_cookies_lab">Form Login Lab</a> (Nathan)</td>-->
-<!--    <td>Authorization: Express Bcrypt (Ilias)</td>-->
-<!--    <td><a href="projects/project_one/README.md">Project One: Intro</a> (Team)</td>-->
-<!--    <td>Project One</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td>HW</td>-->
-<!--    <td><a href="week-04/day-2-cookies-sessions/README.md">Cookies</a> (Nathan)</td>-->
-<!--    <td><a href="week-04/day-3-auth/readme.md">Auth</a> (Ilias) </td>-->
-<!--    <td>No Reading!</td>-->
-<!--    <td>Project One</td>-->
-<!--    <td></td>-->
-<!--  </tr>-->
-<!--</table>-->
+<table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>Drills</td>
+    <td>Weekend Lab Review (Brianna, Alex)</td>
+    <td>Secret Keys (Alex, Juliana)</a>(Ilias & Justin)</td>
+    <td>Binary Search (Matt, Ben)</td>
+    <td>Project approvals (ALL)</td>
+    <td>Project 1</td>
+  </tr>
+  <tr>
+    <td>Module1</td>
+    <td>Mongoose Intro to Relationships and Embedding (Braus, Ben)</td>
+    <td>Cookies & Sessions & LocalStorage (Alex, Matt)</td>
+    <td>Review - Express from the Ground Up (Ben, Juliana)</td>
+    <td>Project 1 Planning. Approvals (ALL) Deadline 12:30pm</td>
+    <td>Project 1</td>
+  </tr>
+  <tr>
+    <td>Module2</td>
+    <td>Mongoose Reference & Populate (Juliana, Brianna)</td>
+    <td>Authorization: Express Bcrypt(Braus, Brianna)</td>
+    <td>Student Project Planning (Braus) / Intro Project 1 (Juliana)</td>
+    <td>Project 1 / Getting Started Breakout (Brianna)</td>
+    <td>Project 1</td>
+  </tr>
+  <tr>
+    <td>HW</td>
+    <td>Cookies & Sessions Authorization Reading</td>
+    <td>Bcrypt Review</td>
+    <td>Project 1 Brainstorm </td>
+    <td>Project One</td>
+    <td></td>
+  </tr>
+</table>
 
 
 ##Week 3 - Building a RESTful Server with Express
