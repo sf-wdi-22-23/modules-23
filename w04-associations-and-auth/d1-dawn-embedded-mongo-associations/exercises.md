@@ -9,7 +9,7 @@ The following challenges are psuedo code. Write a method for example.
 
 Here's an example where **Monsters have many Broods**:
 
-1. Write a monster#create route
+1. Write a route to create a new Monster.
 
   ```js
     app.get('/monsters', function(req, res) {
@@ -19,7 +19,7 @@ Here's an example where **Monsters have many Broods**:
     })
   ```
 
-1. Write a brood#create route
+1. Write a route to create a new Brood that belongs to a Monster.
 
   ```js
     app.post('/monsters/:id/broods', function(req, res) {
@@ -34,7 +34,7 @@ Here's an example where **Monsters have many Broods**:
   ```
 
 **Embedded: Users have many Tweets**
-1. Write a user#create route
+1. Write a route to create a new User
 1. Return an array of all the users
 1. Return an array of all tweets of a specific user
 1. Create a new tweet that belongs to a user (who's id is in the `req.params.id`)
@@ -44,3 +44,5 @@ Here's an example where **Monsters have many Broods**:
 ### Stretch
 
 1. Add a Comment model to your Microblog app and embed comments in the posts.
+1. Add [validations](http://mongoosejs.com/docs/validation) to both the `Question` and `Answer` models. Both the question `text` and answer `content` should be [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required).
+1. In your API routes to create and update questions, respond with an error if the required validation is not met. **Hint:** Send back the <a href="http://mongoosejs.com/docs/validation#validation-errors" target="_blank">validation error</a> from Mongoose. Also, take a look at this <a href="http://expressjs.com/guide/error-handling.html" target="_blank">guide to Express error-handling</a>.
