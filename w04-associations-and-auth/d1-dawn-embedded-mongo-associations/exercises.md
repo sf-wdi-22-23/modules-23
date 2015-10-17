@@ -13,10 +13,11 @@ Here's an example where **Monsters have many Broods**:
 
   ```js
     app.get('/monsters', function(req, res) {
-      Monster.create({ name: "Frankenstein" }, function (err, monster) {
+      var monster = req.body.monster;
+      Monster.create(monster, function (err, monster) {
         res.status(200).json(monster);
-      })
-    })
+      });
+    });
   ```
 
 1. Write a route to create a new Brood that belongs to a Monster.
@@ -29,8 +30,8 @@ Here's an example where **Monsters have many Broods**:
         monster.save(function(err) {
           res.status(200).json(brood);
         });
-      })
-    })
+      });
+    });
   ```
 
 In the following challenges imagine that **Users have many Tweets**
