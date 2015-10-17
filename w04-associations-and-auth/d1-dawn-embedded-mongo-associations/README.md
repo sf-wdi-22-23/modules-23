@@ -18,7 +18,7 @@ There are trade-offs between *efficiency* and *consistency* depending on which t
 
 ## Embedded Data Example: To-Do Lists
 
-Image you had a database of todo `Lists`, each with many `Todos`. Since todos only belong to one list, you could use embedded data to store todos inside the list they belong to. If you needed to update or delete a todo, you would first need to find the associated list, then the todo to update or delete.
+Imagine you have a database of todo `Lists`, each with many `Todos`. Since todos only belong to one list, you could use embedded data to store todos inside the list they belong to. If you needed to update or delete a todo, you would first need to find the associated list, then the todo to update or delete.
 
 ```js
 // List model
