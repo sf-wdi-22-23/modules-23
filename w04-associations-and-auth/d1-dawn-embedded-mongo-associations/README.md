@@ -6,7 +6,7 @@
 | Use an "Embedded" pattern to associate resources with Mongoose |
 | Create, update, and delete data for the nested resource |
 
-As pre-reading for this lesson please reference this Mongo Relationships
+As pre-reading for this lesson please reference this [Mongo Relationships Reading](https://github.com/sf-wdi-22-23/modules/blob/master/w03-intro-backend-with-express/d4-weekend-lab/mongo-relationships.md)
 
 ## Mongoose Data Relationships
 
