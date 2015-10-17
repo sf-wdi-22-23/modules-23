@@ -363,7 +363,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!-------->
 <!-------->
 
-##Week 4 - Users
+##Week 4 - Associations and Authorization
 
 <table>
   <tr>
