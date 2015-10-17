@@ -4,7 +4,7 @@ It's hard to know how to approach a project of this size when you've only been w
 
 <img src="http://3.bp.blogspot.com/_Eiwce13X738/TRIoYJgWTUI/AAAAAAAAJEk/PGOtRyA304k/s1600/How_to_Draw_Owl.jpg" alt="two steps to draw an owl - draw a circle, draw the rest of the owl">
 
-This sample work plan is intended to help you get started without going into every detail.
+This work plan is intended to give you a sample way you might approach the problem.
 
 ##Start the server.
 
@@ -134,7 +134,7 @@ Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_b
 
 Reference: 
 
-  * <a href="https://github.com/sf-wdi-22-23/toEatly" target="_blank">toEatly</a> (go to the sprint-three branch) for deleting data from the page with jQuery
+  * <a href="https://github.com/sf-wdi-22-23/toEatly" target="_blank">toEatly</a> (go to the sprint-three branch, client side JS code) for deleting data from the page with jQuery
   *  <a href="https://github.com/sf-wdi-22-23/modules/tree/master/w02-working-with-objects/d3-dusk-ajax" target="_blank">Giphy lab</a> for adding data to the page with jQuery and HTML strings
 
 At this point, the server should be sending the data you need, but if you're following the instructions in order, you're just logging those responses to the console in the browser.
