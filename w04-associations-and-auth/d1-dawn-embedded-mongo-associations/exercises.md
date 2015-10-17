@@ -34,17 +34,13 @@ Here's an example where **Monsters have many Broods**:
   ```
 
 **Embedded: Users have many Tweets**
-1. Write a route to create a new User
 
-1. Return an array of all the users
-
-1. Return an array of all tweets of a specific user
-
-1. Create a new tweet that belongs to a user (who's id is in the `req.params.id`)
-
-1. Delete a tweet that belongs to a user (make sure to build the route to include the user and the tweet's id's - see example above)
-
-1. Update a tweet that belongs to a user (ditto on their id's!)
+1. Write a route to create a new User.
+1. Return an array of all the users.
+1. Return an array of all tweets of a specific user.
+1. Create a new tweet that belongs to a user (who's id is in the `req.params.id`).
+1. Delete a tweet that belongs to a user (make sure to build the route to include the user and the tweet's id's - see example above).
+1. Update a tweet that belongs to a user (ditto on their id's!).
 
 ### Stretch
 
