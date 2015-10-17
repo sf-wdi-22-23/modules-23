@@ -118,9 +118,9 @@ Reference: <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_b
 
 1. In your server code, with the other `require`s, add one to bring in your database models: `var db = require("./models")`. When we `require` a whole folder, Node looks for an `index.js` in that folder and basically requires it.  So, requiring the models folder should make your post model (and any other models you eventually add) available on a `db` object. For example, the Post model is `db.Post`.
 
-1. Modify your `GET '/'` route to  `console.log` all of the post data from the database. (Make sure you have `mongod` running.) Since your browser automatically makes a get request when you visit a url, test this by going to `localhost:3000/` in your browser. Check the Terminal for your server-side console log.
+1. Modify your `GET '/'` route to  `console.log` all of the post data from the database. (Make sure you have `mongod` running.) Test this in Postman. Since your browser automatically makes a GET request when you visit a url, you could also test this by going to `localhost:3000/` in your browser. Check the Terminal for your server-side console log.
 
-1. Update your `GET '/'` route to render `index.ejs` with the data from your database. If you still have seed data in your client-side JavaScript file, go ahead and remove it now. Test your route in Postman again, then test it from the browser. 
+1. Update your `GET '/'` route to render `index.ejs` with the data from your database. If you still have seed data in your client-side JavaScript file, go ahead and remove it now. Test your again. 
 
 1. Once that's working, make a new commit! Give it a descriptive message like "render data in index.ejs" or "kick ejs's butt".
 
