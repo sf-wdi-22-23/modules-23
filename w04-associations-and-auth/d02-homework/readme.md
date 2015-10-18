@@ -8,13 +8,13 @@
 
 To do so we will be using a fabulous service called Heroku. Heroku lets you deploy up to five apps to there servers for FREEEEEE as long as activity on the app is quite low. Its a perfect platform for deploying apps for learning and early development. 
 
-#### Head to [Heroku.com](www.heroku.com) and create an account. 
+#### Head to [Heroku](www.heroku.com) and create an account. 
 
 We will also be deploying our databases to the web! For this we need another service. Mongolab has a free "Sandbox" service where we can test things out.
 
-#### Head to [MongoLab](mongolab.com/plans)[and sign up for your free sandbox plan]
+#### Head to [MongoLab](mongolab.com/plans) and sign up for your free sandbox plan.
 
-##### ATTN: You will need to enter credit card information, but the services are free. At no time will GA ask you to do anything requiring you to spend any money on either of these services. 
+##### ATTN: You will need to enter credit card information, but the services are free. At no time will GA ask you to do anything requiring you to spend any money on either of these services. However, if your amazing app starts getting a lot of activity that is amazing! Also, it's your job to keep an eye on your accounts and know if and when you will get billed.
 
 ## Review BCrypt
 
