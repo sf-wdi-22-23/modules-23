@@ -33,7 +33,7 @@ Volunteer to have your code refactored by the class! Our volunteer will spend th
 We'll divide into working groups of three people to look at six different parts of the code. **We do not expect you to implement all the changes you suggest**, but you should work with your team to plan how you would implement them and start if feasible.
 
 <a href="foundation-view.md" target="_blank">FOUNDATION: VIEW</a>  
-<a href="foundation-back-end.md">FOUNDATION: BACK END</a>    
+<a href="foundation-back-end.md" target="_blank">FOUNDATION: BACK END</a>    
 <a href="create-front-end.md" target="_blank">CREATE POSTS: FRONT END</a>   
 <a href="create-back-end.md" target="_blank">CREATE POSTS: BACK END</a>  	
 <a href="delete-front-end.md" target="_blank">DELETE POSTS: FRONT END</a>  
@@ -41,10 +41,12 @@ We'll divide into working groups of three people to look at six different parts 
 
 
 We can also keep in mind some larger-scale considerations, like:  
-	- Some refactoring decisions will affect multiple groups.   
-	- Is the same code copied and pasted in many areas of the project? Could this be condensed into a helper function so that there's only one location to debug/update?   
 
-	- Do the routes the client is sending requests to match the routes the server is prepared to respond on?  
+* Some refactoring decisions will affect multiple groups.   
+
+* Is the same code copied and pasted in many areas of the project? Could this be condensed into a helper function so that there's only one location to debug/update?   
+
+* Do the routes the client is sending requests to match the routes the server is prepared to respond on?  
 
 
 ## Group Refactor (25 min)  
