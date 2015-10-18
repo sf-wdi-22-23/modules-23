@@ -30,7 +30,7 @@ Volunteer to have your code refactored by the class! Our volunteer will spend th
 
 <!-- starts at 9:35 -->
 
-We'll divide into working groups of three people to look at six different parts of the code. **We do not expect you to implement all the changes you suggest.**  
+We'll divide into working groups of three people to look at six different parts of the code. **We do not expect you to implement all the changes you suggest**, but you should work with your team to plan how you would implement them and start if feasible.
 
 VIEW FUNDAMENTALS  
 SERVER AND DATABASE FUNDAMENTALS  
@@ -90,29 +90,6 @@ DELETE POSTS: BACK END
 	- Is the database getting many copies of any seed data? (If so, how would you fix this?)
 
 
-
-### Create Posts: Back End
-
-1. What route does the server code use to create a new post? Does this follow RESTful routing?
-
-1. Is it clear from the code or comments what data the server expects to get with this request? Where in the request does it get that data?  
-
-1. Test the route with Postman. Is it working as expected?
-
-1. What happens in the following scenarios:
-	- The request body is missing one of the attributes the post schema includes.
-	- The request body has extra attributes that a post doesn't include.
-	- The request body has the right attributes, with empty strings.
-
-1. How is the code in the route handling errors that might occur during the database query?  Would you suggest a different or additional strategy?
-
-
-1. How would you refactor the back-end code that enables users to create posts? Some specifics to watch out for:
-	- Did you find anything not working as intended?
-	- Is the code organized in a sensible way?
-	- Are variables named well, and is code indented in a way that is readable?
-	- Are there comments that help you understand what each file or chunk of code is doing?
-
 ### Create Posts: Front End
 
 1. Where is the HTML code for the new post form?  Where is the JavaScript?
@@ -148,6 +125,30 @@ DELETE POSTS: BACK END
 	![what the hell was that](https://media.giphy.com/media/aywM2B5Z2q7Pq/giphy.gif)
 
 	That was a <a href="https://www.owasp.org/index.php/XSS" target="_blank">cross-site-scripting (xss) attack</a>!  We won't go over how to fix it in class yet, but it's good to be aware of. -->
+
+
+
+### Create Posts: Back End
+
+1. What route does the server code use to create a new post? Does this follow RESTful routing?
+
+1. Is it clear from the code or comments what data the server expects to get with this request? Where in the request does it get that data?  
+
+1. Test the route with Postman. Is it working as expected?
+
+1. What happens in the following scenarios:
+	- The request body is missing one of the attributes the post schema includes.
+	- The request body has extra attributes that a post doesn't include.
+	- The request body has the right attributes, with empty strings.
+
+1. How is the code in the route handling errors that might occur during the database query?  Would you suggest a different or additional strategy?
+
+
+1. How would you refactor the back-end code that enables users to create posts? Some specifics to watch out for:
+	- Did you find anything not working as intended?
+	- Is the code organized in a sensible way?
+	- Are variables named well, and is code indented in a way that is readable?
+	- Are there comments that help you understand what each file or chunk of code is doing?
 
 
 ### Delete Posts: Front End
@@ -201,17 +202,17 @@ DELETE POSTS: BACK END
 
 Let's come back together and walk through the code, group by group, making some changes!
 
-VIEW FUNDAMENTALS
-SERVER AND DATABASE FUNDAMENTALS
-CREATE POSTS: FRONT END
-CREATE POSTS: BACK END
-DELETE POSTS: FRONT END
-DELETE POSTS: BACK END
+VIEW FUNDAMENTALS  
+SERVER AND DATABASE FUNDAMENTALS  
+CREATE POSTS: FRONT END  
+CREATE POSTS: BACK END  
+DELETE POSTS: FRONT END  
+DELETE POSTS: BACK END  
 
-We can also keep in mind some larger-scale considerations, like:
-	- Some refactoring decisions will affect multiple groups.
-	- Is the same code copied and pasted in many areas of the project? Could this be condensed into a helper function so that there's only one location to debug/update?
-	- Do the routes the client is sending requests to match the routes the server is prepared to respond on?
+We can also keep in mind some larger-scale considerations, like:  
+	- Some refactoring decisions will affect multiple groups.   
+	- Is the same code copied and pasted in many areas of the project? Could this be condensed into a helper function so that there's only one location to debug/update?   
+	- Do the routes the client is sending requests to match the routes the server is prepared to respond on?   
 	
  
  
