@@ -4,7 +4,7 @@
 
 ### Soon you will deploying to the web! 
 
-<div style="max-width: 500px;" id="_giphy_EldfH1VJdbrwY"></div><script>var _giphy = _giphy || []; _giphy.push({id: "EldfH1VJdbrwY",w: 200, h: 200});var g = document.createElement("script"); g.type = "text/javascript"; g.async = true;g.src = ("https:" == document.location.protocol ? "https://" : "http://") + "giphy.com/static/js/widgets/embed.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(g, s);</script>
+http://33.media.tumblr.com/db649f4441940d7fcbbc2bd5d6646bc1/tumblr_mlj0syTLbP1rf1e3ro1_250.gif
 
 To do so we will be using a fabulous service called Heroku. Heroku lets you deploy up to five apps to there servers for FREEEEEE!!!
 
