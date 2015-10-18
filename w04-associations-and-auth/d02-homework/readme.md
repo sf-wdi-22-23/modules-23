@@ -3,6 +3,7 @@
 ## A Couple Quick Logistics
 
 ### Soon you will deploying to the web! 
+![Bilby Stampede](http://example.com/images/logo.png)
 
 http://33.media.tumblr.com/db649f4441940d7fcbbc2bd5d6646bc1/tumblr_mlj0syTLbP1rf1e3ro1_250.gif
 
