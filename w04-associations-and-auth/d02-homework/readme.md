@@ -4,7 +4,7 @@
 
 ### Soon you will deploying to the web! 
 
-<iframe src="//giphy.com/embed/EldfH1VJdbrwY" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/tim-and-eric-mind-blown-EldfH1VJdbrwY">via GIPHY</a></p>
+<div style="max-width: 500px;" id="_giphy_EldfH1VJdbrwY"></div><script>var _giphy = _giphy || []; _giphy.push({id: "EldfH1VJdbrwY",w: 200, h: 200});var g = document.createElement("script"); g.type = "text/javascript"; g.async = true;g.src = ("https:" == document.location.protocol ? "https://" : "http://") + "giphy.com/static/js/widgets/embed.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(g, s);</script>
 
 To do so we will be using a fabulous service called Heroku. Heroku lets you deploy up to five apps to there servers for FREEEEEE!!!
 
