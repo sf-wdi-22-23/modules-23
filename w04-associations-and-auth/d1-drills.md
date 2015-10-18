@@ -1,10 +1,14 @@
 # Team Refactor Drill  
 
-## Motivation (3 minutes) <!-- starts at 9:17 -->
+## Motivation (3 minutes) 
+
+<!-- starts at 9:17 -->
 
 In the real world, web developers often work on code that theyd didn't write originally. Today, we're goind to look at code that will be foreign to most of you and think about how to improve it -- code created by one of you!
 
-## Volunteer Seeking (5 minutes) <!-- starts at 9:20 -->
+## Volunteer Seeking (5 minutes) 
+
+<!-- starts at 9:20 -->
 
 Volunteer to have your code refactored by the class! Our volunteer will spend the drill time answering questions from other groups if necessary.
 
@@ -12,7 +16,9 @@ Volunteer to have your code refactored by the class! Our volunteer will spend th
 <img src="https://media.giphy.com/media/sXv0vaA4331Ti/giphy.gif" alt="begging gif">
 
 
-## Site Tour (10 minutes)  <!-- starts at 9:25 -->
+## Site Tour (10 minutes)  
+
+<!-- starts at 9:25 -->
 
 1. Fork and clone our starter code so you have a local copy.
 
@@ -20,16 +26,18 @@ Volunteer to have your code refactored by the class! Our volunteer will spend th
 
 1. Check out how the site works in the browser. Watch the Chrome Dev Tools console for client-side log messages and the Terminal for server-side log messages.
 
-## Refactor Teams (20 minutes)  <!-- starts at 9:35 -->
+## Refactor Teams (20 minutes)  
+
+<!-- starts at 9:35 -->
 
 We'll divide into working groups of three people to look at six different parts of the code. **We do not expect you to implement all the changes you suggest.**  
 
-VIEW FUNDAMENTALS
-SERVER AND DATABASE FUNDAMENTALS
-CREATE POSTS: FRONT END
-CREATE POSTS: BACK END
-DELETE POSTS: FRONT END
-DELETE POSTS: BACK END
+VIEW FUNDAMENTALS  
+SERVER AND DATABASE FUNDAMENTALS  
+CREATE POSTS: FRONT END  
+CREATE POSTS: BACK END  
+DELETE POSTS: FRONT END  
+DELETE POSTS: BACK END  
 
 
 
@@ -121,7 +129,7 @@ DELETE POSTS: BACK END
 
 1. Which if any custom functions in the front-end JavaScript control the behavior of the new form? Do you like the extent to which this code is encapsulated?
 
-1. Does the front-end code use custom-made object oriented JavaScript (a constructor + prototype)? What are the advantages of doing it the way the developer chose? What are disadvantages?
+1. Does the front-end code use custom-made object oriented JavaScript (a constructor & prototype)? What are the advantages of doing it the way the developer chose? What are disadvantages?
 
 
 1. How would you refactor the front-end code that enables users to create posts? Some specifics to watch out for:
@@ -186,7 +194,9 @@ DELETE POSTS: BACK END
 	- Are variables named well, and is code indented in a way that is readable?
 	- Are there comments that help you understand what each file or chunk of code is doing?
 
-## Group Refactor (20 min)  <!-- starts at 9:55-10:00 -->
+## Group Refactor (20 min)  
+
+<!-- starts at 9:55-10:00 -->
 
 
 Let's come back together and walk through the code, group by group, making some changes!
@@ -203,6 +213,5 @@ We can also keep in mind some larger-scale considerations, like:
 	- Is the same code copied and pasted in many areas of the project? Could this be condensed into a helper function so that there's only one location to debug/update?
 	- Do the routes the client is sending requests to match the routes the server is prepared to respond on?
 	
-
-
- <!-- ends at 10:15-10:20 (because it will take time to regroup after splitting out) -->
+ 
+ 
