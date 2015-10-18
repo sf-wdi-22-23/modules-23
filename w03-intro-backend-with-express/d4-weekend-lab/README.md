@@ -89,5 +89,5 @@ A <a href="work-plan.md" target="_blank">sample work plan</a> is available if yo
 
 * All lessons from this week, and last week's material on APIs.
 * <a href="http://expressjs.com/api.html#app" target="_blank">Express App Docs</a>
-* <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEat.ly</a> (This is a great example of the type of client-server interaction you'll be building. DO NOT copy any of this code unless you understand exactly what it's doing. You've been warned.)
+* <a href="https://github.com/sf-wdi-22-23/toEatly_mongoose" target="_blank">toEat.ly (mongoose version)</a> (This is a great example of the type of client-server interaction you'll be building. DO NOT copy any of this code unless you understand exactly what it's doing. You've been warned.)
 
