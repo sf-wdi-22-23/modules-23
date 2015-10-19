@@ -18,3 +18,10 @@ To run mongoose commands in terminal:
 1. Create at least 5 'top-level' documents (in my case, five games) and at least 3 referenced documents (in my case, three consoles).
 1. Demonstrate the ability to display the documents with just an ObjectId for the referenced documents.
 1. Finally, call `populate()` on a query and demonstrate the **full** referenced documents as in the README with the Legend of Zelda: Ocarina of Time and the Nintendo 64.  
+
+### Tips:
+
+* Use `.remove` or `findOneAndRemove` if your database gets cluttered.
+
+* This `server.js` file might not work exactly because of the *asynchronous* nature of the database operations we're doing.  (They can finish in any order -- test this out with console logs in every callback.) Still, each individual snippet of code will be something we can incorporate into our server code later. 
+
