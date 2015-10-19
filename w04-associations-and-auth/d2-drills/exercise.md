@@ -36,7 +36,7 @@
 2. Now ```API_KEY``` will be equal to your the SECRET_API_KEY in your config .
 3. Run ```git status``. You should see your .gitignore, and your index.js (and other files if they were there already), but you should NOT see your .env file! Is so, make sure you saved your .gitignore file. It should look like this:
 
-```.env```
+.env
 
 
 
