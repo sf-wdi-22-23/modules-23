@@ -384,7 +384,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Module1</td>
-    <td>Mongoose Intro to Relationships and Embedding (Braus, Ben)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-dawn-embedded-mongo-associations">Mongoose Intro to Relationships and Embedding</a> (Braus, Ben)</td>
     <td>Cookies & Sessions (Alex, Matt)</td>
     <td>Review - Express from the Ground Up (Ben, Juliana)</td>
     <td>Project 1 Planning. Approvals (ALL) Deadline 12:30pm</td>
