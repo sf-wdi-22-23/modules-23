@@ -30,6 +30,19 @@ To give users the ability to sign up and log in to our site, we'll need:
 * **Mongoose Models:** for CRUD-ing users and setting up authentication methods
 * <a href="https://github.com/ncb000gt/node.bcrypt.js" target="_blank">**bcrypt:**</a> for hashing users' passwords
 
+
+###Here's the plan
+
+```js
+  // Make a signup form
+  // Submit email and password to a server route
+  // Save off a new user with a secure password and begin a session
+
+  // Make a login form
+  // Submit email and password to a server route
+  // Authenticate that the email and password are correct
+```
+
 ## Challenges: Part 1
 
 **Goal:** Create a new Node/Express project.
@@ -40,7 +53,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   $ mkdir simple_login
   $ cd simple_login
   $ npm init
-  $ npm install --save express body-parser
+  $ npm install --save express body-parser mongoose ejs
   $ touch server.js
   ```
 
@@ -52,13 +65,21 @@ To give users the ability to sign up and log in to our site, we'll need:
   // require express framework and additional modules
   var express = require('express'),
     app = express(),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    ejs = require('ejs'),
+    mongoose = require('mongoose');
 
   // middleware
   app.use(bodyParser.urlencoded({extended: true}));
+  mongoose.connect('mongodb://localhost/simple_login');
 
   // signup route with placeholder response
   app.get('/signup', function (req, res) {
+    res.send('coming soon');
+  });
+
+  // login route with placeholder response
+  app.get('/login', function (req, res) {
     res.send('coming soon');
   });
 
@@ -68,7 +89,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   });
   ```
 
-3. In the terminal, run `nodemon` and make sure your server starts without any errors. If you get an error, read the line number and error message. Most likely, you're trying to use an undefined variable or a module that's not installed.
+3. In the terminal, run `nodemon` and make sure your server starts without any errors. If you get an error, read the line number and error message. Most likely, you're trying to use an undefined variable or a module that's not installed. Visit `/login` and `/signup`
 
   ```
   $ nodemon
@@ -78,7 +99,110 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 ## Challenges: Part 2
 
-**Goal:** Write a `UserSchema` and define a `User` model.
+**Goal:** Set up a login view to test your login functionality in the browser.
+
+1. Install `ejs` and connect it as your view engine.
+
+1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `login.ejs`.
+
+  ```
+  $ mkdir public
+  $ cd public
+  $ mkdir views
+  $ touch views/signup.ejs
+  $ touch views/login.ejs
+  ```
+
+1. Add this boilerplate to `signup.ejs`
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap css -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <title>Simple Login</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h1>Sign Up</h1>
+          <hr>
+          <form id="signup-form">
+            <div class="form-group">
+              <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Sign Up" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+  ```
+
+3. Now that the signup view is ready, it's time for a signup route. In `server.js`, set up `GET /signup` to render the `signup` view.
+
+  ```js
+  // server.js
+
+  // login route (renders signup view)
+  app.get('/signup', function (req, res) {
+    res.render('signup');
+  });
+  ```
+
+4. Test that you can go to `localhost:3000/signup` and see your template.
+
+## Challenges: Part 3
+
+**Goal:** Submit your signup form to the server with client-side AJAX.
+
+1. Setup express to send static assets to the client.
+
+1. Add a `scripts.js` file to your public folder and link it with a `<script>` tag in your `<head>`.
+
+1. Set a submit listener on your signup form and use `$.post()` to post the email and password to `POST /signup`. (Don't forget to use the `serialize()` method to quickly make a `user` object with keys the same as the html "name" attribute of the html input tag and values equal to the value.)
+
+  ```js
+    var user = $("#signup-form").serialize();
+    $.post('/users', user, function(data){
+      console.log(data);
+    })
+  ```
+
+1. In your server create a `post` route to `/signup` that will handle signing up the user.
+
+  ```js
+  // server.js
+
+  // A create user route - creates a new user with a secure password
+  app.post('/users', function (req, res) {
+    console.log(req.body)
+    res.json("it worked!");
+  });
+  ```
+
+1. Try to submit the signup form and see that the form data is logged in your server's and browser's console.
+
+
+
+## Challenges: Part 4
+
+**Goal:** Create a User model and add auth methods with `bycrpt`
 
 1. In the terminal, create a new directory for `models` and create a file for your `User` model.
 
@@ -90,10 +214,10 @@ To give users the ability to sign up and log in to our site, we'll need:
 2. Also in the terminal, install `mongoose` and `bcrypt`.
 
   ```
-  $ npm install --save mongoose bcrypt
+  $ npm install --save bcrypt
   ```
 
-3. In Sublime, open `user.js` and require your newly installed dependencies, `mongoose` and `bcrypt`.
+3. In Sublime, open `user.js` and require your newly installed dependencies, `mongoose` and `bcrypt` and add a variable called `salt` from bcrypt.
 
   ```js
   // user.js
@@ -119,23 +243,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   });
   ```
 
-5. Continuing in `user.js`, define a `User` model using your `UserSchema` and export the model (so we can require it in other parts of our application).
-
-  ```js
-  // user.js
-
-  // define user model
-  var User = mongoose.model('User', UserSchema);
-
-  // export user model
-  module.exports = User;
-  ```
-
-## Challenges: Part 3
-
-**Goal:** Define user authentication methods for our `UserSchema`.
-
-1. In `user.js`, define methods for our `UserSchema`. These methods handle creating a user with a secure (hashed) password and authenticating a user.
+1. Continuing in `user.js`, define the auth methods for our `UserSchema`. These methods handle creating a user with a secure (hashed) password and authenticating (loggin in) a user.
 
    **Note:** We use `UserSchema.statics` to define <a href="http://mongoosejs.com/docs/guide#statics" target="_blank">static methods</a> for our schema and `UserSchema.methods` to define <a href="http://mongoosejs.com/docs/guide#methods" target="_blank">instance methods</a> for our schema. Static methods can hold any functionality related to the collection, while instance methods define functionality related to individual documents in the collection. You can think of instance methods like prototype methods in OOP!
 
@@ -145,8 +253,9 @@ To give users the ability to sign up and log in to our site, we'll need:
   // create a new user with secure (hashed) password
   UserSchema.statics.createSecure = function (email, password, callback) {
     // `this` references our schema
-    // store it in variable `that` because `this` changes context in nested callbacks
-    var that = this;
+    // store it in variable `user` because `this` changes context in nested callbacks
+
+    var user = this;
 
     // hash password user enters at sign up
     bcrypt.genSalt(function (err, salt) {
@@ -154,7 +263,7 @@ To give users the ability to sign up and log in to our site, we'll need:
         console.log(hash);
 
         // create the new user (save to db) with hashed password
-        that.create({
+        user.create({
           email: email,
           passwordDigest: hash
         }, callback);
@@ -169,8 +278,8 @@ To give users the ability to sign up and log in to our site, we'll need:
       console.log(user);
 
       // throw error if can't find user
-      if (user === null) {
-        throw new Error('Can\'t find user with email ' + email);
+      if (!user) {
+        console.log('No user with email ' + email);
 
       // if found user, check if password is correct
       } else if (user.checkPassword(password)) {
@@ -188,49 +297,100 @@ To give users the ability to sign up and log in to our site, we'll need:
 
   **Note:** Make sure your static and instance methods come before defining and exporing the `User` model. Setting and exporting the `User` model should be the last pieces of logic in `user.js` to make sure the authentication methods get added to the model and exported.
 
-## Challenges: Part 4
-
-**Goal:** Add a route to create users with secure (hashed) passwords.
-
-1. In `server.js`, require `mongoose` and your `User` model.
+5. Continuing in `user.js`, define a `User` model using your `UserSchema` and export the model (so we can require it in other parts of our application).
 
   ```js
-  // server.js
+  // user.js
 
-  var express = require('express'),
-      app = express(),
-      bodyParser = require('body-parser'),
-      // new additions
-      mongoose = require('mongoose'),
-      User = require('./models/user');
+  // define user model
+  var User = mongoose.model('User', UserSchema);
+
+  // export user model
+  module.exports = User;
   ```
 
-2. Also in `server.js`, connect to your `test` database.
+1. Don't forget to require your `User` model in `server.js`.
 
   ```js
   // server.js
-
-  // connect to mongodb
-  mongoose.connect('mongodb://localhost/test');
+      var User = require('./models/user');
   ```
 
-3. Continuing in `server.js` add a `POST /users` route to accept user sign up requests.
+1. In your `POST /users` route use your new `createSecure` model method to create a user with a secure password
 
   ```js
-  // server.js
-
-  // user submits the signup form
+  // Sign up route - creates a new user with a secure password
   app.post('/users', function (req, res) {
-
-    // grab user data from params (req.body)
-    var newUser = req.body.user;
-
-    // create new user with secure password
-    User.createSecure(newUser.email, newUser.password, function (err, user) {
-      res.send(user);
+    // use the email and password to authenticate here
+    User.createSecure(req.body.user.email, req.body.user.password, function (err, user) {
+      res.json(user);
     });
   });
   ```
+
+1. Submit your signup form. Did your route return the `user` object?
+
+
+
+## Logging In
+
+1. Create your `login` template (boilerplate here below), on submit AJAX listener, POST route in your server, and use the `User.authenticate` method to check if the user's email and password is correct.
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap css -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <title>Simple Login</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h1>Log In</h1>
+          <hr>
+
+          <!-- method and action refer to the request type (post) and request url (/login) -->
+          <form id="login-form">
+            <div class="form-group">
+              <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Log In" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+  ```
+
+3. Now that the login view is ready, it's time for a login route. In `server.js`, set up `GET /login` to render the `login` view.
+
+  ```js
+  // server.js
+
+  // login route (renders login view)
+  app.get('/login', function (req, res) {
+    res.render('login');
+  });
+  ```
+
+4. Test that you can go to `localhost:3000/login` and see your template.
+
+
 
 4. At this point, your complete `server.js` code should look like the following:
 
@@ -416,74 +576,6 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 ## Challenges: Part 8
 
-**Goal:** Set up a login view to test your login functionality in the browser.
-
-1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `login.html`.
-
-  ```
-  $ mkdir public
-  $ cd public
-  $ mkdir views
-  $ touch views/login.html
-  ```
-
-2. In Sublime, open `login.html` and add this login form boilerplate.
-
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- bootstrap css -->
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <title>Simple Login</title>
-  </head>
-  <body>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h1>Log In</h1>
-          <hr>
-
-          <!-- method and action refer to the request type (post) and request url (/login) -->
-          <form method="post" action="/login">
-            <div class="form-group">
-
-              <!-- the `name` HTML attribute sends form data to the server -->
-              <!-- setting the names `user[email]` and `user[password]` allows us to use `req.body.user` on the server-side, which gives us a user object with `email` and `password` keys -->
-              <input type="text" name="user[email]" class="form-control" placeholder="Email" autofocus>
-            </div>
-            <div class="form-group">
-              <input type="password" name="user[password]" class="form-control" placeholder="Password">
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Log In" class="btn btn-primary">
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </body>
-  </html>
-  ```
-
-3. Now that the login view is ready, it's time for a login route. In `server.js`, set up `GET /login` to render the `login` view.
-
-  ```js
-  // server.js
-
-  // login route (renders login view)
-  app.get('/login', function (req, res) {
-    res.sendFile(__dirname + '/public/views/login.html');
-  });
-  ```
-
-4. Test that you can go to `localhost:3000/login` and successfully log in your user that you created via Postman. After logging in, you should be redirected to `/profile` with the welcome message response.
-
-  ![POST /users](screenshots/get_login.png)
 
 
 ## Stretch Challenges
