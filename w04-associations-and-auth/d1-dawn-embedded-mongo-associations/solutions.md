@@ -1,5 +1,30 @@
 ## Solutions
 
+1. Write a `user.js` file with a User model with embedded Tweet model.
+
+  ```js
+    var mongoose = require('mongoose');
+    var Schema = mongoose.Schema;
+    
+    var tweetSchema = new Schema({
+      body: {
+        type: String,
+        default: ""
+      }
+    });
+    
+    var userSchema = new Schema({
+      username: {
+        type: String,
+        default: ""
+      },
+      tweets: [tweetSchema]   // EMBEDDING :D
+    });
+    
+    var User = mongoose.model('User', userSchema);
+    module.exports = User;
+  ```
+
 1. Write a route to create a new User.
 
   ```js
