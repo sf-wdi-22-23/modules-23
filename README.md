@@ -400,7 +400,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>HW</td>
-    <td><a=href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-relationships-and-auth/d01-homework.md">Cookies & Sessions, Authorization</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-relationships-and-auth/d01-homework.md">Cookies & Sessions, Authorization</a></td>
     <td>Bcrypt Review</td>
     <td>Project 1 Brainstorm </td>
     <td>Project One</td>
