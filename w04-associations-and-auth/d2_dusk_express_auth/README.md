@@ -1,471 +1,503 @@
-# Auth in Express
+# Authentication with Express & Bcrypt
 
+| Objectives |
+| :--- |
+| Implement a password **authentication** strategy with bcrypt |
+| Saved a logged-in user's data to the session |
+| Implement routes for a user to `/login` and `/logout` |
 
-| Learning Objectives |
-| :---- |
-| Implement a password **authentication** strategy in Express |
-| Leverage a session to maintain logged-in state for users |
-| Create routes for managing user sessions |
+## Authentication & Authorization
 
-##Setup
+* **Authentication** verifies that a user is who they say they are. When a user logs into our site, we *authenticate* them by checking that the password they typed in matches the password we have stored for them.
+* **Authorization** is the process of determining whether or not a user has *permission* to to perform certain actions on our site. For example, a user may *be authorized* to view their profile page and edit their own blog posts, but not to edit another user's blog posts.
 
-###Background
+## Why do we hash (and salt) passwords?
 
-This lesson assumes you have background knowledge from the [Storing Passwords w/ Bcrypt](https://github.com/sf-wdi-21/notes/blob/master/week-04/day-3-auth/readme.md) reading.
+In order to authenticate a user, we need to store their password in our database. This allows us to check that the user typed in the correct password when logging into our site.
 
-A solution to the following walk through is in the simple_login folder in this repo. 
+The downside is that if anyone ever got access to our database, they would also have access to all of our users' login information. We use a <a href="https://crackstation.net/hashing-security.htm#normalhashing" target="_blank">hashing algorithm</a> to avoid storing plain-text passwords in the database. We also use a <a href="https://crackstation.net/hashing-security.htm#salt" target="_blank">salt</a> to randomize the hashing algorithm, providing extra security against potential attacks.
 
-###Our Tools
+![](http://memeshare.net/memes/1/604.png)
 
-Today we will take advantage of:
+## Implementing Authentication
 
-* Express Framework: build our application and handle requests
-* Express Middleware:
-  * `body-parser`: handle incoming form data
-  * `express-sessions`: manage user sessions
-  * `mongoose`: act as an ORM for Mongo
-  * `bcrypt`: hash passwords
+To give users the ability to sign up and log in to our site, we'll need:
 
-###Pacing
+* **Express:** for building our application and handling requests
+* **Middleware:**
+  * `body-parser`: for handling incoming form data
+  * `express-session`: for setting sessions and cookies
+* **Mongoose Models:** for CRUD-ing users and setting up authentication methods
+* <a href="https://github.com/ncb000gt/node.bcrypt.js" target="_blank">**bcrypt:**</a> for hashing users' passwords
 
-See all branches in this repo with `git branch -a`. If you want to skip to another point in the exercise, checkout to another step with `git checkout <branch_name>`.
+## Challenges: Part 1
 
-###Get Started
+**Goal:** Create a new Node/Express project.
 
-Fork & Clone [this repo](https://github.com/sf-wdi-21/express_auth/tree/master).
+1. In the terminal, initialize a new Node project, and install `express` and `body-parser`.
 
-##Step 1: App Setup (10m)
+  ```
+  $ mkdir simple_login
+  $ cd simple_login
+  $ npm init
+  $ npm install --save express body-parser
+  $ touch server.js
+  ```
 
-**Goal:** Create a boilerplate server.
+2. Open your project in Sublime, and set up your server in `server.js` with the following code snippet:
 
-Inside the project you'll find a black `index.js` file that we will use as our server. Let's get started on setting up our project.
+  ```js
+  // server.js
 
-Initialize npm (and press enter a bunch of times) to create your `package.json`
+  // require express framework and additional modules
+  var express = require('express'),
+    app = express(),
+    bodyParser = require('body-parser');
 
-```bash
-npm init
-```
+  // middleware
+  app.use(bodyParser.urlencoded({extended: true}));
 
-At the very least we need something like the following:
+  // signup route with placeholder response
+  app.get('/signup', function (req, res) {
+    res.send('coming soon');
+  });
 
-`index.js`
+  // listen on port 3000
+  app.listen(3000, function () {
+    console.log('server started on locahost:3000');
+  });
+  ```
 
-```js
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    app = express();
+3. In the terminal, run `nodemon` and make sure your server starts without any errors. If you get an error, read the line number and error message. Most likely, you're trying to use an undefined variable or a module that's not installed.
 
-app.use(bodyParser.urlencoded({extended: true}))
+  ```
+  $ nodemon
+  ```
 
-app.get("/signup", function (req, res) {
-  res.send("Coming soon");
-});
+  **Note:** Keep `nodemon` running the entire time you're developing your application. When you need to execute other terminal commands, press `command + T` to open a new terminal tab.
 
-var listener = app.listen(3000, function () {
-  console.log("Listening on port " + listener.address().port);
-});
-```
-
-The above won't run unless we install those dependencies, so let's go ahead and make sure we do that now.
-
-
-Now let's try to install
-
-```
-npm install --save express body-parser
-```
-
-Run your `index.js` file using `nodemon`
-
-##Step 2: Setup Mongo (10m)
+## Challenges: Part 2
 
 **Goal:** Write a `UserSchema` and define a `User` model.
 
-In the project, create a new directory for `models` and create a file for your `User` model.
+1. In the terminal, create a new directory for `models` and create a file for your `User` model.
 
-```bash
-mkdir models
-touch models/index.js
-touch models/user.js
-```
+  ```
+  $ mkdir models
+  $ touch models/user.js
+  ```
 
-Install `mongoose` for our Mongo ORM and `bcrypt` to help hash our passwords.
+2. Also in the terminal, install `mongoose` and `bcrypt`.
 
-```bash
-$ npm install --save mongoose bcrypt
-```
+  ```
+  $ npm install --save mongoose bcrypt
+  ```
 
-Let's write some logic to connect to our database and bring in our user model to our `models/index.js`.
+3. In Sublime, open `user.js` and require your newly installed dependencies, `mongoose` and `bcrypt`.
 
+  ```js
+  // user.js
 
-`models/index.js`
-
-```javascript
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/express_auth");
-module.exports.User = require("./user");
-```
-
-In `models/user.js`, require `mongoose` and `bcrypt`.
-
-`models/user.js`
-
-```javascript
-// dependencies
-var mongoose = require('mongoose'),
-Schema = mongoose.Schema,
-bcrypt = require('bcrypt');
-```
-
-Also write the `UserSchema`. Users should have the properties **email**, **passwordDigest**, and **createdAt**.
-
-`models/user.js`
-
-```javascript
-// the user schema
-var UserSchema = new Schema({
-  email: {type: String, required: true},
-  passwordDigest: {type: String, required: true},
-  createdAt: {type: Date, default: Date.now()}
-});
-```
-
-Finally create and export a mongoose model to be required it in other parts of our application.
-
-`models/user.js`
-
-```javascript
-// define user model
-var User = mongoose.model('User', UserSchema);
-// export user model
-module.exports = User;
-```
-
-##Step 3: User Model Methods
-
-Earlier we [played with Bcrypt](https://github.com/sf-wdi-21/notes/blob/master/week-04/day-3-auth/readme.md#bcrypt) to discover how we could help signup a user by generating a secure password or signin a user by comparing the password digest with the hashed version of the provided password. We're going to take that logic and *encapsulate* it into our User model's methods.
-
-Remember `statics` are methods that will be accessible on the `db.User` model, while `methods` are accessible on an instance of the user model, aka a `new db.User()`.
-
-There are four methods we're adding to our model below. This saves us from writing logic in our the functions our routes execute, also known as **controllers** and rather *abstract* it to our **model**. It is best to have fat models and skinny controllers (more logic in the model). The four models we are writing are as follows (note `::` indicates a method on the constructor, while `#` indicates a method on all instances):
-
-* **`User.createSecure(email, password, cb)`**: used create a new user with a password digest (signup).
-* **`User.authenticate(email, password, cb)`**: used to hash a provided password with a specific user's existing password digest. It relies partly on the `checkPassword` method below. (signin).
-* **`user.checkPassword(password)`**: used to check if a user's password is correct.
-
-`models/user.js`
-
-```javascript
-// require dependencies
-var mongoose = require('mongoose'),
+  // require dependencies
+  var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    bcrypt = require('bcrypt');
+    bcrypt = require('bcrypt'),
+    salt = bcrypt.genSaltSync(10);
+  ```
 
-// create user schema
-var UserSchema = new Schema({
-  email: {type: String, required: true},
-  passwordDigest: {type: String, required: true},
-  createdAt: {type: Date, default: Date.now}
-});
+  **NOTE:** `bcrypt`'s `genSaltSync` function provides the salt we'll use to randomize the hashing algorithm.
 
-// create a new user with secure (hashed) password (for sign up)
-UserSchema.statics.createSecure = function (email, password, cb) {
-  // `_this` now references our schema
-  var _this = this;
-  // generate some salt
-  bcrypt.genSalt(function (err, salt) {
-    // hash the password with the salt
-    bcrypt.hash(password, salt, function (err, hash) {
-      // build the user object
-      var user = {
-        email: email,
-        passwordDigest: hash
-      };
-      // create a new user in the db with hashed password and execute the callback when done
-      _this.create(user, cb);
+4. Also in `user.js`, write your `UserSchema`. Users should have the properties **email** and **passwordDigest**.
+
+  ```js
+  // user.js
+
+  // define user schema
+  var UserSchema = new Schema({
+    email: String,
+    passwordDigest: String
+  });
+  ```
+
+5. Continuing in `user.js`, define a `User` model using your `UserSchema` and export the model (so we can require it in other parts of our application).
+
+  ```js
+  // user.js
+
+  // define user model
+  var User = mongoose.model('User', UserSchema);
+
+  // export user model
+  module.exports = User;
+  ```
+
+## Challenges: Part 3
+
+**Goal:** Define user authentication methods for our `UserSchema`.
+
+1. In `user.js`, define methods for our `UserSchema`. These methods handle creating a user with a secure (hashed) password and authenticating a user.
+
+   **Note:** We use `UserSchema.statics` to define <a href="http://mongoosejs.com/docs/guide#statics" target="_blank">static methods</a> for our schema and `UserSchema.methods` to define <a href="http://mongoosejs.com/docs/guide#methods" target="_blank">instance methods</a> for our schema. Static methods can hold any functionality related to the collection, while instance methods define functionality related to individual documents in the collection. You can think of instance methods like prototype methods in OOP!
+
+  ```js
+  // user.js
+
+  // create a new user with secure (hashed) password
+  UserSchema.statics.createSecure = function (email, password, callback) {
+    // `this` references our schema
+    // store it in variable `that` because `this` changes context in nested callbacks
+    var that = this;
+
+    // hash password user enters at sign up
+    bcrypt.genSalt(function (err, salt) {
+      bcrypt.hash(password, salt, function (err, hash) {
+        console.log(hash);
+
+        // create the new user (save to db) with hashed password
+        that.create({
+          email: email,
+          passwordDigest: hash
+        }, callback);
+      });
+    });
+  };
+
+  // authenticate user (when user logs in)
+  UserSchema.statics.authenticate = function (email, password, callback) {
+    // find user by email entered at log in
+    this.findOne({email: email}, function (err, user) {
+      console.log(user);
+
+      // throw error if can't find user
+      if (user === null) {
+        throw new Error('Can\'t find user with email ' + email);
+
+      // if found user, check if password is correct
+      } else if (user.checkPassword(password)) {
+        callback(null, user);
+      }
+    });
+  };
+
+  // compare password user enters with hashed password (`passwordDigest`)
+  UserSchema.methods.checkPassword = function (password) {
+    // run hashing algorithm (with salt) on password user enters in order to compare with `passwordDigest`
+    return bcrypt.compareSync(password, this.passwordDigest);
+  };
+  ```
+
+  **Note:** Make sure your static and instance methods come before defining and exporing the `User` model. Setting and exporting the `User` model should be the last pieces of logic in `user.js` to make sure the authentication methods get added to the model and exported.
+
+## Challenges: Part 4
+
+**Goal:** Add a route to create users with secure (hashed) passwords.
+
+1. In `server.js`, require `mongoose` and your `User` model.
+
+  ```js
+  // server.js
+
+  var express = require('express'),
+      app = express(),
+      bodyParser = require('body-parser'),
+      // new additions
+      mongoose = require('mongoose'),
+      User = require('./models/user');
+  ```
+
+2. Also in `server.js`, connect to your `test` database.
+
+  ```js
+  // server.js
+
+  // connect to mongodb
+  mongoose.connect('mongodb://localhost/test');
+  ```
+
+3. Continuing in `server.js` add a `POST /users` route to accept user sign up requests.
+
+  ```js
+  // server.js
+
+  // user submits the signup form
+  app.post('/users', function (req, res) {
+
+    // grab user data from params (req.body)
+    var newUser = req.body.user;
+
+    // create new user with secure password
+    User.createSecure(newUser.email, newUser.password, function (err, user) {
+      res.send(user);
     });
   });
-};
+  ```
 
-// authenticate user (for login)
-UserSchema.statics.authenticate = function (email, password, cb) {
-  // find user by email entered at log in
-  this.findOne({email: email}, function (err, user) {
-    // throw error if can't find user
-    if (user === null) {
-      cb("Can\'t find user with that email", null);
-    // if found user, check if password is correct
-    } else if (user.checkPassword(password)) {
-      // the user is found & password is correct, so execute callback
-      // pass no error, just the user to the callback
-      cb(null, user);
-    } else {
-      // user found, but password incorrect
-      cb("password incorrect", user)
-    }
-  });
-};
+4. At this point, your complete `server.js` code should look like the following:
 
-// compare password user enters with hashed password (`passwordDigest`)
-UserSchema.methods.checkPassword = function (password) {
-  // run hashing algorithm (with salt) on password to compare with stored `passwordDigest`
-  // `compareSync` is like `compare` but synchronous
-  // returns true or false
-  return bcrypt.compareSync(password, this.passwordDigest);
-};
+  ```js
+  // server.js
 
-// define user model
-var User = mongoose.model('User', UserSchema);
-
-// export user model
-module.exports = User;
-```
-
-###Creating a user
-
-In node try creating a new User with a password digest generated for you:
-
-```javascript
-var db = require('./models');
-db.User.createSecure("alice@ga.co", "foobarbazz", function(err, user){
-  console.log("success!", user);
-});
-```
-
-##Step 4: Signup Route
-
-Let's add our models to our app.
-
-`index.js`
-
-```javascript
-var express = require('express'),
+  // require express framework and additional modules
+  var express = require('express'),
+    app = express(),
     bodyParser = require('body-parser'),
-    db = require("./models"),
-    app = express();
-```
+    mongoose = require('mongoose'),
+    User = require('./models/user');
 
-Let's add a `POST /users` route to accept user signup requests.
+  // connect to mongodb
+  mongoose.connect('mongodb://localhost/test');
 
-```javascript
-// where the user submits the sign-up form
-app.post(["/users", "/signup"], function signup(req, res) {
-  // grab the user from the params
-  var user = req.body.user;
-  // pull out their email & password
-  var email = user.email;
-  var password = user.password;
-  // create the new user
-  db.User.createSecure(email, password, function() {
-    res.send(email + " is registered!\n");
+  // middleware
+  app.use(bodyParser.urlencoded({extended: true}));
+
+  // signup route with placeholder response
+  app.get('/signup', function (req, res) {
+    res.send('coming soon');
   });
-});
-```
 
-Let's test our `signup` route by sending it a post request using the `curl` command from our terminal. First start you server and then in a seperate terminal window run:
+  // user submits the signup form
+  app.post('/users', function (req, res) {
 
-```bash
-curl --data "user[email]=alice@ga.co&user[password]=foobarbazz" localhost:3000/signup
-```
+    // grab user data from params (req.body)
+    var newUser = req.body.user;
 
-##Step 5: Login Route
-
-Similarly to signup, let's add a route to login.
-
-`index.js`
-
-```javascript
-// where the user submits the login form
-app.post(["/sessions", "/login"], function login(req, res) {
-  var user = req.body.user;
-  var email = user.email;
-  var password = user.password;
-  db.User.authenticate(email, password, function (err, user) {
-    res.send(email + " is logged in\n");
+    // create new user with secure password
+    User.createSecure(newUser.email, newUser.password, function (err, user) {
+      res.send(user);
+    });
   });
-});
-```
 
-Then test the route:
+  // listen on port 3000
+  app.listen(3000, function () {
+    console.log('server started on locahost:3000');
+  });
+  ```
 
-```bash
-curl --data "user[email]=alice@ga.co&user[password]=foobarbazz" localhost:3000/login
-```
+5. Test your `POST /users` route with Postman. Check that it creates a new user with a secure (hashed) password.
 
-##Step 6: Sessions
+  **Note:** Make sure you have `nodemon` and `mongod` running. Double-check the params you enter into Postman. They should be `user[email]` and `user[password]`.
 
-As you may [remember](https://github.com/sf-wdi-21/notes/blob/master/week-04/day-2-cookies-sessions/README.md#sessions), sessions help us store information about a user's current login state on the server side that is referred to by a `session-id`, placed in a cookie (session-cookie) passed to the client and returned back to the server with every request.
+  ![POST /users](screenshots/post_users.png)
 
-To add sessions into our app we can use the `express-session` middleware.
+## Challenges: Part 5
 
-```bash
-npm install --save express-session
-```
+**Goal:** Add a route to log in users.
 
-Let's make a session:
+1. In `server.js`, add a `POST /login` route to authenticate a user.
 
-`index.js`
+  ```js
+  // server.js
 
-```javascript
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    db = require("./models"),
-    session = require("express-session"),
-    app = express();
+  // user submits the login form
+  app.post('/login', function (req, res) {
 
-app.use(bodyParser.urlencoded({extended: true}));
+    // grab user data from params (req.body)
+    var userData = req.body.user;
 
-// create our session
-app.use(
-  session({
-    secret: 'super-secret-private-keyyy',
-    resave: false,
-    saveUninitialized: true
-  })
-);
-```
+    // call authenticate function to check if password user entered is correct
+    User.authenticate(userData.email, userData.password, function (err, user) {
+      res.send(user);
+    });
+  });
+  ```
 
-Now hit your routes to see if they have a `set-cookie` header
+2. Test your `POST /login` route with Postman by trying to log in the user you created in Part 5. Check that it sends the authenticated user as a response. Again, your parameters should be `user[email]` and `user[password]`.
 
-```
-curl --data "user[email]=bob@ga.co&user[password]=bazzbarfoo" -i localhost:3000/signup
-curl --data "user[email]=bob@ga.co&user[password]=bazzbarfoo" -i localhost:3000/login
-```
+  ![POST /users](screenshots/post_login.png)
 
-To login a user we'll need to populate their `req.session` object with their `userId`. Setting the `userId` helps us identify which user we are dealing with. As we'll be using certain functionality in our app a lot, we can extend the `req` object to abstract it away from us. Let's create three new methods for the `req` object:
+## Challenges: Part 6
 
-* `req.login(user)`: to login a user
-* `req.currentUser()`: to return the user that is logged in
-* `req.logout()`: to logout the current user.
+**Goal:** Set up sessions and cookies to keep track of logged-in users throughout your app.
 
+1. In the terminal, install `express-session`.
 
-```javascript
-// extending the `req` object to help manage sessions
-app.use(function (req, res, next) {
-  // login a user
-  req.login = function (user) {
-    req.session.userId = user._id;
-  };
-  // find the current user
-  req.currentUser = function (cb) {
-    db.User.
-      findOne({ _id: req.session.userId },
-      function (err, user) {
+  ```
+  $ npm install --save express-session
+  ```
+
+2. In `server.js`, require `express-session` and set the session options. <a href="https://github.com/expressjs/session#options" target="_blank">Read more about the session options.</a>
+
+  ```js
+  // server.js
+
+  var express = require('express'),
+      app = express(),
+      bodyParser = require('body-parser'),
+      mongoose = require('mongoose'),
+      User = require('./models/user'),
+      // new addition
+      session = require('express-session');
+
+  // middleware (new addition)
+  // set session options
+  app.use(session({
+    saveUninitialized: true,
+    resave: true,
+    secret: 'SuperSecretCookie',
+    cookie: { maxAge: 60000 }
+  }));
+  ```
+
+3. Now that you have `express-session` set up, define the middleware `req.login`, `req.currentUser`, and `req.logout` in `server.js` to manage sessions.
+
+  **Note:** `app.use` allows us to define our own middleware and the base path to exectue that middleware. Since our base path is `/`, this middleware will be executed with every request. You can think of this "session" middleware as helper functions that we have access to in every request to our server.
+
+  ```js
+  // server.js
+
+  // middleware to manage sessions
+  app.use('/', function (req, res, next) {
+    // saves userId in session for logged-in user
+    req.login = function (user) {
+      req.session.userId = user.id;
+    };
+
+    // finds user currently logged in based on `session.userId`
+    req.currentUser = function (callback) {
+      User.findOne({_id: req.session.userId}, function (err, user) {
         req.user = user;
-        cb(null, user);
-      })
-  };
-  // logout the current user
-  req.logout = function () {
-    req.session.userId = null;
-    req.user = null;
-  }
-  // call the next middleware in the stack
-  next();
-});
-```
+        callback(null, user);
+      });
+    };
 
-We can refactor our `/login` route to take advantage of the `req.login(user)` method and then redirect to their profile.
+    // destroy `session.userId` to log out user
+    req.logout = function () {
+      req.session.userId = null;
+      req.user = null;
+    };
 
-`index.js`
-
-```javascript
-// where the user submits the login form
-app.post(["/sessions", "/login"], function login(req, res) {
-  var user = req.body.user;
-  var email = user.email;
-  var password = user.password;
-  db.User.authenticate(email, password, function (err, user) {
-    // login the user
-    req.login(user);
-    // redirect to user profile
-    res.redirect("/profile");
+    next();
   });
-});
-```
+  ```
 
-Finally, we can add a `/profile` route that our `/login` route redirects to and take advantage of the `req.currentUser()` method:
+## Challenges: Part 7
 
-```javascript
-// show the current user
-app.get("/profile", function userShow(req, res) {
-  req.currentUser(function (err, user) {
-    res.send("Hello " + user.email);
-  })
-});
-```
+**Goal:** Refactor the `POST /login` route to set the session and redirect to a user profile page.
 
-##Step 7: Adding Views
+1. After authenticating a user, log them in by calling `req.login(user)`, and redirect to the user's profile page. In `server.js`, your `POST /login` route should now look like this:
 
-### Adding Views
+  ```js
+  // server.js
 
-First let's  `mkdir` for views
+  // user submits the login form
+  app.post('/login', function (req, res) {
 
-### Adding a Login Path
+    // grab user data from params (req.body)
+    var userData = req.body.user;
 
+    // call authenticate function to check if password user entered is correct
+    User.authenticate(userData.email, userData.password, function (err, user) {
+      // saves user id to session
+      req.login(user);
 
-We need a `GET /login` view and route by requiring `path` and creating a path to our views.
+      // redirect to user profile
+      res.redirect('/profile');
+    });
+  });
+  ```
 
+2. In the step above, we're redirecting to a route called `/profile`, which we don't have yet, so go ahead and set it up in `server.js`. For now, our profile route will respond with a welcome message.
 
-`index.js`
+  ```js
+  // server.js
 
-```javascript
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    db = require('./models'),
-    session = require('express-session'),
-    path = require('path'),
-    app = express();
+  // user profile page
+  app.get('/profile', function (req, res) {
+    // finds user currently logged in
+    req.currentUser(function (err, user) {
+      res.send('Welcome ' + user.email);
+    });
+  });
+  ```
 
-// views path
-var views = path.join(process.cwd(), "views");
+3. Test `POST /login` again with Postman, this time making sure you see the welcome message response from the redirect to `/profile`.
 
-app.get("/login", function (req, res) {
-  res.sendFile(path.join(views, "login.html"));
-});
+  ![POST /users](screenshots/post_login_profile.png)
 
-```
+## Challenges: Part 8
 
-Then create the login view:
+**Goal:** Set up a login view to test your login functionality in the browser.
 
+1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `login.html`.
 
-`views/login.html`
+  ```
+  $ mkdir public
+  $ cd public
+  $ mkdir views
+  $ touch views/login.html
+  ```
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Title</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
-  <h1>Login</h1>
-  <form method="post" action="/login">
-    <div>
-      <input type="text" name="user[email]">
+2. In Sublime, open `login.html` and add this login form boilerplate.
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap css -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <title>Simple Login</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h1>Log In</h1>
+          <hr>
+
+          <!-- method and action refer to the request type (post) and request url (/login) -->
+          <form method="post" action="/login">
+            <div class="form-group">
+
+              <!-- the `name` HTML attribute sends form data to the server -->
+              <!-- setting the names `user[email]` and `user[password]` allows us to use `req.body.user` on the server-side, which gives us a user object with `email` and `password` keys -->
+              <input type="text" name="user[email]" class="form-control" placeholder="Email" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="password" name="user[password]" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Log In" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div>
-      <input type="password" name="user[password]">
-    </div>
-    <button>Login</button>
-  </form>
-</body>
-</html>
-```
+  </body>
+  </html>
+  ```
+
+3. Now that the login view is ready, it's time for a login route. In `server.js`, set up `GET /login` to render the `login` view.
+
+  ```js
+  // server.js
+
+  // login route (renders login view)
+  app.get('/login', function (req, res) {
+    res.sendFile(__dirname + '/public/views/login.html');
+  });
+  ```
+
+4. Test that you can go to `localhost:3000/login` and successfully log in your user that you created via Postman. After logging in, you should be redirected to `/profile` with the welcome message response.
+
+  ![POST /users](screenshots/get_login.png)
 
 
-CONGRATS! You've just hand-rolled a login system!
+## Stretch Challenges
 
+1. Right now, the `GET /signup` route has a placeholder response. Refactor the route to render a `signup` view. **Hint:** The `signup` view will have a form similar to the `login` view.
 
-## Moar Exercises ^_^
+2. Test that a new user can sign up via the form on the `signup` page.
 
-1. Add a `GET /signup` route and view to create a new user
-2. When a user signs up also log them in and redirect them to the `/profile` page.
-3. Create a route `GET /logout` that uses the `req.logout` middleware to destroy the session. Add a link on your site that logs out the user. (bonus for using a delete request, which is shown in the branch `step_10`).
-4. The `req.currentUser` middleware finds the user who is currently logged in. Use `req.currentUser` to **authorize** parts of your site.
-    * Logged-in users should NOT be able to see the /signup or /login pages.
-    * Users should only be able to see /profile when logged in.
+3. After a new user signs up, redirect them to `/login`. Test the user-flow of signing up, then logging in. After logging in, the user should still be redirected to `/profile` with the welcome message response.
 
-    *Hint: You'll need to add some logic when calling req.currentUser to check if a logged-in user was found. You'll want to use res.redirect if a user tries to perform an unauthorized action.*
+4. Create a route `GET /logout` that uses the `req.logout` middleware to destroy the session. Add a link on your site that logs out the user.
+
+5. The `req.currentUser` middleware finds the user who is currently logged in. Use `req.currentUser` to *authorize* parts of your site.
+  * Logged-in users should NOT be able to see the `/signup` or `/login` pages.
+  * Users should only be able to see `/profile` when logged in.
+
+  **Hint:** You'll need to add some logic when calling `req.currentUser` to check if a logged-in user was found. You'll want to use `res.redirect` if a user tries to perform an unauthorized action.
