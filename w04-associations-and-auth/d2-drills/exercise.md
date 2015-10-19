@@ -40,3 +40,4 @@
 
 
 
+### Bonus: check out the [dotenv docs](https://www.npmjs.com/package/dotenv). Take a look at their .env example and think about the variables they have in there and Google what they are for.
