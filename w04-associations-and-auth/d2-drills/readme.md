@@ -35,3 +35,5 @@ To counter rainbow tables, websites began using a technique called **salting** w
 ![](http://cache.gawkerassets.com/assets/images/17/2011/08/passwords.jpg)
 
 *We can still do our part!  To make it extremely difficult for computers to guess your password, consider using 4 random words strung together.*  
+
+### [Exercise](exercise.md)
