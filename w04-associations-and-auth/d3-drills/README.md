@@ -1,12 +1,13 @@
 # Binary Search
-- [solution](drills_solutions.md)
+
+Binary search is a type of search method used to find the position of a target item in a sorted array.
 
 ```js
 function binarySearch(array, target) {
   // your code here
 };
 
-var sample = [0, 1, 1, 3, 5, 8, 13, 21];
+var sample = [0, 1, 3, 5, 8, 13, 21];
 var target = 1;
 
 binarySearch(sample, 1); // 3 (the index it is located at in the sample array)
@@ -42,6 +43,15 @@ This process continues, eliminating half of the elements, and comparing the targ
 
 [Source Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
+## A real-life example
+
 Searching for a name in a telephone book using binary search - https://study.cs50.net/binary_search (an awesome introduction to binary search).
 
-[solution](https://github.com/sf-wdi-21/notes/blob/master/week-04/drills_solutions.md)
+## Solution
+[Solution](https://github.com/sf-wdi-21/notes/blob/master/week-04/drills_solutions.md)
+
+### Further Reading
+
+[Big O Notation cheatsheet](http://bigocheatsheet.com/)
+[Carnagie Mellon University - Binary Search](http://www.cs.cmu.edu/~15110-f12/Unit05PtB-handout.pdf)
+[Rob Bell - beginner's guide to Big O notation](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
