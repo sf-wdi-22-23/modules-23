@@ -2,16 +2,10 @@
 
 ### Base Exercises
 
-** Questions **
-
-1. What are three examples of times when you would use embedded association pattern?
-1. What are three you would use a reference association pattern?
-
-
-** Setting up an Embedded Model **
+**Setting up an Embedded Model**
 1. Write a file called `user.js` that has a user model with an attribute `tweets` that contains an embedded tweet model.
 
-** Writing User/Tweets Routes ** 
+**Writing User/Tweets Routes** 
 
 The following challenges are psuedo code. Write a method for example.
 
@@ -50,6 +44,13 @@ In the following challenges imagine that **Users have many Tweets**
 1. Create a new tweet that belongs to a user (who's id is in the `req.params.id`).
 1. Delete a tweet that belongs to a user (make sure to build the route to include the user and the tweet's id's - see example above).
 1. Update a tweet that belongs to a user (ditto on their id's!).
+
+
+**Questions**
+
+1. What are three examples of times when you would use embedded association pattern?
+1. What are three you would use a reference association pattern?
+
 
 ### Stretch
 
