@@ -1,24 +1,25 @@
 ## Solutions
 
-1. Write a `user.js` file with a User model with embedded Tweet.
+1. Write a `post.js` file with a Post model with embedded Comment.
 
   ```js
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
     
-    var tweetSchema = new Schema({
+    var commentSchema = new Schema({
       body: {
         type: String,
         default: ""
       }
     });
     
-    var userSchema = new Schema({
-      username: {
+    var postSchema = new Schema({
+      title: {
         type: String,
         default: ""
       },
-      tweets: [tweetSchema]   // EMBEDDING :D
+      body: String,
+      comments: [commentSchema]   // EMBEDDING :D
     });
     
     var User = mongoose.model('User', userSchema);
