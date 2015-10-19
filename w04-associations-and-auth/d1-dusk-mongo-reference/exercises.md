@@ -19,9 +19,14 @@ To run mongoose commands in terminal:
 1. Demonstrate the ability to display the documents with just an ObjectId for the referenced documents.
 1. Finally, call `populate()` on a query and demonstrate the **full** referenced documents as in the README with the Legend of Zelda: Ocarina of Time and the Nintendo 64.  
 
+### Stretch Exercises
+
+1. Add another model to your code to create a multi-tiered structure.
+1. Incorporate both embedded and referenced models.
+1. Add a Tag model to your Mircoblog app and reference them in your posts. 
+
 ### Tips:
 
-* Use `.remove` or `findOneAndRemove` if your database gets cluttered.
+* Use `.remove` or `.findOneAndRemove` if your database gets cluttered.
 
-* This `server.js` file might not work exactly because of the *asynchronous* nature of the database operations we're doing.  (They can finish in any order -- test this out with console logs in every callback.) Still, each individual snippet of code will be something we can incorporate into our server code later. 
-
+* This `server.js` file might not work exactly because of the *asynchronous* nature of the database operations we're doing.  (They can finish in any order -- test this out with console logs in every callback.) Still, each individual snippet of code will be something we can incorporate into our server code later.
