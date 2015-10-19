@@ -135,7 +135,7 @@ var ingredientSchema = new Schema({
 
 ##Route Design
 
-Remember RESTful routing? It's the most popular modern convention for designing resource paths for nested data. Here is an example of an application that has routes for `Store` and `Item` models:
+Remember to always make "RESTful" routes. RESTful routes are the most popular modern convention for designing resource paths for nested data. Here is an example of an application that has routes for `Store` and `Item` models:
 
 ###RESTful Routing
 || | |
