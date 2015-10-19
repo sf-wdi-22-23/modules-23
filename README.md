@@ -385,7 +385,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module1</td>
     <td>Mongoose Intro to Relationships and Embedding (Braus, Ben)</td>
-    <td>Cookies & Sessions & LocalStorage (Alex, Matt)</td>
+    <td>Cookies & Sessions (Alex, Matt)</td>
     <td>Review - Express from the Ground Up (Ben, Juliana)</td>
     <td>Project 1 Planning. Approvals (ALL) Deadline 12:30pm</td>
     <td>Project 1</td>
