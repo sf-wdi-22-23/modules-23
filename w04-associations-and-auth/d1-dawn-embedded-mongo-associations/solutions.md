@@ -22,8 +22,8 @@
       comments: [commentSchema]   // EMBEDDING :D
     });
     
-    var User = mongoose.model('User', userSchema);
-    module.exports = User;
+    var Post = mongoose.model('Post', postSchema);
+    module.exports = Post;
   ```
 
 1. Write a route to create a new User.
