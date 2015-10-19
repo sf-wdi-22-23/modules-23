@@ -70,8 +70,11 @@ To give users the ability to sign up and log in to our site, we'll need:
     mongoose = require('mongoose');
 
   // middleware
+  app.use(express.static('public'));
+  app.set('view engine', 'ejs');
   app.use(bodyParser.urlencoded({extended: true}));
   mongoose.connect('mongodb://localhost/simple_login');
+
 
   // signup route with placeholder response
   app.get('/signup', function (req, res) {
@@ -101,9 +104,7 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 **Goal:** Set up a login view to test your login functionality in the browser.
 
-1. Install `ejs` and connect it as your view engine.
-
-1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `login.ejs`.
+1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `signup.ejs` and a view called `login.ejs`.
 
   ```
   $ mkdir public
@@ -171,9 +172,7 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 **Goal:** Submit your signup form to the server with client-side AJAX.
 
-1. Setup express to send static assets to the client.
-
-1. Add a `scripts.js` file to your public folder and link it with a `<script>` tag in your `<head>`.
+1. We've already setup sending a public folder to the client, so add a `scripts.js` file to your public folder and link it with a `<script>` tag in your `<head>` of `signup.ejs`.
 
 1. Set a submit listener on your signup form and use `$.post()` to post the email and password to `POST /signup`. (Don't forget to use the `serialize()` method to quickly make a `user` object with keys the same as the html "name" attribute of the html input tag and values equal to the value.)
 
