@@ -3,6 +3,7 @@
 ### Base Exercises
 
 **Setting up an Embedded Model**
+
 1. Write a file called `user.js` that has a user model with an attribute `tweets` that contains an embedded tweet model.
 
 **Writing User/Tweets Routes** 
