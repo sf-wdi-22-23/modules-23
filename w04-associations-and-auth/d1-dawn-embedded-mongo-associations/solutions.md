@@ -1,6 +1,6 @@
 ## Solutions
 
-1. Write a `user.js` file with a User model with embedded Tweet model.
+1. Write a `user.js` file with a User model with embedded Tweet.
 
   ```js
     var mongoose = require('mongoose');
