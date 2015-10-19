@@ -7,9 +7,8 @@
 - git init
 - touch index.js
 
-### Setting up .env
+### Setting up and Hiding a secret API key in a ```.env``` file
 
-1. Setting up and Hiding a secret API key in a ```.env``` file
 1. We are going to use a handy module called 'dotenv' run ```npm install dotenv --save```
 1. Create a ```.env``` file in the root folder of your project. This file is where you will define **Development Environment Variables** and **Secret Variables** using the syntax ```NAME=VALUE``` Add a SECRET_API_KEY variable with some key-like thing assigned to it:
 
