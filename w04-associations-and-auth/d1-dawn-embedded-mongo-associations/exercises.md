@@ -4,7 +4,7 @@
 
 **Setting up an Embedded Model**
 
-1. Write a file called `user.js` that has a user model with an attribute `tweets` that contains an embedded tweet model.
+1. Write a file called `user.js` that has a user model with an attribute `tweets` that contains an embedded tweet schema.
 
 **Writing User/Tweets Routes** 
 
