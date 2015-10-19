@@ -5,6 +5,8 @@
 | Review the request and response cycle and the stateless web |
 | Discuss and use an HTTP Cookie in a web application |
 | Differentiate between an HTTP Cookie and a session |
+| Use Express to add sessions to your application. |
+| Implement basic authentication in your application. |
 
 ### Motivation (Why?)
 
