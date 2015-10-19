@@ -64,6 +64,6 @@ Implement a recursive solution (instead of iterative).
 
 ### Further Reading
 
-[Big O Notation cheatsheet](http://bigocheatsheet.com/)
-[Carnagie Mellon University - Binary Search](http://www.cs.cmu.edu/~15110-f12/Unit05PtB-handout.pdf)
-[Rob Bell - beginner's guide to Big O notation](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
+- [Big O Notation cheatsheet](http://bigocheatsheet.com/)
+- [Carnagie Mellon University - Binary Search](http://www.cs.cmu.edu/~15110-f12/Unit05PtB-handout.pdf)
+- [Rob Bell - beginner's guide to Big O notation](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
