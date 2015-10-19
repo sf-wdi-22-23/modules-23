@@ -40,7 +40,7 @@
       user.tweets.push(req.body.tweet);
       user.save(function(err) {
         res.status(200).json(user);
-      })
+      });
     });
   });
   ```
@@ -63,8 +63,8 @@
     User.find({ _id: req.params.userId }, function (err, user) {
       var tweet = req.body.tweet;
       user.tweets.findByIdAndUpdate(tweet, function (err, user) {
-        res.status(200).json(user)
-      })
-    }
-  })
+        res.status(200).json(user);
+      });
+    });
+  });
   ```
