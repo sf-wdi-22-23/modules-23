@@ -23,7 +23,6 @@ To run mongoose commands in terminal:
 
 1. Add another model to your code to create a multi-tiered structure.
 1. Incorporate both embedded and referenced models.
-1. Add a Tag model to your Mircoblog app and reference them in your posts. 
 
 ### Tips:
 

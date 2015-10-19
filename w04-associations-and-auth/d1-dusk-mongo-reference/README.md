@@ -67,22 +67,22 @@ var Console = mongoose.model('Console', consoleSchema);
 Let's make two objects to test out creating a Console document and Game document.
 
 ```javascript
-/* make a simple obect for Console document creation */
- var nin64 = {
- 	name: 'Nintendo 64',
- 	manufacturer: 'Nintendo',
- 	released: 'September 29, 1996'
-};
+/* make a new Console document */
+var nin64 = new Console ({
+ name: 'Nintendo 64',
+ manufacturer: 'Nintendo',
+ released: 'September 29, 1996'
+});
 ```
 
 ```javascript
-/* make a simple object for Game document creation*/
- var zelda = {
- 	name: 'The Legend of Zelda: Ocarina of Time',
- 	developer: 'Nintendo',
- 	release: new Date('April 27, 2000'),
- 	consoles: []
-};
+/* make a new Game document */
+var zelda = new Game ({
+  name: 'The Legend of Zelda: Ocarina of Time',
+  developer: 'Nintendo',
+  release: new Date('April 27, 2000'),
+  consoles: []
+});
 ```
 
 Notice that consoles is empty within the Game document.  That will be filled with ObjectIds later on.
@@ -92,15 +92,12 @@ Now we will create a `Console` document using the `nin64` object we made above. 
 After we create the `Game` document, we push the `nintendo64` console document into the `zeldaGame` consoles array.  Since we already told the Game Schema that we will only be storing ObjectIds instead of actual `Console` documents in the `consoles` array, mongoose will convert `nintendo64` to it's unique `_id` .
 
 ```javascript
- Console.create(nin64, function(err, nintendo64){
- 	if(err) {return console.log(err);}
- 	Game.create(zelda, function(err, zeldaGame) {
- 		if(err) {return console.log(err);}
- 		zeldaGame.consoles.push(nintendo64);
- 		zeldaGame.save();
- 		console.log('Game success: \n' + zeldaGame);
- 	});
- })
+nin64.save(function(err, nintendo64) {
+ if(err) {return console.log(err);}
+ else console.log(nintendo64);
+});
+zelda.consoles.push(nin64);
+zelda.save();
 ```
 This is the result after executing the code we've written thus far:
 
@@ -149,12 +146,19 @@ When we want to get full information from a Console Document we have inside the 
 
 ```javascript
 Game.findOne({ name: 'The Legend of Zelda: Ocarina of Time' })
-	.populate('consoles')
-	.exec(function(err, game) {
- 		if(err){return console.log(err);}
- 		console.log(game);
- 		console.log("/nI love " + game.name + " for the " + game.consoles[0].name);
- 	});
+  .populate('consoles')
+  .exec(function(err, game) {
+    if(err){return console.log(err);}
+    if (game.consoles.length > 0) {
+      for (var i=0; i<game.consoles.length; i++) {
+        console.log("/nI love " + game.name + " for the " + game.consoles[0].name);
+      }
+    }
+    else {
+      console.log('Game has no consoles.');
+    }
+    console.log(game);
+  });
 ```
 Let's go over this method call line by line:
 
