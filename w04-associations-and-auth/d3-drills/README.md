@@ -47,6 +47,18 @@ This process continues, eliminating half of the elements, and comparing the targ
 
 Searching for a name in a telephone book using binary search - https://study.cs50.net/binary_search (an awesome introduction to binary search).
 
+## Exercise
+
+Each student will be assigned a number. Based on their number, the students will sort themselves lowest to highest. The instructor will then act as the `mid` variable, determining which half of the students to continue navigating through in search of the target value.
+
+After this real-life demo, students will pseudocode their plan for implementing a binary search, swap solutions with a partner from across the room, exchange feedback, and then start coding.
+
+**Stretch**
+
+~~Implement a solution that handles non-unique data sets.~~ (this might be too much)
+
+Implement a recursive solution (instead of iterative).
+
 ## Solution
 [Solution](https://github.com/sf-wdi-21/notes/blob/master/week-04/drills_solutions.md)
 
