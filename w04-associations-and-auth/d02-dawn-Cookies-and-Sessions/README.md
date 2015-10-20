@@ -91,8 +91,7 @@ Once the cookie is set in the browser, any subsequent request to the website aut
 
 ## Reading and Writing Cookies -- Client Side
 
-It's also possible to manipulate cookies on the client-side. 
-[MDN document.cookie documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
+It's also possible to manipulate cookies on the client-side.
 
 From the Chrome Developer Console:
 
@@ -201,4 +200,6 @@ app.post('/api/sessions', function (req, res) {
 
 ### Docs & Resources
 
+- [MDN document.cookie documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
+- [Express API documentation for res.cookie](http://expressjs.com/api.html#res.cookie)
 - [express-session README](https://github.com/expressjs/session)
