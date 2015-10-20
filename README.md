@@ -4,7 +4,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 [JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
 <br>
-[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: these use a different templating solution called Handlebars instead of ejs, so those portions don't reflect what we've seen)
+[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: a few of these use a different templating solution called Handlebars instead of ejs, so those portions don't reflect what we've seen)
 <!-- ##Week 12 -->
 <!-- <table>
   <tr>
@@ -377,7 +377,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-drills">Weekend Lab Review</a> (Brianna, Alex)</td>
-    <td>Secret Keys (Alex, Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d2-drills">Secret Keys</a> (Alex, Juliana)</td>
     <td>Binary Search (Matt, Ben)</td>
     <td>Project approvals</td>
     <td>Project 1</td>
@@ -385,7 +385,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module1</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-dawn-embedded-mongo-associations">Mongoose Intro to Relationships and Embedding</a> (Braus, Ben)</td>
-    <td>Cookies & Sessions (Alex, Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d02-dawn-Cookies-and-Sessions">Cookies & Sessions</a> (Alex, Matt)</td>
     <td>Review - Express from the Ground Up (Ben, Juliana)</td>
     <td>Project 1 Planning. Approvals (ALL) Deadline 12:30pm</td>
     <td>Project 1</td>
@@ -393,14 +393,14 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-dusk-mongo-reference">Mongoose Reference & Populate</a> (Juliana, Brianna)</td>
-    <td>Authorization: Express Bcrypt(Braus, Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d2_dusk_express_auth">Authorization: Express Bcrypt</a> (Braus, Brianna)</td>
     <td>Student Project Planning (Braus) / Intro Project 1 (Juliana)</td>
     <td>Project 1 / Getting Started Breakout (Brianna)</td>
     <td>Project 1</td>
   </tr>
   <tr>
     <td>HW</td>
-    <td>Cookies & Sessions, <a href="https://github.com/sf-wdi-21/notes/blob/master/week-04/day-3-auth/readme.md">Authorization Reading</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-relationships-and-auth/d01-homework.md">Cookies & Sessions, Authorization</a></td>
     <td>Bcrypt Review</td>
     <td>Project 1 Brainstorm </td>
     <td>Project One</td>

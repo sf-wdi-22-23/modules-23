@@ -168,9 +168,9 @@ Let's go over this method call line by line:
 
 	- Line 3: When we use `find` without a callback, then `populate`, like here, we can put a callback inside an `.exec()` method call. Technically we have made a query with `find`, but only exectued it when we call `.exec()`.
 
-	- Lines 3-5: If we have any errors, we will log them.  Otherwise, we can display the entire Game Document **including** the populated consoles array.
+	- Lines 4-12: If we have any errors, we will log them.  Otherwise, we can display the entire Game Document **including** the populated consoles array.
 
-	- Line 6 demonstrates that we are able to access both data from the original Game Document we found **and** the referenced Console Document we summoned.  
+	- Line 13 demonstrates that we are able to access both data from the original Game Document we found **and** the referenced Console Document we summoned.  
 
 This is the actual output from the above `findOne()` method call:
 
