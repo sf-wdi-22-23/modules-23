@@ -39,7 +39,7 @@ First we have to install cookie-parser:
 ``` npm install --save cookie-parser ```
 And now we just tell our app to use cookie-parser.
 
-```
+```js
 var express      = require('express');
 var cookieParser = require('cookie-parser');
 
@@ -95,13 +95,13 @@ It's also possible to manipulate cookies on the client-side.
 
 From the Chrome Developer Console:
 
-```
+```js
 document.cookie; // "message=hello"
 ```
 
 You can write to this string simply by reassigning its value. Take care though that you don't overwrite anything important (and watch out for spaces and semi-colons)!
 
-```
+```js
 document.cookie += "; magic_number=10;"
 document.cookie; // "message=hello; magic_number=10;"
 ```
