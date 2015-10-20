@@ -6,7 +6,7 @@
 mkdir cookies-and-sessions;
 cd cookies-and-sessions;
 touch index.js;
-echo '{}' > package.json;
+npm init;
 npm install --save express cookie-parser;
 ```
 
