@@ -14,7 +14,7 @@ When Bob receives the message from Alice, his special **private** key is the onl
  ![](http://www.itgstextbook.com/chapter5-security/public-key-encryption.png)
 
 ####Message Authentication
-If Bob wants to send Alice a response to make sure he received the message, he can perform the above encryption in reverse.  Bob can encrypt his message with his **private** key and send it off.  It should be noted, however, that anyone with Bob's **public** key can decipher his message.  This is a vulnerability, however Bob only cares about making sure that Alice knows that it was truly Bob that sent this new message.  **Private** key encrypted files can only be decrypted with **public** keys.  Since Bob is diligent about keeping his **private** key guarded, we know hat any message sent with his private key encryption is truly from him.
+If Bob wants to send Alice a response to make sure he received the message, he can perform the above encryption in reverse.  Bob can encrypt his message with his **private** key and send it off.  It should be noted, however, that anyone with Bob's **public** key can decipher his message.  This is a vulnerability, however Bob only cares about making sure that Alice knows that it was truly Bob that sent this new message.  **Private** key encrypted files can only be decrypted with **public** keys.  Since Bob is diligent about keeping his **private** key guarded, we know that any message sent with his private key encryption is truly from him.
 
 ###Question
 
