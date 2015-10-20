@@ -28,7 +28,7 @@ Imagine you're in the habit of having deep conversations with a close friend eve
 
 Without sessions, each request/response is self contained. It would be as though you and your friend both had Alzheimer's.
 
-Reading and Writing Cookies -- Using cookie-parser
+### Reading and Writing Cookies -- Using cookie-parser
 
 Cookies can be done without the cookie-parser module, just like requests can be done without body-parser! But it isn't as nice. We are going to just straight to cookie-parser. [Look here](no-cookie-parser.js) for an example of setting cookies without cookie-parser if you are curious. 
 
