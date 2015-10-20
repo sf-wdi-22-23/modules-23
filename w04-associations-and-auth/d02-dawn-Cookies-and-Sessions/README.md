@@ -28,7 +28,7 @@ Imagine you're in the habit of having deep conversations with a close friend eve
 
 Without sessions, each request/response is self contained. It would be as though you and your friend both had Alzheimer's.
 
-### Reading and Writing Cookies -- Using cookie-parser
+## Reading and Writing Cookies -- Using cookie-parser
 
 Cookies can be done without the cookie-parser module, just like requests can be done without body-parser! But it isn't as nice. We are going to just straight to cookie-parser. [Look here](no-cookie-parser.js) for an example of setting cookies without cookie-parser if you are curious. 
 
@@ -89,7 +89,7 @@ Once the cookie is set in the browser, any subsequent request to the website aut
   ```cookie: 'message=hello',```
 ...
 
-Reading and Writing Cookies -- Client Side
+## Reading and Writing Cookies -- Client Side
 
 It's also possible to manipulate cookies on the client-side.
 
@@ -117,7 +117,7 @@ Can you:
 - 
 For more on this approach, take a look at Quirksmode on Cookies.
 
-### Sessions
+## Sessions
 
 Cookies are great, but they're limited in size, and they're hard to work with. If we want finer control, we want sessions!
 
