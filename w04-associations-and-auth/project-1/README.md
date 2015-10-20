@@ -80,7 +80,7 @@ If you want to push yourself and learn something new, optionally consider doing 
 
 ## TIMELINE/DEADLINE
 
-* **Thursday, October 22nd by 12:30pm** - **REQUIRED**:  Submit your project proposal to an instructor and make a Kaban board for it using Trello. Before beginning work on your project, your project idea and the scope of your project must be checked-off by an instructor. You will need the following for an instructor check-off:
+* **Thursday, October 22nd by 12:30pm** - **REQUIRED**:  Submit your project proposal to an instructor and make a Kanban board for it using Trello. Before beginning work on your project, your project idea and the scope of your project must be checked-off by an instructor. You will need the following for an instructor check-off:
     * Wireframes (simple/hand drawn are great)
     * User narratives / user stories ("Users can create a meal with various foods." or "As a SpaceBook user looking for new friends, I want to be able to update my location to my current planet.")
     * Models and database relationship design (ERD)
