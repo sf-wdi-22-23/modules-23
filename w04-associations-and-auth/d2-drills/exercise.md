@@ -3,6 +3,7 @@
 ## To start, clone this [project]('https://github.com/sf-wdi-22-23/api_keys_app'):
 - `git clone https://github.com/sf-wdi-22-23/api_keys_app w04-d2-drills`
 - `cd w04-d2-drills`
+- `npm install`
 
 ### Setting up and Hiding a secret API key in a ```.env``` file
 
