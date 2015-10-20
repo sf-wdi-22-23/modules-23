@@ -91,7 +91,8 @@ Once the cookie is set in the browser, any subsequent request to the website aut
 
 ## Reading and Writing Cookies -- Client Side
 
-It's also possible to manipulate cookies on the client-side.
+It's also possible to manipulate cookies on the client-side. 
+[MDN document.cookie documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
 
 From the Chrome Developer Console:
 
