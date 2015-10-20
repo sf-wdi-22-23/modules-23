@@ -5,12 +5,12 @@
 ```bash
 mkdir cookies-and-sessions;
 cd cookies-and-sessions;
-touch index.js;
+touch server.js;
 npm init;
 npm install --save express cookie-parser;
 ```
 
-In `index.js` add some Express Application boiler-plate:
+In `server.js` add some Express Application boiler-plate:
 
 ```javascript
 
