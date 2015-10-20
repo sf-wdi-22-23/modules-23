@@ -1,43 +1,73 @@
-# Hidding API Keys in Express
+# Hiding API Keys in Express
 
-## You can do these steps on an existing Express project you have, or start a quick new node project to test this out (without express):
-- make new dir
-- cd into new dir
-- npm init
-- git init
-- touch index.js
+## To start, clone this [project]('https://github.com/sf-wdi-22-23/api_keys_app'):
+- `git clone https://github.com/sf-wdi-22-23/api_keys_app w04-d2-drills`
+- `cd w04-d2-drills`
 
 ### Setting up and Hiding a secret API key in a ```.env``` file
 
-1. We are going to use a handy module called 'dotenv'. Run ```npm install dotenv --save```
-1. Create a ```.env``` file in the root folder of your project. This file is where you will define **Development Environment Variables** and **Secret Variables** using the syntax ```NAME=VALUE``` Add a SECRET_API_KEY variable with some key-like thing assigned to it:
+1. We are going to use a handy npm module called [dotenv]('https://www.npmjs.com/package/dotenv'). Run ```npm install dotenv --save```
+1. Run ```touch .env``` to create a `.env` file. This file is where you will define **Development Environment Variables** and **Secret Variables** using the syntax ```NAME=VALUE```. Add a SECRET_API_KEY variable with some key-like thing assigned to it. We're going to be using the Food2Fork API.
 
   .env
     ```
-    SECRET_API_KEY=02934umr092j09mrjj0ije2390msek
+    FOOD_API_KEY=599b7fbb65bf34c008d4903dd396bf5c
     ```
-2. Add a ```.gitignore``` file to your project also in the root folder, add ```.env``` to it and save it.
-3. run ```$ git status``` and you will see .gitignore is added to your project but you will not see ```.env``` because you do not want to save it to github.
+2. Since your `.env` file has secrets (!), it shouldn't get checked in to your git. Type `git status` and notice that your  new `.env` file is listed as `untracked`. Add `.env` to your `gitignore` and run `git status` again. Notice that `.env` is not listed anymore!
 
 ### Accessing ```.env```
 
-1. load the module and use process.env.YOUR_VARIABLE as the syntax
+1. In your `server.js`, load the `dotenv` module and use process.env.YOUR_VARIABLE as the syntax
 
   server.js
   ```js
   //require the module
   require('dotenv').load();
 
-  var API_KEY = process.env.SECRET_API_KEY;
+  var FOOD_API_KEY = process.env.FOOD_API_KEY;
   //this should log your secret key!
-  console.log(API_KEY);
+  console.log(FOOD_API_KEY);
   ```
 
-2. Now ```API_KEY``` will be equal to your the SECRET_API_KEY in your config .
-3. Run ```git status```. You should see your .gitignore, and your index.js (and other files if they were there already), but you should NOT see your .env file! Is so, make sure you saved your .gitignore file. It should look like this:
-
-  .env
+1. Run your server (`nodemon`) to make sure that your `FOOD_API_KEY` is getting logged.
 
 
+### Get API data from your server
+1. We'll be using the [npm request package]('https://www.npmjs.com/package/request').
+  ```
+  npm install request --save
+  ```
+1. Add to `server.js`
+  ```js
+  var request = require('request');
+  ```
+1. Get data from Food2Fork
+  ```js
+  var foods;
+
+  request('http://food2fork.com/api/search?key='+FOOD_API_KEY+'&q=chocolate', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      // This API sends the data as a string so we need to parse it
+      foods = JSON.parse(body).recipes;
+    }
+  });
+  ```
+1. Send the foods data to your client in the `res.render`
+
+### Adding it to your `index.ejs`
+1. Display this data in your view
+  ```html
+  <% for(var i=0; i<foods.length; i++) { %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="<%=foods[i].image_url%>">
+        <div class="caption">
+          <h3><%=foods[i].title%></h3>
+        </div>
+      </div>
+    </div>
+  <% } %>
+  ```
+1. YAYYYYY
 
 ### Bonus: check out the [dotenv docs](https://www.npmjs.com/package/dotenv). Take a look at their .env example and think about the variables they have in there and Google what they are for.

@@ -2,7 +2,7 @@
 
 ####Encryption/Decryption
 
-Public-key cryptography, also known as asymmetric cryptography, is a method of ensuring that data is private and verified when sent from one destination to another. 
+Public-key cryptography, also known as asymmetric cryptography, is a method of ensuring that data is private and verified when sent from one destination to another.
 
 When we use the term **key** we really refer to a specific mathematical algorithm that converts text, documents, etc. from its original form to unreadable characters and visual garbage, known as **cyphertext**.  
 
@@ -28,12 +28,10 @@ To keep your passwords difficult for hackers to guess, they will oftentimes 'has
 
 The website that requires a password stores the hash result rather than your password.  Any guesses why?
 
-Many hackers have assembled **massive** lists of the most commonly used passwords converted into hashes to use when trying to crack password protected accounts.  These are called Rainbow Tables.  These tables reach in excess of 52 Gb of passwords!  Each website uses generally the same hashing method, so the rainbow table became quite dangerous and powerful. 
+Many hackers have assembled **massive** lists of the most commonly used passwords converted into hashes to use when trying to crack password protected accounts.  These are called Rainbow Tables.  These tables reach in excess of 52 Gb of passwords!  Each website uses generally the same hashing method, so the rainbow table became quite dangerous and powerful.
 
 To counter rainbow tables, websites began using a technique called **salting** with the passwords that customers use.  Salting is the act of adding a string to a customer's password THEN hashing the new string.  This makes any table that a hacker has assembled completely useless, as his/her 'evil' hashes don't have the salt included at the time of creation.  This salt string is publicly available, however it only applies to one particular website.  This makes it time-consuming and resource-expensive to try to recreate a rainbow table based on one website with a particular salt.  
 
 ![](http://cache.gawkerassets.com/assets/images/17/2011/08/passwords.jpg)
 
 *We can still do our part!  To make it extremely difficult for computers to guess your password, consider using 4 random words strung together.*  
-
-### [Exercise](exercise.md)
