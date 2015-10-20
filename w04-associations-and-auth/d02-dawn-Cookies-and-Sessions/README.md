@@ -45,9 +45,11 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 app.use(cookieParser());
+```
 
 Altogether that looks like:
 
+```js
 var express      = require('express');
 var cookieParser = require('cookie-parser');
 
@@ -55,7 +57,7 @@ var app = express();
 app.use(cookieParser());
 
 app.get("/", function (req, res) {
-  console.log(req.cookie.message); // "hello"
+  console.log(req.cookies.message); // "hello"
   res.cookie("message", "hello again"); // overwrite
   res.send("Hello World");
 });
@@ -99,10 +101,10 @@ From the Chrome Developer Console:
 document.cookie; // "message=hello"
 ```
 
-You can write to this string simply by reassigning its value. Take care though that you don't overwrite anything important (and watch out for spaces and semi-colons)!
+You can write to this string simply by using assignment (`=`) which will append a new value.  This can be a little surprising as it doesn't act like normal variables. 
 
 ```js
-document.cookie += "; magic_number=10;"
+document.cookie = "magic_number=10"
 document.cookie; // "message=hello; magic_number=10;"
 ```
 
