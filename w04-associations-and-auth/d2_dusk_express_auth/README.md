@@ -101,11 +101,9 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 ## 2. Set up a signup view
 
-1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `signup.ejs` and a view called `login.ejs`.
+1. In the terminal, make a `public` directory, a `views` directory, and a view called `signup.ejs` and a view called `login.ejs`.
 
   ```
-  $ mkdir public
-  $ cd public
   $ mkdir views
   $ touch views/signup.ejs
   $ touch views/login.ejs
@@ -144,6 +142,7 @@ To give users the ability to sign up and log in to our site, we'll need:
             <div class="form-group">
               <input type="submit" value="Sign Up" class="btn btn-primary">
             </div>
+            <a href="/login">Login</a>
           </form>
         </div>
       </div>
@@ -168,7 +167,7 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 ## 3 Submit your signup form to the server.
 
-1. We've already setup sending a public folder to the client, so add a `scripts.js` file to your public folder and link it with a `<script>` tag in your `<head>` of `signup.ejs`.
+1. We've already setup sending a public folder to the client, so add a `public` folder and inside make a `scripts.js` file. Then link it with a `<script>` tag in your `<head>` of `signup.ejs`. Log something to the console to make sure they're connected.
 
 1. Set a submit listener on your signup form and use `$.post()` to post the email and password to `POST /signup`. (Don't forget to use the `serialize()` method to quickly make a `user` object with keys the same as the html "name" attribute of the html input tag and values equal to the value.)
 
@@ -204,7 +203,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   $ touch models/user.js
   ```
 
-2. Also in the terminal, install `mongoose` and `bcrypt`.
+2. Also in the terminal `bcrypt`.
 
   ```
   $ npm install --save bcrypt
@@ -315,7 +314,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   // Sign up route - creates a new user with a secure password
   app.post('/users', function (req, res) {
     // use the email and password to authenticate here
-    User.createSecure(req.body.user.email, req.body.user.password, function (err, user) {
+    User.createSecure(req.body.email, req.body.password, function (err, user) {
       res.json(user);
     });
   });
@@ -329,12 +328,14 @@ At this point, your complete `server.js` code should look like the following:
   ```js
   // server.js
 
+  // server.js
+
   // require express framework and additional modules
   var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
-    User = require('./models/user');
+    ejs = require('ejs'),
+    mongoose = require('mongoose');
 
   // middleware
   app.use(express.static('public'));
@@ -342,21 +343,23 @@ At this point, your complete `server.js` code should look like the following:
   app.use(bodyParser.urlencoded({extended: true}));
   mongoose.connect('mongodb://localhost/simple-login');
 
+  var User = require('./models/user');
+
+  app.post('/users', function (req, res) {
+    console.log(req.body)
+    User.createSecure(req.body.email, req.body.password, function (err, user) {
+      res.json(user);
+    });
+  });
+
   // signup route with placeholder response
   app.get('/signup', function (req, res) {
     res.render('signup');
   });
 
+  // login route with placeholder response
   app.get('/login', function (req, res) {
-    res.render('login');
-  })
-
-  // user submits the signup form
-  app.post('/users', function (req, res) {
-    // create new user with secure password
-    User.createSecure(req.body.user.email, req.body.user.password, function (err, user) {
-      res.json(user);
-    });
+    res.send('coming soon');
   });
 
   // listen on port 3000
@@ -366,7 +369,7 @@ At this point, your complete `server.js` code should look like the following:
   ```
 
 
-## Challenge 5: Logging In
+## 5. Logging In
 
 1. Create your `login` template (boilerplate here below).
 
@@ -382,6 +385,7 @@ At this point, your complete `server.js` code should look like the following:
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 
     <title>Simple Login</title>
   </head>
@@ -392,7 +396,6 @@ At this point, your complete `server.js` code should look like the following:
           <h1>Log In</h1>
           <hr>
 
-          <!-- method and action refer to the request type (post) and request url (/login) -->
           <form id="login-form">
             <div class="form-group">
               <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
@@ -403,6 +406,7 @@ At this point, your complete `server.js` code should look like the following:
             <div class="form-group">
               <input type="submit" value="Log In" class="btn btn-primary">
             </div>
+            <a href="/signup">Sign Up</a>
           </form>
         </div>
       </div>
@@ -421,7 +425,7 @@ At this point, your complete `server.js` code should look like the following:
   // user submits the login form
   app.post('/login', function (req, res) {
     // call authenticate function to check if password user entered is correct
-    User.authenticate(req.body.user.email, req.body.user.password, function (err, user) {
+    User.authenticate(req.body.email, req.body.password, function (err, user) {
       res.json(user);
     });
   });
@@ -442,14 +446,7 @@ At this point, your complete `server.js` code should look like the following:
 
   ```js
   // server.js
-
-  var express = require('express'),
-      app = express(),
-      bodyParser = require('body-parser'),
-      mongoose = require('mongoose'),
-      User = require('./models/user'),
-      // new addition
-      session = require('express-session');
+  var session = require('express-session');
 
   // middleware (new addition)
   // set session options
@@ -477,19 +474,17 @@ At this point, your complete `server.js` code should look like the following:
   // user profile page
   app.get('/profile', function (req, res) {
     // finds user currently logged in
-    req.currentUser(function (err, user) {
+    User.findOne({_id: req.session.userId}, function (err, user) {
       res.render('user-show.ejs', {user: user})
     });
   });
   ```
 
+## Logging out and Custom Middleware
 
+1. Make a `GET /logout` route that logs out a user by setting the  `req.session.userId` and the `req.user` both to `null`.
 
-## Stretch Challenges
-
-1. Make a `GET /logout` route that logs out a user by setting the  `req.session.userId` and the `req.user` both to null?
-
-1. Setup some custom middleware to find the current user.
+1. Let's refactor our lookup of the current user into some custom middleware to find the current user so we will always have it available.
 
   ```js
     // finds user currently logged in based on `session.userId`
@@ -511,3 +506,13 @@ At this point, your complete `server.js` code should look like the following:
   * Users should only be able to see `/profile` when logged in.
 
   **Hint:** You'll need to add some logic when calling `req.currentUser` to check if a logged-in user was found. You'll want to use `res.redirect` if a user tries to perform an unauthorized action.
+
+
+## 7. Error Handling
+
+> Things don't always go right and we need our apps to respond nicely when they don't. Here are some strategies.
+
+1. Upon login, if a password is not correct, respond with an error message and display it on the client. Remember to use the bootstrap `.alert` and `.alert-warning` classes.
+1. Upon login, If a user is not found, respond with an error message and display it on the client.
+1. Upon signup, make sure passwords are at least 6 characters long. Return and display an error if this is false.
+1. Is there a way to refactor your client- or server-side code to generalize these two examples of error handling?
