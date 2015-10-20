@@ -98,7 +98,7 @@ document.cookie; // "message=hello"
 You can write to this string simply by reassigning its value. Take care though that you don't overwrite anything important (and watch out for spaces and semi-colons)!
 
 document.cookie += "; magic_number=10;"
-document.cookie; // "message=hello; magic_humber=10;"
+document.cookie; // "message=hello; magic_number=10;"
 Try it out! Open your Console, and see what cookies are set in your browser. Try it out on a few different websites.
 
 Can you create a new cookie.
