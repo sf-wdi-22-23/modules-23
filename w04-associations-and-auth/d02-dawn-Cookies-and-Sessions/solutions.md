@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 app.get("/moar_cookie", function(req, res){
-  res.cookie("wdi", 21);
+  res.cookie("wdi", 22);
   res.send("Check your cookies!");
   // res.send({json: "data"});
 });
