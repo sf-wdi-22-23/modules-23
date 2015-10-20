@@ -377,7 +377,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-drills">Weekend Lab Review</a> (Brianna, Alex)</td>
-    <td>Secret Keys (Alex, Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d2-drills">Secret Keys</a> (Alex, Juliana)</td>
     <td>Binary Search (Matt, Ben)</td>
     <td>Project approvals</td>
     <td>Project 1</td>

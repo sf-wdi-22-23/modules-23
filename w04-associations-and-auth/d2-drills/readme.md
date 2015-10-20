@@ -1,4 +1,4 @@
-## Day 2 - Keeping Things a secret.
+## Keeping Things a secret.
 
 ####Encryption/Decryption
 
