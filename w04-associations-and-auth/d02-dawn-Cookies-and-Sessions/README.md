@@ -129,7 +129,7 @@ method: GET
 cookie: wrong_answers=7; right_answer=3; current_question=11; GeoIP=US:CA:San_Francisco:37.7909:-122.4017:v4; last_access=31-Aug-2015;
 ```
 
-Now imagine that, instead of storing all this data in the browser, the server kept it in a database. And everytime someone visits the website for the first time, they're assigned a globally unique id, or guid.
+Now imagine that, instead of storing all this data in the browser, the server kept it in a database. And every time someone visits the website for the first time, they're assigned a globally unique id, or guid.
 
 ```
 host: quizful.ly
