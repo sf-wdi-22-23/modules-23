@@ -41,7 +41,7 @@ You will each need to turn in an individual project, but you will move faster an
 
 ## TECHNICAL REQUIREMENTS
 
-### Core Technical Requirements 
+### Core Technical Requirements
 
 **Your app should have all of the following:**
 
@@ -62,7 +62,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **Model Relationship** Create a one-to-many or many-to-many relationship between two models using either embedded or referenced data.
 * **Authentication** Enable users to sign up, log in, and log out. (Note: This covers the core sessions or cookies requirement.)
 * **Data Validation** Validate data by handling incorrect inputs during sign up, such as unique email addresses and minimum password lengths.   And on database.
- 
+
 
 ## Ideas for Further Exploration
 
@@ -70,12 +70,12 @@ If you want to push yourself and learn something new, optionally consider doing 
 
 * **Search** Build a form that allows users to search your data based on keywords.
 * **Authorization** Create and implement rules that prevent users from seeing/editing/deleting content that belongs to other users. Start with one rule; the specifics are up to you. For example, a good challenge could be saying users cannot delete a post (or other resource) if it is not theirs.  (Note: This requires authentication.)
-* **Testing** Test your code with an automated testing library. 
+* **Testing** Test your code with an automated testing library.
 * **Email** Send emails with express-mailer.
 * **Payments** Add payments with stripe.com. But don't put it into production yet!
 * **Web-Scraping** Use a web-scraper to collect data from a website that doesn't have an API. Example technologies include <a href="http://casperjs.org" target="_blank">Casper</a> or <a href="https://www.kimonolabs.com" target="_blank">Kimono</a>.
 * **Web Sockets** Create an open, real-time connection between your server and client (e.g. live chatting). Check out <a href="http://socket.io/" target="_blank">Socket.io</a> if you're interested in web sockets.
-* **Client-side HTML Templating**  Refactor your client side to use a templating library like Mustache, underscore's `_.template`, or another. 
+* **Client-side HTML Templating**  Refactor your client side to use a templating library like Mustache, underscore's `_.template`, or another.
 * **Whatever else you can think of!**
 
 ## TIMELINE/DEADLINE
@@ -105,8 +105,27 @@ We will schedule 1:1s throughout the week. We will also do mini lessons on certa
 
 ###WDI 23
 
-**BRAUS**
+**BRAUS**  
+Annie  
+Jeehye  
+Breana  
+Scot  
+Brendan   
+Emily K.  
 
-**JULIANA**
+**JULIANA**  
+Isom  
+Eric  
+John B.  
+John C.  
+Emily A.  
+Jorge  
+Natasha  
 
-**MATT**
+**MATT**  
+Ling  
+Meredith  
+Michael  
+Noel  
+Roy  
+Zain  
