@@ -51,17 +51,18 @@ You will each need to turn in an individual project, but you will move faster an
 * **AJAX** Leverage your server-side Express API to fetch JSON data asynchronously to the client-side.
 * **jQuery** Use jQuery to manipulate the DOM and listen for events on the client-side.
 * **Server-Side HTML Templating** Render your HTML views with data using EJS templating.
-* **Data Validation** Validate data by handling incorrect inputs during sign up, such as unique email addresses and minimum password lengths.
+* Custom CSS
 * **Visual Design** Use Bootstrap to kick-start your UI and UX.
-* **Heroku** Deploy your app to Heroku.
-	* Ensure no app secrets are exposed. __Do not commit secret keys to Github!__
+* **Heroku** Deploy your app to Heroku.  Ensure no app secrets are exposed. __Do not commit secret keys to Github!__
 
 ### Flex Technical Requirements
 
-**Your app should have 3 of the 5 following options:**
+**Your app should have 3 of the 4 following options:**
 * **External API** Use an external API to integrate rich data into your app.
 * **Model Relationship** Create a one-to-many or many-to-many relationship between two models using either embedded or referenced data.
 * **Authentication** Enable users to sign up, log in, and log out. (Note: This covers the core sessions or cookies requirement.)
+* **Data Validation** Validate data by handling incorrect inputs during sign up, such as unique email addresses and minimum password lengths.   And on database.
+ 
 
 ## Ideas for Further Exploration
 
@@ -69,15 +70,15 @@ If you want to push yourself and learn something new, optionally consider doing 
 
 * **Search** Build a form that allows users to search your data based on keywords.
 * **Authorization** Create and implement rules that prevent users from seeing/editing/deleting content that belongs to other users. Start with one rule; the specifics are up to you. For example, a good challenge could be saying users cannot delete a post (or other resource) if it is not theirs.  (Note: This requires authentication.)
-* **Testing** Write request tests for each of your app's API routes that at least check the response status code. 
+* **Testing** Test your code with an automated testing library. 
 * **Email** Send emails with express-mailer.
-* **Payments** Add payments with stripe.com.
+* **Payments** Add payments with stripe.com. But don't put it into production yet!
 * **Web-Scraping** Use a web-scraper to collect data from a website that doesn't have an API. Example technologies include <a href="http://casperjs.org" target="_blank">Casper</a> or <a href="https://www.kimonolabs.com" target="_blank">Kimono</a>.
 * **Web Sockets** Create an open, real-time connection between your server and client (e.g. live chatting). Check out <a href="http://socket.io/" target="_blank">Socket.io</a> if you're interested in web sockets.
 * **Client-side HTML Templating**  Refactor your client side to use a templating library like Mustache, underscore's `_.template`, or another. 
 * **Whatever else you can think of!**
 
-## DEADLINES
+## TIMELINE/DEADLINE
 
 * **Thursday, October 22nd by 12:30pm** - **REQUIRED**:  Submit your project proposal to an instructor and make a Kaban board for it using Trello. Before beginning work on your project, your project idea and the scope of your project must be checked-off by an instructor. You will need the following for an instructor check-off:
     * Wireframes (simple/hand drawn are great)
@@ -96,6 +97,7 @@ We will schedule 1:1s throughout the week. We will also do mini lessons on certa
 ### WDI 22
 
 **ALEX**
+
 
 **BEN**
 
