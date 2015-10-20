@@ -5,7 +5,6 @@
 | Review the request and response cycle and the stateless web. |
 | Add, modify and delete cookies. |
 | Use Express to add sessions to your application. |
-| Implement basic authentication in your application. |
 
 | Concepts | Tools | Activities |
 | :---: | :---: | :---: |
