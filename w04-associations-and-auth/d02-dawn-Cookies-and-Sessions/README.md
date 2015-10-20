@@ -115,7 +115,7 @@ Can you:
 - add a key-value pair to an existing cookie?
 - log yourself out of a website by deleting your cookie (and refreshing the page)?
 
-For more on this approach, take a look at Quirksmode on Cookies.
+For more on this approach, take a look at [Quirksmode on Cookies](http://www.quirksmode.org/js/cookies.html).
 
 ## Sessions
 
