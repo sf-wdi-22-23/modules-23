@@ -401,7 +401,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>HW</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-relationships-and-auth/d01-homework.md">Cookies & Sessions, Authorization</a></td>
-    <td>a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d02-homework">Bcrypt Review</a></td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d02-homework">Bcrypt Review</a></td>
     <td>Project 1 Brainstorm </td>
     <td>Project One</td>
     <td></td>
