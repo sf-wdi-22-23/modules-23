@@ -6,7 +6,7 @@
 ![Bilby Stampede](http://33.media.tumblr.com/db649f4441940d7fcbbc2bd5d6646bc1/tumblr_mlj0syTLbP1rf1e3ro1_250.gif)
 
 
-To do so we will be using a fabulous service called Heroku. Heroku lets you deploy up to five apps to there servers for FREEEEEE as long as activity on the app is quite low. Its a perfect platform for deploying apps for learning and early development. 
+To do so we will be using a fabulous service called Heroku. Heroku lets you deploy a few apps to there servers for FREEEEEE as long as activity on the app is quite low, and not 24 7. Its a perfect platform for deploying apps for learning and early development. 
 
 #### Head to [Heroku](www.heroku.com) and create an account. 
 
