@@ -4,7 +4,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 [JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
 <br>
-[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: these use a different templating solution called Handlebars instead of ejs, so those portions don't reflect what we've seen)
+[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: a few of these use a different templating solution called Handlebars instead of ejs, so those portions don't reflect what we've seen)
 <!-- ##Week 12 -->
 <!-- <table>
   <tr>
@@ -393,7 +393,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-dusk-mongo-reference">Mongoose Reference & Populate</a> (Juliana, Brianna)</td>
-    <td>Authorization: Express Bcrypt(Braus, Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d2_dusk_express_auth">Authorization: Express Bcrypt</a> (Braus, Brianna)</td>
     <td>Student Project Planning (Braus) / Intro Project 1 (Juliana)</td>
     <td>Project 1 / Getting Started Breakout (Brianna)</td>
     <td>Project 1</td>
