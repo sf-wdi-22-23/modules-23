@@ -8,7 +8,7 @@
 
 | Concepts | Tools | Activities |
 | :---: | :---: | :---: |
-| Stateless web, sessions, authentication | Node, Express, espress-session | Challenges |
+| Stateless web, cookies, sessions, authentication | Node, Express, cookie-parser, express-session | Challenges |
 
 ![cookiemonster](http://media0.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif)
 
@@ -30,7 +30,7 @@ Without sessions, each request/response is self contained. It would be as though
 
 Reading and Writing Cookies -- Using cookie-parser
 
-Cookies can be done without the cookie-parser module, just like requests can be done without body-parser! But it isn't as nice. We are going to just strait to cookie-parser. [Look here](no-cookie-parser.js) for an example of setting cookies without cookie-parser if you are curious. 
+Cookies can be done without the cookie-parser module, just like requests can be done without body-parser! But it isn't as nice. We are going to just straight to cookie-parser. [Look here](no-cookie-parser.js) for an example of setting cookies without cookie-parser if you are curious. 
 
 Cookie-parser will make it so you don't have to deal with string manipulation, and can just manipulate an object of key-value pairs. (We did the same thing with body-parser middleware).
 
@@ -44,6 +44,7 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 app.use(cookieParser());
+
 Altogether that looks like:
 
 var express      = require('express');
@@ -65,6 +66,7 @@ HTTP Response Header
 
 This sends a response that looks something like the following:
 
+```
 HTTP/1.1 200 OK
 X-Powered-By: Express
 Set-Cookie: message=hello%20again
@@ -75,6 +77,8 @@ Date: Mon, 18 May 2015 07:36:50 GMT
 Connection: keep-alive
 
 Hello World
+```
+
 The Cookie is then saved to the browser for localhost:3000. You can view it in the Chrome Developer Console under the "resources" tab. Try this.
 
 Once the cookie is set in the browser, any subsequent request to the website automatically has the following line in the HTTP Request Header:
@@ -134,7 +138,9 @@ Now, instead of needing to read, parse, and manipulate all the data in the cooki
 var session = require('express-session');
 
 app.use(session({
+  //this forces an unitialized session to be saved, uninitialized meaning new but not modified
   saveUninitialized: true,
+  //this forces a session to be saved even if it is not modified
   resave: true,
   secret: 'OurSuperSecretCookieSecret',
   cookie: { maxAge: 60000 }
