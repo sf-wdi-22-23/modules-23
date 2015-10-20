@@ -32,7 +32,7 @@ app.listen(3000, function () {
 ## Cookies
 
 #### Challenge 1: Write a Cookie - [solutions](solutions.md)
-* Set a cookie in the HTTP Resonse Header with a key of `"wdi"` and value of `21` whenever you hit `/moar_cookie`. See [res.cookie](http://expressjs.com/api.html#res.cookie).
+* Set a cookie in the HTTP Resonse Header with a key of `"wdi"` and value of `22` whenever you hit `/moar_cookie`. See [res.cookie](http://expressjs.com/api.html#res.cookie).
 * Next, hit your endpoint. From inside your route, can you `read` the incoming cookies and `console.log` them?
     - How would you `get` the value associated with `wdi`?
     - What datatype is it? Can you prove it?
