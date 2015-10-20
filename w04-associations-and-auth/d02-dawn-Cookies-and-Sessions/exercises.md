@@ -80,5 +80,5 @@ app.post('/', function(req, res){
 
 app.listen(80);
 ```
-#### Challenge 2: Comment each line of to explain what it is doing. - [Solution](solutions.js)
+#### Challenge 2: Comment each line of to explain what it is doing. - [Solution](sessions_solutions.js)
 
