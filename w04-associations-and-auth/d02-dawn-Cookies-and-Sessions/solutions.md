@@ -1,38 +1,37 @@
-**Cookies** -- Solutions
+//Sessions -- Solutions
 
+// load express module into variable
+var express = require('express');
+// load bodyParser module into variable
+var bodyParser = require('body-parser');
+// load express-session module into variable
+var expressSession = require('express-session');
+// load cookieParser module into variable
+var cookieParser = require('cookie-parser'); // the session is stored in a cookie, so we use this to parse it
 
-```javascript
-var express = require("express");
+// call express module
 var app = express();
 
-var cookieParser = require('cookie-parser');
+// must use cookieParser before expressSession
+// configure app to use cookieParser
 app.use(cookieParser());
+// configure app to use expressSession with a secret token
+app.use(expressSession({secret:'somesecrettokenhere'}));
+// configure app to use bodyParser
+app.use(bodyParser());
 
-app.get("/moar_cookie", function(req, res){
-  res.cookie("wdi", 22);
-  res.send("Check your cookies!");
-  // res.send({json: "data"});
+// sets up get root route
+app.get('/', function(req, res){
+	// saves form in html variable
+  var html = '<form action="/" method="post">' +
+             'Your name: <input type="text" name="userName"><br>' +
+             '<button type="submit">Submit</button>' +
+             '</form>';
+  // checks if there is currently a session attribut on the req object
+  // and if there is a username attribute on that session
+  if (req.session.userName) {
+  	// if there is, add message containing user name
+    html += '<br>Your username from your session is: ' + req.session.userName;
+  }
+  res.send(html);
 });
-
-app.get("/sad_cookie", function(req, res){
-  var val = req.cookies.wdi;
-  console.log(val, typeof(val));
-
-  res.clearCookie("wdi");
-  res.send("Cookie is gone?");
-  // res.send({json: "data"});
-})
-
-app.get("/", function(req, res) {
-  var count = parseInt(req.cookies.count) || 0;
-  var new_count = count+1;
-  res.cookie("count", new_count)
-  res.send(new_count.toString());
-});
-
-app.listen(3000, function () {
-  console.log("UP AND RUNNING");
-});
-
-```
-
