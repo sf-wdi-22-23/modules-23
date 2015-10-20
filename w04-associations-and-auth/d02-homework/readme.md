@@ -26,4 +26,4 @@ We will also be deploying our databases to the web! For this we need another ser
 	- If you are wondering what the heck 'B4c0/\/' is, it is the example password they are using. 
 - [This blog post about using bcrypt with mongoose & express](http://devsmash.com/blog/password-authentication-with-mongoose-and-bcrypt)
 
-## Do the Exercise
+## [Do the Exercise](https://github.com/sf-wdi-22-23/modules/blob/w04d02-homework/w04-associations-and-auth/d02-homework/exercise.md)
