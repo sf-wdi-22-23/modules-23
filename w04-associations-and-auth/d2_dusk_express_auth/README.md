@@ -43,15 +43,13 @@ To give users the ability to sign up and log in to our site, we'll need:
   // Authenticate that the email and password are correct
 ```
 
-## Challenges: Part 1
-
-**Goal:** Create a new Node/Express project.
+## 1. Create a new Node/Express project.
 
 1. In the terminal, initialize a new Node project, and install `express` and `body-parser`.
 
   ```
-  $ mkdir simple_login
-  $ cd simple_login
+  $ mkdir simple-login
+  $ cd simple-login
   $ npm init
   $ npm install --save express body-parser mongoose ejs
   $ touch server.js
@@ -73,7 +71,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   app.use(express.static('public'));
   app.set('view engine', 'ejs');
   app.use(bodyParser.urlencoded({extended: true}));
-  mongoose.connect('mongodb://localhost/simple_login');
+  mongoose.connect('mongodb://localhost/simple-login');
 
 
   // signup route with placeholder response
@@ -100,9 +98,8 @@ To give users the ability to sign up and log in to our site, we'll need:
 
   **Note:** Keep `nodemon` running the entire time you're developing your application. When you need to execute other terminal commands, press `command + T` to open a new terminal tab.
 
-## Challenges: Part 2
 
-**Goal:** Set up a login view to test your login functionality in the browser.
+## 2. Set up a signup view
 
 1. In the terminal, make a `public` directory, a `views` directory (inside `public`), and a view called `signup.ejs` and a view called `login.ejs`.
 
@@ -168,9 +165,8 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 4. Test that you can go to `localhost:3000/signup` and see your template.
 
-## Challenges: Part 3
 
-**Goal:** Submit your signup form to the server with client-side AJAX.
+## 3 Submit your signup form to the server.
 
 1. We've already setup sending a public folder to the client, so add a `scripts.js` file to your public folder and link it with a `<script>` tag in your `<head>` of `signup.ejs`.
 
@@ -199,9 +195,7 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 
 
-## Challenges: Part 4
-
-**Goal:** Create a User model and add auth methods with `bycrpt`
+## 4. Create a User model and add auth methods with `bycrpt`
 
 1. In the terminal, create a new directory for `models` and create a file for your `User` model.
 
@@ -242,7 +236,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   });
   ```
 
-1. Continuing in `user.js`, define the auth methods for our `UserSchema`. These methods handle creating a user with a secure (hashed) password and authenticating (loggin in) a user.
+5. Continuing in `user.js`, define the auth methods for our `UserSchema`. These methods handle creating a user with a secure (hashed) password and authenticating (loggin in) a user.
 
    **Note:** We use `UserSchema.statics` to define <a href="http://mongoosejs.com/docs/guide#statics" target="_blank">static methods</a> for our schema and `UserSchema.methods` to define <a href="http://mongoosejs.com/docs/guide#methods" target="_blank">instance methods</a> for our schema. Static methods can hold any functionality related to the collection, while instance methods define functionality related to individual documents in the collection. You can think of instance methods like prototype methods in OOP!
 
@@ -296,7 +290,7 @@ To give users the ability to sign up and log in to our site, we'll need:
 
   **Note:** Make sure your static and instance methods come before defining and exporing the `User` model. Setting and exporting the `User` model should be the last pieces of logic in `user.js` to make sure the authentication methods get added to the model and exported.
 
-5. Continuing in `user.js`, define a `User` model using your `UserSchema` and export the model (so we can require it in other parts of our application).
+6. Continuing in `user.js`, define a `User` model using your `UserSchema` and export the model (so we can require it in other parts of our application).
 
   ```js
   // user.js
@@ -308,14 +302,14 @@ To give users the ability to sign up and log in to our site, we'll need:
   module.exports = User;
   ```
 
-1. Don't forget to require your `User` model in `server.js`.
+7. Don't forget to require your `User` model in `server.js`.
 
   ```js
   // server.js
       var User = require('./models/user');
   ```
 
-1. In your `POST /users` route use your new `createSecure` model method to create a user with a secure password
+8. In your `POST /users` route use your new `createSecure` model method to create a user with a secure password
 
   ```js
   // Sign up route - creates a new user with a secure password
@@ -327,13 +321,54 @@ To give users the ability to sign up and log in to our site, we'll need:
   });
   ```
 
-1. Submit your signup form. Did your route return the `user` object?
+9. Submit your signup form. Did your route return the `user` object? Are you saving the users? How can you check?
 
 
+At this point, your complete `server.js` code should look like the following:
 
-## Logging In
+  ```js
+  // server.js
 
-1. Create your `login` template (boilerplate here below), on submit AJAX listener, POST route in your server, and use the `User.authenticate` method to check if the user's email and password is correct.
+  // require express framework and additional modules
+  var express = require('express'),
+    app = express(),
+    bodyParser = require('body-parser'),
+    mongoose = require('mongoose'),
+    User = require('./models/user');
+
+  // middleware
+  app.use(express.static('public'));
+  app.set('view engine', 'ejs');
+  app.use(bodyParser.urlencoded({extended: true}));
+  mongoose.connect('mongodb://localhost/simple-login');
+
+  // signup route with placeholder response
+  app.get('/signup', function (req, res) {
+    res.render('signup');
+  });
+
+  app.get('/login', function (req, res) {
+    res.render('login');
+  })
+
+  // user submits the signup form
+  app.post('/users', function (req, res) {
+    // create new user with secure password
+    User.createSecure(req.body.user.email, req.body.user.password, function (err, user) {
+      res.json(user);
+    });
+  });
+
+  // listen on port 3000
+  app.listen(3000, function () {
+    console.log('server started on locahost:3000');
+  });
+  ```
+
+
+## Challenge 5: Logging In
+
+1. Create your `login` template (boilerplate here below).
 
   ```html
   <!DOCTYPE html>
@@ -376,71 +411,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   </html>
   ```
 
-3. Now that the login view is ready, it's time for a login route. In `server.js`, set up `GET /login` to render the `login` view.
-
-  ```js
-  // server.js
-
-  // login route (renders login view)
-  app.get('/login', function (req, res) {
-    res.render('login');
-  });
-  ```
-
-4. Test that you can go to `localhost:3000/login` and see your template.
-
-
-
-4. At this point, your complete `server.js` code should look like the following:
-
-  ```js
-  // server.js
-
-  // require express framework and additional modules
-  var express = require('express'),
-    app = express(),
-    bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
-    User = require('./models/user');
-
-  // connect to mongodb
-  mongoose.connect('mongodb://localhost/test');
-
-  // middleware
-  app.use(bodyParser.urlencoded({extended: true}));
-
-  // signup route with placeholder response
-  app.get('/signup', function (req, res) {
-    res.send('coming soon');
-  });
-
-  // user submits the signup form
-  app.post('/users', function (req, res) {
-
-    // grab user data from params (req.body)
-    var newUser = req.body.user;
-
-    // create new user with secure password
-    User.createSecure(newUser.email, newUser.password, function (err, user) {
-      res.send(user);
-    });
-  });
-
-  // listen on port 3000
-  app.listen(3000, function () {
-    console.log('server started on locahost:3000');
-  });
-  ```
-
-5. Test your `POST /users` route with Postman. Check that it creates a new user with a secure (hashed) password.
-
-  **Note:** Make sure you have `nodemon` and `mongod` running. Double-check the params you enter into Postman. They should be `user[email]` and `user[password]`.
-
-  ![POST /users](screenshots/post_users.png)
-
-## Challenges: Part 5
-
-**Goal:** Add a route to log in users.
+1. Add an on submit AJAX listener in your `scripts.js` file. Remember to use `serialize()` to make a nice `user` object to send in your `$.post` to `/login`.
 
 1. In `server.js`, add a `POST /login` route to authenticate a user.
 
@@ -449,24 +420,17 @@ To give users the ability to sign up and log in to our site, we'll need:
 
   // user submits the login form
   app.post('/login', function (req, res) {
-
-    // grab user data from params (req.body)
-    var userData = req.body.user;
-
     // call authenticate function to check if password user entered is correct
-    User.authenticate(userData.email, userData.password, function (err, user) {
-      res.send(user);
+    User.authenticate(req.body.user.email, req.body.user.password, function (err, user) {
+      res.json(user);
     });
   });
   ```
 
-2. Test your `POST /login` route with Postman by trying to log in the user you created in Part 5. Check that it sends the authenticated user as a response. Again, your parameters should be `user[email]` and `user[password]`.
+1. Try to login with the credentials of the first user you created.
 
-  ![POST /users](screenshots/post_login.png)
 
-## Challenges: Part 6
-
-**Goal:** Set up sessions and cookies to keep track of logged-in users throughout your app.
+## 6. Set up sessions and cookies to keep track of logged-in users.
 
 1. In the terminal, install `express-session`.
 
@@ -497,65 +461,15 @@ To give users the ability to sign up and log in to our site, we'll need:
   }));
   ```
 
-3. Now that you have `express-session` set up, define the middleware `req.login`, `req.currentUser`, and `req.logout` in `server.js` to manage sessions.
-
-  **Note:** `app.use` allows us to define our own middleware and the base path to exectue that middleware. Since our base path is `/`, this middleware will be executed with every request. You can think of this "session" middleware as helper functions that we have access to in every request to our server.
+1. Now that the session is defined, let's start a session when someone signs up or logs in by setting `req.session.userId` to the user's id. This would go just before the `res` line of your `POST /users` and `POST /login` routes.
 
   ```js
-  // server.js
-
-  // middleware to manage sessions
-  app.use('/', function (req, res, next) {
-    // saves userId in session for logged-in user
-    req.login = function (user) {
       req.session.userId = user.id;
-    };
-
-    // finds user currently logged in based on `session.userId`
-    req.currentUser = function (callback) {
-      User.findOne({_id: req.session.userId}, function (err, user) {
-        req.user = user;
-        callback(null, user);
-      });
-    };
-
-    // destroy `session.userId` to log out user
-    req.logout = function () {
-      req.session.userId = null;
-      req.user = null;
-    };
-
-    next();
-  });
   ```
 
-## Challenges: Part 7
+1. After authenticating a user, log them in, then redirect them to the user's profile page using: `res.redirect('/profile');`.
 
-**Goal:** Refactor the `POST /login` route to set the session and redirect to a user profile page.
-
-1. After authenticating a user, log them in by calling `req.login(user)`, and redirect to the user's profile page. In `server.js`, your `POST /login` route should now look like this:
-
-  ```js
-  // server.js
-
-  // user submits the login form
-  app.post('/login', function (req, res) {
-
-    // grab user data from params (req.body)
-    var userData = req.body.user;
-
-    // call authenticate function to check if password user entered is correct
-    User.authenticate(userData.email, userData.password, function (err, user) {
-      // saves user id to session
-      req.login(user);
-
-      // redirect to user profile
-      res.redirect('/profile');
-    });
-  });
-  ```
-
-2. In the step above, we're redirecting to a route called `/profile`, which we don't have yet, so go ahead and set it up in `server.js`. For now, our profile route will respond with a welcome message.
+2. In the step above, we're redirecting to a route called `/profile`, which we don't have yet, so go ahead and set it up in `server.js`. Render a `user-show.ejs` template.
 
   ```js
   // server.js
@@ -564,28 +478,33 @@ To give users the ability to sign up and log in to our site, we'll need:
   app.get('/profile', function (req, res) {
     // finds user currently logged in
     req.currentUser(function (err, user) {
-      res.send('Welcome ' + user.email);
+      res.render('user-show.ejs', {user: user})
     });
   });
   ```
-
-3. Test `POST /login` again with Postman, this time making sure you see the welcome message response from the redirect to `/profile`.
-
-  ![POST /users](screenshots/post_login_profile.png)
-
-## Challenges: Part 8
 
 
 
 ## Stretch Challenges
 
-1. Right now, the `GET /signup` route has a placeholder response. Refactor the route to render a `signup` view. **Hint:** The `signup` view will have a form similar to the `login` view.
+1. Make a `GET /logout` route that logs out a user by setting the  `req.session.userId` and the `req.user` both to null?
 
-2. Test that a new user can sign up via the form on the `signup` page.
+1. Setup some custom middleware to find the current user.
 
-3. After a new user signs up, redirect them to `/login`. Test the user-flow of signing up, then logging in. After logging in, the user should still be redirected to `/profile` with the welcome message response.
+  ```js
+    // finds user currently logged in based on `session.userId`
+    app.use('/', function (req, res, next) {    
+      req.currentUser = function (callback) {
+        User.findOne({_id: req.session.userId}, function (err, user) {
+          if (!user) { callback("No User Found", null) }
+          req.user = user;
+          callback(null, user);
+        });
+      };
 
-4. Create a route `GET /logout` that uses the `req.logout` middleware to destroy the session. Add a link on your site that logs out the user.
+      next();
+    });
+  ```
 
 5. The `req.currentUser` middleware finds the user who is currently logged in. Use `req.currentUser` to *authorize* parts of your site.
   * Logged-in users should NOT be able to see the `/signup` or `/login` pages.
