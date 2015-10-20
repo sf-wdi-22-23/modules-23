@@ -86,33 +86,36 @@ The Cookie is then saved to the browser for localhost:3000. You can view it in t
 Once the cookie is set in the browser, any subsequent request to the website automatically has the following line in the HTTP Request Header:
 
 ...
-  cookie: 'message=hello',
+  ```cookie: 'message=hello',```
 ...
+
 Reading and Writing Cookies -- Client Side
 
 It's also possible to manipulate cookies on the client-side.
 
 From the Chrome Developer Console:
 
+```
 document.cookie; // "message=hello"
+```
+
 You can write to this string simply by reassigning its value. Take care though that you don't overwrite anything important (and watch out for spaces and semi-colons)!
 
+```
 document.cookie += "; magic_number=10;"
 document.cookie; // "message=hello; magic_number=10;"
+```
+
 Try it out! Open your Console, and see what cookies are set in your browser. Try it out on a few different websites.
 
-Can you create a new cookie.
-Can you overwrite an existing cookie.
-Can you add a key-value pair to an existing cookie.
-Can you log yourself out of a website by deleting your cookie (and refreshing the page)?
+Can you:
+
+- create a new cookie?
+- overwrite an existing cookie?
+- add a key-value pair to an existing cookie?
+- log yourself out of a website by deleting your cookie (and refreshing the page)?
+- 
 For more on this approach, take a look at Quirksmode on Cookies.
-
-Additional reading:
-
-Cookies in the Chrome Console
-HTTP Intro
-An Introduction to Cookies (php/javascript)
-
 
 ### Sessions
 
@@ -120,14 +123,20 @@ Cookies are great, but they're limited in size, and they're hard to work with. I
 
 Imagine for a moment that we have a fancy quiz-app and we used cookies to store user preferences and the current state of the quiz. Eventually the request header might look like:
 
+```
 host: quizful.ly
 method: GET
 cookie: wrong_answers=7; right_answer=3; current_question=11; GeoIP=US:CA:San_Francisco:37.7909:-122.4017:v4; last_access=31-Aug-2015;
-Now imagine that, instead of storing all this data in the browser, the server kept it in a database. And every time someone visits the website for the first time, they're assigned a globally unique id, or guid.
+```
 
+Now imagine that, instead of storing all this data in the browser, the server kept it in a database. And everytime someone visits the website for the first time, they're assigned a globally unique id, or guid.
+
+```
 host: quizful.ly
 method: GET
 cookie: guid=a134vbce34584ibjeapc38;
+```
+
 Now, instead of needing to read, parse, and manipulate all the data in the cookie, we can just find the user's session based on their guid.
 
 #### Key Snippets
@@ -191,4 +200,4 @@ app.post('/api/sessions', function (req, res) {
 
 ### Docs & Resources
 
-* [express-session README](https://github.com/expressjs/session)
+- [express-session README](https://github.com/expressjs/session)
