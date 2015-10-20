@@ -47,7 +47,7 @@ Let's see if we can `count` the number of times someone has come to the site, us
 ## Sessions
 
 #### Challenge 1: Take a look at the following code line by line:
-
+```
 var express = require('express');
 var bodyParser = require('body-parser'); 
 var expressSession = require('express-session');
@@ -79,6 +79,6 @@ app.post('/', function(req, res){
 });
 
 app.listen(80);
-
+```
 #### Challenge 2: Comment each line of to explain what it is doing. - [Solution](solutions.md)
 
