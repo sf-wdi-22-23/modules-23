@@ -36,9 +36,10 @@ Cookie-parser will make it so you don't have to deal with string manipulation, a
 
 First we have to install cookie-parser:
 
-npm install --save cookie-parser
+``` npm install --save cookie-parser ```
 And now we just tell our app to use cookie-parser.
 
+```
 var express      = require('express');
 var cookieParser = require('cookie-parser');
 
@@ -62,6 +63,7 @@ app.get("/", function (req, res) {
 app.listen(3000, function () {
   console.log("UP AND RUNNING");
 });
+```
 HTTP Response Header
 
 This sends a response that looks something like the following:
