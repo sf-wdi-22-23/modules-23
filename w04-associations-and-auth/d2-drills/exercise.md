@@ -58,6 +58,7 @@
 
 ### Adding it to your `index.ejs`
 1. Display this data in your view
+
   ```html
   <% for(var i=0; i<foods.length; i++) { %>
     <div class="col-sm-6 col-md-4">
