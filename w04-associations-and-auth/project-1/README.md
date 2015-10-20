@@ -1,5 +1,15 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) SF WDI 22/23 - Project One
 
+```
+@TODO
+see @TODOS
+references not yet looked at: 
+  https://github.com/sf-wdi-19-20/modules/tree/master/w9_project_2
+  https://github.com/sf-wdi-19-20/modules/tree/master/w11_project_3
+  https://github.com/sf-wdi-21/notes/tree/master/projects/project_one
+```
+
+
 ## DESCRIPTION
 
 It's time to put everything that you've learned in the past month together! For the first project you will use your knowledge of front and back-end web development to produce an awesome web application that can be used by friends, family or any of the other billions of people who use the Internet. The type of web application you create is your choice.
