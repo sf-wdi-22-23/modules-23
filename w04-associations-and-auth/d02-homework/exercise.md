@@ -4,7 +4,7 @@ This exercise will use bcrypt in a simple JS document without being a part of an
 
 1. In your dev or week-4 folder on your computer, create a file bcrypt_by_itself.js
 2. require (and npm install) bcrypt
-3. assign an empty object to the variable 'user'
+3. In bcrypt_by_itself assign an empty object to the variable 'user'
 4. assign a password of your choosing to the variable 'password'
 5. Implement bcrypt's genSalt and hash functions which should
 	a. Add salt to your password
