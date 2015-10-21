@@ -12,7 +12,7 @@ Examples of applications that do one thing well:
 - [Question Cookie](http://www.questioncookie.com/) - allows fast voting moderation
 - Facebook Messenger - allows easy communication between individuals or groups
 - Twitter - lets people share their thoughts quickly
-- [Maps with Friends](maps-with-friends.herokuapp.com) - lets you track friends by putting markers on a map
+- [Maps with Friends](https://maps-with-friends.herokuapp.com/) - lets you track friends by putting markers on a map
 
 ### User stories
 
