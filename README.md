@@ -394,7 +394,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module2</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-dusk-mongo-reference">Mongoose Reference & Populate</a> (Juliana, Brianna)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d2_dusk_express_auth">Authorization: Express Bcrypt</a> (Braus, Brianna)</td>
-    <td>Student Project Planning (Braus) / Intro Project 1 (Juliana)</td>
+    <td>Student Project Planning (Braus) / Intro <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-associations-and-auth/project-1/README.md" target="_blank">Project 1</a></td>
     <td>Project 1 / Getting Started Breakout (Brianna)</td>
     <td>Project 1</td>
   </tr>
