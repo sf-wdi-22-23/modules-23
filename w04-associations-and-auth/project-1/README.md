@@ -20,14 +20,15 @@ You will each need to turn in an individual project, but you will move faster an
 
 * **Scope.** What are you planning to build? What do you reasonably think you can implement in the time period?
 * **User stories.** What features will your app have? Set up your project and user stories in [Trello](https://trello.com).
-* **Wireframes.** Sketch out what each of your pages will look like and how they will work.
-* **Object Models.** Draw out the model associations for your project in an entity relationship diagram (ERD).
-* **Milestones.** Outline milestones/sprints to approach the implementation iteratively.
+* **Wireframes.** Sketch out what each of your pages will look like and how they will work. Consider making a _paper prototype_ to demonstrate and/or test key user interactions.
+* **Object Models.** Draw out the models and any associations for your project in an entity relationship diagram (ERD).
+* **Milestones.** What are major steps to completing the project, and when do you expect to work on each?
+* **Feasibility Check.** If you are using an external API or scraping a website, make sure you can get that data. If you are using a new tool, go through its getting started tutorial. We will ask to see your results.
 
 
 ### Completed project deliverables:
 
-* Link to Heroku hosted project, with core and flex technical requirements complete
+* Link to Heroku hosted project, with core and 3 flex technical requirements complete
 * Link to source code on GitHub
 * A `README` with the following:
   * `Description`: A paragraph-long elevator pitch of your project
@@ -61,7 +62,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **External API** Use an external API to integrate rich data into your app.
 * **Model Relationship** Create a one-to-many or many-to-many relationship between two models using either embedded or referenced data.
 * **Authentication** Enable users to sign up, log in, and log out. (Note: This covers the core sessions or cookies requirement.)
-* **Data Validation** Validate data by handling incorrect inputs during sign up, such as unique email addresses and minimum password lengths.   And on database.
+* **Data Validation** On the client side, don't let users submit blank forms -- and give them a visible error message explaining why they weren't allowed to submit.  In your database, use mongoose validation 
 
 
 ## Ideas for Further Exploration
