@@ -104,7 +104,7 @@ If you want to push yourself and learn something new, optionally consider doing 
 
 ## GROUPS 
 
-Each student will have an assigned instructor, which splits us into three informal groups per class. Your instructor will approve your project, lead your morning standups (with the rest of your group), and give you feedback after the project. Of course, you're welcome to work with other instructors, the DiRs, and students from any group you'd like!
+Each student will have an assigned instructor, which splits us into three informal groups per class. Your instructor will approve your project, lead your morning standups (with the rest of your group), meet with you for 1:1s, and give you feedback after the project. Outside of those structured activities, you're welcome to work with other instructors, the DiRs, and students from any group you'd like!
 
 ### WDI 22
 
