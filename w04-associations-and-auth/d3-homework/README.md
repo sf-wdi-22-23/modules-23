@@ -140,11 +140,6 @@ Once you have an index page populated with data from the database, you can move 
 - [ ] make a button that allows you to delete a specific instance of a model
 - [ ] add a page where you can edit your model (or do it on the show page with AJAX)
 
-
-## Conclusion
-
-Have fun and ask questions!
-
 ## Submission
 
-You will submit all of your planning requirements in person to an instructor on Thursday morning. Please create physical (or electronic) documents for each item; projects will not be approved without instructors reviewing these. 
+You will submit all of your planning requirements in person to an instructor on Thursday morning. Please create physical (or electronic) documents for each item; projects will not be approved without instructors reviewing these.  Have fun and ask questions! 
