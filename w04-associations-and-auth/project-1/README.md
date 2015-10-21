@@ -88,4 +88,4 @@ If you want to push yourself and learn something new, optionally consider doing 
 
 
 ## ACCESS TO INSTRUCTORS
-We will schedule 1:1s throughout the week. We will also do mini lessons on certain topics if we notice that several people are running into the same issues.
+We will have standups every morning at 10:00AM. We will schedule 1:1s throughout the week. We will also do mini lessons on certain topics if we notice that several people are running into the same issues.
