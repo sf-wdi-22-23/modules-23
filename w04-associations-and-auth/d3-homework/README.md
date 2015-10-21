@@ -37,9 +37,18 @@ Add comments to your cards as you progress and complete features – by the end 
 
 Sketch out the core pages of your app. What will they look like? How they will work, both on page-load and when affected by AJAX?
 
-Iterate on your wireframes. Start simple: just some boxes. Make another wireframe: add some text to the boxes to indicate what they represent like the header, sidebar, images, titles, articles and so on. Then write up what your actual content will be and make a polished wireframe that incorporates that.
+Iterate on your wireframes. Start simple: just some boxes. Make another wireframe: add some text to the boxes to indicate what they represent like the header, sidebar, images, titles, articles and so on.
+![wireframe](./wireframe.jpg)
+
+Then write up what your actual content will be and make a polished wireframe that incorporates that.
+
+![wireframe-progress](./wireframe-progress.jpeg)
 
 It's easier to do these steps on paper than in code, so iterate frequently in this stage to save yourself time down the road.
+
+Once you have some wireframes for the different pages of your site, you can wireframe how the pages will connect to each other by drawing the user flow.
+
+![user-flow-2](./user-flow-2.png)
 
 The more time you spend on this step, the easier it will be to structure your HTML. Well-structured HTML will make implementing your CSS, figuring out what routes go where, and how to manipulate the DOM easier.
 
@@ -48,9 +57,9 @@ The more time you spend on this step, the easier it will be to structure your HT
 
 Use an entity relationship diagram (schema) to plan out the Models, their relationship(s), and properties.
 
-* Will your application have many models or only a few (or one)?
-* How will they interact with each other?
-* What attributes (properties) will they have, and what kind of data types (string, integer, collection, etc.) will they use?
+- Will your application have many models or only a few (or one)?
+- How will they interact with each other?
+- What attributes (properties) will they have, and what kind of data types (string, integer, collection, etc.) will they use?
 
 ### Scope
 
