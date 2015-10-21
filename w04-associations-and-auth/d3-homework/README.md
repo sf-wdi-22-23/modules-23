@@ -57,7 +57,9 @@ The same applies to the scope of your project. If you're always looking at the t
 
 Figure out the absolutely smallest thing you can do, and do that thing. Not the next immediate thing, but the simplest possible implementation of your app. If that means that the entire functionality of your app consists of logging in, displaying all of a user's photos from their Instagram account, and logging out, that is totally great.
 
-Don't think so? Check out the [requirements](). It's all there: your own Node/Express API serving EJS templates to your client, two models that are associated with each other, AJAX, an external API call, authentication, etc. See? You did it!
+Don't think so? Check out the [requirements](https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/project-1). It's all there: your own Node/Express API serving EJS templates to your client, two models that are associated with each other, AJAX, an external API call, authentication, and so on.
+
+See? You did it!
 
 **Example Scope**
 
@@ -67,12 +69,13 @@ To help break out your scope, you'll want milestones.
 
 ### Milestones
 
-Milestones provide checkpoints for the progress of your sprint – they give you a way to check in with yourself about how much headway you've made. Listing each feature reminds you what is done / pending, but makes it convenient for estimating the number of hours/days for a feature.
+Milestones provide checkpoints for the progress of your sprint – they give you a way to check in with yourself about how much headway you've made.
 
-Note: each milestone will likely be made of several user stories, and contain elements of the technical requirements.
-Example milestones:
+Listing each feature reminds you what is done or pending, and makes it convenient for estimating the number of hours/days for a feature.
 
-**Milestones**
+*Note: each milestone will likely be made of several user stories, and contain elements of the technical requirements.*
+
+**Example Milestones**
 
 - [ ] project planning complete (wireframes, user stories, etc.)
 - [ ] Hello World achieved
@@ -89,6 +92,12 @@ Before you get started, you'll want to do some research to see if what you're lo
 - Reading documentation to see what data you can request from your API of choice. Is it JSON? XML? Is all the information you want included in the response? Will you need to make several different requests to the API?
 - Verifying that you can successfully request data from your API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en) or [cURL](http://conqueringthecommandline.com/book/curl#cid23)
 - Researching something you want to use that hasn't been taught in class yet, like an external module/library, data store, etc.
+
+**Example Feasibility**
+
+- [ ] Read Yelp API documentation
+- [ ] Use Postman to test Twilio API
+- [ ] Research using Handlebars.js client-side templating
 
 **DO NOT start coding before each of the above is clearly outlined and approved by an instructor.**
 
