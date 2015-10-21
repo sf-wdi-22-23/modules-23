@@ -98,5 +98,13 @@ If you want to push yourself and learn something new, optionally consider doing 
 * **Friday, October 30th, 10:00am** - Project due and presentations!  (Submission instructions and presentation details will be posted next week.)
 
 
-## ACCESS TO INSTRUCTORS
-We will have standups every morning at 10:00AM. We will schedule 1:1s throughout the week. We will also do mini lessons on certain topics if we notice that several people are running into the same issues.
+## SOURCES OF HELP/SUPPORT
+
+- the internet (the docs, tutorials, stack overflow, the module notes)
+- working with your classmates in Slack
+- working with your classmates in person (tear down that wall!)
+- instructor/student standups every morning at 10:00AM 
+- scheduled 1:1s for each student throughout the project
+- breakout lessons on selected topics as needed 
+- instructors and DiRs available in the classroom each weekday (but not all of them, all the time)
+- evening and weekend TAs
