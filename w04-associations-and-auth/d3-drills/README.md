@@ -10,7 +10,7 @@ function binarySearch(array, target) {
 var sample = [0, 1, 3, 5, 8, 13, 21];
 var target = 1;
 
-binarySearch(sample, 1); // 3 (the index it is located at in the sample array)
+binarySearch(sample, 1); // 2 (the index it is located at in the sample array)
 ```
 
 The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array.
