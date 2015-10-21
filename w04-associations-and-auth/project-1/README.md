@@ -63,7 +63,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **External API** Use an external API to integrate rich data into your app.
 * **Model Relationship** Create a one-to-many or many-to-many relationship between two models using either embedded or referenced data.
 * **Authentication** Enable users to sign up, log in, and log out. (Note: This covers the core sessions or cookies requirement.)
-* **Data Validation** On the client side, don't let users submit blank forms -- and give them a visible error message explaining why they weren't allowed to submit. In your database, use mongoose's validation for at least one attribute for each of your schemas.
+* **Data Validation** On the client side, don't let users submit blank forms -- and give them a visible error message explaining why they weren't allowed to submit. You can do this by hand or with a library like <a href="http://jqueryvalidation.org/" target="_blank">jQuery Validate</a>. In your database, use mongoose's validations for at least one attribute for each of your schemas (see <a href="http://mongoosejs.com/docs/validation.html" target="_blank">mongoose validation docs</a> and/or this <a href="https://masteringmean.com/lessons/196-Introduction-to-Mongoose-Model-Validation-and-Middleware" target="_blank">outside tutorial's</a> validaton section). You can meet this requirement with just mongoose's built-in validations, but you could also take it further with custom validations.
 
 
 ## Ideas for Further Exploration
