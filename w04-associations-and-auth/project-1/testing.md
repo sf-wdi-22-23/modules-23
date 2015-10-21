@@ -9,13 +9,10 @@
 | :---: | :---: | :---: |
 | Testing TDD/BDD | Mocha, Chai, Request, Cheerio | Challenges |
 
-### Preparatory Readings
-
-1. [Difference Between Test Methodologies](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test/4904533#4904533)
 
 ### Motivation (Why?)
 
-Automated testing makes you have a clearer spec of what you want to build, and lets you code much faster and with fewer errors. Many jobs require you to follow Test Driven Development and Behavior Driven Development (TDD/BDD) methodologies.
+Automated testing makes you have a clearer spec of what you want to build, and lets you code much faster and with fewer errors. Many jobs require you to follow Test Driven Development and Behavior Driven Development (TDD/BDD) methodologies.  
 
 ### Analogy (What?)
 
@@ -43,7 +40,9 @@ Automated testing makes you have a clearer spec of what you want to build, and l
 
 **Functional Tests** test the way the user would actually use the code.
 
-#### Example of a Simple API Test
+For some more developer vocab, you can look at [Differences Between Test Methodologies](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test/4904533#4904533).
+
+#### Example of a Simple API Test with Mocha and Chai
 
 Add your testing libraries
 ```
@@ -122,8 +121,6 @@ expect(object)
   .exist
 ```
 
-#Challenges
-
 ### Docs & Resources
 
 * Here is an article on our testing stack. https://davidbeath.com/posts/testing-http-responses-in-nodejs.html
@@ -148,7 +145,7 @@ npm install mocha chai request --save
 3. Add 1 PUT test to your API - ditto.
 4. Add 1 DELTE test to your API - ditto.
 
-### Stretch: View Testing
+## View Testing with Cheerio
 
 Above we are testing APIs, but what if we wanted to test more than just our API? What if we wanted to test our url end-points that respond with HTML? We would have to check that DOM elements were in our responses. For this we can use ```cheerio```
 
