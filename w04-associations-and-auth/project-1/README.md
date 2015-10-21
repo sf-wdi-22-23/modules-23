@@ -25,7 +25,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **Milestones.** What are major steps to completing the project?
 * **Feasibility Check.** If you are using an external API, make sure you can get that data. If you are using a new tool, go through its getting started tutorial. We will ask to see your results.
 
-See more details in the <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-associations-and-auth/d3-homework/README.md" target="_blank">project planning homework document</a>.
+**See more details about these deliverables in the <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-associations-and-auth/d3-homework/README.md" target="_blank">project planning homework document</a>.**
 
 
 ### Completed project deliverables:
@@ -74,7 +74,7 @@ If you want to push yourself and learn something new, optionally consider doing 
 
 * **Search** Build a form that allows users to search your data, based on attributes.
 * **Authorization** Create and implement rules that prevent users from seeing/editing/deleting content that belongs to other users. Start with one rule; the specifics are up to you. For example, a good challenge could be saying users cannot delete a post (or other resource) if it is not theirs.  (Note: This requires authentication.)
-* **Testing** Test your code with an automated testing library.
+* **Testing** Test your code with an automated testing library (<a href="testing.md" target="_blank">here's a resource for mocha and chai</a>).
 * **Email** Send emails with express-mailer.
 * **Payments** Add payments with stripe.com. 
 * **Web-Scraping** Use a web-scraper to collect data from a website that doesn't have an API. Example technologies include <a href="http://casperjs.org" target="_blank">Casper</a> or <a href="https://www.kimonolabs.com" target="_blank">Kimono</a>.
