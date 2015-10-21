@@ -60,7 +60,6 @@ Add comments to your cards as you progress and complete features – by the end 
 
 Sketch out the pages of your app. What will they look like? How they will work, both on page-load and when affected by jQuery?
 
-<<<<<<< HEAD
 Iterate on your wireframes. Start simple: just some boxes. Make another wireframe: add some text to the boxes to indicate what they represent like the header, sidebar, images, titles, articles and so on.
 ![wireframe](./wireframe.jpg)
 
@@ -74,25 +73,17 @@ Once you have some wireframes for the different pages of your site, you can wire
 
 ![user-flow-2](./user-flow-2.png)
 
-The more time you spend on this step, the easier it will be to structure your HTML. Well-structured HTML will make implementing your CSS, figuring out what routes go where, and how to manipulate the DOM easier.
-=======
 The more time you spend on this step, the easier it will be to structure your HTML. Well-structured HTML will make it easier to implement your CSS, to manipulate the DOM, and to figure out what routes you need to get data for the page.
->>>>>>> d4d5fe596b2b75cad7acf0d52b6ab2fc4e17634a
-
 
 ### Object Models
 
 Use an entity relationship diagram to plan out the Models and any relationship(s) among them.  In your diagram, write out the properties for your schemas. Include:
 
-<<<<<<< HEAD
-- Will your application have many models or only a few (or one)?
-- How will they interact with each other?
-- What attributes (properties) will they have, and what kind of data types (string, integer, collection, etc.) will they use?
-=======
+
+
 * Will your application have many models or only a few?
 * How will they interact with each other?
 * What attributes (properties) will they have, and what kind of data types (string, integer, collection, etc.) will they use?
->>>>>>> d4d5fe596b2b75cad7acf0d52b6ab2fc4e17634a
 
 ### Scope
 
