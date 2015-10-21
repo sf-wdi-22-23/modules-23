@@ -23,7 +23,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **Wireframes.** Sketch out what each of your pages will look like and how they will work. Consider making a _paper prototype_ to demonstrate and/or test key user interactions.
 * **Object Models.** Draw out the models and any associations for your project in an entity relationship diagram (ERD).
 * **Milestones.** What are major steps to completing the project, and when do you expect to work on each?
-* **Feasibility Check.** If you are using an external API or scraping a website, make sure you can get that data. If you are using a new tool, go through its getting started tutorial. We will ask to see your results.
+* **Feasibility Check.** If you are using an external API, make sure you can get that data. If you are using a new tool, go through its getting started tutorial. We will ask to see your results.
 
 
 ### Completed project deliverables:
@@ -52,9 +52,10 @@ You will each need to turn in an individual project, but you will move faster an
 * **AJAX** Leverage your server-side Express API to fetch JSON data asynchronously to the client-side.
 * **jQuery** Use jQuery to manipulate the DOM and listen for events on the client-side.
 * **Server-Side HTML Templating** Render your HTML views with data using EJS templating.
-* Custom CSS
-* **Visual Design** Use Bootstrap to kick-start your UI and UX.
-* **Heroku** Deploy your app to Heroku.  Ensure no app secrets are exposed. __Do not commit secret keys to Github!__
+* **Cookies or Sessions** Save some data about the state of your user's visit in cookies or sessions.
+* **Visual Design** Leverage Bootstrap to kick-start your UI and UX.
+* **Custom Styling** Go beyond Bootstrap with styles and/or animations customized for your app. 
+* **Heroku** Deploy your app to Heroku.  Ensure no app secrets are exposed. __Do not commit secret keys to GitHub!__
 
 ### Flex Technical Requirements
 
@@ -62,71 +63,29 @@ You will each need to turn in an individual project, but you will move faster an
 * **External API** Use an external API to integrate rich data into your app.
 * **Model Relationship** Create a one-to-many or many-to-many relationship between two models using either embedded or referenced data.
 * **Authentication** Enable users to sign up, log in, and log out. (Note: This covers the core sessions or cookies requirement.)
-* **Data Validation** On the client side, don't let users submit blank forms -- and give them a visible error message explaining why they weren't allowed to submit.  In your database, use mongoose validation 
+* **Data Validation** On the client side, don't let users submit blank forms -- and give them a visible error message explaining why they weren't allowed to submit. In your database, use mongoose's validation for at least one attribute for each of your schemas.
 
 
 ## Ideas for Further Exploration
 
 If you want to push yourself and learn something new, optionally consider doing some of the following with your app. *Please talk to an instructor* beforehand.
 
-* **Search** Build a form that allows users to search your data based on keywords.
+* **Search** Build a form that allows users to search your data, based on attributes.
 * **Authorization** Create and implement rules that prevent users from seeing/editing/deleting content that belongs to other users. Start with one rule; the specifics are up to you. For example, a good challenge could be saying users cannot delete a post (or other resource) if it is not theirs.  (Note: This requires authentication.)
 * **Testing** Test your code with an automated testing library.
 * **Email** Send emails with express-mailer.
-* **Payments** Add payments with stripe.com. But don't put it into production yet!
+* **Payments** Add payments with stripe.com. 
 * **Web-Scraping** Use a web-scraper to collect data from a website that doesn't have an API. Example technologies include <a href="http://casperjs.org" target="_blank">Casper</a> or <a href="https://www.kimonolabs.com" target="_blank">Kimono</a>.
-* **Web Sockets** Create an open, real-time connection between your server and client (e.g. live chatting). Check out <a href="http://socket.io/" target="_blank">Socket.io</a> if you're interested in web sockets.
-* **Client-side HTML Templating**  Refactor your client side to use a templating library like Mustache, underscore's `_.template`, or another.
+* **Web Sockets** Create an open, real-time connection between your server and client (e.g. live chatting) with a tool like <a href="http://socket.io/" target="_blank">Socket.io</a>.
+* **Client-side HTML Templating**  Refactor your *client-side code* to use a templating library like Handlebars, Mustache, underscore's `_.template`, or another.
 * **Whatever else you can think of!**
 
-## TIMELINE/DEADLINE
+## DEADLINES
 
-* **Thursday, October 22nd by 12:30pm** - **REQUIRED**:  Submit your project proposal to an instructor and make a Kanban board for it using Trello. Before beginning work on your project, your project idea and the scope of your project must be checked-off by an instructor. You will need the following for an instructor check-off:
-    * Wireframes (simple/hand drawn are great)
-    * User narratives / user stories ("Users can create a meal with various foods." or "As a SpaceBook user looking for new friends, I want to be able to update my location to my current planet.")
-    * Models and database relationship design (ERD)
-    * Proof of feasibility for any external APIs you are using - show us that you can get data
+* **Thursday, October 22nd by 12:30pm** - **REQUIRED**:  Submit your project proposal to an instructor and make a Kanban board for it using Trello. Before beginning work on your project, your project idea, the scope of your project, and your other planning deliverables must be checked-off by an instructor. 
 
 * **Friday, October 30th, 9:17am** - Project due and presentations!  (Submission instructions will be posted later.)
 
 
 ## ACCESS TO INSTRUCTORS
 We will schedule 1:1s throughout the week. We will also do mini lessons on certain topics if we notice that several people are running into the same issues.
-
-## GROUPS (@TODO)
-
-### WDI 22
-
-**ALEX**
-
-
-**BEN**
-
-**BRIANNA**
-
-###WDI 23
-
-**BRAUS**  
-Annie  
-Jeehye  
-Breana  
-Scot  
-Brendan   
-Emily K.  
-
-**JULIANA**  
-Isom  
-Eric  
-John B.  
-John C.  
-Emily A.  
-Jorge  
-Natasha  
-
-**MATT**  
-Ling  
-Meredith  
-Michael  
-Noel  
-Roy  
-Zain  
