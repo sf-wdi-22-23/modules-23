@@ -65,8 +65,8 @@ File Structure
 // test/test.js
 //
 
-var request = require('request')
-  , expect = require('chai').expect
+var request = require('request'),
+    expect = require('chai').expect;
 
 // DESCRIBE WHAT WE ARE TESTING
   // SAY WHAT BEHAVIOR 'IT' AUGHT TO HAVE
@@ -152,9 +152,9 @@ Above we are testing APIs, but what if we wanted to test more than just our API?
 Think of ```cheerio``` as **jQuery for Testing**. Watch: cheerio digests the html (the body of the response) into a ```$``` variable and then you query it with a jQuery-like syntax.
 
 ```
-var request = require('request')
-  , expect = require('chai').expect
-  , cheerio = require('cheerio')
+var request = require('request'),
+    expect = require('chai').expect,
+    cheerio = require('cheerio');
 
 var baseUrl = 'http://localhost:3000';
 
