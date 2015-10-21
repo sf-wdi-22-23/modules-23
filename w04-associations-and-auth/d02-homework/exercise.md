@@ -7,9 +7,9 @@ This exercise will use bcrypt in a simple JS document without being a part of an
 3. In bcrypt_by_itself assign an empty object to the variable 'user'
 4. assign a password of your choosing to the variable 'password'
 5. Implement bcrypt's genSalt and hash functions which should
-	a. Add salt to your password
-	b. hash the salted password
-	c. save the hash as a password property on the user object
-	d. console.log the user object so you can see the your beautifully un-guessable hashed password
-	e. return the user object, now containing the hashed password. 
+  1. Add salt to your password
+  1. hash the salted password
+  1. save the hash as a password property on the user object
+  1. console.log the user object so you can see your beautifully un-guessable hashed password
+  1. return the user object, now containing the hashed password. 
 

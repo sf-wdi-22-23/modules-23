@@ -386,7 +386,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module1</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d1-dawn-embedded-mongo-associations">Mongoose Intro to Relationships and Embedding</a> (Braus, Ben)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules/tree/master/w04-associations-and-auth/d02-dawn-Cookies-and-Sessions">Cookies & Sessions</a> (Alex, Matt)</td>
-    <td>Review - Express from the Ground Up (Ben, Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/express_heroku_starter">Review - Express from the Ground Up</a> (Ben, Juliana)</td>
     <td>Project 1 Planning. Approvals (ALL) Deadline 12:30pm</td>
     <td>Project 1</td>
   </tr>
