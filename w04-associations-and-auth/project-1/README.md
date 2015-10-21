@@ -22,7 +22,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **User stories.** What features will your app have? Set up your project and user stories in [Trello](https://trello.com).
 * **Wireframes.** Sketch out what each of your pages will look like and how they will work. Consider making a _paper prototype_ to demonstrate and/or test key user interactions.
 * **Object Models.** Draw out the models and any associations for your project in an entity relationship diagram (ERD).
-* **Milestones.** What are major steps to completing the project, and when do you expect to work on each?
+* **Milestones.** What are major steps to completing the project?
 * **Feasibility Check.** If you are using an external API, make sure you can get that data. If you are using a new tool, go through its getting started tutorial. We will ask to see your results.
 
 
@@ -52,7 +52,7 @@ You will each need to turn in an individual project, but you will move faster an
 * **AJAX** Leverage your server-side Express API to fetch JSON data asynchronously to the client-side.
 * **jQuery** Use jQuery to manipulate the DOM and listen for events on the client-side.
 * **Server-Side HTML Templating** Render your HTML views with data using EJS templating.
-* **Cookies or Sessions** Save some data about the state of your user's visit in cookies or sessions.
+* **Cookies or Sessions** Save some data in cookies or sessions.
 * **Visual Design** Leverage Bootstrap to kick-start your UI and UX.
 * **Custom Styling** Go beyond Bootstrap with styles and/or animations customized for your app. 
 * **Heroku** Deploy your app to Heroku.  Ensure no app secrets are exposed. __Do not commit secret keys to GitHub!__
@@ -79,12 +79,23 @@ If you want to push yourself and learn something new, optionally consider doing 
 * **Web Sockets** Create an open, real-time connection between your server and client (e.g. live chatting) with a tool like <a href="http://socket.io/" target="_blank">Socket.io</a>.
 * **Client-side HTML Templating**  Refactor your *client-side code* to use a templating library like Handlebars, Mustache, underscore's `_.template`, or another.
 * **Whatever else you can think of!**
+ 
+
+<!--## PRESENTATIONS-->
+
+<!--Each of you will present your project on **Friday, August 21st** starting at **10:00am**. Your presentation should be **6 minutes or less** and cover the following:-->
+
+<!--* What is your project, and what does it do? (demo)-->
+<!--* What was your motivation to build it?-->
+<!--* What was the most challenging aspect? Was there anything that was surprisingly easy to implement?-->
+<!--* What did you learn? -->
+
 
 ## DEADLINES
 
 * **Thursday, October 22nd by 12:30pm** - **REQUIRED**:  Submit your project proposal to an instructor and make a Kanban board for it using Trello. Before beginning work on your project, your project idea, the scope of your project, and your other planning deliverables must be checked-off by an instructor. 
 
-* **Friday, October 30th, 9:17am** - Project due and presentations!  (Submission instructions will be posted later.)
+* **Friday, October 30th, 10:00am** - Project due and presentations!  (Submission instructions and presentation details will be posted next week.)
 
 
 ## ACCESS TO INSTRUCTORS
