@@ -101,3 +101,58 @@ If you want to push yourself and learn something new, optionally consider doing 
 - breakout lessons on selected topics as needed 
 - instructors and DiRs available in the classroom each weekday (but not all of them, all the time)
 - evening and weekend TAs
+
+## GROUPS 
+
+### WDI 22
+
+**ALEX**  
+Angelo  
+Dani  
+Josh  
+Riley   
+Uriel  
+Will  
+
+**BEN**  
+Brian  
+Jamey  
+Jennifer  
+Laura E.  
+Matt  
+Racha  
+
+**BRIANNA**   
+Chris
+Francesca    
+Laura B.  
+Margaux 
+Mikey  
+Sam  
+
+###WDI 23
+
+**BRAUS**  
+Annie  
+Jeehye  
+Breana  
+Scot  
+Brendan   
+Emily K.  
+
+**JULIANA**  
+Isom  
+Eric  
+John B.  
+John C.  
+Emily A.  
+Jorge  
+Natasha  
+
+**MATT**  
+Ling  
+Meredith  
+Michael  
+Noel  
+Roy  
+Zain  
