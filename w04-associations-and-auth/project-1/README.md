@@ -16,7 +16,7 @@ You will each need to turn in an individual project, but you will move faster an
 
 ### Project plan deliverables:
 
-*You must review the following with your instructional team BEFORE you start to code.*
+**You must review the following with your instructional team BEFORE you start to code.**  
 
 * **Scope.** What are you planning to build? What do you reasonably think you can implement in the time period?
 * **User stories.** What features will your app have? Set up your project and user stories in [Trello](https://trello.com).
@@ -24,6 +24,8 @@ You will each need to turn in an individual project, but you will move faster an
 * **Object Models.** Draw out the models and any associations for your project in an entity relationship diagram (ERD).
 * **Milestones.** What are major steps to completing the project?
 * **Feasibility Check.** If you are using an external API, make sure you can get that data. If you are using a new tool, go through its getting started tutorial. We will ask to see your results.
+
+See more details in the <a href="https://github.com/sf-wdi-22-23/modules/blob/master/w04-associations-and-auth/d3-homework/README.md" target="_blank">project planning homework document</a>.
 
 
 ### Completed project deliverables:
@@ -80,15 +82,6 @@ If you want to push yourself and learn something new, optionally consider doing 
 * **Client-side HTML Templating**  Refactor your *client-side code* to use a templating library like Handlebars, Mustache, underscore's `_.template`, or another.
 * **Whatever else you can think of!**
  
-
-<!--## PRESENTATIONS-->
-
-<!--Each of you will present your project on **Friday, August 21st** starting at **10:00am**. Your presentation should be **6 minutes or less** and cover the following:-->
-
-<!--* What is your project, and what does it do? (demo)-->
-<!--* What was your motivation to build it?-->
-<!--* What was the most challenging aspect? Was there anything that was surprisingly easy to implement?-->
-<!--* What did you learn? -->
 
 
 ## DEADLINES
