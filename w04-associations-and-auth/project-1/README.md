@@ -124,13 +124,13 @@ Laura E.
 Matt  
 Racha  
 
-**BRIANNA**   
-Chris
+**BRIANNA**     
+Chris  
 Francesca    
-Laura B.  
-Margaux 
-Mikey  
-Sam  
+Laura B.    
+Margaux   
+Mikey    
+Sam    
 
 ###WDI 23
 
