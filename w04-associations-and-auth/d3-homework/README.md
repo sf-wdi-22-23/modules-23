@@ -37,7 +37,12 @@ Add comments to your cards as you progress and complete features – by the end 
 
 Sketch out the core pages of your app. What will they look like? How they will work, both on page-load and when affected by AJAX?
 
+Iterate on your wireframes. Start simple: just some boxes. Make another wireframe: add some text to the boxes to indicate what they represent like the header, sidebar, images, titles, articles and so on. Then write up what your actual content will be and make a polished wireframe that incorporates that.
+
+It's easier to do these steps on paper than in code, so iterate frequently in this stage to save yourself time down the road.
+
 The more time you spend on this step, the easier it will be to structure your HTML. Well-structured HTML will make implementing your CSS, figuring out what routes go where, and how to manipulate the DOM easier.
+
 
 ### Object Models
 
