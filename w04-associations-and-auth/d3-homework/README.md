@@ -131,11 +131,11 @@ Start with the basics of your view:
 
 - [ ] an index.html file with static data directly in the file
 - [ ] create a template based on the structure in the html
-- [ ] use the template to display dynamic data stored on the client
-- [ ] move the data to the server and get it with a GET call to a route on the server
+- [ ] use the template to display dynamic data from a temporary array on the client
+- [ ] move the data to a temporary array on the server and get it with a GET call to a route on the server
 - [ ] move the data to your database
 
-Once you have an index page populated with data from the database, try to follow an outside-in process to:
+Once you have an index page populated with data from the database, you can move to other views or features. Your data is already in the database, but try to follow an outside-in process to:
 - [ ] make a route for a show page (a page for a specific instance of a model)
 - [ ] make a button that allows you to delete a specific instance of a model
 - [ ] add a page where you can edit your model (or do it on the show page with AJAX)
