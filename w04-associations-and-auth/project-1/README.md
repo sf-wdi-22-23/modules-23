@@ -98,7 +98,7 @@ If you want to push yourself and learn something new, optionally consider doing 
 - working with your classmates in person (tear down that wall!)
 - instructor/student standups every morning at 10:00AM 
 - scheduled 1:1s for each student throughout the project
-- breakout lessons on selected topics as needed [Go Here](http://www.questioncookie.com/BreakOutTopics) to suggest and vote on breakout topics!
+- breakout lessons on selected topics as needed **[Go Here](http://www.questioncookie.com/BreakOutTopics) to suggest and vote on breakout topics!**
 - instructors and DiRs available in the classroom each weekday (but not all of them, all the time)
 - evening and weekend TAs
 
