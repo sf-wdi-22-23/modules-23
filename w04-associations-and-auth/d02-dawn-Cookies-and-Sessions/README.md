@@ -14,7 +14,7 @@
 
 ### Motivation (Why?)
 
-Every HTTP request/response stands on its own. Because the request is the only context the client needs understand the response, the HTTP protocol is said to be *stateless*.
+Every HTTP request/response stands on its own. Because the request is the only context the client needs to understand the response, the HTTP protocol is said to be *stateless*.
 
 Sometimes we need state to persist across requests; this is where cookies and sessions come in. One example is a shopping cart. Without cookies or sessions, your shopping cart would be empty as soon as you navigated to the next page!
 
