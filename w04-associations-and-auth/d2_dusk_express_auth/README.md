@@ -9,7 +9,7 @@
 ## Authentication & Authorization
 
 * **Authentication** verifies that a user is who they say they are. When a user logs into our site, we *authenticate* them by checking that the password they typed in matches the password we have stored for them.
-* **Authorization** is the process of determining whether or not a user has *permission* to to perform certain actions on our site. For example, a user may *be authorized* to view their profile page and edit their own blog posts, but not to edit another user's blog posts.
+* **Authorization** is the process of determining whether or not a user has *permission* to perform certain actions on our site. For example, a user may *be authorized* to view their profile page and edit their own blog posts, but not to edit another user's blog posts.
 
 ## Why do we hash (and salt) passwords?
 
@@ -287,7 +287,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   };
   ```
 
-  **Note:** Make sure your static and instance methods come before defining and exporing the `User` model. Setting and exporting the `User` model should be the last pieces of logic in `user.js` to make sure the authentication methods get added to the model and exported.
+  **Note:** Make sure your static and instance methods come before defining and exporting the `User` model. Setting and exporting the `User` model should be the last pieces of logic in `user.js` to make sure the authentication methods get added to the model and exported.
 
 6. Continuing in `user.js`, define a `User` model using your `UserSchema` and export the model (so we can require it in other parts of our application).
 
