@@ -34,13 +34,20 @@ To give users the ability to sign up and log in to our site, we'll need:
 ###Here's the plan
 
 ```js
+// Signup
   // Make a signup form
   // Submit email and password to a server route
-  // Save off a new user with a secure password and begin a session
+  // Save a new user with a secure password
 
+// Login
   // Make a login form
   // Submit email and password to a server route
-  // Authenticate that the email and password are correct
+  // Check that user's email exists in database
+  // Authenticate that the password is correct for that user
+  // Save that user's data in a session on our server
+ 
+// Logout
+  // Delete any saved user data in our session
 ```
 
 ## 1. Create a new Node/Express project.
@@ -50,9 +57,9 @@ To give users the ability to sign up and log in to our site, we'll need:
   ```
   $ mkdir simple-login
   $ cd simple-login
+  $ touch server.js
   $ npm init
   $ npm install --save express body-parser mongoose ejs
-  $ touch server.js
   ```
 
 2. Open your project in Sublime, and set up your server in `server.js` with the following code snippet:
@@ -64,7 +71,6 @@ To give users the ability to sign up and log in to our site, we'll need:
   var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
-    ejs = require('ejs'),
     mongoose = require('mongoose');
 
   // middleware
@@ -76,12 +82,12 @@ To give users the ability to sign up and log in to our site, we'll need:
 
   // signup route with placeholder response
   app.get('/signup', function (req, res) {
-    res.send('coming soon');
+    res.send('signup coming soon');
   });
 
   // login route with placeholder response
   app.get('/login', function (req, res) {
-    res.send('coming soon');
+    res.send('login coming soon');
   });
 
   // listen on port 3000
@@ -90,7 +96,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   });
   ```
 
-3. In the terminal, run `nodemon` and make sure your server starts without any errors. If you get an error, read the line number and error message. Most likely, you're trying to use an undefined variable or a module that's not installed. Visit `/login` and `/signup`
+3. In the terminal, run `nodemon` and make sure your server starts without any errors. If you get an error in your Terminal, read the line number and error message. Most likely, you're trying to use an undefined variable or a module that's not installed. Visit `/login` and `/signup` in your browser to make GET requests to those paths. Verify that those routes are sending back the messages you expect.
 
   ```
   $ nodemon
@@ -99,9 +105,9 @@ To give users the ability to sign up and log in to our site, we'll need:
   **Note:** Keep `nodemon` running the entire time you're developing your application. When you need to execute other terminal commands, press `command + T` to open a new terminal tab.
 
 
-## 2. Set up a signup view
+## 2. Set up a signup view and route
 
-1. In the terminal, make a `public` directory, a `views` directory, and a view called `signup.ejs` and a view called `login.ejs`.
+1. In the terminal, make a `views` directory, a view called `signup.ejs`, and a view called `login.ejs`.
 
   ```
   $ mkdir views
@@ -109,7 +115,7 @@ To give users the ability to sign up and log in to our site, we'll need:
   $ touch views/login.ejs
   ```
 
-1. Add this boilerplate to `signup.ejs`
+1. Add this boilerplate to `signup.ejs`.  Spend a minute looking over it. What is the id of the signup form? What are the `name`s of its input fields?  What external CSS and/or JS are linked to the file?  Find any places where ejs is filling in template data.
 
   ```html
   <!DOCTYPE html>
@@ -156,18 +162,18 @@ To give users the ability to sign up and log in to our site, we'll need:
   ```js
   // server.js
 
-  // login route (renders signup view)
+  // signup route (renders signup view)
   app.get('/signup', function (req, res) {
     res.render('signup');
   });
   ```
 
-4. Test that you can go to `localhost:3000/signup` and see your template.
+4. Test that you can go to `localhost:3000/signup` and see your template rendered on the page.
 
 
-## 3 Submit your signup form to the server.
+## 3. Submit your signup form to the server
 
-1. We've already setup sending a public folder to the client, so add a `public` folder and inside make a `scripts.js` file. Then link it with a `<script>` tag in your `<head>` of `signup.ejs`. Log something to the console to make sure they're connected.
+1. We've already told Express to serve a public folder, so make a `public` folder and inside make a `scripts.js` file. Then link it with a `<script>` tag in your `signup.ejs`. Log something to the console to make sure they're connected.
 
 1. Set a submit listener on your signup form and use `$.post()` to post the email and password to `POST /signup`. (Don't forget to use the `serialize()` method to quickly make a `user` object with keys the same as the html "name" attribute of the html input tag and values equal to the value.)
 
