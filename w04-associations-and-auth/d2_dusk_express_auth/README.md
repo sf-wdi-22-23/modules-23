@@ -364,10 +364,10 @@ To give users the ability to sign up and log in to our site, we'll need:
   
 1. Create a `GET /login` route on your server that renders the login view.
 
-1. Add an "on submit" listener in your `scripts.js` file for the login form. When the login form is submitted, use `$.ajax` or `$.post` to send a request to a `/sessions` path with the user's login data.  As with signup, you can use `serialize()` to package and format the login data to send to the server.  We aren't storing our session data in the database, but we're using this route because the mechanics of logging in will require us to update the session.
+1. Add an "on submit" listener in your `scripts.js` file for the login form. When the login form is submitted, use `$.ajax` or `$.post` to send a request to a `/sessions` path with the user's login data.  As with signup, you can use `serialize()` to package and format the login data to send to the server.  We aren't storing our session data in the database, but we're using this route path because the mechanics of logging in will require us to update the session.
 
   
-1. We already have a `POST /sessions` route set up in the server, and it has the form data -- but it just sends back a message right now. To log a user in, we'll need to do more than that:
+1. Set up a `POST /sessions` route in the server. Start by making it console log the login form data and send a message back as the response. To log a user in, we'll need to do more than that:
 
     * look the user up in the database with the email from the form
     * if a user is found, compare that user's passwordDigest with the password from the form
