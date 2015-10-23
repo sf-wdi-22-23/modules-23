@@ -1,5 +1,3 @@
-# 2223-simple-login
-
 # Authentication with Express & Bcrypt
 
 | Objectives |
@@ -35,22 +33,21 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 ###Here's the plan
 
-```js
-// Signup
-  // Make a signup form
-  // Submit email and password to a server route
-  // Save a new user with a secure password
+* Signup
+  * Make a signup form
+  * Submit email and password to a server route
+  * Save a new user with a secure password
 
-// Login
-  // Make a login form
-  // Submit email and password to a server route
-  // Check that user's email exists in database
-  // Authenticate that the password is correct for that user
-  // Save that user's data in a session on our server
+* Login
+  * Make a login form
+  * Submit email and password to a server route
+  * Check that user's email exists in database
+  * Authenticate that the password is correct for that user
+  * Save that user's data in a session on our server
  
-// Logout
-  // Delete any saved user data in our session
-```
+* Logout
+  * Delete any saved user data in our session
+
 
 ## 1. Create a new Node/Express project.
 
@@ -524,18 +521,18 @@ To give users the ability to sign up and log in to our site, we'll need:
 
 1. We don't want new users to get a JSON or message response when they sign up, either. In fact, we probably want to log them in automatically. Modify the `POST /users` route to save a new user's id in the session and then redirect to the profile. Also modify your signup form to use `method` and `action`.
 
-## 7. Enable log out
+## 7. Enable logout
 
 1. On the profile view, add a logout link.
 
 
-```html
-<!-- profile.ejs -->
-<h1>Profile</h1>
-<hr>
-<h2>Welcome! You're logged in as <%= user.email %>.</h2>
-<a id="logout" href="/logout" class="btn btn-default">Log Out</a>
-```
+  ```html
+  <!-- profile.ejs -->
+  <h1>Profile</h1>
+  <hr>
+  <h2>Welcome! You're logged in as <%= user.email %>.</h2>
+  <a id="logout" href="/logout" class="btn btn-default">Log Out</a>
+  ```
 
 1. Make a `GET /logout` route on your server that logs out a user by setting the  `req.session.userId` to `null`, then redirects to the login page.
 
@@ -548,6 +545,16 @@ To give users the ability to sign up and log in to our site, we'll need:
     // redirect to login (for now)
     res.redirect('/login');
   });
+  ```
+
+## 8. Error Handling
+
+Things don't always go right, and we need our apps to respond nicely when they don't. Here are some strategies.
+
+1. Upon login, if a password is not correct, respond with an error message and display it on the client. Remember to use the bootstrap `.alert` and `.alert-warning` classes.
+1. Upon login, if a user is not found, respond with an error message and display it on the client.
+1. Upon signup, make sure passwords are at least 6 characters long. Return and display an error if this is false.
+1. Is there a way to refactor your client- or server-side code to generalize these two examples of error handling?
 
 
 ## Custom Middleware Refactor (Stretch)
@@ -583,11 +590,3 @@ To give users the ability to sign up and log in to our site, we'll need:
   **Hint:** You'll need to add some logic when calling `req.currentUser` to check if a logged-in user was found. You'll want to use `res.redirect` if a user tries to perform an unauthorized action.
 
 
-## 7. Error Handling
-
-> Things don't always go right and we need our apps to respond nicely when they don't. Here are some strategies.
-
-1. Upon login, if a password is not correct, respond with an error message and display it on the client. Remember to use the bootstrap `.alert` and `.alert-warning` classes.
-1. Upon login, if a user is not found, respond with an error message and display it on the client.
-1. Upon signup, make sure passwords are at least 6 characters long. Return and display an error if this is false.
-1. Is there a way to refactor your client- or server-side code to generalize these two examples of error handling?
