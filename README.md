@@ -363,6 +363,74 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!-------->
 <!-------->
 
+##Week 5 - Project 1
+<table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>Morning 9:17</td>
+    <td>Ben here</td>
+    <td>Alex here</td>
+    <td>Brianna here</td>
+    <td>Braus here</td>
+    <td>All</td>
+  </tr>
+  <tr>
+    <td>Standups 10:00</td>
+    <td>Standups (ALL)</td>
+    <td>Standups (ALL)</td>
+    <td>Standups (ALL)</td>
+    <td>Standups (ALL)</td>
+    <td>Project 1 Presentations (ALL)</td>
+  </tr>
+  <tr>
+    <td>1:1s 10:30-12:30</td>
+    <td>25 min 1:1s (ALL)</td>
+    <td>25 min 1:1s (ALL)</td>
+    <td>25 min 1:1s (ALL)</td>
+    <td>25 min 1:1s (ALL)</td>
+    <td>Project 1 Presentations (ALL)</td>
+  </tr>
+  <tr>
+    <td>Breakout 1A (Classroom 1) 1:30-2:30</td>
+    <td>Authentication Login/Logout (Brianna)</td>
+    <td>git and GitHub (Travis)</td>
+    <td>Error Handling and Validation (Braus)</td>
+    <td>Material Design (Juliana)</td>
+    <td>Project 1 Celebration</td>
+  </tr>
+  <tr>
+    <td>Breakout 1B (Classroom 2) 1:30-2:30</td>
+    <td>EJS Partials & Pages (Ben)</td>
+    <td>Cookies (Matt)</td>
+    <td></td>
+    <td></td>
+    <td>Project 1 Celebration</td>
+  </tr>
+  <tr>
+    <td>Breakout 2A (Classroom 1) 3:00-4:00</td>
+    <td>Heroku Workshop (ALL, REQUIRED unless already deployed)</td>
+    <td>AJAX (Alex)</td>
+    <td>EJS Partials & Pages (Ben)</td>
+    <td>Testing (Braus)</td>
+    <td>Project 1 Celebration</td>
+  </tr>
+  <tr>
+    <td>Breakout 2B (Classroom 2) 3:00-4:00</td>
+    <td></td>
+    <td>Server-side external API requests (Brianna)</td>
+    <td>Sockets (Brianna)</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 ##Week 4 - Associations and Authorization
 
 <table>
