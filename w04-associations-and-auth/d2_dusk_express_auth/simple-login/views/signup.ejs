@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="scripts.js"></script>
+
   <title>Simple Login</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
       <div class="col-md-6 col-md-offset-3">
         <h1>Sign Up</h1>
         <hr>
-        <form id="signup-form">
+        <form id="signup-form" method="POST" action="/users">
           <div class="form-group">
             <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
           </div>
