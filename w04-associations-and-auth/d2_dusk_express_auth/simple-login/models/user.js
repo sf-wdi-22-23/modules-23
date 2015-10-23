@@ -1,7 +1,6 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema,
-  bcrypt = require('bcrypt'),
-  salt = bcrypt.genSaltSync(10);
+  bcrypt = require('bcrypt');
 
 var UserSchema = new Schema({
   email: String,
@@ -16,8 +15,8 @@ UserSchema.statics.createSecure = function (email, password, callback) {
 
   // hash password user enters at sign up
   bcrypt.genSalt(function (err, salt) {
+    console.log('salt: ', salt);  // changes every time
     bcrypt.hash(password, salt, function (err, hash) {
-      console.log(hash);
 
       // create the new user (save to db) with hashed password
       user.create({
@@ -28,19 +27,22 @@ UserSchema.statics.createSecure = function (email, password, callback) {
   });
 };
 
+
 // authenticate user (when user logs in)
 UserSchema.statics.authenticate = function (email, password, callback) {
   // find user by email entered at log in
-  this.findOne({email: email}, function (err, user) {
-    console.log(user);
+  this.findOne({email: email}, function (err, foundUser) {
+    console.log(foundUser);
 
     // throw error if can't find user
-    if (!user) {
+    if (!foundUser) {
       console.log('No user with email ' + email);
-
-    // if found user, check if password is correct
-    } else if (user.checkPassword(password)) {
-      callback(null, user);
+      callback("Error: no user found", null);  // better error structures are available, but a string is good enough for now
+    // if we found a user, check if password is correct
+    } else if (foundUser.checkPassword(password)) {
+      callback(null, foundUser);
+    } else {
+      callback("Error: incorrect password", null);
     }
   });
 };
