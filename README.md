@@ -363,7 +363,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!-------->
 <!-------->
 
-##Week 5 - Project 1
+##Week 5 - <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w04-associations-and-auth/project-1/README.md" target="_blank">Project 1</a>
 <table>
   <tr>
     <th></th>
