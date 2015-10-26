@@ -417,7 +417,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Breakout 2A (Classroom 1) 3:00-4:00</td>
     <td>Heroku Workshop (ALL, REQUIRED unless already deployed)</td>
     <td>AJAX (Alex)</td>
-    <td>Sockets (Brianna)</td>
+    <td>Realtime with <a href="http://socket.io/" target="_blank">socket.io</a> (Brianna)</td>
     <td>Testing (Braus)</td>
     <td>Project 1 Celebration</td>
   </tr>
