@@ -408,7 +408,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Breakout 1B (Classroom 2) 1:30-2:30</td>
     <td>EJS Partials & Pages (Ben)</td>
-    <td>Cookies (Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/cookies-sessions-breakout">Cookies and Sessions</a> (Matt)</td>
     <td></td>
     <td></td>
     <td>Project 1 Celebration</td>
