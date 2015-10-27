@@ -36,28 +36,6 @@ https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
 The second line of defense is to put requirements in your database to reject malformed data. We accomplish this using [Mongoose's Validation options](http://mongoosejs.com/docs/validation.html).
 
-###### Normalization: Setters and Getters
-
-```js
-function toLower (v) {
-  return v.toLowerCase();
-}
-
-var UserSchema = new Schema({
-  email: { type: String, set: toLower }
-});
-```
-
-```js
-function obfuscate (cc) {
-  return '****-****-****-' + cc.slice(cc.length-4, cc.length);
-}
-
-var AccountSchema = new Schema({
-  creditCardNumber: { type: String, get: obfuscate }
-});
-```
-
 ###### Validaton: Type
 
 ```js
@@ -96,6 +74,27 @@ Toy.schema.path('color').validate(function (value) {
 }, 'Invalid color');
 ```
 
+###### Normalization: Setters and Getters
+
+```js
+function toLower (v) {
+  return v.toLowerCase();
+}
+
+var UserSchema = new Schema({
+  email: { type: String, set: toLower }
+});
+```
+
+```js
+function obfuscate (cc) {
+  return '****-****-****-' + cc.slice(cc.length-4, cc.length);
+}
+
+var AccountSchema = new Schema({
+  creditCardNumber: { type: String, get: obfuscate }
+});
+```
 
 ### The Err Object
 
@@ -121,6 +120,7 @@ toy.save(function (err) {
 
 ### Responding To The Client
 
+server.js
 ```js
 // Server-Side
 app.post('/posts', function (req, res) {
@@ -135,12 +135,12 @@ app.post('/posts', function (req, res) {
 })
 ```
 
-### Showing and Hiding the Alert
-
+index.html
 ```html
 <div class='alert' id='alert' style="display:none;"></div>
 ```
 
+app.js
 ```js
 function alertHandler(msg, type) {
   $('#alert').addClass(type).text(msg).fadeIn();
