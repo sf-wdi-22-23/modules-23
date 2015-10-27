@@ -30,11 +30,13 @@ https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </script>
 ```
 
+**Exercise**: add jQuery validate to your project and validate the required fields of at least one form.
+
 ### Server-Side Validation & Data Normalization
 
 The second line of defense is to put requirements in your database to reject malformed data. We accomplish this using [Mongoose's Validation options](http://mongoosejs.com/docs/validation.html).
 
-###### Setters and Getters
+###### Normalization: Setters and Getters
 
 ```js
 function toLower (v) {
@@ -56,7 +58,7 @@ var AccountSchema = new Schema({
 });
 ```
 
-###### Type Validators
+###### Validaton: Type
 
 ```js
 var Dude = new Schema({
@@ -64,7 +66,7 @@ var Dude = new Schema({
 })
 ```
 
-###### Built in Schema Validators and Helpers
+###### Validation: min/max, regex, required, select
 
 ```js
 var Person = new Schema({
@@ -79,7 +81,7 @@ var Person = new Schema({
 })
 ```
 
-###### Custom Validator
+###### Validation: Custom
 
 ```js
 var toySchema = new Schema({
@@ -96,6 +98,7 @@ Toy.schema.path('color').validate(function (value) {
 
 
 ### The Err Object
+
 Each validation option will let you know what went wrong in the `err` object as the first argument of any Mongoose method.
 
 ```js
@@ -132,20 +135,29 @@ app.post('/posts', function (req, res) {
 })
 ```
 
-### Alert
+### Showing and Hiding the Alert
+
+```html
+<div class='alert' id='alert' style="display:none;"></div>
+```
 
 ```js
-function errorHandler(data) {
-  //data.message //=> message: "Post validation failed"
-  var msg = "There was a problem saving your " + data.message.split(' ')[0] // Object name
-  $('#alert').addClass('alert-danger').text(msg).fadeIn();
-  setTimeout(function() { $('#alert').fadeOut(); }, 4000);
+function alertHandler(msg, type) {
+  $('#alert').addClass(type).text(msg).fadeIn();
+  setTimeout(function() { $('#alert').fadeOut().text('').removeClass(type); }, 4000);
 }
 // Client
 var post = $(this).serialize();
 $.post('/posts', post)
   .success(function (data) {
-
+    //
+    var msg = "Post saved!"
+    alertHandler(msg, 'alert-success')
   })
-  .error(errorHandler(data));
+  .error(function() {
+    var msg = "There was a problem saving your post. Please try again.";
+    alertHandler(msg, 'alert-danger')
+  });
 ```
+
+**Exercise**: Setup a schema level validation and handle the error in your ajax `error()` function. Can you put your alert in the upper right corner of the page?
