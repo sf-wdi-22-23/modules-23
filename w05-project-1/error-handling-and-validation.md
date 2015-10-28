@@ -127,9 +127,9 @@ app.post('/posts', function (req, res) {
   var post = Post.new(req.body)
   post.save(function (err) {
     if (err) {
-      res.send(400, {err: err.errors})
+      res.status(400).json({err: err.errors})
     } else {
-      res.send(201, {post: post})
+      res.status(201).json({post: post})
     }
   })
 })
