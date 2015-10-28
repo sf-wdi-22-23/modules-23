@@ -127,9 +127,11 @@ app.post('/posts', function (req, res) {
   var post = Post.new(req.body)
   post.save(function (err) {
     if (err) {
-      res.status(400).json({err: err.errors})
+      var err = "There was a problem saving your post. Please try again.";
+      res.json({err: err});
     } else {
-      res.status(201).json({post: post})
+      var msg = "Post saved successfully!";
+      res.json({msg: msg, post: post});
     }
   })
 })
@@ -150,13 +152,11 @@ function alertHandler(msg, type) {
 var post = $(this).serialize();
 $.post('/posts', post)
   .success(function (data) {
-    //
-    var msg = "Post saved!"
-    alertHandler(msg, 'alert-success')
-  })
-  .error(function() {
-    var msg = "There was a problem saving your post. Please try again.";
-    alertHandler(msg, 'alert-danger')
+    if (data.err) {
+      alertHandler(data.err, 'alert-danger')
+    } else {
+      alertHandler(data.msg, 'alert-success')
+    }
   });
 ```
 
