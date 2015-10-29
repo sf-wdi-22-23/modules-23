@@ -54,6 +54,7 @@ Tests are like putting a net under a tightrope walker. If you fall (if there is 
 Add your testing libraries
 ```
 npm install mocha chai request --save
+sudo npm install mocha -g
 ```
 
 File Structure
