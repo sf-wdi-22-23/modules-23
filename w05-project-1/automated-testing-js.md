@@ -15,7 +15,7 @@
 
 ### Motivation (Why?)
 
-Automated testing makes you have a clearer spec of what you want to build, and lets you code much faster and with fewer errors. Many jobs require you to follow Test Driven Development and Behavior Driven Development (TDD/BDD) methodologies.
+Automated testing makes you have a clearer spec of what you want to build, and lets you code much faster and with fewer errors. Many jobs require you to follow [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) and [Behavior Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) (TDD/BDD) methodologies.
 
 ### Analogy (What?)
 
