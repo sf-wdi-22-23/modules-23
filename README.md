@@ -363,7 +363,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!-------->
 <!-------->
 
-##Week 5 - Project 1
+##Week 5 - <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w04-associations-and-auth/project-1/README.md">Project 1</a>
 <table>
   <tr>
     <th></th>
@@ -399,25 +399,25 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Breakout 1A (Classroom 1) 1:30-2:30</td>
-    <td>Authentication Login/Logout (Brianna)</td>
+    <td>Authentication <a href="https://github.com/sf-wdi-22-23/login-logout" target="_blank">Login/Logout</a> (Brianna)</td>
     <td>git and GitHub (Travis)</td>
-    <td>Error Handling and Validation (Braus)</td>
-    <td><a href="https://github.com/sf-wdi-22-23/material-design-example">Material Design</a> (Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w05-project-1/error-handling-and-validation.md" target="_blank">Error Handling and Validation</a> (Braus)</td>
+  <td><a href="https://github.com/sf-wdi-22-23/material-design-example">Material Design</a> (Juliana)</td>
     <td>Project 1 Celebration</td>
   </tr>
   <tr>
     <td>Breakout 1B (Classroom 2) 1:30-2:30</td>
     <td>EJS Partials & Pages (Ben)</td>
-    <td>Cookies (Matt)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/cookies-sessions-breakout">Cookies and Sessions</a> (Matt)</td>
     <td></td>
     <td></td>
     <td>Project 1 Celebration</td>
   </tr>
   <tr>
     <td>Breakout 2A (Classroom 1) 3:00-4:00</td>
-    <td>Heroku Workshop (ALL, REQUIRED unless already deployed)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w05-project-1/heroku_node_mongo.md" target="_blank">Heroku Workshop</a> (ALL, REQUIRED unless already deployed)</td>
     <td>AJAX (Alex)</td>
-    <td>Sockets (Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/socketio-example" target="_blank">Realtime communication</a> with <a href="http://socket.io/" target="_blank">socket.io</a> (Brianna)</td>
     <td>Testing (Braus)</td>
     <td>Project 1 Celebration</td>
   </tr>
