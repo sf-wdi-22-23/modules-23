@@ -401,7 +401,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Breakout 1A (Classroom 1) 1:30-2:30</td>
     <td>Authentication <a href="https://github.com/sf-wdi-22-23/login-logout" target="_blank">Login/Logout</a> (Brianna)</td>
     <td>git and GitHub (Travis)</td>
-    <td>Error Handling and Validation (Braus)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w05-project-1/error-handling-and-validation.md" target="_blank">Error Handling and Validation</a> (Braus)</td>
     <td>Material Design (Juliana)</td>
     <td>Project 1 Celebration</td>
   </tr>
@@ -417,7 +417,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Breakout 2A (Classroom 1) 3:00-4:00</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w05-project-1/heroku_node_mongo.md" target="_blank">Heroku Workshop</a> (ALL, REQUIRED unless already deployed)</td>
     <td>AJAX (Alex)</td>
-    <td>Realtime with <a href="http://socket.io/" target="_blank">socket.io</a> (Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/socketio-example" target="_blank">Realtime communication</a> with <a href="http://socket.io/" target="_blank">socket.io</a> (Brianna)</td>
     <td>Testing (Braus)</td>
     <td>Project 1 Celebration</td>
   </tr>
