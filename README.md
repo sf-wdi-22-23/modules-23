@@ -354,8 +354,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td>OOP Reading (Alex)</td>
    <td>Intro Rails Reading (Brianna)</td>
    <td>Rails Guides & Rails for Zombies (Ben)</td>
-   <td>Bog App (Braus)</td>
-   <!-- <td><a href="how-tos/the_rails_checklist.md">Rails Checklist</td> ???-->
+   <td>Rails Checklist (Juliana)</td>
 </tr>
 </table>
 
