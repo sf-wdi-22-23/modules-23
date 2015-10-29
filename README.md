@@ -402,7 +402,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Authentication Login/Logout (Brianna)</td>
     <td>git and GitHub (Travis)</td>
     <td>Error Handling and Validation (Braus)</td>
-    <td>Material Design (Juliana)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/material-design-example">Material Design</a> (Juliana)</td>
     <td>Project 1 Celebration</td>
   </tr>
   <tr>
