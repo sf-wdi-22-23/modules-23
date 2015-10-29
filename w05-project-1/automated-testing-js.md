@@ -21,6 +21,8 @@ Automated lowers *technical debt* and allows you to *develop and deploy features
 
 Tests are like putting a net under a tightrope walker. If you fall (if there is an error) a good test suite catches it.
 
+![man on wire](http://static.rogerebert.com/uploads/review/primary_image/reviews/man-on-wire-2008/hero_EB20080804REVIEWS808070305AR.jpg)
+
 ### Definitions
 
 **Automated testing** means instructing the code to test itself and to expect certain view or data objects. When you have high test coverage you can move fast.
