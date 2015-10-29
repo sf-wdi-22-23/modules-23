@@ -15,9 +15,13 @@
 
 ### Motivation (Why?)
 
-Automated testing makes you have a clearer spec of what you want to build, and lets you code much faster and with fewer errors. Many jobs require you to follow [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) and [Behavior Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) (TDD/BDD) methodologies.
+Automated lowers *technical debt* and allows you to *develop and deploy features more quickly and securely*. Automated testing also clarifies what exactly your software should be capable of. Finally, remember that many jobs require you to write tests or even to follow [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) and [Behavior Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) (TDD/BDD) development methodologies.
 
 ### Analogy (What?)
+
+Tests are like putting a net under a tightrope walker. If you fall (if there is an error) a good test suite catches it.
+
+### Definitions
 
 **Automated testing** means instructing the code to test itself and to expect certain view or data objects. When you have high test coverage you can move fast.
 
@@ -43,7 +47,7 @@ Automated testing makes you have a clearer spec of what you want to build, and l
 
 **Functional Tests** test the way the user would actually use the code.
 
-#### Example of a Simple API Test
+### Example of a Simple API Test
 
 Add your testing libraries
 ```
