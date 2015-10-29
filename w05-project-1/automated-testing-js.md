@@ -143,6 +143,7 @@ expect(object)
 1. Install your testing libraries
 ```
 npm install mocha chai request --save
+sudo npm install mocha -g
 ```
 2. Add ```test/test.js``` to your project.
 3. Add the example code that tests Google.com and run it with ```$ mocha```
