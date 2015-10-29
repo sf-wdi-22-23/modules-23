@@ -326,35 +326,35 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Drills</td>
-   <td><a href="#">Peer Review</a> (Juliana)</td>
-   <td><a href="#">Regex Drills</a> (Juliana)</td>
-   <td><a href="#">Ruby Binary Search</a> (Matt)</td>
-   <td><a href="#">Ruby Bubble Sort</a> (Matt)</td>
+   <td>Peer Review (Juliana)</td>
+   <td>Regex Drills (Juliana)</td>
+   <td>Ruby Binary Search (Matt)</td>
+   <td>Ruby Bubble Sort (Matt)</td>
    <td>Rails Drills (Braus)</td>
  </tr>
  <tr>
    <td>Module1</td>
-   <td><a href="#">Peer Review </a> (Juliana)</td>
-   <td><a href="#">Ruby Method Drills</a> (Braus)</td>
-   <td><a href="#">Ruby OOP</a> (Matt)</td>
-   <td><a href="#">Intro Rails Framework</a> (Matt)</td>
-   <td><a href="#">Review</a> (Braus)</td>
+   <td>Peer Review  (Juliana)</td>
+   <td>Ruby Method Drills (Braus)</td>
+   <td>Ruby OOP (Matt)</td>
+   <td>Intro Rails Framework (Matt)</td>
+   <td>Review (Braus)</td>
  </tr>
  <tr>
    <td>Module2</td>
-   <td><a href= "">Intro Ruby</a> (Braus)</td>
-   <td><a href="#">Username Generator Lab</a> (Juliana)</td>
-   <td><a href="#">OOP Lab</a> (Braus)</td>
-   <td><a href="#">Intro Active Record</a> (Juliana)</td>
-   <td><a href="#">Bog App</a> (Braus)</td>
+   <td>Intro Ruby (Braus)</td>
+   <td>Username Generator Lab (Juliana)</td>
+   <td>OOP Lab (Braus)</td>
+   <td>Intro Active Record (Juliana)</td>
+   <td>Bog App (Braus)</td>
  </tr>
  <tr>
    <td>HW</td>
-   <td><a href="#">Ruby Language</a> and <a href="#">IP Address Lab</a> (Matt)</td>
-   <td><a href="#">OOP Reading</a> (Alex)</td>
-   <td><a href="#">Intro Rails Reading</a> (Brianna)</td>
-   <td><a href="#">Rails Guides</a> & <a href="#">Rails for Zombies</a> (Ben)</td>
-   <!-- <td><a href="how-tos/the_rails_checklist.md">Rails Checklist</a></td> ???-->
+   <td>Ruby Language and IP Address Lab (Matt)</td>
+   <td>OOP Reading (Alex)</td>
+   <td>Intro Rails Reading (Brianna)</td>
+   <td>Rails Guides & Rails for Zombies (Ben)</td>
+   <!-- <td><a href="how-tos/the_rails_checklist.md">Rails Checklist</td> ???-->
 </tr>
 </table>
 
