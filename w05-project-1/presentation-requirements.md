@@ -8,4 +8,4 @@ During your presentation, we'd like you to share the following:
 1. Why did you make it?
 1. Walkthrough/demo of your site
 1. Something you learned (Show us some code!)
-1. Shout-outs for fellow students
+1. Student shout-outs
