@@ -425,9 +425,9 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td></td>
     <td>
       Weekend Tutorials:
-      <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby</a>
-      <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/tutorials-ruby-data-types.md">Tutorial: Ruby Data Types</a>
-      <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/tutorials-arrays-hashes-blocks.md">Tutorial: Arrays and Blocks</a>
+      * <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby</a>
+      * <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/tutorials-ruby-data-types.md">Tutorial: Ruby Data Types</a>
+      * <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/tutorials-arrays-hashes-blocks.md">Tutorial: Arrays and Blocks</a>
     </td>
   </tr>
 </table>
