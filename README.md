@@ -423,7 +423,12 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Server-side external API requests (Brianna)</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>
+      Weekend Tutorials:
+      [Try Ruby](http://tryruby.org/levels/1/challenges/0)
+      [Tutorial: Ruby Data Types](https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/reading-ruby-data-types.md),
+      [Tutorial: Arrays and Blocks](https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/reading-arrays-hashes-blocks.md)
+    </td>
   </tr>
 </table>
 
