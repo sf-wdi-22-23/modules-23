@@ -14,7 +14,7 @@ You may create a separate file for each of the exercises to avoid cluttering a f
 
 1. Print (`puts`) "Ruby is awesome!" 50 times. Implement this 3 different ways, using:
   * <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" target="_blank">`while`</a>
-  * <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" target="_blank">`for`</a>
+  * <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-each">`.each`</a>
   * <a href="http://ruby-doc.org/core-2.0.0/Integer.html#method-i-times" target="_blank">`.times`</a>
 
 2. Save any string to a variable, then create an empty hash called count (`count = {}`). Loop through the string, and count occurrences of each letter. Store the counts in your hash like this example:
