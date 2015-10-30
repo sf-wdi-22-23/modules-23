@@ -1,7 +1,6 @@
 # Welcome To Ruby
 ## Control Flow and Methods
 
-
 | After this module, you can phone your friends and tell them you can: |
 |:--- |
 | Identify control flow patterns and functions in Ruby |
@@ -9,123 +8,85 @@
 | Apply methods in ruby to solve problems |
 
 
-### Parts of A Language
+### Ruby vs. JS Patterns
 
-* `Primitives`
-* `Combinations`
-* `Abstractions`
+Review some of the differences between Javascript and Ruby:
 
+Methods
+  * [JavaScript and Ruby](http://agentcooper.io/js-ruby-comparison/).
 
-### Ruby vs. JS Primitives
-
-Let's recall some of our JS Data Types
-
-
-#### Javascript
-
-* `null`, `undefined`
-* Strings
-* Booleans
-* Number
-  * `.toString`
-* Arrays
-  `indexOf`,`splice`, `slice`
-* Objects
-  * `["some_key"]`, `.some_key`
-* operators
-  * `==`, `===`, `>`, `>=`, ..
-  * `!`, `||`, `&&`
-  * `+`, `-`, `/`, `*`
-* Console methods
-    * `console.log`
-    * `prompt`
-
-#### Ruby 
-
-* `nil`
-* Integers
-    * Fixnum
-    * Bignum
-     * `to_s`
-* Floats
-* Strings
-  * `.to_i` and `.to_f` `*INTEGER`
-* Symbols 
-* Booleans
-* Arrays / Ranges
-  * `[x..y]`, `[x...y]`, `index`
-* Hashes
-  * `{ :key => value }`
-  * `{ key: value }` which is the same as `{:key =>value }`
-  * `[some_key]` and `[some_key]=` 
-  * `key`,`.keys`, `.each`
-* operators
-  * `||=`, `*=`, `/=`
-  * `==`, `.equal?`, 
-  * `!`, `not`, `||`, `&&`
-  * `**`, `+`, `-`, `/`, `*`
-* General Delimited Input
-    * `%w`, `%r` 
-* Console Methods
-    * `puts`, `p`
-    * `gets` and `gets.chomp` 
-
-### Control flow
-
-
-#### Javascript ([Some Control Flow Structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Statements))
-
-* Conditionals 
-    * `if`, `else if`, `else`, `switch`, ...
-* Loops
-    * `do-while`, `while`,  ... 
-* iterators,
-    * `for-in`
-* Exceptions
-    * `try`, `catch`
-
-#### Ruby ([Some Control Flow Structures](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures))
-
-* Conditionals 
-    * `if`, `elsif`, `else`, `unless`, `case when else` ...
-* Loops
-    * `until`, `while`, `times` ... 
-* iterators,
-    * `.each`, `for ... in`
-* Exceptions
-    *  `begin`, `rescue`, `ensure` 
-
+Control Flow
+  * [Ruby](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures)
+  * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Statements)
 
 ### Some Abstractions
 
-#### Javascript
+#### Javascript Function vs. Ruby Method
 
-* Function
-    * Anonymous: `function (param1, [..param2, [...]]){...}`, 
-    * Named: `function Name(param1, [..param2, [...]]){...}`
-    * Uses lexical scope
-    * Used as values
-    * require explicit return
-    * all `params` are optional
+Compare this javascript and ruby code:
 
-#### Ruby   
+```js
+// JS
 
- * Function
-    * uses `def` 
-    * Do not capture scope
-    * Not used as values
-    * optional parameters must be specified
-    * implicitly returns last evaluation
-    
-* block
+var posts;
+
+posts.forEach(function(post) {
+  console.log(post.title);
+});
+
+function functionName(arg1, arg2) {
+  var sum = arg1 + arg2;
+  return sum
+}
+
+function functionWithoutParams() {
+  // code
+}
+
+functionName(arg1, arg2);
+functionWithoutParams();
+```
+
+```ruby
+# ruby
+
+@posts.each do |post|
+  puts post.title
+end
+
+def method_name(arg1, arg2)
+    sum = arg1 + arg2
+    return sum
+end
+
+def method_without_params
+  # code
+end
+
+method_name(arg1, arg2)
+method_without_params
+```
+
+###### Observations on Ruby Methods and Javascript Functions
+
+Javascript:
+
+  * Anonymous: `function (param1, [..param2, [...]]){...}`,
+  * Named: `function Name(param1, [..param2, [...]]){...}`
+  * Uses lexical scope
+  * Used as values
+  * require explicit return
+  * all `params` are optional
+
+Ruby:
+
+  * uses `def`
+  * Do not capture scope
+  * Not used as values
+  * optional parameters must be specified
+  * implicitly returns last evaluation
+  * block
     * used with `.each`, `.map`, et cetera
-    
-    ```ruby
-    some_method do [param1, [param2, [...]] 
-        # some code
-    end
-    
-    ```
     * captures scope
 
 [Further Reading on Blocks](http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes)

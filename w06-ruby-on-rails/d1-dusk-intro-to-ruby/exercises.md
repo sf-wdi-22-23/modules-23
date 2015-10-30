@@ -1,67 +1,81 @@
+
 ## Ruby Exercises
 
 You may create a separate file for each of the exercises to avoid cluttering a file.
+### Data Types
 
-### Looping And Other Exercises
+1. Store your `first_name` in a variable and your `last_name` in another variable.
 
-Use a loop to do  the following:
+2. Create a method called `full_name` that concatenates your `first_name` and `last_name` variables.
 
-1.) Write a method called `p_times` that takes a `statement` and a `num` puts the `statement` some `num` of times to the console.
+3. Use [`.split`](http://ruby-doc.org/core-2.2.0/String.html#method-i-split) to turn your `full_name` variable into an array of your first and last name.
 
-2.) Write a method called `letter_count` to count letter occurence in a string, returned as a `Hash`.
+### Loops
 
-3.) Write a method called `mock_me` that `gets` some input from the terminal and puts it until the input is the word `quit` or `q`. (Be sure to remove trailing `\n`.)
+1. Print (`puts`) "Ruby is awesome!" 50 times. Implement this 3 different ways, using:
+  * <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" target="_blank">`while`</a>
+  * <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" target="_blank">`for`</a>
+  * <a href="http://ruby-doc.org/core-2.0.0/Integer.html#method-i-times" target="_blank">`.times`</a>
 
-4.) Write a method called `print_contacts` that takes a `hash` of `name` and `phone-number` key-value pairs and puts the `name` with the contact info.
+2. Save any string to a variable, then create an empty hash called count (`count = {}`). Loop through the string, and count occurrences of each letter. Store the counts in your hash like this example:
+  * For the string `apple`, your `count` hash would look like this: `{a: 1, p: 2, l: 1, e: 1}`.
 
-5.) Write a method called `get_contact` that
+3. Write a program that gets user input from the terminal and `puts` it until the input is the word `"quit"` or `"q"`.
+  * **Hint:** Use `gets.chomp` instead of `gets` to remove trailing `\n`.
 
-* takes a `contacts` hash,
-* prints the contacts,
-* prompts the terminal for a **new** `name` and a `phone` number, 
-* and then adds the `name` and `phone` as a key value pair respectively if `name` is not already a contact. 
-* The `get_contact` method should `return` the `contacts` hash.
+4. Write a program that prints the "bottles of beer on the wall" song:
 
-### List exercises
+  ```
+  5 bottles of beer on the wall,
+  5 bottles of beer!
+  Take one down and pass it around,
+  4 bottles of beer on the wall!
+  ...
+  ```
 
-#### Using `Array#inject`
-[API on Array#inject](http://apidock.com/ruby/Enumerable/inject)
+  * Use `gets.chomp` to ask the user how many verses they want to hear.
+  * Make sure your song prints "1 **bottle** of beer".
+  * When the song gets to "0 bottles of beer on the wall", it should print "No more bottles of beer on the wall" instead.
 
-Write a method for each exercise below that uses `Array#inject`:
+### Iterators: Each
 
-1.) Write a method called `get_sum` to find the `sum` of the values in an array.
+1. Define an array of 4 phrases: `"Hello, world"`, `"OMG"`, `"Ruby"`, and `"Pair Programming"`. Use <a href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm" target="_blank">`.each`</a> to iterate over the array and `puts` each phrase.
 
-2.) Write a method called `get_max` to find the `max` of the values in an array.
+2. Iterate over your array of phrases again, but this time, only `puts` the phrase if its length 5 letters or longer. Otherwise, print a message that the phrase is too short, and include the phrase's index in the message (**Hint:** Look up `.each_with_index`).
 
-3.) Write a method called `get_min` to find the `min` of the values in an array.
+### Iterators: Map
 
-4.) Write a method called `reverse_str` to reverse a string.
+1. Write a program that <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-map" target="_blank">maps</a> an array of numbers to double each number.
 
-**Challenge**: *write a method called `partial_sums` that pushes the partial sum of an array to a new list*
+2. Write a program that maps an array of words to the reverse of each word. (**Hint:** Look up `.reverse`)
 
-```
-partial_sums([])
-#=> [0]
-partial_sums([5])
-#=> [0, 5]
-partial_sums([5,6,7])
-#=> [0, 5, 11, 18]
-```
+## Stretch Challenges
 
-#### Using `Array#map`
-[API on Array#map] (http://ruby-doc.org/core-2.2.0/Array.html#method-i-map)
+1. Create a simple temperature convertor. It should function like the example below:
 
-Write a method for each exercise below that uses `Array#map`:
+  ```
+  Type '1' to convert from Celsius to Fahrenheit or '2' to convert from Fahrenheit to Celsius
+  1
+  Enter Celsius temperature:
+  24
+  24 degrees Celsius is equal to 75.2 degrees Fahrenheit
+  ```
 
-1.)  Write a method called `multiply_by` that takes a number and returns an array of numbers multiplied by that number.
+2. Create a simple calculator that first asks the user what method they would like to use (addition, subtraction, multiplication, or division), then asks the user for two numbers, printing the result of the method with the two numbers. Here is a sample prompt:
 
-2.)  Write a method called `reverse_each` that takes an array of words and returns an array of reversed words.
+  ```
+  What calculation would you like to do? (add, sub, mult, div)
+  add
+  What is the first number?
+  3
+  What is the second number?
+  6
+  The result is 9
+  ```
 
-3.)  Write method called `get_responses` that takes an array of questions (strings) and returns an array of responses input from the console for each question. (Hint: you will need to use `gets.chomp` and `puts` )
+### Stretch
 
-### Method Problems
-
-* Write a method to compute the `factorial` of a number.
 * Write a method to check if a number is a `palindrome`.
-* Write a method to `reverse` a word in-place, do not use iterators, use only a while loop and indices.
+* Write a method to compute the `factorial` of a number.
+* Write a method to `reverse` a word in-place. (Do not use the ruby `reverse` method!)
 * Write a method to `merge` to two sorted Arrays.
