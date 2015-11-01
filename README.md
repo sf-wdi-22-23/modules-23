@@ -353,8 +353,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td>Ruby Language and IP Address Lab (Matt)</td>
    <td>OOP Reading (Alex)</td>
    <td>Intro Rails Reading (Brianna)</td>
-   <td>Rails Guides (Ben)</td>
-   <td>Rails Checklist & Rails for Zombies (Juliana)</td>
+   <td>Rails Guides & Rails for Zombies(Ben)</td>
+   <td>Rails Checklist(Juliana)</td>
 </tr>
 </table>
 
