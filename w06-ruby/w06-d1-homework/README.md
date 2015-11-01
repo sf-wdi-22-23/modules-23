@@ -162,15 +162,18 @@ end
 
 Base Exercises:
 
-- About Asserts
-- About Arrays
-- About Nil
-- About Objects
-- About True and False
-- About Strings
+`cd` into your new `koans` directory and run through the following exercises using `ruby <file_name.rb>`.
+
+- About Asserts - `about_asserts.rb`
+- About Arrays - `about_arrays.rb`
+- About Nil - `about_nil.rb`
+- About Objects - `about_objects.rb`
+- About True and False - `about_true_and_false.rb`
+- About Strings - `about_strings.rb`
 
 Stretch Exercises:
 
-- About Hashes
-- About Variable Scope
-- About Iteration
+- About Hashes - `about_hashes.rb`
+- About Blocks - `about_blocks.rb`
+- About Variable Scope - `about_variable_scope.rb`
+- About Iteration - `about_iteration.rb`
