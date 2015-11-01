@@ -25,21 +25,16 @@ Gems in Ruby are a lot like node modules. Say you want to use a gem like "Awesom
 
 **Challenge Set 3: Let's have a HTTParty!**
 
-4. Let's have an [HTTParty](https://github.com/jnunemaker/httparty)!
-
-5. Install the httparty gem ```$ gem install httparty```.
-
-6. Now require it in a new ruby script file, and use it to call an album search on the word "White" to the spotify API.
-
-7. Can you require both ```httparty``` and ```awesome_print``` to have the output look nice? (remember just require awesome_print and then use ```ap``` instead of ```p```)
-
-5. In the same file, can you write a loop that returns an array of the album names from your search?
+1. Let's have an [HTTParty](https://github.com/jnunemaker/httparty)!
+1. Install the httparty gem ```$ gem install httparty```.
+1. Now require it in a new ruby script file, and use it to call an album search on the word "White" to the spotify API. (Hint: call `conf.echo = false` in your method to prevent the irb terminal printing out -- "echoing" -- the whole results object)
+1. Can you require both ```httparty``` and ```awesome_print``` to have the output look nice? (remember just require awesome_print and then use ```ap``` instead of ```p```)
+1. In the same file, can you write a loop that returns an array of the album names from your search?
 
 **Challenge Set 2: Find some Sweet Gems**
 
 1. So now you now awesome_print and httparty are cool gems. Find 3 more gems you think are cool and try to use them in your own scripts. ([Ruby Toolbox](https://www.ruby-toolbox.com/)) has a lot of great gems listed. You might have to hold off on incorporating Rails gems until we get to rails.
-
-2. Slack what gems you used
+1. Slack what gems you used to your cohort with a brief description.
 
 **Challenge Set 3: Guessing Game**
 
@@ -64,3 +59,8 @@ Gems in Ruby are a lot like node modules. Say you want to use a gem like "Awesom
    19
    You got 19 in 7 tries!
    ```
+   (hint use `gets.chomp` to get user input while a method is running)
+
+**Challenge Set 4: Build a Terminal Spotify Search**
+
+1. Write a program that uses `gets.chomp` to take in a search query from the user in the terminal and searches the spotify API for an album. Display the output with `awesome_print`.
