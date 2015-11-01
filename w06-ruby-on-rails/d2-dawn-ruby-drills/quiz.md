@@ -7,7 +7,7 @@ Concepts:
 * Troubleshooting and debugging
 * Project 1 Workflow
 
-1. Psuedo code instructions to make a peanut butter and jelly sandwich.
+1. Code imaginary instructions to make a peanut butter and jelly sandwich in ruby and javascript.
 1. Write a brief and complete user narrative for you're favorite user interaction with any web application or mobile app.
 1. Write a comment for each line of the following code for what it does (if you don't know what some code does, try your best to guess):
   ```js
