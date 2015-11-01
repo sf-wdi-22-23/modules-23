@@ -2,6 +2,7 @@
 ## Ruby Exercises
 
 You may create a separate file for each of the exercises to avoid cluttering a file.
+
 ### Data Types
 
 1. Store your `first_name` in a variable and your `last_name` in another variable.
