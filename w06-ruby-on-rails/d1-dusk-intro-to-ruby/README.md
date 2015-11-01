@@ -67,6 +67,54 @@ method_name(arg1, arg2)
 method_without_params
 ```
 
+Now compare these two controllers and create post route, one written in Express and one in Rails:
+
+```js
+// ExpressJS server.js
+
+var Post = require('../models/post.js')
+  , User = require('../models/user.js')
+
+module.exports = function(app) {
+  //CREATE POST
+  app.post('/api/posts', function (req, res) {
+    var post = new Post(req.body);
+    post.user = req.session.userId;
+    User.findById(req.session.userId, function (err, user) {
+      if (err) { return console.log(err) }
+      post.rsvps.push(user);
+      post.save(function (err) {
+        if (err) { return res.send(err) };
+        res.status(201).json(post);
+      });      
+    })
+  });
+}
+```
+
+```ruby
+class PostsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
+
+  # POST /trips
+  # POST /trips.json
+  def create
+    @post = current_user.trips.new(trip_params)
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to post_path(@post), notice: 'Post was successfully created' }
+        format.json { render json: @post, status: :created, location: @post }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+end
+
+```
+
 ###### Observations on Ruby Methods and Javascript Functions
 
 Javascript:
