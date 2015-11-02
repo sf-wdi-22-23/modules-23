@@ -4,7 +4,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 [JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
 <br>
-[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: a few of these use a different templating solution called Handlebars instead of ejs, so those portions don't reflect what we've seen)
+[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: a few of these use a different ExpressJS templating engine called Handlebars instead of ejs, so those portions don't reflect what we've seen)
 <!-- ##Week 12 -->
 <!-- <table>
   <tr>
