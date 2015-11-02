@@ -27,7 +27,6 @@ while low_index <= high_index do
     return mid_index if target == array[mid_index]
 
     puts "#{low_index} #{mid_index} #{high_index}"
-    sleep(1.0)
 
     if target > array[mid_index]
       # move lower bound up to mid, recalculate new mid
@@ -65,6 +64,39 @@ numbers = [4, 8, 15, 16, 23, 42]
 p binary_search_recursive(numbers, target)
 #=> 4
 
+def binary_string_search(array, search_string)
+  capitalized_strings = array.map do |string|
+    string.downcase; string.capitalize
+  end
+
+  sorted_strings = capitalized_strings.sort
+
+  # declare variables for low and high positions
+  low_index = 0
+  high_index = array.length - 1
+  mid_index = (high_index + low_index) / 2
+
+  # while the low is less than the high
+  while low_index <= high_index do
+
+    return mid_index if search_string == sorted_strings[mid_index]
+
+    puts "#{low_index} #{mid_index} #{high_index}"
+    puts "#{sorted_strings[low_index]} #{sorted_strings[mid_index]} #{sorted_strings[high_index]}"
+
+    if search_string > sorted_strings[mid_index]
+      # move lower bound up to mid, recalculate new mid
+      low_index = mid_index
+      # set the high halfway between
+      mid_index = (low_index + high_index) / 2
+    elsif search_string < sorted_strings[mid_index]
+      # move upper bound to mid, recalculate new mid
+      high_index = mid_index
+      mid_index = (low_index + high_index) / 2
+    end
+  end
+end
+
 
 sample_array = [1, 2, 5, 6, 8, 10, 22, 33, 37]
 p binary_search_iterative(sample_array, 2)
@@ -73,3 +105,6 @@ p binary_search_recursive(sample_array, 2)
 even_array = [1, 2, 5, 6, 8, 10, 22, 33, 37, 40]
 p binary_search_iterative(even_array, 37)
 p binary_search_recursive(even_array, 37)
+
+months = ["Jan", "Feb", "mar", "Apr", "May", "Jun", "jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+p binary_string_search(months, "May")
