@@ -7,12 +7,10 @@
  }
 ```
 
-```ruby
 friends = ["bill", "nick", "sonja"]
 friends.each do |friend|
   puts friend
 end
-```
 
 ```js
  function greet(names) {
@@ -22,13 +20,11 @@ end
  }
 ```
 
-```ruby
   def greet(names)
     names.each do |name|
       puts "Hi #{name}"
     end
   end
-```
 
 ```js
  var people = [
@@ -48,7 +44,6 @@ end
  }
 ```
 
-```ruby
   people = [
   { name: "George", age: 25 },
   { name: "Anne", age: 60 },
@@ -64,7 +59,7 @@ end
      end
    end
  end
-```
+ 
 ## Data Types
 
 # 1. Store your `first_name` in a variable and your `last_name`
