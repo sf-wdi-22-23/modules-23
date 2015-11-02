@@ -8,7 +8,7 @@
 | Fork & then clone your partner's project |
 | Pair program to resolve the Github Issue & submit a Pull Request |
 
-**Please keep track of time -- you should spend roughly an hour on each project**
+**Please keep track of time -- you should spend roughly 75 min with each of your partners**
 
 ###1. Create an Issue (10m)
 
