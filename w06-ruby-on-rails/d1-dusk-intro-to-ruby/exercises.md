@@ -7,7 +7,7 @@ Write the following code in Ruby.
 ```js
  var friends = ["bill", "nick", "sonja"];
  for (i in friends) {
-  puts friends[i];
+  console.log(friends[i]);
  }
 ```
 
