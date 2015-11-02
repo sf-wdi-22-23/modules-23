@@ -326,7 +326,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Drills</td>
-   <td>Peer Review (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review</a> (Juliana)</td>
    <td>Regex Drills (Juliana)</td>
    <td>Ruby Binary Search (Matt)</td>
    <td>Ruby Bubble Sort (Matt)</td>
@@ -334,7 +334,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Module1</td>
-   <td>Peer Review  (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review (Juliana)</a></td>
    <td>Ruby Method Drills (Braus)</td>
    <td>Ruby OOP (Matt)</td>
    <td>Intro Rails Framework (Matt)</td>
@@ -353,8 +353,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td>Ruby Language and IP Address Lab (Matt)</td>
    <td>OOP Reading (Alex)</td>
    <td>Intro Rails Reading (Brianna)</td>
-   <td>Rails Guides & Rails for Zombies(Ben)</td>
-   <td>Rails Checklist(Juliana)</td>
+   <td>Rails Guides & Rails for Zombies (Ben)</td>
+   <td>Rails Checklist (Juliana)</td>
 </tr>
 </table>
 
