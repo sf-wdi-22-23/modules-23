@@ -63,7 +63,9 @@ end
 
 ## Reference
 
-Reference the reading on Ruby methods for discussion of how the koans' methods are structured. 
+Reference <a href="https://github.com/sf-wdi-22-23/modules-22/blob/w06-d2-dawn-ruby-methods/w06-ruby-on-rails/d2-dawn-ruby-methods/README.md" target="_blank">this reading on Ruby methods</a> for discussion of how the koans' methods are structured. 
+
+<!-- @TODO - check/confirm location ofruby method reading file -- should this just live in hw folder? -->
 
 ## Exercises
 
