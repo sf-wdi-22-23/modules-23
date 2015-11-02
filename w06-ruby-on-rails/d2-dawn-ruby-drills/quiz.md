@@ -1,4 +1,4 @@
-## Low Stakes Workflow, UX, and Psuedo Coding Quiz
+## Workflow, UX, and Psuedo Coding Quiz
 
 Concepts:
 * Psuedocode
