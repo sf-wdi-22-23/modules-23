@@ -43,13 +43,13 @@
     })
   });
   ```
-1. Describe in your own words what it means to build an application '(r)outside-in'.
+1. Describe in your own words what it means to build an application 'outside-in'.
 
-  It is best to design and build code starting from the user's experience. The user experiences the templates first and then the client and backend code are meant to serve the template correctly. Sometimes you have to start with your routes because you can't serve a template without first having a route.
+  To build code outside-in means to start with what is first to the user and work towards what is first to the computer. Generally this means making the template, then the server, then the models and database. It is best to design and build code that is user friendly. The user experiences the templates first and then the client and backend code are meant to serve the template correctly.
 
 1. Although you might know nothing about Python, imagine you've been asked by your employer or client to find the best Django module for doing authentication. (Django is like Rails but built in python). Pick the Django module you'd use and list the pros and cons of why to use or not use it and why you think it is the best.
 
-  I would choose to use Django REST framework's Authentication patterns because it looks like a full featured and integrated solution. It is recommended on djangopackages.com as used by over 130 people and it has 4,800 github stars, 322 watchers, and 1,500 forks. If we want social authentication, I'd recommend python social auth. Also has great github stats and is recommended in a few blogs to work with Django REST framework.
+  I would choose to use Django REST framework's Authentication patterns because it looks like a full featured and integrated solution. It is recommended on djangopackages.com as used by over 130 people and it has 4,800 github stars, 322 watchers, and 1,500 forks. If we want social authentication, I'd recommend python social auth. It also has great github stats and is recommended in a few blogs to work with Django REST framework.
 
 1. Name three of your favorite and most effective debugging techniques.
 
@@ -65,11 +65,11 @@
   1. What error you are receiving or problem you are having
   1. Relevant, brief code samples
 
-    I used bower-rails with a rails 4 + AngularJS website, now am trying to deploy to heroku. The problem is heroku does not see the bower_components in my vendor/assets file even though I've added the path to my application.rb file
+    I am using bower-rails with a rails 4 + AngularJS website to load client-side packages and am having trouble with heroku. I've added the path to my application.rb file but the bower_components are not available in my asset pipeline.
     ```
         config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     ```
-    Heroku push origin master:
+    When I push to heroku:
 
       ```
            -----> Preparing app for Rails asset pipeline

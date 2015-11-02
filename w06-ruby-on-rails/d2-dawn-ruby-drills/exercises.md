@@ -30,7 +30,7 @@ Gems in Ruby are a lot like node modules. Say you want to use a gem like "Awesom
 1. Find 3 gems you think are cool and try to use them in your own scripts. ([Ruby Toolbox](https://www.ruby-toolbox.com/)) has a lot of great gems listed, though you might have to hold off on incorporating Rails gems.
 
 **Challenge 3: Guessing Game**
-Create a program that asks the user to guess a number between 1 and 100.  Once the user guesses a number, the program should say higher or lower, or report that the number was correct.  The user should continue to make guesses until the correct number is found.  Also, once the user guesses correctly, the program should print the number of guesses needed to arrive at the correct answer. Below is sample output:
+Create a program that asks the user to guess a number between 1 and 100.  Once the user guesses a number, the program should say higher or lower, or report that the number was correct.  The user should continue to make guesses until the correct number is found.  Also, once the user guesses correctly, the program should print the number of guesses needed to arrive at the correct answer. (Remember to use `gets.chomp` to take in user input from the terminal.) Below is sample output:
 
    ```
    Guess a number between 1 and 100
@@ -49,9 +49,8 @@ Create a program that asks the user to guess a number between 1 and 100.  Once t
    19
    You got 19 in 7 tries!
    ```
-(Remember to use `gets.chomp` to take in user input from the terminal.)
 
 **Challenge 4: Spotify Album Search In Terminal**
 
-1. Make a method that takes in user input to make a Spotify API album search and desplays the result with `awesome_print`
+1. Make a method that takes in user input to make a Spotify API album search and displays the result with `awesome_print`
 1. Can you have the method ask for artist or album or both?
