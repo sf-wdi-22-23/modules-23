@@ -342,7 +342,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Module2</td>
-   <td>Intro Ruby (Braus)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby">Intro Ruby</a> (Braus)</td>
    <td>Username Generator Lab (Juliana)</td>
    <td>OOP Lab (Braus)</td>
    <td>Intro Active Record (Juliana)</td>
