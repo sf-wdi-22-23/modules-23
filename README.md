@@ -326,7 +326,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Drills</td>
-   <td>Peer Review (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review</a> (Juliana)</td>
    <td>Regex Drills (Juliana)</td>
    <td>Ruby Binary Search (Matt)</td>
    <td>Ruby Bubble Sort (Matt)</td>
@@ -334,7 +334,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Module1</td>
-   <td>Peer Review  (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review (Juliana)</a></td>
    <td>Ruby Method Drills (Braus)</td>
    <td>Ruby OOP (Matt)</td>
    <td>Intro Rails Framework (Matt)</td>
@@ -423,7 +423,15 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Server-side external API requests (Brianna)</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>
+      Weekend Tutorials:
+      <br>
+      <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby (30 min)</a>
+      <br>
+      <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/tutorials-ruby-data-types.md">Tutorial: Ruby Data Types (1 hour)</a>
+      <br>
+      <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby/tutorials-arrays-hashes-blocks.md">Tutorial: Arrays and Blocks (1 hour)</a>
+    </td>
   </tr>
 </table>
 
