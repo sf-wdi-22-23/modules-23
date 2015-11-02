@@ -27,11 +27,11 @@ mountains are merely mountains
 your path thus far [X_________________________________________________] 0/12
 ```
 
-While it may look verbose, all this output is doing is explaining why the code isn't running and stating which line (and which method, if applicable) to fix. Each time fix that is made will provide a new prompt when the file is run again.
+While it may look verbose, all this output is doing is explaining why the code isn't running and stating which line (and which method, if applicable) to fix. Each time a fix is made, the koan will provide a new prompt when the file is run again.
 
-Each koan file has some blanks you should fill or lines you should change in to "reach enlightenment" or pass all of the code's tests.  Read the comments in a koan file one by one to see what each part should do. If you're unsure what one of the tests is asking for, try a few things, ask in Slack, and skip it if you need to instead of getting stuck. 
+Each koan file has some blanks you should fill or lines you should change in to "reach enlightenment" or pass all of the code's tests.  Read the comments in a koan file one by one to see what each part should do. If you're unsure what one of the tests is asking for, try a few things, ask in Slack, and skip it if you need to instead of getting stuck.
 
-The koan files have some structure we haven't seen yet. Methods are defined by the blocks that start with `def` and end with `end` -- these reserved words are like the curly brackets of Ruby methods. Also, the `class` line in each file is a way of organizing the code and grouping the methods together.  
+The koan files have some structure we haven't seen yet. Methods are defined by the blocks that start with `def` and end with `end` -- these reserved words are like the curly brackets of Ruby methods. Also, the `class` line in each file is a way of organizing the code and grouping the methods together.
 
 
 Example of completing parts of a koan (from `about_hashes.rb`):
@@ -63,7 +63,7 @@ end
 
 ## Reference
 
-Reference <a href="https://github.com/sf-wdi-22-23/modules-22/blob/w06-d2-dawn-ruby-methods/w06-ruby-on-rails/d2-dawn-ruby-methods/README.md" target="_blank">this reading on Ruby methods</a> for discussion of how the koans' methods are structured. 
+Reference <a href="https://github.com/sf-wdi-22-23/modules-22/blob/w06-d2-dawn-ruby-methods/w06-ruby-on-rails/d2-dawn-ruby-methods/README.md" target="_blank">this reading on Ruby methods</a> for discussion of how the koans' methods are structured.
 
 <!-- @TODO - check/confirm location ofruby method reading file -- should this just live in hw folder? -->
 
