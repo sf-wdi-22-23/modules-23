@@ -1,7 +1,41 @@
-
 ## Ruby Exercises
 
 You may create a separate file for each of the exercises to avoid cluttering a file.
+
+Write the following code in Ruby.
+
+```js
+ var friends = ["bill", "nick", "sonja"];
+ for (i in friends) {
+  puts friends[i];
+ }
+```
+
+```js
+ function greet(names) {
+  for (i in names) {
+   console.log("Hi " + names[i]);
+  }
+ }
+```
+
+```js
+ var people = [
+  { name: "George", age: 25 },
+  { name: "Anne", age: 60 },
+  { name: "Nick", age: 75 },
+ ]
+ 
+ function politelyGreet(people) {
+  for (i in people) {
+   if (people[i].age > 60) {
+    console.log("Very nice to meet you " + people[i].name)
+   } else {
+    console.log("Hi " + people[i].name)
+   }
+  }
+ }
+```
 
 ### Data Types
 
