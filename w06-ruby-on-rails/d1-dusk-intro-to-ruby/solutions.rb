@@ -1,5 +1,70 @@
 ### Base Challenges
 
+```js
+ var friends = ["bill", "nick", "sonja"];
+ for (i in friends) {
+  console.log(friends[i]);
+ }
+```
+
+```ruby
+friends = ["bill", "nick", "sonja"]
+friends.each do |friend|
+  puts friend
+end
+```
+
+```js
+ function greet(names) {
+  for (i in names) {
+   console.log("Hi " + names[i]);
+  }
+ }
+```
+
+```ruby
+  def greet(names)
+    names.each do |name|
+      puts "Hi #{name}"
+    end
+  end
+```
+
+```js
+ var people = [
+  { name: "George", age: 25 },
+  { name: "Anne", age: 60 },
+  { name: "Nick", age: 75 },
+ ]
+ 
+ function politelyGreet(people) {
+  for (i in people) {
+   if (people[i].age > 60) {
+    console.log("Very nice to meet you " + people[i].name)
+   } else {
+    console.log("Hi " + people[i].name)
+   }
+  }
+ }
+```
+
+```ruby
+  people = [
+  { name: "George", age: 25 },
+  { name: "Anne", age: 60 },
+  { name: "Nick", age: 75 },
+ ]
+ 
+ def politelyGreet(people) 
+   people.each do |person|
+     if person.age > 60
+      puts "Very nice to meet you #{person.name}"
+     else 
+      puts "Hi #{person.name}"
+     end
+   end
+ end
+```
 ## Data Types
 
 # 1. Store your `first_name` in a variable and your `last_name`
