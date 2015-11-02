@@ -57,10 +57,10 @@ end
  
  def politelyGreet(people) 
    people.each do |person|
-     if person.age > 60
-      puts "Very nice to meet you #{person.name}"
+     if person[:age] > 60
+      puts "Very nice to meet you #{person[:name]}"
      else 
-      puts "Hi #{person.name}"
+      puts "Hi #{person[:name]}"
      end
    end
  end
