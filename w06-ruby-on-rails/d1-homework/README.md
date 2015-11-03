@@ -61,6 +61,10 @@ class AboutHashes < Neo::Koan
 end
 ```
 
+## Reference		
+		
+Reference <a href="http://ploos.io/ruby-koans-companion-part-10-about_methods-rb/" target="_blank">this reading on Ruby methods</a> for discussion of how the koans' methods are structured.
+
 ## Exercises
 
 Base Exercises:
