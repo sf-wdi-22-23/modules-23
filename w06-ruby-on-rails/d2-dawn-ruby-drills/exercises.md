@@ -25,12 +25,14 @@ Gems in Ruby are a lot like node modules. Say you want to use a gem like "Awesom
 
 7. Can you require both ```httparty``` and ```awesome_print``` to have the output look nice? (remember just require awesome_print and then use ```ap``` instead of ```p```)
 
-5. In the same file, can you write a loop that returns an array of the album names from your search? (Use `conf.echo = false` in your method to prevent the method "echoing" the whole array result at the end).
+5. In the same file, can you write a loop that returns an array of the album names from your search? (User `JSON.parse(json)` to parse JSON you get back into a hash). (Extra credit: Use `conf.echo = false` in your method to prevent the method "echoing" the whole array result at the end).
 
 **Challenge 2: Awesome Gems**
+
 1. Find 3 gems you think are cool and try to use them in your own scripts. ([Ruby Toolbox](https://www.ruby-toolbox.com/)) has a lot of great gems listed, though you might have to hold off on incorporating Rails gems.
 
 **Challenge 3: Guessing Game**
+
 Create a program that asks the user to guess a number between 1 and 100.  Once the user guesses a number, the program should say higher or lower, or report that the number was correct.  The user should continue to make guesses until the correct number is found.  Also, once the user guesses correctly, the program should print the number of guesses needed to arrive at the correct answer. (Remember to use `gets.chomp` to take in user input from the terminal.) Below is sample output:
 
    ```
