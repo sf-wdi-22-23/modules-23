@@ -14,6 +14,7 @@ Concepts:
 1. Name three of your favorite and most effective debugging techniques.
 
 **PROJECT 1 Review**
+
 1. Describe briefly what workflow process you actually did for Project 1. Feel free to reference your Project 1 code and materials. Feel free to break up your description by day.
 1. Write what workflow do you wish you had done and what will your workflow look like in future projects?
 1. Recall a problem you had or are having with your project 1 and write a sample stackoverflow.com question. Remember to include
