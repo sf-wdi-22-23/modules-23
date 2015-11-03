@@ -12,21 +12,30 @@ By the end of lesson, students will be able to...
 
 Let's create a new Hash
 
-* Hashes are simple key value stores.
+* Hashes are simple key/value stores.
 
 **Challenge:**
 How can I organize my data using key/value pairs in Ruby? Like so:
 
 ```ruby
+# hash rocket notation
 {:name=>"Napoleon", :fav_food=>"steak", :skills=>["archery", "combat", "egg farming"]}
+# symbol notation
+{name: "James Bond", fav_food: "Vodka Martini",
+skills: ["hand to hand combat", "marksmanship", "espionage"]}
 ```
 
 ##Objects (10m)
 
-* Everything in Ruby is an Object; however, we almost never use plain vanilla Objects because there are more sophisticated implementations of them such a `String`, `Integer`, and `Hash`.
+- Everything in Ruby is an Object; however, we almost never use plain vanilla Objects because there are more sophisticated implementations of them such a `String`, `Array`, `Integer`, and `Hash`.
+
+- Different objects provide different types of functionality for storing data and performing behaviors. However, for more complex applications, classes (a certain kind of object) are used to model real-world interactions.
 
 **Challenge:**
 How can we prove that the Hash we just created inherited from `Basic Object`?
+
+*Hint:* use the #is_a? method
+
 
 ###Class Inheritance Tree
 
@@ -130,6 +139,8 @@ How can I create both `Car` and `Motorbike` classes while being DRY and not dupl
 
 ## Exercise: Characters and Superheroes
 
+Previously you worked with using inheritance to create some `Animal` and `People` classes. This exercise will review those concepts, using the `Character` and `Superhero` classes.
+
 Superheroes are still Characters after all. In this exercise, you'll define:
 
   1. An `Character` class, with the following:
@@ -141,7 +152,7 @@ Superheroes are still Characters after all. In this exercise, you'll define:
 
   2. A `Superhero` class, with the following characteristics:
     * Inherits from `Character`
-    * Automatically sets `@alignment` to `"Good"`
+    * Automatically sets `@alignment` to `"good"`
     * Adds 3 new instance vars:
       * species
       * charisma
@@ -152,3 +163,14 @@ Superheroes are still Characters after all. In this exercise, you'll define:
 
 * Sometimes superheroes must reveal who they are to the public. Add an instance method called `reveal` that prints out a superhero's name and the secret identity they used in the following format: "I am Green Arrow. But you know me better as Oliver Queen." (Hint: look up how to interpolate strings in Ruby)
  * Add a `class variable` called `count` that keeps track of all the superheroes you create.
+
+ **Stretch** (no solution)
+
+ Create a `Fruit` class that has an attribute of `kind`, a string, and `diameter`, a random integer between 1 and 5.
+
+ Create a `Tree` class that has the attribute `fruits`, which is an array, the attribute `age`, which starts at 0, and the attribute `dead`, which should be a boolean.
+
+ - `Tree#dead?` should print a message about the age of the tree or a message that the tree is dead based on the value of `dead` attribute.
+ - `Tree#age!` should change the tree's `dead` attribute if the tree is over a certain age, and return the message from `Tree#dead` if the tree is dead.
+ - `Tree#age!` should increment the tree's age by 1 (if the tree is alive).
+ - `Tree#age!` should add a random number of Fruit instances to the tree's `fruits` array (if the tree is alive).
