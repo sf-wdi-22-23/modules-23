@@ -70,6 +70,7 @@ def binary_string_search(array, search_string)
   end
 
   sorted_strings = capitalized_strings.sort
+  p sorted_strings
 
   # declare variables for low and high positions
   low_index = 0
@@ -78,9 +79,12 @@ def binary_string_search(array, search_string)
 
   # while the low is less than the high
   while low_index <= high_index do
+    # sleep(1.0)
 
     return mid_index if search_string == sorted_strings[mid_index]
 
+    puts "sorted_strings are: #{sorted_strings}"
+    puts "Target is #{search_string}"
     puts "#{low_index} #{mid_index} #{high_index}"
     puts "#{sorted_strings[low_index]} #{sorted_strings[mid_index]} #{sorted_strings[high_index]}"
 
@@ -108,3 +112,13 @@ p binary_search_recursive(even_array, 37)
 
 months = ["Jan", "Feb", "mar", "Apr", "May", "Jun", "jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 p binary_string_search(months, "May")
+#=> sorted_strings = ["Apr", "Aug", "Dec", "Feb", "Jan", "Jul", "Jun", "Mar", "May", "Nov", "Oct", "Sept"]
+#=> 8
+
+wdi_combined_enrollment = ["Angelo", "dani", "Jennifer", "Mikey", "Sam", "Laura e.", "Chris", "Margaux", "uriel", "Josh", "Francesca", "racha", "Brian", "Jamey", "Laura B.", "Riley", "Matt", "Ling", "Annie", "John", "Meredith", "Breana", "Randee", "michael", "Brendan", "vince", "Emily A.", "Jeehye", "Emily k.", "jorge", "Eric", "Natasha", "Scot", "Zain", "Isom", "Noel", "Roy"]
+p binary_string_search(wdi_combined_enrollment, "Angelo")
+#=> 0
+# Note: not working
+# p binary_string_search(wdi_combined_enrollment, "Zain")
+#=> 36
+p binary_string_search(wdi_combined_enrollment, "Mikey")
