@@ -15,7 +15,7 @@ Concepts:
 
 **PROJECT 1 Review**
 
-1. Describe briefly what workflow process you actually did for Project 1. Feel free to reference your Project 1 code and materials. Feel free to break up your description by day.
+1. Write a brief step by step of what workflow process you ended up doing for Project 1. For example, maybe you wrote user narratives first, then drew a schema drawing, and then started templating. Feel free to reference your Project 1 code and materials and break up your answer by day.
 1. Write what workflow do you wish you had done and what will your workflow look like in future projects?
 1. Recall a problem you had or are having with your project 1 and write a sample stackoverflow.com question. Remember to include
   1. What you're trying to accomplish
