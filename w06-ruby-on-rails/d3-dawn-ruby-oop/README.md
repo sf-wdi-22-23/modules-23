@@ -128,27 +128,27 @@ end
 **Challenge:**
 How can I create both `Car` and `Motorbike` classes while being DRY and not duplicating the method `accelerate` in each?
 
-## Exercise: The Animal Kingdom
+## Exercise: Characters and Superheroes
 
-Humans are still animals after all. In this exercise, you'll define:
+Superheroes are still Characters after all. In this exercise, you'll define:
 
-  1. An `Animal` class, with the following:
+  1. An `Character` class, with the following:
     * Properties:
-      * `kind`: A string that holds the type of animal
+      * `name`: A string that holds the character's name
     * Instance Methods:
-      * `eat`: Takes a parameter `food` to eat and prints out a message that the animal is eating `food`
-      * `sleep` & `wake`: These two methods should NOT be passed any arguments. Instead, they will set an instance variable `@state` to the string `"asleep"` or `"awake"` respectively.
+      * `location`: Takes a parameter `origin` prints out a message telling the character's `name` and where they are from (their `origin`)
+      * `exercise` & `rest`: These two methods should NOT be passed any arguments. Instead, they will set an instance variable `@state` to the string `"ready"` or `"tired"` respectively.
 
-  2. A `Person` class, with the following characteristics:
-    * Inherits from `Animal`
-    * Automatically sets `@type` to `"person"`
+  2. A `Superhero` class, with the following characteristics:
+    * Inherits from `Character`
+    * Automatically sets `@alignment` to `"Good"`
     * Adds 3 new instance vars:
-      * age
-      * gender
-      * name
-    - Also, people aren't cannibals! Make sure your `Person` class *overrides* the existing `eat` method (in `Animal`) so that a `Person` cannot eat a `"person"`
+      * species
+      * charisma
+      * secret_identity
+    - Superheroes must keep their identities secret! Make sure your `Superhero` class *overrides* the existing `greet` method (in `Character`) so that a `Superhero` doesn't reveal their true `"name"`
 
 **BONUS:**
 
-* People can speak, and it's good to be polite. Add an instance method called `greet` that prints out a person's name, age, and gender in the following format: "Hi, I'm Teddy. I'm a person, and I'm 156 years old." (Hint: look up how to interpolate strings in Ruby)
- * Add a `class variable` that keeps track of all the people you create.
+* Sometimes superheroes must reveal who they are to the public. Add an instance method called `reveal` that prints out a superhero's name and the secret identity they used in the following format: "I am Green Arrow. But you know me better as Oliver Queen." (Hint: look up how to interpolate strings in Ruby)
+ * Add a `class variable` called `count` that keeps track of all the superheroes you create.
