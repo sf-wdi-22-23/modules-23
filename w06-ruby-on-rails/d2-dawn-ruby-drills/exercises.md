@@ -4,10 +4,11 @@ Gems in Ruby are a lot like node modules. Say you want to use a gem like "Awesom
 
 1. First install the gem on your computer: ```$ gem install awesome_print```
 2. Now just require it at the top of your file or in irb and then use it according to its documentation.
+
   ```ruby
-  require 'awesome_print'
-  a = ["value1", "value2", "value3"]
-  ap a
+    require 'awesome_print'
+    a = ["value1", "value2", "value3"]
+    ap a
   ```
 [Ruby Toolbox](https://www.ruby-toolbox.com/)
 
