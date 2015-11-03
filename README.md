@@ -327,14 +327,14 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  <tr>
    <td>Drills</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review</a> (Juliana)</td>
-   <td>Regex Drills (Travis)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d2-drills">Regex Drills</a> (Travis)</td>
    <td>Ruby Binary Search (Matt)</td>
    <td>Ruby Bubble Sort (Matt)</td>
    <td>Rails Drills (Braus)</td>
  </tr>
  <tr>
    <td>Module1</td>
-   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review (Juliana)</a></td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review </a>(Juliana)</td>
    <td>Ruby Method Drills (Braus)</td>
    <td>Ruby OOP (Matt)</td>
    <td>Intro Rails Framework (Matt)</td>
