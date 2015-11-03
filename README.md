@@ -346,7 +346,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="https://github.com/sf-wdi-22-23/username_generator">Username Generator Lab</a> (Juliana)</td>
    <td>OOP Lab (Braus)</td>
    <td>Intro Active Record (Juliana)</td>
-   <td>Bog App (Braus)</td>
+   <td></td>
  </tr>
  <tr>
    <td>HW</td>
@@ -354,7 +354,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td>OOP Reading (Alex)</td>
    <td>Intro Rails Reading (Brianna)</td>
    <td>Rails Guides & Rails for Zombies (Ben)</td>
-   <td>Rails Checklist (Juliana)</td>
+   <td>Bog App (Braus) & Rails Checklist (Juliana)</td>
 </tr>
 </table>
 
