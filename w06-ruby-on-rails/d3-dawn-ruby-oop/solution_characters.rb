@@ -50,11 +50,11 @@ class Superhero < Character
     puts "I'm #{secret_identity}. Nice to meet you."
   end
 
-  def persuade(other_character)
-    if charisma > other_character.charisma
-      puts "#{name} convinced #{other_character.name} to see reason."
+  def persuade(other_superhero)
+    if charisma > other_superhero.charisma
+      puts "#{name} convinced #{other_superhero.name} to see reason."
     else
-      puts "#{name} couldn't change #{other_character.name}'s mind."
+      puts "#{name} couldn't change #{other_superhero.name}'s mind."
     end
   end
 

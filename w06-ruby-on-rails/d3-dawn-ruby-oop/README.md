@@ -175,7 +175,7 @@ Superheroes are still Characters after all. In this exercise, you'll define:
     * initializes using `super`, passing `name` as an argument
     - Adds 2 new methods:
       - `persuade`, which
-        - takes another character as an argument
+        - takes another instance of the `Superhero` class as an argument
         - compares charisma of the character using the method to the character passed to the method as an argument *Hint: use if / else*
         - prints a message stating whether the character calling the method was able to persuade the other character or not
       - `study_rhetoric`, which increments `charisma` and optionally prints a message about the character's new charisma level
