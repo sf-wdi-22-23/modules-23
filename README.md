@@ -396,7 +396,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Breakout 1A (Classroom 1) 1:30-2:30</td>
     <td>Authentication <a href="https://github.com/sf-wdi-22-23/login-logout" target="_blank">Login/Logout</a> (Brianna)</td>
-    <td>git and GitHub (Travis)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/git_intro">git and GitHub</a> (Travis)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w05-project-1/error-handling-and-validation.md" target="_blank">Error Handling and Validation</a> (Braus)</td>
   <td><a href="https://github.com/sf-wdi-22-23/material-design-example">Material Design</a> (Juliana)</td>
     <td>Project 1 Celebration</td>
