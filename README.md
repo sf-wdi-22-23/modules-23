@@ -352,8 +352,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td>HW</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-homework"> Ruby Koans</a> (Matt)</td>
    <td><a href="w06-ruby-on-rails/d2-homework/readme.md">OOP Reading (Alex)</a></td>
-   <td>Intro Rails Reading (Brianna)</td>
-   <td>Rails Guides & Rails for Zombies (Ben)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-homework" target="_blank">Intro Rails Guide</a> (Brianna)</td>
+   <td>Rails for Zombies (Ben)</td>
    <td>Bog App (Braus) & Rails Checklist (Juliana)</td>
 </tr>
 </table>
