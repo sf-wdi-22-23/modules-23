@@ -20,6 +20,17 @@ How can I organize my data using key/value pairs in Ruby? Like so:
 ```ruby
 # hash rocket notation
 {:name=>"Napoleon", :fav_food=>"steak", :skills=>["archery", "combat", "egg farming"]}
+
+# can use anything as a key with hash rocket notation, but probably should not
+x = { ["foo"] => "bar" }
+{ [ "foo" ] => "bar" }
+x[["foo"]]
+#=> "bar"
+x = { {nice: "test"}  => "bar" }
+{ { :nice => "test" } => "bar" }
+x[{nice: "test" }]
+#{=> }"bar"
+
 # symbol notation
 {name: "James Bond", fav_food: "Vodka Martini",
 skills: ["hand to hand combat", "marksmanship", "espionage"]}
@@ -143,7 +154,7 @@ Previously you worked with using inheritance to create some `Animal` and `People
 
 Superheroes are still Characters after all. In this exercise, you'll define:
 
-  1. An `Character` class, with the following:
+  1. A `Character` class, with the following:
     * Attributes (instance variables defined in initialize method):
       * `name`: A string that holds the character's name
     * Instance Methods:
