@@ -28,7 +28,9 @@ while low_index <= high_index do
 
     puts "#{low_index} #{mid_index} #{high_index}"
 
-    if target > array[mid_index]
+    if low_index == mid_index
+      return high_index
+    elsif target > array[mid_index]
       # move lower bound up to mid, recalculate new mid
       low_index = mid_index
       # set the high halfway between
