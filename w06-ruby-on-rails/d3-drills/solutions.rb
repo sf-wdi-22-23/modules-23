@@ -65,8 +65,11 @@ p binary_search_recursive(numbers, target)
 #=> 4
 
 def binary_string_search(array, search_string)
+  # creating a new array from the input array
+  # the new array properly capitalized names
   capitalized_strings = array.map do |string|
-    string.downcase; string.capitalize
+    string.downcase
+    string.capitalize
   end
 
   sorted_strings = capitalized_strings.sort
@@ -79,8 +82,8 @@ def binary_string_search(array, search_string)
 
   # while the low is less than the high
   while low_index <= high_index do
-    # sleep(1.0)
-
+    sleep(1.0)
+    p search_string, sorted_strings[mid_index]
     return mid_index if search_string == sorted_strings[mid_index]
 
     puts "sorted_strings are: #{sorted_strings}"
@@ -88,10 +91,12 @@ def binary_string_search(array, search_string)
     puts "#{low_index} #{mid_index} #{high_index}"
     puts "#{sorted_strings[low_index]} #{sorted_strings[mid_index]} #{sorted_strings[high_index]}"
 
-    if search_string > sorted_strings[mid_index]
+    if low_index == mid_index
+      return high_index
+    elsif search_string > sorted_strings[mid_index]
       # move lower bound up to mid, recalculate new mid
       low_index = mid_index
-      # set the high halfway between
+      # set the mid halfway between
       mid_index = (low_index + high_index) / 2
     elsif search_string < sorted_strings[mid_index]
       # move upper bound to mid, recalculate new mid
@@ -118,7 +123,7 @@ p binary_string_search(months, "May")
 wdi_combined_enrollment = ["Angelo", "dani", "Jennifer", "Mikey", "Sam", "Laura e.", "Chris", "Margaux", "uriel", "Josh", "Francesca", "racha", "Brian", "Jamey", "Laura B.", "Riley", "Matt", "Ling", "Annie", "John", "Meredith", "Breana", "Randee", "michael", "Brendan", "vince", "Emily A.", "Jeehye", "Emily k.", "jorge", "Eric", "Natasha", "Scot", "Zain", "Isom", "Noel", "Roy"]
 p binary_string_search(wdi_combined_enrollment, "Angelo")
 #=> 0
-# Note: not working
-# p binary_string_search(wdi_combined_enrollment, "Zain")
+p binary_string_search(wdi_combined_enrollment, "Zain")
 #=> 36
 p binary_string_search(wdi_combined_enrollment, "Mikey")
+#=> 25

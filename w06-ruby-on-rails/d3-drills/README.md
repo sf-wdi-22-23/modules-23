@@ -27,8 +27,8 @@ mid = (low + high) / 2)
 If the target value is equal to the middle element's value, then the position is returned and the search is finished.
 
 ```ruby
-array[mid] === target
-#=> 5 === 1
+array[mid] == target
+#=> 5 == 1
 #=> false
 ```
 
