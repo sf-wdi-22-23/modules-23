@@ -65,8 +65,11 @@ After this real-life demo, students will:
 **Stretch**
 
 1. Implement a recursive solution (instead of iterative).
+
 1. Implement a solution for an array of names (strings).
+
 <!-- 1. Refactor the string search to alphabetize and capitalize first and last initials
+
 1. Implement a solution that handles non-unique data sets. ```// no solution provided``` -->
 
 
