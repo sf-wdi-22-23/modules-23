@@ -144,19 +144,25 @@ Previously you worked with using inheritance to create some `Animal` and `People
 Superheroes are still Characters after all. In this exercise, you'll define:
 
   1. An `Character` class, with the following:
-    * Properties:
+    * Attributes (instance variables defined in initialize method):
       * `name`: A string that holds the character's name
     * Instance Methods:
       * `location`: Takes a parameter `origin` prints out a message telling the character's `name` and where they are from (their `origin`)
       * `exercise` & `rest`: These two methods should NOT be passed any arguments. Instead, they will set an instance variable `@state` to the string `"ready"` or `"tired"` respectively.
+    - *Note:* What type of `attr` method will be needed to `read` the name and state variables?
 
   2. A `Superhero` class, with the following characteristics:
     * Inherits from `Character`
-    * Automatically sets `@alignment` to `"good"`
-    * Adds 3 new instance vars:
-      * species
-      * charisma
-      * secret_identity
+    * Adds 2 new instance variables (which initialize takes as arguments):
+      * `charisma`
+      * `secret_identity`
+    * initializes using `super`, passing name as an argument
+    - Adds 2 new methods:
+      - `persuade`, which
+        - takes another character as an argument
+        - compares charisma of the character using the method to the character passed to the method as an argument *Hint: use if / else*
+        - prints a message stating whether the character calling the method was able to persuade the other character or not
+      - `study_rhetoric`, which increments `charisma` and optionally prints a message about the character's new charisma level
     - Superheroes must keep their identities secret! Make sure your `Superhero` class *overrides* the existing `greet` method (in `Character`) so that a `Superhero` doesn't reveal their true `"name"`
 
 **BONUS:**
