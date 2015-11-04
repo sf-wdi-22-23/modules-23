@@ -156,7 +156,7 @@ Superheroes are still Characters after all. In this exercise, you'll define:
     * Adds 2 new instance variables (which initialize takes as arguments):
       * `charisma`
       * `secret_identity`
-    * initializes using `super`, passing name as an argument
+    * initializes using `super`, passing `name` as an argument
     - Adds 2 new methods:
       - `persuade`, which
         - takes another character as an argument
@@ -172,11 +172,14 @@ Superheroes are still Characters after all. In this exercise, you'll define:
 
  **Stretch** (no solution)
 
- Create a `Fruit` class that has an attribute of `kind`, a string, and `diameter`, a random integer between 1 and 5.
+ Create a `Lollipop` class that has an attribute of  `diameter`, a random integer between 1 and 5.
 
- Create a `Tree` class that has the attribute `fruits`, which is an array, the attribute `age`, which starts at 0, and the attribute `dead`, which should be a boolean.
+ Create a `Tree` class that has the attribute `fruits`, which is an array, the attribute `age!`, which starts at 0, and the attribute `dead`, which should be a boolean.
 
  - `Tree#dead?` should print a message about the age of the tree or a message that the tree is dead based on the value of `dead` attribute.
- - `Tree#age!` should change the tree's `dead` attribute if the tree is over a certain age, and return the message from `Tree#dead` if the tree is dead.
- - `Tree#age!` should increment the tree's age by 1 (if the tree is alive).
- - `Tree#age!` should add a random number of Fruit instances to the tree's `fruits` array (if the tree is alive).
+ - `Tree#bloom` should initialize a random number of Lollipops (with random diameters) and add them to the tree's `fruits` array
+ - `Tree#age!` should
+    - change the tree's `dead` attribute to `true` if the tree is over a certain age
+    - print a message about the tree being dead based on `Tree#dead?`
+ - `Tree#age!` should increment the tree's age by 1 (if the tree is alive) and optionally print the tree's `age`.
+ - `Tree#age!` should invoke the `bloom method`.
