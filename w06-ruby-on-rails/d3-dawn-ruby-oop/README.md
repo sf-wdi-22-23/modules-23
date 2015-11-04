@@ -48,7 +48,7 @@ agent[:skills] #=> ["hand to hand combat", "marksmanship", "espionage"]
 **Challenge:**
 How can we prove that the Hash we just created inherited from `Basic Object`?
 
-*Hint:* use the #is_a? method
+*Hint:* use the `#is_a?` method
 
 
 ###Class Inheritance Tree
@@ -85,7 +85,9 @@ fiat.color
 ##Methods (10m)
 
 **Challenge:**
-How would we create an instance method for Car named `color?`, which tests whether the color matches what is passed in?
+How would we create an instance method `color?` for our `Car` class instances, which tests whether the color matches what is passed in?
+
+**Note:** Methods ending in `?` are conventionally used to denote that they return a boolean value. [Source](https://github.com/bbatsov/ruby-style-guide#naming)
 
 ```ruby
 alpha = Car.new
@@ -101,7 +103,7 @@ alpha.color?("orange")
 ##Initialization & Instance Variables (10m)
 
 **Challenge:**
-What If I want to set the color of the car at the moment I'm creating it? How could I enable code like this?
+What if I want to set the color of the car at the moment I'm creating it? How could I enable code like this?
 
 ```ruby
 lambo = Car.new("red")
