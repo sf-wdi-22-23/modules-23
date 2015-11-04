@@ -19,17 +19,11 @@ How can I organize my data using key/value pairs in Ruby? Like so:
 
 ```ruby
 # hash rocket notation
-{:name=>"Napoleon", :fav_food=>"steak", :skills=>["archery", "combat", "egg farming"]}
-
-# can use anything as a key with hash rocket notation, but probably should not
-x = { ["foo"] => "bar" }
-{ [ "foo" ] => "bar" }
-x[["foo"]]
-#=> "bar"
-x = { {nice: "test"}  => "bar" }
-{ { :nice => "test" } => "bar" }
-x[{nice: "test" }]
-#{=> }"bar"
+hash = {"name"=>"Napoleon", "fav_food"=>"steak", "skills"=>["archery", "combat", "egg farming"]}
+hash["name"] #=> "Napoleon"
+hash['skills'].first #=> "archery"
+test =  { 0 => "Zero", 1 => "One", 2 => "Two" }
+test[0] #=> "Zero"
 
 # symbol notation
 {name: "James Bond", fav_food: "Vodka Martini",
