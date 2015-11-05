@@ -32,16 +32,15 @@ git commit -m "inital commit, rails skeleton"
 subl .
 ```
 
-#### 2. Create a `Talk` model
-Our `Talk` model will have two attributes: a topic and a duration, both strings.
+#### 2. Create a `Speaker` model
+Our `Speaker` model will have two attributes: a topic and a duration, both strings.
 ``` bash
-rails g model talk topic:string duration:integer
-git diff # take a look at the files you just created!
+rails g model speaker first_name:string last_name:string email:string
 ```
 
-And take a look at the following files:  
-* `app/models/talk.rb`
-* `db/migrate/1234566789_create_talks.rb`
+Take a look at the files you just created:  
+* `app/models/speaker.rb`
+* `db/migrate/1234566789_create_speakers.rb`
 
 #### 3. Setup your database
 Download and Launch [Postgres.app](http://postgresapp.com/). You should see an elephant in your menu if it's running. [Postico](https://eggerapps.at/postico/), a Postgres GUI, is a helpful tool for visualizing your database.
@@ -52,7 +51,7 @@ rake db:create # create a new database on your machine
 rake db:migrate # instruct your database what tables it needs to contain
 ```
 
-#### 4. Launch the rails console and create your first talk!
+#### 4. Launch the rails console and create your first speaker!
 ```bash
 rails console
 # or
@@ -61,8 +60,8 @@ rails c
 
 **Confirm that your model exists**  
 ```ruby
-Talk
- #=> Talk(id: integer, topic: string, duration: integer, created_at: datetime, updated_at: datetime)
+Speaker
+ #=> Speaker(id: integer, first_name: string, last_name: string, email: string, created_at: datetime, updated_at: datetime)
 ```
 
 (You may need to "connect" to your database in the rails console. Just follow the instructions.)
@@ -70,9 +69,9 @@ Talk
 #### 5. Can you seed your database?
 Take a look at `db/seed.rb`.
 
-Add the following line:
+Add the following line to `db/seed.rb`:
 ```ruby
-Talk.create({topic: "Playing with Models in the Rails Console", duration: 45})
+Speaker.create({first_name: "Juliana", last_name: "Lopker" email: "juliana_lopker@generalassemb.ly"})
 ```
 
 Now run the following from your command line (not the console!):
@@ -82,26 +81,26 @@ rake db:seed
 
 The `seed.rb` file is magic, because it _already_ knows about all of the models and gems in your rails app. All you have to do is tell it what data to create!
 
-Now, back in the rails console, type `Talk.all`. Does it show the new talk you just created?
+Now, back in the rails console, type `Speaker.all`. Does it show the new speaker you just created?
 
 
 #### Exercises ([Active Record docs](http://guides.rubyonrails.org/active_record_basics.html) will help)
-Seed your database with at least 3 talks using the FFaker gem. HINT: add `gem ffaker` to your `GEMFILE`. [ffaker documentation](https://github.com/ffaker/ffaker/blob/master/REFERENCE.md)
+Seed your database with at least 3 speakers using the FFaker gem. HINT: add `gem ffaker` to your `GEMFILE`. [ffaker documentation](https://github.com/ffaker/ffaker/blob/master/REFERENCE.md)
 
 Using the rails console:
-1. Delete a talk
-1. Find the first talk
-1. Find the last talk
+1. Delete a speaker
+1. Find the first speaker
+1. Find the last speaker
 1. Search by id
-1. Search by topic
-1. Sort by topic
-1. Update the topic of a talk
-1. Delete all the talks you created.
+1. Search by first name
+1. Sort by last name
+1. Update the email of a speaker
+1. Delete all the speakers you created.
 
 
 #### Stretch Exercises
-1. 1. Add a location column to the Talk table that will display the location of a given talk and update the database. HINT: `rails g migration AddLocationToTalks speaker:string`
-1. In terminal, create a Speaker model with attributes `first_name`, `last_name`, and `email`.
+1. Add a phone column to the Speaker table that will display the location of a given speaker and update the database. HINT: `rails g migration AddPhoneToSpeakers phone:string` and then don't forget to migrate!
+1. In terminal, create a Talk model with attributes `topic` and `duration`.
 1. Create a has many relationship between Speakers and Talks.
 
 

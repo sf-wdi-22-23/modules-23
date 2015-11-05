@@ -13,18 +13,19 @@
 ```ruby
 # seed database
 10.times do
-  Talk.create({
-    topic: FFaker::Company.catch_phrase,
-    duration: rand(1..6)*15
+  Speaker.create({
+    first_name: FFaker::Name.first_name,
+    last_name: FFaker::Name.last_name,
+    email: FFaker::Internet.free_email
   })
 end
 ```
 
-1. `Talk.delete(1)`
-1. `Talk.first`
-1. `Talk.last`
-1. `Talk.find_by(id:2)`
-1. `Talk.find_by(topic: 'This is the topic')`
-1. `Talk.order(:topic)`
-1. `Talk.find_by(id:2).update(topic: 'This is the new topic.')`
-1. `Talk.destroy_all`
+1. `Speaker.delete(1)`
+1. `Speaker.first`
+1. `Speaker.last`
+1. `Speaker.find_by(id:2)`
+1. `Speaker.find_by(first_name: 'Juliana')`
+1. `Speaker.order(:last_name)`
+1. `Speaker.find_by(id:2).update(email: 'new@email.com')`
+1. `Speaker.destroy_all`
