@@ -329,7 +329,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review</a> (Juliana)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d2-drills">Regex Drills</a> (Travis)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-drills">Ruby Binary Search</a> (Matt)</td>
-   <td>Ruby Bubble Sort (Matt)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-drills">Ruby Bubble Sort</a> (Matt)</td>
    <td>Rails Drills (Braus)</td>
  </tr>
  <tr>
@@ -337,7 +337,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dawn-peer-review">Peer Review </a>(Juliana)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d2-dawn-ruby-drills">Ruby Method Drills</a> (Braus)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-dawn-ruby-oop">Ruby OOP</a> (Matt)</td>
-   <td>Intro Rails Framework (Matt)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-dawn-intro-rails">Intro Rails Framework</a> (Matt)</td>
    <td>Review (Braus)</td>
  </tr>
  <tr>
