@@ -72,7 +72,7 @@ Take a look at `db/seed.rb`.
 
 Add the following line:
 ```ruby
-Talk.create({topic: "Playing with Models in the Rails Console"})
+Talk.create({topic: "Playing with Models in the Rails Console", duration: 45})
 ```
 
 Now run the following from your command line (not the console!):
@@ -98,7 +98,9 @@ Using the rails console:
 1. Update the topic of a talk
 1. Delete all the talks you created.
 
+
 #### Stretch Exercises
+1. 1. Add a location column to the Talk table that will display the location of a given talk and update the database. HINT: `rails g migration AddLocationToTalks speaker:string`
 1. In terminal, create a Speaker model with attributes `first_name`, `last_name`, and `email`.
 1. Create a has many relationship between Speakers and Talks.
 
