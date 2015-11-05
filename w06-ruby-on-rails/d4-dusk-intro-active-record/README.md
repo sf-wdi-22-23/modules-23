@@ -98,8 +98,7 @@ Using the rails console:
 
 #### Stretch Exercises
 1. Add a phone column to the Speaker table that will display the location of a given speaker and update the database. HINT: `rails g migration AddPhoneToSpeakers phone:string` and then don't forget to migrate!
-1. In terminal, create a Talk model with attributes `topic` and `duration`.
-1. Create a has many relationship between Speakers and Talks.
+1. Create a `Speaker` controller with an associated route and view. Display your speakers on your view. Remember to use instance variables! 
 
 
 **Pro-Tip**: Remember, when you're working in the console/repl `up-arrow` is your friend! (That and "hanging a dot" + "double-tabbing").
