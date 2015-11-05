@@ -12,7 +12,7 @@ In this lab you will learn how to create seed data and use ActiveRecord, the Rai
 #### Think, Pair, Share
 Convert these English statements into queries. Consult the [Rails docs](http://guides.rubyonrails.org/active_record_querying.html) as needed.
 
-1. Give me the all users with the last name "Hendrickson".
+1. Give me all the users with the last name "Hendrickson".
 
 2. Give me all the articles with ids from 54 to 67.
 
