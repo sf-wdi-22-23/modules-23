@@ -18,8 +18,8 @@ pry
 ```
 
 ```ruby
-pry > require "bubble_sort.rb"
-pry > bubble_sort([3,2,1])
+pry > require "./bubble_sort.rb"
+pry > bubble_sort([3,2,1])  # => when we start this returns nil
 ```
 
 **Using Rspec Tests**:   
@@ -35,13 +35,13 @@ rspec -e "handles zero"
 # Bubble Sort Refresher
 Pre-work: [First, some Hungarian ("Csángó") folk dance](https://www.youtube.com/watch?v=lyZQPjUT5B4)
 
-Bubble sort is one of the first sorting algorithms you should try and master.  It essentially forces larger elements to 'sink' to the bottom/back while inadvertently 'floating' smaller elements to the top/front of a list.  This is done with numerous comparisons between one element in an array with its neighbor.  
+Bubble sort is one of the first sorting algorithms you should try and master.  It essentially forces larger elements to 'sink' to the bottom/back while inadvertently 'floating' smaller elements to the top/front of a list.  This is done with numerous comparisons between one element in an array and its neighbor.  
 
 ###Sort the list using Bubble Sort: [5,4,2,3,1,6]
 
 ####Iteration 1
 Look at the first two elements in the list.
-    
+
 0: [**5, 4**,2,3,1,6]  
 
 Is 5 > 4 ? Yes! Swap!
@@ -72,13 +72,13 @@ If an element on the left (5) is greater than the element on the right (4), the 
 
 Stop!
 
-Remember: we know that last element is the largest number in the list.  There is no need to compare against that number ever again.  We also now know that the **second** to last number is the second largest number; no need to move that one ever again as well. (Detect a trend?)
+Remember: we know that the last element is the largest number in the list.  There is no need to compare against that number ever again.  We also now know that the **second** to last number is the second-largest number; no need to move that one ever again as well. (Detect a trend?)
 
 ###Iteration 3
 
 0: [**2,3**,1,4,~~5,6~~]  
 
-If an element on the left has met a larger or equal element, we look at its bigger neighbor and now compare the larger neighbor to it's neighbor on the right.  The process is continued until our established end.
+If an element on the left has met a larger or equal element, we look at its bigger neighbor and now compare the larger neighbor to it's neighbor on the right.  The process is continued until we reach this iteration's established end.
 
 1: [2,**3,1**,4,~~5,6~~]
 
@@ -86,7 +86,7 @@ If an element on the left has met a larger or equal element, we look at its bigg
 
 Stop!
 
-We don't stop sorting until we hit the end.  Even if we find 
+We don't stop sorting until we hit this iteration's established end.
 
 ###Iteration 4
 
