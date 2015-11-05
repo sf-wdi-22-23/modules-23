@@ -2,7 +2,7 @@
 
 Rails was created in 2003 by David Heinemeier Hansson, while working on the code base for Basecamp, a project management tool by 37signals. David extracted Ruby on Rails and officially released it as open source code in July of 2004.
 
-Rails was created with the goal of increasing programmers' happiness and productivity levels. In short, with Rails you can get started with a full-stack web application by quickly creating pages, templates and even query functions. Even though Rails comes with its own set of tools and settings, you're certainly not limited to library of rails commands and configurations. Developers are free to configure their applications however they wish, though adopting conventions is certainly recommended.
+Rails was created with the goal of increasing programmers' happiness and productivity levels. In short, with Rails you can get started with a full-stack web application by quickly creating pages, templates and even query functions. Even though Rails comes with its own set of tools and settings, you're certainly not limited to the included library of rails commands and configurations. Developers are free to configure their applications however they wish, though adopting conventions is certainly recommended.
 
 ## [Understanding Rails Guiding Principles](http://railsapps.github.io/what-is-ruby-rails.html)
 The popularity of Rails is an outgrowth of the Rails “philosophy” or guiding principles.

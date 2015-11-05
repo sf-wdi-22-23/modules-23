@@ -18,7 +18,7 @@ Rails values...
 
 ### Separation of Concerns
 
-In writing a large application it is important to establish something known as **Separation of Concerns**, *writing modular code that focuses on one aspect within the application.* The benefit of this is similar to idea of **compartmentalization** with respect to a production line, which allows for *more rapid development* by being able to **divide and conquer** the construction of a product.
+In writing a large application it is important to establish something known as **Separation of Concerns**, *writing modular code that focuses on one aspect within the application.* The benefit of this is similar to the idea of **compartmentalization** with respect to a production line, which allows for *more rapid development* by being able to **divide and conquer** the construction of a product.
 
 ## MVC (15m)
 
@@ -33,7 +33,16 @@ Rails uses an __MVC__ architecture
 ![MVC Diagram](http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png)
 
 ## Railstaurant Metaphor (10m)
-The **client** is a customer eating in the restaurant, **Rails** is the kitchen, the **request** is the order made, the **router** is the waiter, the **controller** is a chef, the **model** is a recipe, the **database** is the giant walk-in refrigerator with ingredients, the **view** is plating the dish to look pretty, the **response** with a file is a waiter finally serving the dish to the customer.
+
+- the **client** is a customer eating in the restaurant
+- **Rails** is the kitchen
+- the **request** from the client is the order made
+- the **router** is the waiter
+- the **controller** is a chef
+- the **model** is a recipe
+- the **database** is the giant walk-in refrigerator with ingredients
+- the **view** is plating the dish to look pretty
+- the **response** with a file is a waiter finally serving the dish to the customer
 
 ## Setup (10m)
 
@@ -53,7 +62,7 @@ Bundler is a separate gem from Rails, and can be used outside of
 Rails, but Rails is going to depend on it to manage the RubyGems that the application needs. The first thing that you need to know is that there are two files that matter to bundler: `Gemfile` and `Gemfile.lock`. Gemfile contains configuration information about what
 gems are part of our project, it is similar to the `package.json` file in Node.
 
-Bundler looks at the `Gemfile` loading all the included gems in addition to each's dependencies. It then generates a manifest file that is stored in Gemfile.lock. **Never** edit Gemfile.lock!
+Bundler looks at the `Gemfile` and then loads all the listed gems and their dependencies. It then generates a manifest file that is stored in Gemfile.lock. **Never** edit Gemfile.lock!
 
 So how do you tell Bundler to take your `Gemfile` and turn it into `Gemfile.lock`? Run: `bundle install`. When we create a Rails application it will run this command for us unless we specify otherwise.
 
@@ -62,9 +71,11 @@ So how do you tell Bundler to take your `Gemfile` and turn it into `Gemfile.lock
 - Create a new Rails app with `rails new railsFun --skip-activerecord`
     - the last flag tells the application to not use `activerecord`
     - `activerecord` is our ORM that manages our Models and our database, we'll learn more about it this afternoon
-- `cd` into your `railsFun` folder and run
+- `cd` into your `railsFun` folder
 - run `rails server` or just `rails s` and see what happens
 - This will start a server on `localhost:3000` head there and see what it says...
+
+**Note:** `rails server` works similarly to `nodemon` in that it updates the application without needing to be stopped and restarted (with the exception of a few things, like changing the `Gemfile`). Feel free to keep your `rails server` running in one Terminal tab and open another for your Git / Bash work.
 
 ## Rails File Structure (10m)
 
@@ -72,14 +83,14 @@ So how do you tell Bundler to take your `Gemfile` and turn it into `Gemfile.lock
 
 ## Routing (10m)
 
-In `routes.rb` we write logic to map our paths to controllers we will make. See the image below for how the controller actions match up with their respective url paths and HTTP verbs (which combine to define a route).
+In `config/routes.rb` we write logic to map our paths to controllers we will make. See the image below for how the controller actions match up with their respective url paths and HTTP verbs (which combine to define a route).
 
 ![Rails Routing](./restful-routing-rails.png)
 
 Let's say when a user sends a `GET` request to the root route, `/`, we want the `WelcomeController`'s `index` method to run. In order to do that we could write:
 
 
-`route.rb`
+`config/routes.rb`
 
 ```ruby
 get "/" => "welcome#index"`
@@ -90,13 +101,13 @@ Try saving the file and heading to your root route. What error do you get?
 
 ## Controllers (10m)
 
-If you did the last step correctly, you should see an error message: `*uninitialized constant WelcomeController*`. This means that we need to create a controller with the name `welcome` as that is where we told our route to go in the first place!
+If you did the last step correctly, you should see an error message: *`uninitialized constant WelcomeController`*. This means that we need to create a controller with the name `welcome` as that is where we told our route to go in the first place!
 
 - Run: `rails generate controller welcome`
 
 This will generate a file in the Controllers directory called `welcome_controller.rb`, along with several other directories relating to it, including views, javascripts, stylesheets.
 
-Reload the page again and find a different error message: `*The action 'index' could not be found for WelcomeController*`. We have created the welcome controller correctly, but there is no `index` method defined. Let's make one:
+Reload the page again and find a different error message: *`The action 'index' could not be found for WelcomeController`*. We have created the welcome controller correctly, but there is no `index` method defined. Let's make one:
 
 `welcome_controller.rb`
 
@@ -121,7 +132,7 @@ Nice!
 
 ## View (5m)
 
-- This will not change the behavior, but you may wish to be more explicit in our controller by stating to `render` the template `index`
+- This will not change the behavior, but we may wish to be more explicit in our controller by stating to `render` the template `index`
 
 `app/controllers/welcome_controller.rb`
 
@@ -175,7 +186,7 @@ class WelcomeController < ApplicationController
 end
 ```
 
-Notice we did not create a variable named `random` instead we created an instance variable named `@random`, the **@** is VERY important. Normal (local) variables' scope do not reach the view, only **instance variables**' scope reach the view.
+Notice we did not create a variable named `random` instead we created an instance variable named `@random`, the **@** is VERY important. The scope of local variables does not reach into the view. Only controller **instance variables** are available (in-scope) in the view.
 
 Finally we can refactor the `welcome/index.html.erb` file so that it will use this new variable.
 
