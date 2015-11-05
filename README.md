@@ -345,7 +345,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d1-dusk-intro-to-ruby">Intro Ruby</a> (Braus)</td>
    <td><a href="https://github.com/sf-wdi-22-23/username_generator">Username Generator Lab</a> (Juliana)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-dusk-oop-lab">OOP Lab</a> (Braus)</td>
-   <td>Intro Active Record (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-dusk-intro-active-record">Intro Active Record</a> (Juliana)</td>
    <td></td>
  </tr>
  <tr>
@@ -354,7 +354,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="w06-ruby-on-rails/d2-homework/readme.md">OOP Reading (Alex)</a></td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-homework" target="_blank">Intro Rails Guide</a> (Brianna)</td>
    <td>Rails for Zombies (Ben)</td>
-   <td>Bog App (Braus) & Rails Checklist (Juliana)</td>
+   <td>Bog App (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist</a> (Juliana)</td>
 </tr>
 </table>
 
