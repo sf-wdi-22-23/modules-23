@@ -44,7 +44,7 @@ And take a look at the following files:
 * `db/migrate/1234566789_create_talks.rb`
 
 #### 3. Setup your database
-Download and Launch Postgres.app. You should see an elephant in your menu if it's running.
+Download and Launch [Postgres.app](http://postgresapp.com/). You should see an elephant in your menu if it's running. [Postico](https://eggerapps.at/postico/), a Postgres GUI, is a helpful tool for visualizing your database.
 
 Next, create your application database:
 ```bash
@@ -78,7 +78,6 @@ Talk.create({topic: "Playing with Models in the Rails Console"})
 Now run the following from your command line (not the console!):
 ```bash
 rake db:seed
-# Hello from seed.rb
 ```
 
 The `seed.rb` file is magic, because it _already_ knows about all of the models and gems in your rails app. All you have to do is tell it what data to create!
@@ -106,4 +105,5 @@ Using the rails console:
 
 **Pro-Tip**: Remember, when you're working in the console/repl `up-arrow` is your friend! (That and "hanging a dot" + "double-tabbing").
 
-**Bonus**: can you do it with the FFaker gem? Hint: add the `ffaker` gem to your `Gemfile` with `gem ffaker`
+>***A note on `p` vs `puts`:***<br>
+`puts` calls `to_s` on the object and generally returns a readable version of the object. `p` is equivalent to `puts`, but with the inspect method called instead of the `to_s`. So with `p` we will see the difference between "2" and 2. This method is better for debugging.
