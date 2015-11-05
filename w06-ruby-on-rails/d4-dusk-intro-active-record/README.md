@@ -84,6 +84,7 @@ Now, back in the rails console, type `Speaker.all`. Does it show the new speaker
 Seed your database with at least 3 speakers using the FFaker gem. HINT: add `gem ffaker` to your `GEMFILE` then `bundle install` it. [ffaker documentation](https://github.com/ffaker/ffaker/blob/master/REFERENCE.md)
 
 Using the rails console:
+
 1. Delete a speaker
 1. Find the first speaker
 1. Find the last speaker
