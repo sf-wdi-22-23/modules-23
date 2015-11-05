@@ -25,10 +25,6 @@ Convert these English statements into queries. Consult the [Rails docs](http://g
 ``` bash
 rails new conference_app -T -d postgresql
 cd conference_app
-bundle
-git init
-git add . -A
-git commit -m "inital commit, rails skeleton"
 subl .
 ```
 
@@ -67,7 +63,7 @@ Speaker
 (You may need to "connect" to your database in the rails console. Just follow the instructions.)
 
 #### 5. Can you seed your database?
-Take a look at `db/seed.rb`.
+Take a look at `db/seeds.rb`.
 
 Add the following line to `db/seed.rb`:
 ```ruby
@@ -85,7 +81,7 @@ Now, back in the rails console, type `Speaker.all`. Does it show the new speaker
 
 
 #### Exercises ([Active Record docs](http://guides.rubyonrails.org/active_record_basics.html) will help)
-Seed your database with at least 3 speakers using the FFaker gem. HINT: add `gem ffaker` to your `GEMFILE`. [ffaker documentation](https://github.com/ffaker/ffaker/blob/master/REFERENCE.md)
+Seed your database with at least 3 speakers using the FFaker gem. HINT: add `gem ffaker` to your `GEMFILE` then `bundle install` it. [ffaker documentation](https://github.com/ffaker/ffaker/blob/master/REFERENCE.md)
 
 Using the rails console:
 1. Delete a speaker
