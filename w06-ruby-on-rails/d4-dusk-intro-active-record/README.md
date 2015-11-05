@@ -66,7 +66,7 @@ Speaker
 #### 5. Can you seed your database?
 Take a look at `db/seeds.rb`.
 
-Add the following line to `db/seed.rb`:
+Add the following line to `db/seeds.rb`:
 ```ruby
 Speaker.create({first_name: "Juliana", last_name: "Lopker", email: "juliana_lopker@generalassemb.ly"})
 ```
@@ -76,7 +76,7 @@ Now run the following from your command line (not the console!):
 rake db:seed
 ```
 
-The `seed.rb` file is magic, because it _already_ knows about all of the models and gems in your rails app. All you have to do is tell it what data to create!
+The `seeds.rb` file is magic, because it _already_ knows about all of the models and gems in your rails app. All you have to do is tell it what data to create!
 
 Now, back in the rails console, type `Speaker.all`. Does it show the new speaker you just created?
 
@@ -98,7 +98,7 @@ Using the rails console:
 
 #### Stretch Exercises
 1. Add a phone column to the Speaker table that will display the location of a given speaker and update the database. HINT: `rails g migration AddPhoneToSpeakers phone:string` and then don't forget to migrate!
-1. Create a `Speaker` controller with an associated route and view. Display your speakers on your view. Remember to use instance variables! 
+1. Create a `Speaker` controller with an associated route and view. Display your speakers on your view. Remember to use instance variables!
 
 
 **Pro-Tip**: Remember, when you're working in the console/repl `up-arrow` is your friend! (That and "hanging a dot" + "double-tabbing").
