@@ -67,7 +67,7 @@ Take a look at `db/seeds.rb`.
 
 Add the following line to `db/seed.rb`:
 ```ruby
-Speaker.create({first_name: "Juliana", last_name: "Lopker" email: "juliana_lopker@generalassemb.ly"})
+Speaker.create({first_name: "Juliana", last_name: "Lopker", email: "juliana_lopker@generalassemb.ly"})
 ```
 
 Now run the following from your command line (not the console!):
