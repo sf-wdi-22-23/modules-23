@@ -24,7 +24,7 @@ end
 1. `Speaker.delete(1)`
 1. `Speaker.first`
 1. `Speaker.last`
-1. `Speaker.find_by(id:2)`
+1. `Speaker.find_by(id:2)` OR `Speaker.find_by_id(2)` OR `Speaker.find(2)`
 1. `Speaker.find_by(first_name: 'Juliana')`
 1. `Speaker.order(:last_name)`
 1. `Speaker.find_by(id:2).update(email: 'new@email.com')`
