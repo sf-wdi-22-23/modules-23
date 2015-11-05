@@ -21,12 +21,13 @@ Convert these English statements into queries. Consult the [Rails docs](http://g
 4. Give me all the articles.
 
 #### 1. Create a new rails application
-**Make sure you're in a new project folder**
 ``` bash
-rails new conference_app -T -d postgresql
+cd ~/dev
+rails new conference_app -T --database=postgresql
 cd conference_app
 subl .
 ```
+**ProTip: run `rails -help` to understand `-T` and `--database` as well as other options**
 
 #### 2. Create a `Speaker` model
 Our `Speaker` model will have two attributes: a topic and a duration, both strings.
