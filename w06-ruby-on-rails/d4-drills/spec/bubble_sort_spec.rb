@@ -1,6 +1,7 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `bubble_sort.rb`
 # TO RUN YOUR TESTS TYPE: `rspec` (from the main project folder)
 
+# require "./solution.rb"
 require "./bubble_sort.rb"
 
 describe "#bubble_sort" do

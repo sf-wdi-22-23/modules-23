@@ -1,16 +1,32 @@
-def bubble_sort(arr)
+def bubble_sort(array)
+  # set a flag stating that the array is not sorted
   sorted = false
   until sorted
+    # until sorted is true
     sorted = true
-    (arr.count - 1).times do |i|
-      if arr[i] > arr[i + 1]
-        arr[i], arr[i + 1] = arr[i + 1], arr[i]
+    # iterate n-1 times over the array, n is the count of elements in the array
+    (array.count - 1).times do |index|
+      # if the value of element at the current index
+      # is greater than the element next to it
+      if array[index] > array[index + 1]
+        # swap the values at those indices
+        # note: this uses multiple assignments in one line
+        array[index], array[index + 1] = array[index + 1], array[index]
+
+        # could also do:
+        # left = array[index]
+        # right = array[index + 1]
+        # array[index] = right
+        # array[index + 1] = left
+
+        # set sorted to false (because the array isn't sorted yet)
         sorted = false
+        # so the until loop starts again
       end
     end
   end
-
-  arr
+  # return the sorted array
+  array
 end
 
 
