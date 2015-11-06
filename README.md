@@ -354,7 +354,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="w06-ruby-on-rails/d2-homework/readme.md">OOP Reading (Alex)</a></td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-homework" target="_blank">Intro Rails Guide</a> (Brianna)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-homework" target="_blank">Rails for Zombies</a> (Ben)</td>
-   <td><a href="https://github.com/sf-wdi-22-23/bog_app">Bog App</a> (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist</a> (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/bog_app">Bog App</a> (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist</a> 
+    <a href="http://guides.rubyonrails.org/association_basics.html">Read Rails Guides AR Associations</a>(Juliana)</td>
 </tr>
 </table>
 
