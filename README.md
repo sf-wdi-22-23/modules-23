@@ -313,7 +313,16 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <!--  </tr>-->
 <!--</table>-->
 
-##Week 6 - Ruby
+## Week 7 - Ruby on Rails, cont.
+
+|  | Monday | Tuesday | Wednesday | Thursday | Friday |
+| :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
+| **Drills** | SQL (Juliana) | Merge Sort (Matt) | Recursion (Matt) | Intro Project Vagabond (Juliana) | Project Vagabond |
+| **Module 1** | Asset Pipeline Lab (Braus) | Authentication Lab (Braus) | Testing Rails with Rspec (Juliana) | Project Vagabond | Project Vagabond |
+| **Module 2** | Relationships 1:1, 1:n (Juliana) | Rails Views & Validations & Error Handling (Matt) | Library App Lab (Braus) | Project Vagabond |  |
+| **Evening Homework** | Auth Reading | Rails Guides - Testing | Collaborating with Git and Github | Project Vagabond | Project Vagabond |
+
+## Week 6 - Ruby on Rails
 
 <table>
  <tr>
@@ -354,8 +363,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="w06-ruby-on-rails/d2-homework/readme.md">OOP Reading (Alex)</a></td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-homework" target="_blank">Intro Rails Guide</a> (Brianna)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-homework" target="_blank">Rails for Zombies</a> (Ben)</td>
-   <td><a href="https://github.com/sf-wdi-22-23/bog_app">Bog App, </a> (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist, </a> 
-   Check out Rails Guides on <a href="http://guides.rubyonrails.org/active_model_basics.html">Models</a> and 
+   <td><a href="https://github.com/sf-wdi-22-23/bog_app">Bog App, </a> (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist, </a>
+   Check out Rails Guides on <a href="http://guides.rubyonrails.org/active_model_basics.html">Models</a> and
     <a href="http://guides.rubyonrails.org/association_basics.html"> AR Associations</a>(Juliana)</td>
 </tr>
 </table>
