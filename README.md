@@ -338,7 +338,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d2-dawn-ruby-drills">Ruby Method Drills</a> (Braus)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-dawn-ruby-oop">Ruby OOP</a> (Matt)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-dawn-intro-rails">Intro Rails Framework</a> (Matt)</td>
-   <td>Review (Braus)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d5-rocknrails">Review (RocknRails)</a> (Braus)</td>
  </tr>
  <tr>
    <td>Module2</td>
@@ -354,7 +354,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
    <td><a href="w06-ruby-on-rails/d2-homework/readme.md">OOP Reading (Alex)</a></td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d3-homework" target="_blank">Intro Rails Guide</a> (Brianna)</td>
    <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w06-ruby-on-rails/d4-homework" target="_blank">Rails for Zombies</a> (Ben)</td>
-   <td>Bog App (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist</a> (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/bog_app">Bog App</a> (Braus) & <a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w06-ruby-on-rails/rails-checklist.md">Rails Checklist</a> (Juliana)</td>
 </tr>
 </table>
 
