@@ -16,7 +16,9 @@
 
 ## One-To-Many (1:N) Relationship
 
-**Example:** One owner `has_many` pets and a pet `belongs_to` one owner (our `Pet` model will have a foreign key (FK) `owner_id`).
+**Example:** One owner `has_many` pets and a pet `belongs_to` one owner (our `Pet` model will have a foreign key (FK) `owner_id`). The foreign key always goes on the table with the data that belongs to data from another table. In this example, a person **has_many** pets, and a pet **belongs_to** a person. The foreign key `person_id` goes on the `pets` table to indicate which person the pet belongs to.
+
+![](https://raw.githubusercontent.com/sf-wdi-18/notes/master/lectures/week-07/day-1-intro-sql/dawn-simple-queries/images/primary_foreign_key.png)
 
 **Always remember!** Whenever there is a `belongs_to` in the model, there should be a *FK in the matching migration!*
 
