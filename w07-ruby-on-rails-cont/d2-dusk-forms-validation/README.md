@@ -210,6 +210,8 @@
 
 5. Implement `edit` and `update` actions for your users.
 
+[Solution Repo]()
+
 ## Docs & Resources
 
 * <a href="http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password" target="_blank">`has_secure_password`</a>
