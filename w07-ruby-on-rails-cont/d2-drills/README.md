@@ -42,15 +42,44 @@ There are many ways to sort an array of numbers. Each have their pros and cons i
 
 Today, we'll focus on a recursive solution called merge sort.
 
-## Challenge
+### Why Merge Sort?
+Merge sort is the first powerful sorting algorithm that you will encounter in the wilds of the real world (baked into Safari and Firefox.)  It uses an extremely efficient application of the 'Divide and Conquer' concept to lists of elements.  We worked on Bubble Sort previously, now let's up our game and work on Merge Sort!
 
-Write a function `merge_sort` that:
-- takes an array of numbers as input
-- returns a new array which:
-  - contains all the same elements as the input
-  - has the elements sorted in ascending order
+Merge Sort works on the basic principal of dividing your list into sub-lists (recursively) until your sub-lists are of length one or zero.  Once your sub-lists are at that size, you merge with a neighboring sub-list.  When you merge them, you merge them in ascending or descending order, depending on your implementation.  
 
-**Hint:** Consider separation of concerns and the single responsibility principle. Would breaking your method into two methods help?
+![Merge Sort visualization](https://webdocs.cs.ualberta.ca/~holte/T26/Lecture6Fig6.gif)
+
+
+## Challenge: Write your own Merge Sort
+
+There are TWO functions that work together to accomplish a Merge Sort:
+
+-  A `merge_sort` function that:
+  - takes an array as a parameter
+  - splits the input array into two subarrays
+  - calls a `merge` function  
+
+*Note:* The `merge_sort` function **is recursive**. Don't forget your base case!
+
+-  A `merge` function that:
+  - takes two arrays as parameters
+  - compares the the first elements of the two arrays **until** either of the input arrays are empty
+  - pushes the smaller element from the compared arrays into the `results` array
+
+    *Hint:* this should remove the element from its original array and add it to the results array
+  - returns the `results` array, concatenated with the two input arrays
+
+*Note:* The merge function **is not recursive**.
+
+Create a `merge_sort` that will sort a list of student names from this class!
+
+```ruby
+wdi_22_23  = ["Angelo", "Dani", "Jennifer", "Mikey", "Sam", "Laura E.", "Chris", "Margaux", "Uriel", "Josh", "Francesca", "Racha", "Brian", "Jamey", "Laura b.", "Riley", "Matt", "Ling", "Annie", "John", "Meredith", "Breana", "Michael", "Brendan", "Vince", "Emily A.", "Jeehye", "Emily K.", "Jorge", "Eric", "Natasha", "Scot", "Zain", "Isom", "Noel", "Roy"]
+```
+
+## Solution
+[solution](./merge_sort.rb)
+
 
 ## Stretch Challenges
 
@@ -60,25 +89,3 @@ Write a function `merge_sort` that:
     - Which one has more space complexity?
 
     **Resource**: [Benchmarking Code in Ruby](http://rubylearning.com/blog/2013/06/19/how-do-i-benchmark-ruby-code/)
-
-    ##Day 4: Merge sort! - [solution](drills_solutions.md)
-
-    ###Why Merge Sort?
-    Merge sort is the first powerful sorting algorithm that you will encounter in the wilds of the real world (baked into Safari and Firefox.)  It uses an extremely efficient application of the 'Divide and Conquer' concept to lists of elements.  We worked on Bubble Sort previously, now let's up our game and work on Merge Sort!
-
-    Merge Sort works on the basic principal of dividing your list into sub-lists (recursively) until your sub-lists are of length one or zero.  Once your sub-lists are at that size, you merge with a neighboring sub-list.  When you merge them, you merge them in ascending or descending order, depending on your implementation.  
-
-    ![Merge Sort visualization](https://webdocs.cs.ualberta.ca/~holte/T26/Lecture6Fig6.gif)
-
-    There are TWO functions that work together to accomplish a Merge Sort:
-
-    -  A `merge_sort` function that takes an array, splits the array in two, and calls a `merge` function.  The `merge_sort` function **is recursive**.  Try to remember the prescribed function structuring we recommended.
-
-    -  A `merge` function that takes two arrays as parameters, looks at the the first elements of the two lists, and assembles a resulting list based on the two lists 'zipped' together by pushing the lowest to highest valued elements. The merge function **is not recursive**.
-
-    ### Make your own Merge Sort implementation!
-    Create a `merge_sort` that will sort a list of student names from this class!
-
-    ```ruby
-    wdi_22_23  = ["Angelo", "Dani", "Jennifer", "Mikey", "Sam", "Laura E.", "Chris", "Margaux", "Uriel", "Josh", "Francesca", "Racha", "Brian", "Jamey", "Laura b.", "Riley", "Matt", "Ling", "Annie", "John", "Meredith", "Breana", "Michael", "Brendan", "Vince", "Emily A.", "Jeehye", "Emily K.", "Jorge", "Eric", "Natasha", "Scot", "Zain", "Isom", "Noel", "Roy"]
-    ```
