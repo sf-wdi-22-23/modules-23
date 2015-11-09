@@ -6,6 +6,20 @@
 
 <hr>
 
+#### Why do we need the ActiveRecord ORM?
+It's convenient!
+
+**Would you rather...**
+
+| ActiveRecord | SQL |
+| :-------------------- | :------- |
+| User.all | `SELECT * from users` |
+| User.find(123) | `SELECT * from users WHERE users.id = 123 LIMIT 1` |
+| user.posts | `SELECT * from posts WHERE posts.user_id = 123` |
+| student.courses | `SELECT * FROM courses INNER JOIN enrollments ON courses.id = enrollments.course_id     WHERE enrollments.student_id = 456  ` |
+
+---
+
 ##What is a Relational Database (RDB)?
 
 Relational databases were invented in the 1970's as a way to structure data so that it can be queried by a "relational algebra." The basic idea of relational model, though, was to use collections of data called *tables*, where each *database* manages relations among the data in various tables. Each table is organized like a spreadsheet with a *Row* (also known as a "record") for each data item and with attributes of those items arranged in *Columns*.
