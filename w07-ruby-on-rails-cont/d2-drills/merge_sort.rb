@@ -1,49 +1,26 @@
-def merge_sort(arr)
-  # if the array is length 1 or 0
-  if arr.length < 2
-    # return the array
-    return arr
-  end
+def merge_sort(array)
+  return array if array.length <= 1
 
-  # find the array's midpoint
-  middle = arr.length / 2
-  # create a left subarray
-  left = arr[0...middle]
-  # create a right subarray
-  right = arr[middle..-1]
-  p middle, left, right
-  sleep(1.0)
-
-  # call merge on a recursively called left half and right half
-  return merge(merge_sort(left), merge_sort(right))
+  middle = array.length / 2
+  left = merge_sort(array[0...middle])
+  right = merge_sort(array[middle..-1])
+  merge(left, right)
 end
 
 def merge(left, right)
   result = []
-
-# while both arrays have elements in them, zip them together
-  while left.length && right.length do
-      if left[0] <= right[0]
-    # if the left array first element is less than the right array first element, push to result
-        result << left.shift
-      else
-    # else push the right array first element to result
-        result << right.shift
-      end
+  until left.empty? || right.empty?
+    if left.first <= right.first
+      result << left.shift
+    else
+      result << right.shift
+    end
+    # result << (left.first<=right.first ? left.shift : right.shift)
   end
-
-  # if left is the only array with elements, push them all in
-  while left.length
-    result << left.shift
-  end
-
-  # if right is the only array with elmeents, push them all in
-  while right.length
-    result << right.shift
-  end
-
-  result
+  result + left + right
 end
 
-
-p merge_sort([2, 8, 5, 7, 5, 4, 3])
+ary = [7,6,5,9,8,4,3,1,2,0]
+p merge_sort(ary)
+wdi_22_23  = ["Angelo", "Dani", "Jennifer", "Mikey", "Sam", "Laura E.", "Chris", "Margaux", "Uriel", "Josh", "Francesca", "Racha", "Brian", "Jamey", "Laura b.", "Riley", "Matt", "Ling", "Annie", "John", "Meredith", "Breana", "Michael", "Brendan", "Vince", "Emily A.", "Jeehye", "Emily K.", "Jorge", "Eric", "Natasha", "Scot", "Zain", "Isom", "Noel", "Roy"]
+p merge_sort(wdi_22_23)
