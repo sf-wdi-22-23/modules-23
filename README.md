@@ -317,7 +317,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 |  | Monday | Tuesday | Wednesday | Thursday | Friday |
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| **Drills** | SQL (Juliana) | Merge Sort (Matt) | Recursion (Matt) | Intro Project Vagabond (Juliana) | Project Vagabond |
+| **Drills** | [SQL](https://github.com/sf-wdi-22-23/modules-23/tree/master/w07-ruby-on-rails-cont/d1-drills) (Juliana) | Merge Sort (Matt) | Recursion (Matt) | Intro Project Vagabond (Juliana) | Project Vagabond |
 | **Module 1** | Asset Pipeline (Braus) | Authentication Lab (Braus) | Testing Rails with Rspec (Juliana) | Project Vagabond | Project Vagabond |
 | **Module 2** | Relationships 1:1, 1:n (Juliana) | Rails Views & Validations & Error Handling (Matt) | Library App Lab (Braus) | Project Vagabond |  |
 | **Evening Homework** | Auth Reading | Rails Guides - Testing | Collaborating with Git and Github | Project Vagabond | Project Vagabond |
