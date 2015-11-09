@@ -138,7 +138,7 @@
 If you accidentally run `rake db:migrate` before adding a foreign key to the table's migration, it's ok. There's no need to panic. You can always fix this by creating a new migration:
 
 ```
-$ rails g migration AddOwnerIdToPets
+$ rails g migration AddOwnerIdToPets owner_id:integer
 ```
 
 Then modify the migration to include the following:
@@ -163,9 +163,9 @@ class AddOwnerIdToPets < ActiveRecord::Migration
 end
 ```
 
-## Challenges, Part 1: One-To-Many
+## Exercises, Part 1: One-To-Many
 
-Jump over to the [One-To-Many Challenges](one_to_many_challenges.md) where you'll work in pairs on a solution.
+Jump over to the [One-To-Many Exercises](one-to-many-exercises.md) where you'll work in pairs on a solution.
 
 ## Many-To-Many (N:N) with 'through'
 
@@ -293,9 +293,9 @@ To create N:N relationships in Rails, we use this pattern: `has_many :related_mo
   # => ["English", "Algebra"]
   ```
 
-## Challenges, Part 2: Many-To-Many
+## Exercises, Part 2: Many-To-Many
 
-Head over to the [Many-To-Many Challenges](many_to_many_challenges.md) and work together in pairs.
+Head over to the [Many-To-Many Exercises](many-to-many-exercises.md) and work together in pairs.
 
 ## Migration Workflow
 
