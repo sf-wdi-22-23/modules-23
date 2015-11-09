@@ -22,6 +22,8 @@ It's convenient!
 
 ##What is a Relational Database (RDB)?
 
+![sql vs nosql](http://dataconomy.com/wp-content/uploads/2014/07/SQL-vs.-NoSQL.png)
+
 Relational databases were invented in the 1970's as a way to structure data so that it can be queried by a "relational algebra." The basic idea of relational model, though, was to use collections of data called *tables*, where each *database* manages relations among the data in various tables. Each table is organized like a spreadsheet with a *Row* (also known as a "record") for each data item and with attributes of those items arranged in *Columns*.
 
 **Authors Table**
