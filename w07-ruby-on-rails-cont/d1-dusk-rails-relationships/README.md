@@ -171,7 +171,7 @@ Jump over to the [One-To-Many Exercises](one-to-many-exercises.md) where you'll 
 
 ## Many-To-Many (N:N) with 'through'
 
-**Example:** A student `has_many` courses and a course `has_many` students. Thinking back to our SQL discussions, recall that we used a *join* table to create this kind of association.
+**Example:** A student `has_many` courses and a course `has_many` students. 
 
 A *join* table has two different foreign keys, one for each model it is associating. In the example below, 3 students have been associated with 4 different courses:
 
