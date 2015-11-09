@@ -117,14 +117,14 @@
   Owner.count
   fido = Pet.create(name: "Fido")
   lassie = Pet.create(name: "Lassie")
-  nathan = Owner.create(name: "Nathan")
-  nathan.pets
+  juliana = Owner.create(name: "Juliana")
+  juliana.pets
   fido.owner
-  nathan.pets << fido # makes Fido one of Nathan's pets
-  nathan.pets << lassie # makes Lassie another one of Nathan's pets
-  nathan.pets.count
-  nathan.pets.map(&:name)
-  nathan.pets.each do |pet| puts "My pet is named #{pet.name}!" end
+  juliana.pets << fido # makes Fido one of Juliana's pets
+  juliana.pets << lassie # makes Lassie another one of Juliana's pets
+  juliana.pets.count
+  juliana.pets.map(&:name)
+  juliana.pets.each do |pet| puts "My pet is named #{pet.name}!" end
   fido.owner
 
   # What will be returned when we do this?
