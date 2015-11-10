@@ -56,16 +56,22 @@ There are TWO functions that work together to accomplish a Merge Sort:
 
 -  A `merge_sort` function that:
   - takes an `array` as a parameter
-  - assigns `first_half` to the result of merge_sort called on an array created from a range of elements from the start of the array up to but not including the midpoint of the array
-  - assigns `second_half` to the result of merge_sort called on an array created from a range of elements starting from the midpoint of the array to the end of the array
+  - assigns `first_half` to an array created from a range of elements from the start of the array up to but not including the midpoint of the array
+  - assigns `second_half` to an array created from a range of elements starting from the midpoint of the array to the end of the array
+  - assigns `left` to the result of `merge_sort` being passed the `first_half` array
+  - assigns `right` to the result of `merge_sort` being passed the `second_half` array
   - calls a `merge` function, which takes two arrays, `left` and `right`, as parameters
 
   ```ruby
   def merge_sort(array)
+    # SETUP VARIABLES
     # find midpoint of array
     mid = array.length / 2
-    # assign left to range of first element up to but not including midpoint
-    # assign right to range from midpoint to end, including last element
+    # assign first_half to range of first element up to but not including midpoint
+    # assign second_half to range from midpoint to end, including last element
+    # RECURSIVE CALLS
+    # assign left to result of merge_sort on first_half array
+    # assign right to result of merge_sort on second_half array
     merge(left, right)
   end
   ```
