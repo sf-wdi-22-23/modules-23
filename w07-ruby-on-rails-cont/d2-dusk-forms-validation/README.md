@@ -91,6 +91,8 @@ There is a lot going on here. A few important things to note:
 <%= f.submit %>
 ```
 
+The `text_field` takes a symbol as an argument, which is uses to determine which attribute on the model to link the field to, along with a [hash of options](http://apidock.com/rails/ActionView/Helpers/FormHelper/text_field), such as deciding placeholders, classes, and more.
+
 The [form builder API docs](http://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html) for other methods, and the [Form Helpers documentation](http://guides.rubyonrails.org/form_helpers.html) for general information about forms in Rails.
 
 Okay, so we have our owner form. Let's make some owners! But wait, what if we make owners that don't pass our validations? How can we inform the user what needs to be corrected?
