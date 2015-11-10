@@ -6,9 +6,11 @@ def merge_sort(array)
   # the left and right subarrays are created using a recursive call
   middle = array.length / 2
   # first element upto but NOT including middle element
-  left = merge_sort(array[0...middle])
+  first_half = array[0...middle]
+  left = merge_sort(first_half)
   # middle element up to AND including last element
-  right = merge_sort(array[middle..-1])
+  second_half = array[middle..-1]
+  right = merge_sort(second_half)
   # pass two subarrays to merge function
   p merge(left, right)
 end

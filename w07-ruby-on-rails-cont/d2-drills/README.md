@@ -55,19 +55,55 @@ Merge Sort works on the basic principal of dividing your list into sub-lists (re
 There are TWO functions that work together to accomplish a Merge Sort:
 
 -  A `merge_sort` function that:
-  - takes an array as a parameter
-  - splits the input array into two subarrays
-  - calls a `merge` function  
+  - takes an `array` as a parameter
+  - assigns `first_half` to the result of merge_sort, passing an array created from a range of elements from the start of the array up to but not including the midpoint of the array
+  - assigns `second_half` to an array created from a range of elements from the midpoint of the array to the end of the array
+  - calls a `merge` function, which takes two arrays, `left` and `right`, as parameters
+
+  ```ruby
+  def merge_sort(array)
+    # find midpoint of array
+    mid = array.length / 2
+    # assign left to range of first element up to but not including midpoint
+    # assign right to range from midpoint to end, including last element
+    merge(left, right)
+  end
+  ```
+
+  Example of creating arrays with ranges:
+  ```ruby
+  foo = [1,2,3,4,5]
+  bar = foo[0..2]
+  #=> [1, 2, 3]
+  bar = foo[0...2]
+  #=> [1, 2]
+  baz = foo[2..-1]
+  #=> [3, 4, 5]
+  ```
 
 *Note:* The `merge_sort` function **is recursive**. Don't forget your base case!
 
 -  A `merge` function that:
-  - takes two arrays as parameters
-  - compares the the first elements of the two arrays **until** either of the input arrays are empty
+  - assigns `results` to an empty array
+  - takes two arrays, `left` and `right` as parameters
+  - compares the first elements of the two arrays **until** either of the input arrays are empty
   - pushes the smaller element from the compared arrays into the `results` array
 
     *Hint:* this should remove the element from its original array and add it to the results array
   - returns the `results` array, concatenated with the two input arrays
+
+```ruby
+def merge(left, right)
+  results = []
+  # until left or right is empty:
+  # if first element of left is less than or equal to first element of right
+  # Array#shift first element of left into results
+  # else
+  # Array#shift first element of right into results
+  # end
+  results + left + right
+end
+```
 
 *Note:* The merge function **is not recursive**.
 
