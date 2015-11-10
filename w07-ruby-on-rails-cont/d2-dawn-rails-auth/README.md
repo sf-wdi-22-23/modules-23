@@ -199,6 +199,9 @@
 
 ## Stretch Challenges
 
+1. Create a logout action and allow users to logout. What do you have to do to the `session[:user_id]`? Where do you `redirect_to` after they log out.
+1. Create a login page at `sessions#new`. Use the `@user.authenticate` method from `has_secure_password` to create a `sessions#create` action. (Hint, you'll need a `SessionsController`)
+
 1. Create another resource that the user has_many of called `posts`. Have the logged in user be able to create new posts that belong to them.
 
 1. Add <a href="http://guides.rubyonrails.org/active_record_validations.html" target="_blank">validations</a> to your `User` model.
