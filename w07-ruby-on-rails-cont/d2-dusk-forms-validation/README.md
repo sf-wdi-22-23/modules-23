@@ -32,7 +32,7 @@ Validations provide security against invalid or harmful data being entered into 
 ```ruby
 # app/models/owner.rb
 class Owner < ActiveRecord::Base
-    validates :name, presence: true, uniqueness: true, length: { min: 6 }
+  validates :name, presence: true, uniqueness: true, length: { min: 6 }
 end
 ```
 
@@ -41,43 +41,25 @@ This snippet of code is calling the `validate` method, and accepting two argumen
 ```ruby
 # app/controllers/owners_controller.rb
 def create
-    @user = Owner.create(username: "Taco")
+  @owner = Owner.create(name: "Taco")
 end
 ```
 
-If someone tried to `save` a new user in the database with a duplicate username, or no username, or a username with fewer than 6 characters, an error would be generated.
+If someone tried to `save` a new owner in the database with a duplicate username, or no username, or a name with fewer than 6 characters, an error would be generated.
 
 ```ruby
 ActiveRecord::RecordInvalid: Validation failed: Name is too short (minimum is 6 characters)
 ```
 
-However, this error would be displayed in the server. So how can we get it to the view where the user can see it? Well, fortunately the error message is stored on the object that was attempting to be saved (`@user` in this case).
+However, this error would be displayed in the server. So how can we get it to the view where the owner can see it? Well, fortunately the error message is stored on the object that was attempting to be saved (`@owner` in this case).
 
-We can access the errors using `@user.errors.full_messages` method provided by `ActiveRecord::Base`. See the docs [here](http://api.rubyonrails.org/classes/ActiveModel/Errors.html#method-i-full_message).  We can display the errors in the view by iterating over the array of error message strings on the User object.
+Speaking of `@owner`, where is that being used in the view? It's here:
 
 ```html
 <!-- app/views/owners/new.html.erb -->
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2 class="error-warning">
-      <%= pluralize(@article.errors.count, "error") %> prohibited
-      this user from being saved:
-    </h2>
-    <ul>
-      <% @article.errors.full_messages.each do |msg| %>
-      <li class="error-message"><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
-```
-
-For context, we will be adding this error section to our existing User form
-
-```html
 <div class='owner-form'>
   <%= form_for @owner do |f| %>
-  <!-- error handling code goes here -->
+  <!-- error handling code will go here -->
   <p class="owner-form-title">
     <%= f.text_field :name, placeholder: 'name' %>
   </p>
@@ -88,11 +70,56 @@ For context, we will be adding this error section to our existing User form
 </div>
 ```
 
-With our new and improved form, users will get error messages telling them what fields they need to fix when they make an invalid form submission. Awesome!
+There is a lot going on here. A few important things to note:
+
+**`form_for`**
+
+```ruby
+<%= form_for @owner do |f| %>
+# ERB code here  
+<% end %>
+```
+
+`form_for` is a [form helper](http://guides.rubyonrails.org/form_helpers.html#binding-a-form-to-an-object) method Rails provides which can take several parameters:
+  - the actual object which is the form is creating or updating, e.g, `@owner`
+  - a hash of options, which itself consists of a `url` hash and an `html` hash, which will affect how the form renders in HTML and what route it aligns with
+
+`form_for` yields a form builder object, `f`, which is used to generate the various different form tags like text fields, text areas, and submit buttons. Like this:
+
+```ruby
+<%= f.text_field :name, placeholder: 'name' %>
+<%= f.submit %>
+```
+
+The [form builder API docs](http://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html) for other methods, and the [Form Helpers documentation](http://guides.rubyonrails.org/form_helpers.html) for general information about forms in Rails.
+
+Okay, so we have our owner form. Let's make some owners! But wait, what if we make owners that don't pass our validations? How can we inform the user what needs to be corrected?
+
+We can access the errors using `@owner.errors.full_messages` method provided by `ActiveRecord::Base`. See the docs [here](http://api.rubyonrails.org/classes/ActiveModel/Errors.html#method-i-full_message).  We can display the errors in the view by iterating over the array of error message strings on the Owner object.
+
+Look at the following code snippet. What does it do?
+
+```html
+<% if @owner.errors.any? %>
+  <div id="error_explanation">
+    <h2 class="error-warning">
+      <%= pluralize(@owner.errors.count, "error") %> prohibited
+      this owner from being saved:
+    </h2>
+    <ul>
+      <% @owner.errors.full_messages.each do |msg| %>
+      <li class="error-message"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+```
+
+Add the above code to your form, right below the `form_for` opening tag. With our new and improved form, users will get error messages telling them what fields they need to fix when they make an invalid owner form submission. Awesome!
 
 ## Challenges
 
-Now that you've seen how to implement validations and propogate the ActiveRecord errors from your database models to the controller and then pass that into the view, it's your turn!
+Now that you've seen how to implement validations and propagate the ActiveRecord errors from your database models to the controller and then pass that into the view, it's your turn!
 
 **Create a form for Pets**
 
