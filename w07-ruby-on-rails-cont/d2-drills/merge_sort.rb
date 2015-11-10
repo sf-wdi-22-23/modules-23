@@ -3,7 +3,7 @@ def merge_sort(array)
   # method returns the array if it has 1 or 0 elements
   return array if array.length <= 1
   # use midpoint of array to set left and right subarrays
-  # the left and right subarrays are created using a recursive call
+  # the left and right subarrays that you passed to the merge function are created using a recursive call to merge_sort
   middle = array.length / 2
   # first element upto but NOT including middle element
   first_half = array[0...middle]
