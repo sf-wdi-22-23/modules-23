@@ -123,15 +123,4 @@ Add the above code to your form, right below the `form_for` opening tag. With ou
 
 Now that you've seen how to implement validations and propagate the ActiveRecord errors from your database models to the controller and then pass that into the view, it's your turn!
 
-**Create a form for Pets**
-
-- in the `app/views/owners/show.html`, add a form (with an errors div) for creating a `Pet` using `form_for`.
-- in `app/models/owner.rb`, add a validation to your `Pet` model for the `name` attribute, requiring the `presence` to be `true`
-- in `app/controllers/pets_controller.rb`, define a `create` method which assigns `@pet` to `Pet.new(name: params[:name])`. Have the `create` method `redirect_to` the pet's route (check `rake routes` to determine the path name).
-
-**Note:** You'll need to associate the pet being created with the Owner you want it to be owned by.
-
-## Stretch Challenge
-
-- Add a breed attribute to the `Pet` model by creating a new migration. Add a validation for `breed` in your `models/Pet.rb` file. Edit your Pet creation form to include the new `breed` attribute.
-- Add a email attribute to the `Owner` model by creating a new migration. Add a validation for `email` in your `models/Owner.rb` file. Validate the email using a [Regular Expression](http://edgeguides.rubyonrails.org/active_record_validations.html#format) Edit your Owner creation form to include the new `email` attribute.
+[Exercise repo](https://github.com/sf-wdi-22-23/rails-forms-validations)
