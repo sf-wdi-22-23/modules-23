@@ -122,6 +122,7 @@
   <%= form_for :user, url: '/users' do |f| %>
     <%= f.email_field :email, placeholder: "Email", autofocus: true %>
     <%= f.password_field :password, placeholder: "Password" %>
+    <%= f.submit "Sign Up" %>
   <% end %>
   ```
 
