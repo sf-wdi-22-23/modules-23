@@ -2,7 +2,7 @@
 
 ### Base Challenges
 
-We'll build off a rails app with auth. Fork and clone the <a href="github.com/sf-wdi-22-23/rails_auth" target="_blank">rails_auth app</a>.
+We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth).
 
 **Model Method Tests**
 

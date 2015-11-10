@@ -10,7 +10,7 @@ Reference: [Testing Pre-reading](https://github.com/sf-wdi-22-23/modules-23/tree
 
 ## rspec-rails
 
-Rspec is a testing gem for Ruby. It helps us write tests that sound like user stories or planning comments ("This method should..."). <a href="https://github.com/rspec/rspec-rails" target="_blank">rspec-rails</a> is a testing framework specifically for Rails. We'll use rspec-rails alone to test our models and controllers.
+Rspec is a testing gem for Ruby. It helps us write tests that sound like user stories or planning comments ("This method should..."). [rspec-rails](https://github.com/rspec/rspec-rails) is a testing framework specifically for Rails. We'll use rspec-rails alone to test our models and controllers.
 
 rspec-rails helps us implement the four-phase testing methodology (with setup, exercise, verify, and tear down steps). Here's what a simple rspec-rails test might look like:
 
@@ -94,7 +94,7 @@ To run only a specific set of tests, type `rspec` and the file path for the test
 
 ### Cool Tool: FFaker
 
-FFaker generates random data for us! We can use it to create fake data for tests. For example, `FFaker::Name.first_name` generates a fake first name. `FFaker::Internet.email` generates a fake email. To see more that FFaker can do, check out the <a href="http://www.rubydoc.info/github/emmanueloga/ffaker/FFaker" target="_blank">FFaker docs</a> and/or this <a href="http://ricostacruz.com/cheatsheets/ffaker.html" target="_blank">handy FFaker cheatsheet</a>.
+FFaker generates random data for us! We can use it to create fake data for tests. For example, `FFaker::Name.first_name` generates a fake first name. `FFaker::Internet.email` generates a fake email. To see more that FFaker can do, check out the [FFaker docs](http://www.rubydoc.info/github/emmanueloga/ffaker/FFaker) and/or this [handy FFaker cheatsheet](http://ricostacruz.com/cheatsheets/ffaker.html).
 
 **Bonus:** Later, we can use FFaker to seed our database (but hold off!).
 
@@ -265,10 +265,10 @@ We could use a tool like [Capybara](https://github.com/jnicklas/capybara) to tes
 ### Base Challenges
 
 
-We'll build off a rails app with auth. Fork and clone the <a href="github.com/sf-wdi-22-23/rails_auth" target="_blank">rails_auth app</a>.
+We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth).
 
 **Model Method Tests**
-
+  ```ruby
   describe "#full_name" do
     it "joins first name and last name" do
       expect(@user.full_name).to eq("#{@user.first_name} #{@user.last_name}")
