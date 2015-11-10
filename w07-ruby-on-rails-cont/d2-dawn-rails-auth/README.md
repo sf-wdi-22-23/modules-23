@@ -73,7 +73,7 @@
 
 9. Start your server and visit `localhost:3000` in the browser. Start debugging errors until the view rendered on the `root_path` has:
   * A welcome message
-  * A button (remember: `link_to` or try `button_to`) that leads to the route `"/users/new"`
+  * A button (remember: `link_to`) that leads to the route `"/users/new"`
 
   **Note:** Typically controllers are always plural, i.e. `UsersController`. In the case of our `SiteController`, it's ok for it to be singular since it only contains logic related to static pages and is not interacting with any resources in our database.
 
