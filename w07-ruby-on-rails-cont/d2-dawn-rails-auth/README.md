@@ -114,35 +114,18 @@
 
 #### User Flow for Sign Up
 
-12. The `users#new` action should render a view called `new.html.erb`. The view should have a form that posts to `users#create` with the parameters `email` and `password`. Your form should look something like this:
+12. The `users#new` action should render a view called `new.html.erb`. The view should have a form that posts to `users#create` with the parameters `email` and `password`. Because `password` is not an attribute of your User model, if you try to use a standard `form_for @user` pattern, rails will bork, so your form should look something like this:
 
   ```html+erb
   <!-- app/views/users/new.html.erb -->
 
-  <%= form_for @user do |f| %>
+  <%= form_for :user, url: '/users' do |f| %>
     <%= f.email_field :email, placeholder: "Email", autofocus: true %>
     <%= f.password_field :password, placeholder: "Password" %>
   <% end %>
   ```
 
   **Stretch Challenge:** Can you do this in a modal in the `site#index`? Would you need your `users#new` route or action any more?
-
-13. In order for `form_for @user` to work, we need to pass a `@user` instance from the controller to the view.
-
-  ```ruby
-  #
-  # app/controllers/users_controller.rb
-  #
-  class UsersController < ApplicationController
-
-    def new
-      @user = User.new
-    end
-
-    ...
-
-  end
-  ```
 
 14. In the `users#create` action, create a user, then log them in by creating a new session. After the user is successfully created and the session is set, redirect to the user show page.
 
