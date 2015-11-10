@@ -64,6 +64,8 @@ There are TWO functions that work together to accomplish a Merge Sort:
 
   ```ruby
   def merge_sort(array)
+    # SET BASE CASE
+    # return the array if the array has only 1 or 0 elements
     # SETUP VARIABLES
     # find midpoint of array
     mid = array.length / 2
