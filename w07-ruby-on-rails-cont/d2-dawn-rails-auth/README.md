@@ -200,7 +200,7 @@
   ```html+erb
   <!-- splash.html.erb -->
   
-  Welcome <%= @current_user %>
+  Welcome <%= current_user %>
   ```
 
 ## Stretch Challenges
