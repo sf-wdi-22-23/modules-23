@@ -2,9 +2,12 @@
 
 Look here for all things related to lesson notes, exercises, and solutions as well as the schedule.
 
+#### Screencasts:
 [JS and jQuery Screencasts](https://www.youtube.com/playlist?list=PLw1xVKFboueks5UMLogE01mdThRU577oa)
 <br>
-[ExpressJS Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8) (note: a few of these use a different ExpressJS templating engine called Handlebars instead of ejs, so those portions don't reflect what we've seen)
+[ExpressJS 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8)
+<br>
+[Rails 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUn7MQ77Z7FnMeir_b_4HSuM)
 
 
 ## Week 7 - Ruby on Rails, cont.
