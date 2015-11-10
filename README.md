@@ -11,7 +11,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 |  | Monday | Tuesday | Wednesday | Thursday | Friday |
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| **Drills** | [SQL](https://github.com/sf-wdi-22-23/modules-23/tree/master/w07-ruby-on-rails-cont/d1-drills) (Juliana) | Merge Sort (Matt) | Recursion (Matt) | Intro Project Vagabond (Juliana) | Project Vagabond |
+| **Drills** | [SQL](https://github.com/sf-wdi-22-23/modules-23/tree/master/w07-ruby-on-rails-cont/d1-drills) (Juliana) | [Merge Sort](w07-ruby-on-rails-cont/d2-drills) (Matt) | Recursion (Matt) | Intro Project Vagabond (Juliana) | Project Vagabond |
 | **Module 1** | [Asset Pipeline](https://github.com/sf-wdi-22-23/modules-23/tree/master/w07-ruby-on-rails-cont/d1-dawn-asset-pipeline) (Braus) | Authentication Lab (Braus) | Testing Rails with Rspec (Juliana) | Project Vagabond | Project Vagabond |
 | **Module 2** | [Relationships 1:1, 1:n](https://github.com/sf-wdi-22-23/modules-23/tree/master/w07-ruby-on-rails-cont/d1-dusk-rails-relationships) (Juliana) | Rails Views & Validations & Error Handling (Matt) | Library App Lab (Braus) | Project Vagabond |  |
 | **Evening Homework** | [Auth Reading](https://github.com/sf-wdi-22-23/modules-23/tree/master/w07-ruby-on-rails-cont/d1-homework) | Rails Guides - Testing | Collaborating with Git and Github | Project Vagabond | Project Vagabond |
