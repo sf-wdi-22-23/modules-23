@@ -56,8 +56,8 @@ There are TWO functions that work together to accomplish a Merge Sort:
 
 -  A `merge_sort` function that:
   - takes an `array` as a parameter
-  - assigns `first_half` to the result of merge_sort, passing an array created from a range of elements from the start of the array up to but not including the midpoint of the array
-  - assigns `second_half` to an array created from a range of elements from the midpoint of the array to the end of the array
+  - assigns `first_half` to the result of merge_sort called on an array created from a range of elements from the start of the array up to but not including the midpoint of the array
+  - assigns `second_half` to the result of merge_sort called on an array created from a range of elements starting from the midpoint of the array to the end of the array
   - calls a `merge` function, which takes two arrays, `left` and `right`, as parameters
 
   ```ruby

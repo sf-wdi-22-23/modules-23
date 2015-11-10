@@ -19,7 +19,6 @@ def merge(left, right)
   # create array to store output
   result = []
   # loop until one subarray is empty
-  # note: the subarrays only contain one element
   until left.empty? || right.empty?
     # move the smaller result (left or right) to the results array
     if left.first <= right.first
