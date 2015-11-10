@@ -14,15 +14,13 @@
 
 #### Model Set Up
 
-2. Generate a `User` model with the attributes `email` and `password`:
+2. Generate a `User` model with the attributes `email` and `password_digest`:
 
   ```
-  rails g model User email password
+  rails g model User email password_digest
   ```
 
-  **Note:** `string` is the default attribute type, so we don't need to explicitly specify it.
-
-  `email` serves as a natural username for our users, and `password` attribute for a hashed password.
+  **Note:** `string` is the default attribute type, so we don't need to explicitly specify it. `email` serves as a natural username for our users, and `password_digest` attribute for a hashed password.
 
 3. From the terminal, `rake db:migrate` to run your migration (which creates the user table in your database).
 
@@ -37,6 +35,7 @@
   end
 
   # Here's the behavior that has_secure_password gives you
+  # Schema: User(name:string, password_digest:string)
   # user = User.new(name: 'david', password: '', password_confirmation: 'nomatch')
   # user.save                                                       # => false, password required
   # (omit a password_confirmation column to disable this behavior)
