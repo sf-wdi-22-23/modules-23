@@ -4,24 +4,25 @@
 | :--- |
 | Implement a User model that securely stores passwords |
 | Build routes, controllers, and views necessary for a user to sign up |
+| Add a `current_user` application-level helper method to keep track of the currently signed in user |
 
 ## Challenges
 
 #### App Set Up
 
-1. Create a new rails app called `rails_auth`. Your app should have a Postgres database (**Hint:** `-d postgresql`). Once your app is created, remember to run `rake db:create` to create your database.
+1. Create a new rails app called `rails_auth`. Your app should not have the default rails test framework and have a Postgres database (**Hint:** `-T -d postgresql`). Once your app is created, remember to run `rake db:create` to create your database.
 
 #### Model Set Up
 
-2. Generate a `User` model with the attributes `email` and `password_digest`:
+2. Generate a `User` model with the attributes `email` and `password`:
 
   ```
-  rails g model User email password_digest
+  rails g model User email password
   ```
 
   **Note:** `string` is the default attribute type, so we don't need to explicitly specify it.
 
-  `email` serves as a natural username for our users, and `password_digest` is the rails-y attribute for a hashed password.
+  `email` serves as a natural username for our users, and `password` attribute for a hashed password.
 
 3. From the terminal, `rake db:migrate` to run your migration (which creates the user table in your database).
 
@@ -34,6 +35,19 @@
   class User < ActiveRecord::Base
     has_secure_password
   end
+
+  # Here's the behavior that has_secure_password gives you
+  # user = User.new(name: 'david', password: '', password_confirmation: 'nomatch')
+  # user.save                                                       # => false, password required
+  # (omit a password_confirmation column to disable this behavior)
+  # user.password = 'mUc3m00RsqyRe'
+  # user.save                                                       # => false, confirmation doesn't match
+  # user.password_confirmation = 'mUc3m00RsqyRe'
+  # user.save                                                       # => true
+  # user.authenticate('notright')                                   # => false
+  # user.authenticate('mUc3m00RsqyRe')                              # => user
+  # User.find_by(name: 'david').try(:authenticate, 'notright')      # => false
+  # User.find_by(name: 'david').try(:authenticate, 'mUc3m00RsqyRe') # => user
   ```
 
 #### Secure Password with BCrypt
@@ -45,24 +59,24 @@
   # Gemfile
   #
   # Use ActiveModel has_secure_password
-  gem 'bcrypt', '~> 3.1.7'
+  gem 'bcrypt'
   ```
 
 6. From the terminal, run `bundle install` (or `bundle` for short) to install `bcrypt`.
 
 #### Sign Up Routes
 
-7. Add a root route that points to `"site#index"`.
+7. Add a root route that points to `"site#index"` and create an `index.html.erb` template in your `views/site` folder.
 
-8. Add resources for users with the actions ONLY `new`, `create`, and `show`. Run `rake routes` in the terminal to see all your routes.
+8. Even though we are doing Auth, we want our routes to conform to a RESTful convention, so `users#new` will be our GET signup tempalte, `users#create` is our POST signup route, and `users#show` will be our user profile page. Add `resources :users` to `routes.rb` with the actions ONLY `new`, `create`, and `show`. Run `rake routes` in the terminal to see all your routes.
 
 #### Site Controller & Homepage View
 
 9. Start your server and visit `localhost:3000` in the browser. Start debugging errors until the view rendered on the `root_path` has:
   * A welcome message
-  * A button (link) that leads to the route `"/users/new"`
+  * A button (remember: `link_to` or try `button_to`) that leads to the route `"/users/new"`
 
-  **Note:** Typically our controllers are plural, i.e. `UsersController`. In the case of our `SiteController`, it's ok for it to be singular since it only contains logic related to static pages and is not interacting with any resources in our database.
+  **Note:** Typically controllers are always plural, i.e. `UsersController`. In the case of our `SiteController`, it's ok for it to be singular since it only contains logic related to static pages and is not interacting with any resources in our database.
 
 #### Users Controller
 
@@ -112,6 +126,8 @@
   <% end %>
   ```
 
+  **Stretch Challenge:** Can you do this in a modal in the `site#index`? Would you need your `users#new` route or action any more?
+
 13. In order for `form_for @user` to work, we need to pass a `@user` instance from the controller to the view.
 
   ```ruby
@@ -122,7 +138,6 @@
 
     def new
       @user = User.new
-      render :new
     end
 
     ...
@@ -154,7 +169,7 @@
   end
   ```
 
-  **Stretch Challenge:** Create a condition that checks if the user was saved correctly. **Hint:** first build the user in memory with `User.new(user_params)`, then check `if user.save` proceed as normal `else` redirect to `"/users/new"` again.
+  **Stretch Challenge:** Create a condition that checks if the user was saved correctly. **Hint:** first build the user in memory with `User.new(user_params)`, then check `if user.save` proceed as normal `else` redirect to `"/users/new"` again. Run `rails g scaffold user email password` in a SEPARATE SAMPLE PROJECT for an example.
 
 15. The last step is to display attributes for the currently logged in user on the user show page. To do this, update the `users#show` method in the controller find a user in the database using the current `session[:user_id]`.
 
@@ -168,7 +183,6 @@
 
     def show
       @user = User.find(session[:user_id])
-      render :show
     end
 
     ...
@@ -176,7 +190,7 @@
   end
   ```
 
-16. Finally, we want to display data for the currently logged-in user in the view:
+16. Now, we want to display data for the currently logged-in user in the view:
 
   ```html+erb
   <!-- app/views/users/show.html.erb -->
@@ -184,14 +198,32 @@
   Welcome, <%= @user.email %>!
   ```
 
+1. Lastly, add a `current_user` method at the application level.
+
+  ```ruby
+    #  app/controllers/application_controller.rb
+
+    class ApplicationController < ActionController::Base
+      protect_from_forgery with: :exception
+
+      def current_user
+        @current_user ||= session[:user_id] && User.find_by_id(session[:user_id])
+      end
+
+      helper_method :current_user  #makes the current_user method available to views
+    end
+  ```
+
 ## Stretch Challenges
+
+1. Create another resource that the user has_many of called `posts`. Have the logged in user be able to create new posts that belong to them.
 
 1. Add <a href="http://guides.rubyonrails.org/active_record_validations.html" target="_blank">validations</a> to your `User` model.
   * Validate the <a href="http://guides.rubyonrails.org/active_record_validations.html#presence" target="_blank">presence</a> of `email` and `password`.
   * Validate the <a href="http://guides.rubyonrails.org/active_record_validations.html#format" target="_blank">format</a> and <a href="http://guides.rubyonrails.org/active_record_validations.html#uniqueness" target="_blank">uniqueness</a> of `email`.
   * Validate that the `password` is <a href="http://guides.rubyonrails.org/active_record_validations.html#length" target="_blank">at least 6 characters long</a>.
 
-2. Add a `password_confirmation` field to your signup form. Adding the field requires the user to enter their password twice in order to sign up. Read more about it in the <a href="http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password" target="_blank">`has_secure_password` docs</a>. You will also need to edit your private method `user_params` in the `UsersController` to permit `password_confirmation`.
+2. Add a `password_confirmation` field to your user table and signup form. Adding the field requires the user to enter their password twice in order to sign up. Read more about it in the <a href="http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password" target="_blank">`has_secure_password` docs</a>. You will also need to edit your private method `user_params` in the `UsersController` to permit `password_confirmation`.
 
 3. Add a <a href="http://api.rubyonrails.org/classes/ActionDispatch/Flash.html" target="_blank">flash message</a> that notifies a user if they signed up successfully or not. **Hint:** In your `users#create` action, display a `flash[:notice]` if the user signed up successfully, or a `flash[:error]` if the user failed validations and didn't save to the database. You will also need a way to display your flash messages in the view:
 
@@ -208,7 +240,9 @@
 
 4. Refactor your `flash[:error]` to display the error messages from the failed validations if a user doesn't save to the database. **Hint:** Try <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-join" target="_blank">joining</a> the <a href="http://api.rubyonrails.org/classes/ActiveModel/Errors.html#method-i-full_messages" target="_blank">`full_messages`</a>.
 
-5. Implement `edit` and `update` actions for your users.
+1. Follow [this screencast](http://railscasts.com/episodes/274-remember-me-reset-password) to add "remember me" and reset password functionality to your app:
+
+5. Implement `edit` and `update` actions for your user.
 
 ## Docs & Resources
 
