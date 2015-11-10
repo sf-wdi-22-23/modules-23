@@ -181,7 +181,7 @@
   Welcome, <%= @user.email %>!
   ```
 
-1. Lastly, add a `current_user` method at the application level.
+1. Lastly, add a `current_user` method at the application level and then try to use it in your splash page.
 
   ```ruby
     #  app/controllers/application_controller.rb
@@ -195,6 +195,12 @@
 
       helper_method :current_user  #makes the current_user method available to views
     end
+  ```
+
+  ```html+erb
+  <!-- splash.html.erb -->
+  
+  Welcome <%= @current_user %>
   ```
 
 ## Stretch Challenges
