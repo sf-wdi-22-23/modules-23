@@ -260,7 +260,7 @@ We could use a tool like [Capybara](https://github.com/jnicklas/capybara) to tes
 5. **Request Specs** https://www.relishapp.com/rspec/rspec-rails/docs/request-specs/request-spec
 6. **Matchers**  https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
 
-## Challenges
+<!-- ## Challenges
 
 ### Base Challenges
 
@@ -333,4 +333,4 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
 
 1. Update your recipe controller spec to check that when a user creates a recipe, it's saved to the user's recipe list.
 
-1. Refactor the `create` method in your `RecipesController` to pass your new `create` action tests.
+1. Refactor the `create` method in your `RecipesController` to pass your new `create` action tests. -->
