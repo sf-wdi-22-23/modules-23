@@ -2,24 +2,18 @@
 
 ### Base Challenges
 
-We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those before you `rake db:create`.
+We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those before you `rake db:create`. You will need to add the FFaker gem to your project to complete these exercises.
 
 **Model Method Tests**
 
-1. Generate a spec for your `User` model. Add this model test (from above) into the `User` model spec:
-
-  ```ruby
-  describe "#full_name" do
-    it "joins first name and last name" do
-      expect(@user.full_name).to eq("#{@user.first_name} #{@user.last_name}")
-    end
-  end
-  ```
+1. Generate a spec for your `User` model.
 
   ```
   # generate User model spec
   $ rails g rspec:model user
   ```
+
+1. Add this test into the `User` model spec:
 
   ```ruby
   #
@@ -69,7 +63,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   $ rake db:migrate
   ```
 
-1. Write a `full_name` instance method in the `User` model to pass the test you added.
+1. Write a `full_name` instance method in the `User` model to pass the test you just added.
 
   ```ruby
   #
@@ -89,9 +83,9 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
 1. Write a spec for a `generate_username` method that combines the first letter of a user's first name with the user's full last name and a random 2 digit number. All letters should be changed to lower case. Examples:
 
   ```ruby
-  # user1 has first_name "Cameron", last_name "Jacoby"
+  # user1 has first_name "Juliana", last_name "Lopker"
   user1.generate_username
-  # => cjacoby64
+  # => jlopker64
 
   # user2 has first_name "Adam", last_name "Braus"
   user2.generate_username

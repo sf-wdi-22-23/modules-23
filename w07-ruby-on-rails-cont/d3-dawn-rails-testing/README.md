@@ -10,9 +10,9 @@ Reference: [Testing Pre-reading](https://github.com/sf-wdi-22-23/modules-23/tree
 
 ## rspec-rails
 
-Rspec is a testing gem for Ruby. It helps us write tests that sound like user stories or planning comments ("This method should..."). [rspec-rails](https://github.com/rspec/rspec-rails) is a testing framework specifically for Rails. We'll use rspec-rails alone to test our models and controllers.
+Rspec is a testing gem for Ruby. It helps us write tests that sound like user stories or planning comments ("This method should..."). [rspec-rails](https://github.com/rspec/rspec-rails) is a testing framework specifically for Rails. We'll use rspec-rails to test our models and controllers.
 
-rspec-rails helps us implement the four-phase testing methodology (with setup, exercise, verify, and tear down steps). Here's what a simple rspec-rails test might look like:
+<!-- rspec-rails helps us implement the four-phase testing methodology (with setup, exercise, verify, and tear down steps). Here's what a simple rspec-rails test might look like:
 
 ```ruby
 #
@@ -35,7 +35,7 @@ RSpec.describe Pet, type: :model do
   # teardown is automatic
 
 end
-```
+``` -->
 
 ### Adding rspec-rails to Your Project
 
@@ -65,7 +65,7 @@ end
 1. If you created models before adding rspec-rails, create a spec file for each of your models. (This is only necessary if you had a model created before you installed rspec-rails.)
 
   ```bash
-  $ rails g rspec:model article
+  $ rails g rspec:model MODEL_NAME
   ```
 
 ### Running rspec-rails Tests
@@ -91,7 +91,7 @@ To run only a specific set of tests, type `rspec` and the file path for the test
   Run `rspec` from the terminal now to check that your install worked.
 
 ## Writing rspec-rails Tests
-
+<!-- 
 ### Cool Tool: FFaker
 
 FFaker generates random data for us! We can use it to create fake data for tests. For example, `FFaker::Name.first_name` generates a fake first name. `FFaker::Internet.email` generates a fake email. To see more that FFaker can do, check out the [FFaker docs](http://www.rubydoc.info/github/emmanueloga/ffaker/FFaker) and/or this [handy FFaker cheatsheet](http://ricostacruz.com/cheatsheets/ffaker.html).
@@ -128,7 +128,7 @@ To add FFaker to your project, put it in your Gemfile for the development and te
   end
   ```
 
-Then run `bundle` in your terminal.
+Then run `bundle` in your terminal. -->
 
 ### Testing Models
 
