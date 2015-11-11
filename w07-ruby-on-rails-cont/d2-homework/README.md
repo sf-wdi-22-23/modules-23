@@ -7,6 +7,8 @@
 | Review RSpec setup in a Rails app |
 | Write controller specs for `new` and `create` actions |
 
+*Note: Scroll to the bottom for today's deliverables.*  
+
 ## Why We Test
 
 - save time when we create or update a project
@@ -183,6 +185,7 @@ Setting flash messages in the controller makes them available in our view, but d
 ```
 
 ## Review: RSpec Setup
+Let's quickly review how to setup RSpec and work with it.  Let's imagine we have a rails app for handling recipes; how can we switch over to using RSpec and test our code?
 
 1. Add `rspec-rails` to your `Gemfile` in the development and test groups. We'll also go ahead and add <a href="https://github.com/ffaker/ffaker" target="_blank">ffaker</a> and <a href="https://github.com/thoughtbot/factory_girl_rails" target="_blank">factory_girl_rails</a>:
 
