@@ -529,6 +529,8 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   #
   class Recipe < ActiveRecord::Base
 
+    ... 
+
     belongs_to :user
 
   end
