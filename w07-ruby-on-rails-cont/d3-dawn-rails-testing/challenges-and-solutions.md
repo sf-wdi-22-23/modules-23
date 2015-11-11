@@ -2,7 +2,7 @@
 
 ### Base Challenges
 
-We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those (`rake db:drop`) before you `rake db:create`. You will need to add the FFaker gem to your project to complete these exercises. Jump over to the README and follow the directions for adding `rspec-rails` to your project.
+We'll build off a rails app with auth. Fork and clone the [rails_auth app](https://github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those (`rake db:drop`) before you `rake db:create`. You will need to add the FFaker gem to your project to complete these exercises. Jump over to the README and follow the directions for adding `rspec-rails` to your project.
 
 **Model Method Tests**
 
@@ -529,7 +529,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   #
   class Recipe < ActiveRecord::Base
 
-    ... 
+    ...
 
     belongs_to :user
 
