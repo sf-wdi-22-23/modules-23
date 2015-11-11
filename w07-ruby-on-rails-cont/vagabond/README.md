@@ -10,24 +10,24 @@ Working in teams of 3-4, using pair programming and agile development methodolog
 
 Team 1 - Juliana
 Breana
-Emily A.
+Annie
 Michael
 Roy
 
 Team 2 - Juliana
 Brendan
 Emily K.
-Meredith
+Natasha
 Scot
 
 Team 3 - Braus
 Eric
 Jeehye
 Zain
-Natasha
+Meredith
 
 Team 4 - Braus
-Annie
+Emily A.
 Isom
 Vince
 Ling
