@@ -13,7 +13,7 @@ def fibonacci_iterative(n)
   fib_numbers = [0,1]
   # iterate equal amount of times as given Fibonacci number you are seeking
   n.times do
-  	# add the sum of the last and second-to-last elements of the fib_numbers array to the fib_numbers array
+    # add the sum of the last and second-to-last elements of the fib_numbers array to the fib_numbers array
     p fib_numbers << (fib_numbers[-1] + fib_numbers[-2])
   end
   # when done iterating, return the nth Fibonnaci number
@@ -35,10 +35,19 @@ fibonacci_recursive(10)
 # fib(n-1) + fib(n-2) otherwise
 # 0,1,1,2,3,5,8,13,21
 
-### Runtime Tests
+## Runtime Tests
+# NOTE: when running these benchmarks comment out all puts and p
+#   scrolling those down your terminal is far more intensive to the CPU
+#   than the algorithm itself. :-)
+
+
+# puts "fibonacci iterative benchmark results:"
 # puts Benchmark.measure { 1000.times do fibonacci_iterative(20) end }
 
-# puts Benchmark.measure {
-#   1000.times do
-#     fibonacci_recursive(20)
-# end }
+# result = Benchmark.measure do
+  # 1000.times do
+    # fibonacci_recursive(20)
+  # end
+# end
+# puts "fibonacci recursive benchmark results:"
+# puts result
