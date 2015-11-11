@@ -50,7 +50,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](https
 1. Create and run a migration to add a `first_name` and a `last_name` column to the `users` table.
 
   ```
-  $ rails g migration AddFieldsToUsers first_name:string last_name:sting
+  $ rails g migration AddFieldsToUsers first_name:string last_name:string
   ```
 
   This will create a migration file that looks like:
