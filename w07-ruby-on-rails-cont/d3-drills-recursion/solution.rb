@@ -63,6 +63,7 @@ def in_words(int)
     hundreds, tens = (int/100), int % 100
     "#{INT_ENGLISH_MAPPER[hundreds]} hundred #{in_words(tens)}".strip
   else
+    # Woah cowboy, this solution is only valid up into the thousands!  Can you solve the rest on your own?
     thousands, hundreds = (int/1000), int % 1000
     "#{INT_ENGLISH_MAPPER[thousands]} thousand #{in_words(hundreds)}".strip
   end
