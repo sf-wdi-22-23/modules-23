@@ -1,6 +1,6 @@
 
 # Using recursion to solve a practical problem
-#### Creating a ruby method to convert numbers English words
+#### Creating a ruby method to convert numbers to English words
 
 *Why should we care about this?* Great question. Recursion is a powerful tool in programming, so powerful it is used by life itself!
 
@@ -22,7 +22,7 @@ end
 
 ## Fibonacci: A quick example. 
 
-#### It's only natural to teach the example of generating fibonacci numbers using recursion because the are **defined recursively**
+#### It's only natural to teach the example of generating fibonacci numbers using recursion because they are **defined recursively**
 By definition, the first two numbers in the Fibonacci sequence are either 1 and 1, or 0 and 1, depending on the chosen starting point of the sequence, and each subsequent number is the sum of the previous two.
 
 Check out an iterative and recursive solution [here](fibonacci.rb).
