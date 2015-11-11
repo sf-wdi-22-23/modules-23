@@ -8,29 +8,29 @@ Working in teams of 3-4, using pair programming and agile development methodolog
 
 #### Groups:
 
-Team 1 - Juliana
-Breana
-Annie
-Michael
-Roy
+Team 1 - Braus
+Emily A.
+Isom
+Vince
+Ling
 
-Team 2 - Juliana
+Team 2 - Braus
 Brendan
 Emily K.
 Natasha
 Scot
 
-Team 3 - Braus
+Team 3 - Juliana
 Eric
 Jeehye
 Zain
 Meredith
 
-Team 4 - Braus
-Emily A.
-Isom
-Vince
-Ling
+Team 4 - Juliana
+Breana
+Annie
+Michael
+Roy
 
 Team 5 - Matt
 Johnny
