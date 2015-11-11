@@ -2,13 +2,13 @@
 
 ### Base Challenges
 
-We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth).
+We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those before you `rake db:create`.
 
 **Model Method Tests**
 
 1. Generate a spec for your `User` model. Add this model test (from above) into the `User` model spec:
 
-  ```
+  ```ruby
   describe "#full_name" do
     it "joins first name and last name" do
       expect(@user.full_name).to eq("#{@user.first_name} #{@user.last_name}")
@@ -52,6 +52,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   $ rails g migration AddFieldsToUsers first_name last_name
   ```
 
+  This will create a migration file that looks like:
   ```ruby
   #
   # db/migrate/20150806041236_add_fields_to_users.rb
@@ -63,7 +64,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
     end
   end
   ```
-
+  Run the migration to update your database:
   ```
   $ rake db:migrate
   ```
@@ -145,6 +146,11 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   end
   ```
 
+  ```
+  # to run all tests
+  $ rspec
+  ```
+
 **Controller Tests with Recipes!**
 
 1. Create a `Recipe` model and its controller. A recipe should include the dish's title and the instructions for making the dish. You can assume the instructions are plain text.
@@ -198,6 +204,11 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
     end
 
   end
+  ```
+
+  ```
+  # to run all tests
+  $ rspec
   ```
 
 1. Write the spec for a `new` action. It should render a new view (which would have the new recipe form). Do you expect your tests to pass or fail? Run the tests.
