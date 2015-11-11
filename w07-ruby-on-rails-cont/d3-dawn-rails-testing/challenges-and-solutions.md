@@ -2,7 +2,7 @@
 
 ### Base Challenges
 
-We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those before you `rake db:create`. You will need to add the FFaker gem to your project to complete these exercises.
+We'll build off a rails app with auth. Fork and clone the [rails_auth app](github.com/sf-wdi-22-23/rails_auth). If you already have rails_auth_development and rails_auth_test databases, drop those (`rake db:drop`) before you `rake db:create`. You will need to add the FFaker gem to your project to complete these exercises. Jump over to the README and follow the directions for adding `rspec-rails` to your project.
 
 **Model Method Tests**
 
@@ -39,11 +39,18 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
 
   end
   ```
+  Talk to your partner about what this test is testing for.
+
+1. Run your new test and watch it fail:
+  ```
+  # to run all tests
+  $ rspec
+  ```
 
 1. Create and run a migration to add a `first_name` and a `last_name` column to the `users` table.
 
   ```
-  $ rails g migration AddFieldsToUsers first_name last_name
+  $ rails g migration AddFieldsToUsers first_name:string last_name:sting
   ```
 
   This will create a migration file that looks like:
@@ -147,12 +154,13 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
 
 **Controller Tests with Recipes!**
 
-1. Create a `Recipe` model and its controller. A recipe should include the dish's title and the instructions for making the dish. You can assume the instructions are plain text.
+1. Create a `Recipe` model and its controller. A recipe should include the dish's title and the instructions for making the dish. You can assume the instructions are plain text. Notice how the specs were created automatically. Don't forget to migrate your new model!
 
   ```
-  $ rails g model Recipe title instructions
+  $ rails g model Recipe title:string instructions:text
   $ rails g controller recipes
   ```
+  What are the pending tests? Discuss with your partner. Try to figure out how to get them to not show up when you run your tests.
 
 1. Write the spec for `recipes#index` (`recipes` controller, `index` action). It should render an index view with data from all existing recipes in the database. Do you expect your tests to pass or fail? Run the spec.
 
@@ -204,6 +212,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   # to run all tests
   $ rspec
   ```
+  Why does this fail? HINT: you need to add a recipes#index view to render `:index`.
 
 1. Write the spec for a `new` action. It should render a new view (which would have the new recipe form). Do you expect your tests to pass or fail? Run the tests.
 
@@ -250,7 +259,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   end
   ```
 
-1. Write a spec for a `create` action. It should use data from parameters to add a recipe to the database, then redirect to a show view for the new recipe. Do you expect your tests to pass?
+1. Write a spec for a `create` action. It should use data from parameters to add a recipe to the database, then redirect to a show view for the new recipe. Discuss with your partner what this test is testing for.
 
   ```ruby
   #
@@ -289,7 +298,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   end
   ```
 
-1. Update your controller to fill in the `create` action, and pass as many of the tests you wrote as possible so far. **Hint:** Don't write a `show` action for this step!
+1. Update your controller to fill in the `create` action, and pass as many of the tests you wrote as possible so far.
 
   ```ruby
   #
@@ -308,6 +317,22 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
       end
     end
 
+    def recipe_params
+      params.require(:recipe).permit(:title, :instructions)
+    end
+
+  end
+  ```
+
+1. The last test creates a new recipe with `title: nil, instructions: nil`. To get the last test to pass, we need to do a validation in the recipe model.
+
+  ```ruby
+  #
+  # app/models/recipe.rb
+  #
+  class Recipe < ActiveRecord::Base
+    validates :title, presence: true
+    validates :instructions, presence: true
   end
   ```
 
@@ -339,7 +364,7 @@ We'll build off a rails app with auth. Fork and clone the [rails_auth app](githu
   end
   ```
 
-1. Update your controller to pass the tests you wrote for your `show` action.
+1. Update your controller to pass the tests you wrote for your `show` action. Don't forget to create the associated view!
 
   ```ruby
   #

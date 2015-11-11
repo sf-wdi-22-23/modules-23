@@ -39,15 +39,13 @@ end
 
 ### Adding rspec-rails to Your Project
 
-1. Add rspec-rails to your Gemfile in the `development` and `test` groups:
+1. Add rspec-rails to your Gemfile:
 
   ```ruby
   #
   # Gemfile
   #
-   group :development, :test do
-     gem 'rspec-rails'
-   end
+  gem 'rspec-rails'
   ```
 
 1. Run `bundle install` (or `bundle` for short) in your terminal so that rspec-rails is actually added to your project.
@@ -59,8 +57,6 @@ end
   ```
 
   This creates a `spec` directory. It also adds `spec/spec_helper.rb` and `.rspec` files that are used for configuration. See those files for more information.
-
-1. Configure your specs by going into the `.rspec` file and removing the line that says `--warnings` if there is one.
 
 1. If you created models before adding rspec-rails, create a spec file for each of your models. (This is only necessary if you had a model created before you installed rspec-rails.)
 
@@ -91,7 +87,7 @@ To run only a specific set of tests, type `rspec` and the file path for the test
   Run `rspec` from the terminal now to check that your install worked.
 
 ## Writing rspec-rails Tests
-<!-- 
+<!--
 ### Cool Tool: FFaker
 
 FFaker generates random data for us! We can use it to create fake data for tests. For example, `FFaker::Name.first_name` generates a fake first name. `FFaker::Internet.email` generates a fake email. To see more that FFaker can do, check out the [FFaker docs](http://www.rubydoc.info/github/emmanueloga/ffaker/FFaker) and/or this [handy FFaker cheatsheet](http://ricostacruz.com/cheatsheets/ffaker.html).
