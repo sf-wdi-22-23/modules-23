@@ -9,6 +9,14 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <br>
 [Rails 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUn7MQ77Z7FnMeir_b_4HSuM)
 
+## Week 9 - Project 2
+
+|  | Monday | Tuesday | Wednesday | Thursday | Friday |
+| :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
+| **Dawn 10:00am** | Project 2, 11AM Action Mailer Breakout (Brianna) | Project 2 | WOOHOO | Tanks Gibbon | WOOHOO |
+| **Dusk** | Project 2 | Project 2 Presentations  | | | |
+| **HW** | None |  Angular Preparation Homework (Alex)  | | | |
+
 ## Week 8 - Projects
 
 |  | Monday | Tuesday | Wednesday | Thursday | Friday |
