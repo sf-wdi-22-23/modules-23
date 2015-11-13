@@ -13,10 +13,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 
 |  | Monday | Tuesday | Wednesday | Thursday | Friday |
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| **Dawn 10:00-12:30** | Project Vagabond, 11AM Heroku Deploy Workshop | Project Vagabond Presentations & Project 2 Pitches | Project 2 | Project 2 | Project 2 |
-| **Dusk** | Project Vagabond | Project 2 Groups Assigned & Planning  | Project 2  
-Photo Uploading (Braus) | Project 2
-Pretty URLs (Juliana) | Project 2 & outcomes |
+| **Dawn 10:00am** | Project Vagabond, 11AM Heroku Deploy Workshop | Project Vagabond Presentations & Project 2 Pitches | Project 2 | Project 2 | Project 2 |
+| **Dusk** | Project Vagabond | Project 2 Groups Assigned & Planning  | Project 2 + Photo Uploading (Braus) | Project 2 + Pretty URLs (Juliana) | Project 2 & outcomes |
 
 ## Week 7 - Ruby on Rails, cont.
 
