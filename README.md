@@ -15,7 +15,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
 | **Dawn 10:00am** | Project 2, 11AM Action Mailer Breakout (Brianna) | Project 2 | WOOHOO | Tanks Gibbon | WOOHOO |
 | **Dusk** | Project 2 | Project 2 Presentations  | | | |
-| **HW** | None |   [Angular Prep and Review](./w08-project-2/thankgiving_homework.md) (Alex)  | | | |
+| **HW** | None |   [Angular Prep and Review](https://github.com/sf-wdi-22-23/modules-23/blob/master/w08-project-2/thanksgiving_homework.md) (Alex)  | | | |
 
 ## Week 8 - Projects
 
