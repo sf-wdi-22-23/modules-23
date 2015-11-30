@@ -90,7 +90,7 @@ In order to pass data or behavior to our HTMl view we need to use the object `$s
 Let's register some Pokemon with $scope!
 
 ```js
-app.controller("PokemonCtrl", [$scope, function($scope){
+app.controller("PokemonCtrl", ['$scope', function($scope){
   $scope.pokemon = [
     {
       Ndex: 25,
