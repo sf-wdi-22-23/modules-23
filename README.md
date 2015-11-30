@@ -39,7 +39,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Module2</td>
     <td>Intro MEAN and Client-Side Architecture, simple $http GET (Braus)</td>
     <td>Angular $http (Juliana)</td>
-    <td>Custom ng directives (Matt)</td>
+    <td>Custom Angular directives (Matt)</td>
     <td>Intro Weekend Lab (Braus)</td>
     <td>Weekend Lab (Team)</td>
   </tr>
