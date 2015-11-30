@@ -90,7 +90,8 @@ The data structure allows you to do the following:
 	
 
 1. You follow a favorite literary critic's book ratings very closely.  In particular, you keep a self-balancing binary search tree of all the critic's reviews, where each node's key is the rating given by the critic to that node's book.  Every time the critic publishes a new book review, you add it to the tree. Every time you finish reading your current book, you read the next highest-rated book. As a first step to automating your book selection process, pseudocode a `max` function to find the book in the tree with the highest rating. Your function should take the tree as its argument. (A next step would be to also delete the item, but don't work on that right now.)
-	
+
+
 
 
 ## Trie (15 minutes)
