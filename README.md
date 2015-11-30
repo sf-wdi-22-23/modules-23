@@ -39,7 +39,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Module2</td>
-    <td>Intro MEAN and Client-Side Architecture, simple $http GET (Braus)</td>
+    <td>[Intro MEAN and Client-Side Architecture, simple $http GET](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1_dusk_intro_mean_and_%24http) (Braus)</td>
     <td>Angular $http (Juliana)</td>
     <td>Custom Angular Directives (Matt)</td>
     <td>Intro Weekend Lab (Braus)</td>
