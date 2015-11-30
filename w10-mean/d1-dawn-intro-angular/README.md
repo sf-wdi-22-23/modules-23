@@ -51,7 +51,7 @@ Great, we're up and running!
 
 Angular creates it's views by templating directly into HTML with expressions. This is it's declarative way of building the UI.
 
-Try writing any regular javascript expression in side double curly brackets, such as: `{{ <someExpression> }}` and see what your HTML evaluates to. What happens what you express:
+Try writing any regular javascript expression in side double curly brackets, such as: `{{ <someExpression> }}` and see what your HTML evaluates to. What happens when you express:
 
 * `4 * 4`
 * `"hola!".toUpperCase()`
