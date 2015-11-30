@@ -210,3 +210,6 @@ There are many more directives. For now, know that they exist and why they may b
 
 * Sort the Pokemon by nDex number.
 * Create an input tag so that I can search for a particular Pokemon.
+
+###Stretch Challenges
+* Play around with more directives such as `ng-show`/`ng-hide` and `ng-click`.
