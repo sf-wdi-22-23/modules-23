@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Intro Angular</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="ngFun" class="container">
+  {{ "lower cap string" | uppercase }}
+
+  <div ng-controller="PokemonCtrl">
+    <h1>Trainer: {{trainer.name || "Ash"}}</h1>
+    <span>Enter your name:</span>
+    <input ng-model="trainer.name"/>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ndex</th>
+          <th>Name</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="p in pokemon | orderBy: 'Ndex' | filter:searchText">
+          <td>{{p.Ndex}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.type}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <span>Search Pokemon: </span>
+    <input ng-model="searchText"/>
+  </div>
+</body>
+</html>
