@@ -29,8 +29,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Module1</td>
-    <td>NG Intro & Base Native Directives (Juliana)</td>
-    <td>NG Routing with UI router (Matt)</td>
+    <td>Intro to Angular & Base Native Directives (Juliana)</td>
+    <td>Angular Routing with UI router (Matt)</td>
     <td>Services and ng-resource (Juliana)</td>
     <td>Custom Services (Braus)</td>
     <td>Review (Juliana)</td>
@@ -38,7 +38,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td>Intro MEAN and Client-Side Architecture, simple $http GET (Braus)</td>
-    <td>NG $http other verbs & stealthy semi-review (Juliana)</td>
+    <td>Angular $http other verbs & stealthy semi-review (Juliana)</td>
     <td>Custom ng directives (Matt)</td>
     <td>Intro Weekend Lab (Braus)</td>
     <td>Weekend Lab (Team)</td>
