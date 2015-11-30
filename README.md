@@ -8,6 +8,8 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 [ExpressJS 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8)
 <br>
 [Rails 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUn7MQ77Z7FnMeir_b_4HSuM)
+<br>
+[Angular 1.4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUmKzFoqOwClxw6OIgKxa5sM)
 
 ## Week 10 - MEAN
  <table>
@@ -21,7 +23,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Drills</td>
-    <td>Trees & Tries Intro (Matt)</td>
+    <td>[Trees & Tries Intro](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-drills-trees) (Matt)</td>
     <td>Breadth-First Search (Matt)</td>
     <td>Depth-First Search (Braus)</td>
     <td>Tree Traversal (Braus)</td>
