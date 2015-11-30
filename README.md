@@ -29,7 +29,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   </tr>
   <tr>
     <td>Module1</td>
-    <td>Intro to Angular & Base Native Directives (Juliana)</td>
+    <td>[Intro to Angular & Base Native Directives](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-dawn-intro-angular) (Juliana)</td>
     <td>Angular Routing with UI router (Matt)</td>
     <td>Services and ng-resource (Juliana)</td>
     <td>Custom Services (Braus)</td>
