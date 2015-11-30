@@ -32,7 +32,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module1</td>
     <td>[Intro to Angular](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-dawn-intro-angular) (Juliana)</td>
-    <td>Angular Routing with UI router (Matt)</td>
+    <td>[Angular Routing with UI router](https://github.com/sf-wdi-22-23/angular-ui-router-lab) (Matt)</td>
     <td>Services and ng-resource (Juliana)</td>
     <td>Custom Services (Braus)</td>
     <td>Review (Juliana)</td>
