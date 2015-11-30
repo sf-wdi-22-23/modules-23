@@ -9,6 +9,50 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <br>
 [Rails 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUn7MQ77Z7FnMeir_b_4HSuM)
 
+## Week 10 - MEAN
+ <table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>Drills</td>
+    <td>Trees & Tries Intro (Matt)</td>
+    <td>Breadth-First Search (Matt)</td>
+    <td>Depth-First Search (Braus)</td>
+    <td>Tree Traversal (Braus)</td>
+    <td>String Matching(Matt)</td>
+  </tr>
+  <tr>
+    <td>Module1</td>
+    <td>NG Intro & Base Native Directives (Juliana)</td>
+    <td>NG Routing with UI router (Matt)</td>
+    <td>Services and ng-resource (Juliana)</td>
+    <td>Custom Services (Braus)</td>
+    <td>Review (Juliana)</td>
+  </tr>
+  <tr>
+    <td>Module2</td>
+    <td>Intro MEAN and Client-Side Architecture, simple $http GET (Braus)</td>
+    <td>NG $http other verbs & stealthy semi-review (Juliana)</td>
+    <td>Custom ng directives (Matt)</td>
+    <td>Intro weekend lab (Braus)</td>
+    <td>Weekend Lab (Team)</td>
+  </tr>
+  <tr>
+    <td>HW</td>
+    <td>Angular Routing (Alex)</td>
+    <td>ng-resources (Juliana)</td>
+    <td>services (Brianna)</td>
+    <td>CRUD Weekend Lab (Angular Prototype)</td>
+    <td>Lightning Talk Assignment / Research (Brianna)</td>
+  </tr>
+</table>
+
 ## Week 9 - [Project 2](https://github.com/sf-wdi-22-23/modules-23/tree/master/w08-project-2)
 
 |  | Monday | Tuesday | Wednesday | Thursday | Friday |
