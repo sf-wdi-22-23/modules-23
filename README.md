@@ -40,7 +40,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Intro MEAN and Client-Side Architecture, simple $http GET (Braus)</td>
     <td>NG $http other verbs & stealthy semi-review (Juliana)</td>
     <td>Custom ng directives (Matt)</td>
-    <td>Intro weekend lab (Braus)</td>
+    <td>Intro Weekend Lab (Braus)</td>
     <td>Weekend Lab (Team)</td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>Angular Routing (Alex)</td>
     <td>ng-resources (Juliana)</td>
     <td>services (Brianna)</td>
-    <td>CRUD Weekend Lab (Angular Prototype)</td>
+    <td>Weekend Lab</td>
     <td>Lightning Talk Assignment / Research (Brianna)</td>
   </tr>
 </table>
