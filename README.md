@@ -8,6 +8,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 [ExpressJS 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUkPTztJ8zEJsuTOMdxZshO8)
 <br>
 [Rails 4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUn7MQ77Z7FnMeir_b_4HSuM)
+<br>
 [Angular 1.4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUmKzFoqOwClxw6OIgKxa5sM)
 
 ## Week 10 - MEAN
