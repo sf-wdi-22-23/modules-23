@@ -3,19 +3,19 @@
 Built on the top of the `$http` service, Angular’s `$resource` is a service that lets you interact with RESTful backends easily. `$resource` is very similar to models in Rails. In this tutorial, we're going to make use of a book API that can be found here: `http://daretodiscover.herokuapp.com/books`. The request syntax of the books API follows the same pattern as the wine API that you used yesterday.
 
 ## Installation
-1. Create a new angular app and controller.
-1. The `$resource` service doesn’t come bundled with the main Angular script. Add it to your `index.html` file.
+1. Clone `seed-mean-html` and name it `bookApp`.
+1. The `$resource` service doesn’t come bundled with the main Angular script. Double check that it's getting loaded in your `index.html`
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-resource.min.js"></script>
+<script type="text/javascript" src="/vendor/angular-resource/angular-resource.js"></script>
 ```
 
-1. Now you need to load the `$resource` module into your application.
+1. Now you need to load the `$resource` module into your application in `app.js`.
 ```js
-angular.module('app', ['ngResource']);
+angular.module('app', [..., 'ngResource']);
 ```
 
 ## Interacting with the API
-1. To use `$resource` inside your controller/service you need to declare a dependency on `$resource`. The next step is calling the `$resource()` function with your REST endpoint, as shown in the following example. This function call returns a `$resource` class representation which can be used to interact with the REST backend. Create a `services.js` file and put your new `$resource` service in it.
+1. To use `$resource` inside your controller/service you need to declare a dependency on `$resource`. The next step is calling the `$resource()` function with your REST endpoint, as shown in the following example. This function call returns a `$resource` class representation which can be used to interact with the REST backend. Create a `services.js` file in your `public` folder and put your new `$resource` service in it.
 
   ```js
   angular.module('myApp').service('Book', function($resource) {
@@ -85,8 +85,8 @@ We're going to build a CRUD app like the `$http` one we built yesterday but usin
 ## Stretch Challenges
 Link the `name` of each book to a view that shows only the details for that book. **Hints:**
 
-* Use `ngRoute` and `ng-view` to set up multiple views in your Angular app.  
-* Use `$routeParams` to figure out which book to display.  
+* Use the `.config` section in `app.js` to set up multiple views in your Angular app. Like in Express, you can use the `/:id` route to indicate a wildcard.
+* Use `$stateParams` to figure out which book to display.
 * Your view for a single book will have a different controller than your view that displays all books.  
 
 Add a filter (client side search) to your app. See docs here: https://docs.angularjs.org/api/ng/filter/filter
