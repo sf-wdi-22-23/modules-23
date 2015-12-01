@@ -24,7 +24,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Drills</td>
     <td>[Trees & Tries Intro](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-drills-trees) (Matt)</td>
-    <td>Breadth-First Search (Matt)</td>
+    <td>[Breadth-First Search](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-drills-bfs) (Matt)</td>
     <td>Depth-First Search (Braus)</td>
     <td>Tree Traversal (Braus)</td>
     <td>String Matching(Matt)</td>
