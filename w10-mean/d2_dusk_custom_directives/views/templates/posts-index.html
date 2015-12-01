@@ -1,0 +1,30 @@
+<h3 class='pull-left'>Posts</h3>
+<form ng-submit="createPost()">
+  <div class='form-group'>
+    <textarea class='form-control' ng-model="post.content"></textarea>
+  </div>
+  <button type="submit" class='btn btn-default'>Save</button>
+</form>
+<hr>
+<ul class='list-group'>
+  <li ng-repeat="post in posts" class='list-group-item'>
+    {{post.content}}
+    <a href="#" class='pull-right' ng-click="deletePost(post)">
+      <i class='icon ion-close-circled'></i>
+    </a>
+  </li>
+</ul>
+
+<div ng-controller="GifsCtrl">
+  <form ng-submit="searchGifs()">
+    <div class='form-group'>
+      <textarea class='form-control' ng-model="term"></textarea>
+    </div>
+    <button type="submit" class='btn btn-default'>Search</button>
+  </form>
+  <ul class='list-group'>
+    <li ng-repeat="gif in gifs" class='list-group-item'>
+      <img src="{{gif.images.fixed_height_small.url}}" alt="gif">
+    </li>
+  </ul>
+</div>
