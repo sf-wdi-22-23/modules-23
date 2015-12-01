@@ -90,3 +90,5 @@ Link the `name` of each book to a view that shows only the details for that book
 * Your view for a single book will have a different controller than your view that displays all books.  
 
 Add a filter (client side search) to your app. See docs here: https://docs.angularjs.org/api/ng/filter/filter
+
+Solution [here](https://github.com/sf-wdi-22-23/seed-mean-html/tree/book-app)
