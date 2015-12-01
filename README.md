@@ -40,7 +40,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>Module2</td>
     <td>[Intro MEAN and Client-Side Architecture, simple $http GET](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1_dusk_intro_mean_and_%24http) (Braus)</td>
-    <td>Angular $http (Juliana)</td>
+    <td>[Angular $http Lab](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-dusk-angular-http) (Juliana)</td>
     <td>Custom Angular Directives (Matt)</td>
     <td>Intro Weekend Lab (Matt)</td>
     <td>Weekend Lab (Team)</td>
@@ -48,7 +48,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
   <tr>
     <td>HW</td>
     <td>[Angular Routing](https://github.com/sf-wdi-22-23/modules-22/blob/master/w10-mean/d1-homework.md) (Alex)</td>
-    <td>ng-resources (Juliana)</td>
+    <td>[ng-resources and directives](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-homework) (Juliana)</td>
     <td>services (Brianna)</td>
     <td>Weekend Lab</td>
     <td>Lightning Talk Assignment / Research (Brianna)</td>
