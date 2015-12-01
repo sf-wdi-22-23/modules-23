@@ -46,8 +46,10 @@
 
 1. Binary search trees can be faster than arrays at keeping data sorted when you insert and remove nodes, but only if the binary search tree is *balanced*, because a balanced tree has the minimum possible number of levels to store all its nodes. We can check that a tree is balanced by looking at where it has "missing children," room where nodes could have a child but don't. A tree is balanced if all of the missing children are at the very bottom level of the tree or just one level higher. How could you use breadth first search to check whether a binary search tree is balanced?
 
-	*You'd have to modify the algorithm to add the left and right children, as above. Then you'd want to keep track of the depth at which you encountered a missing left or right child. To do so, you can have the queue store hashes/objects that include the node itself as well as its depth.*
-
+	*You'd have to modify the algorithm to add the left and right children, as above. Then you'd want to keep track of the first depths at which you encounter a missing left or right child. To do so, you can have the queue store hashes/objects that include the node itself as well as its depth. When you find the first missing child, save its depth to a variable. As you move through the rest of the tree after the first missing child, you can check if the depth of another missing child is ever 2 greater than the saved minimum missing child depth. If it is, the tree is not balanced. If you finish going through the whole tree without figuring out it's not balanced, it must be balanced.*
+	
+	
+	`This pseudocode shows how to track depth as you search but does not fully solve the balance checking question.`
 	```python
 	def breadth_first_search(tree, target_key):
 		# store node object *and depth* in queue
