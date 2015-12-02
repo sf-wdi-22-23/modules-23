@@ -15,7 +15,7 @@ Tonight's homework is intended to be light enough that you can review new Angula
 
 	**How have we been "getting away with" using Bootstrap with Angular?** (You can check out <a href="https://github.com/sf-wdi-22-23/angular-custom-directives/blob/master/solution-code/app/index.html" target="_blank">the Cards Against Assembly index.html</a> for an example.)
 
-4. Check out <a href="http://angular-ui.github.io/bootstrap/#/getting_started" target="_blank">UI-Bootstrap</a>.  Why is it for? Read over the buttons section.  
+4. Check out <a href="http://angular-ui.github.io/bootstrap/#/getting_started" target="_blank">UI-Bootstrap</a>.  What is it for? Read over the buttons section.  
 
 
 5. Review angular! Here are just a few of the resources your classmates recommend:
