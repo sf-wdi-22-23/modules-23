@@ -13,17 +13,17 @@
 
 ## Custom Directives - Intro (10 mins)
 
-As you've seen by now, a huge amount of the code you work with in Angular are directives. Angular was designed to be an extension of HTML - a way to have custom-defined interactive tags of your own making.
+As you've seen by now, directives make up a huge amount of the code you work with in Angular. Angular was designed to be an extension of HTML - a way to have custom-defined interactive tags of your own making.
 
-While we've been getting good at using the directives that come with Angular, it's time to start seeing what we can do if we start making some up.
+While we've been leveling up at using the directives that come with Angular, it's time to see what we can do if we start making some up.
 
-One of the most obvious _uses_ of this is when you've got repetitive code to render some information or data. If you're using a bunch of tags all over the place, it's a simple DRY principle – you might forget a tag or decide to change something and have to change it in a million places.
+One of the most obvious _uses_ of this is when you've got repetitive code to render some information or data. If you're using a bunch of tags all over the place, it's a simple DRY principle – you might forget a tag or decide to change something and have to change it in a million places.
 
 By extracting it to a custom directive, we can just reference that directive whenever we need to use it and not worry about repeating the code to render it.
 
 #### Real World Example
 
-As an example, we're going to mess around with duplicating something that's becoming a common pattern in interface design – the concept of a card. Applications like Twitter, Pinterest, Facebook, and a lot more are moving towards this design pattern.
+As an example, we're going to mess around with duplicating something that's becoming a common pattern in interface design – the concept of a card. Applications like Twitter, Pinterest, Facebook, and a lot more are moving towards this design pattern.
 
 <img width="571" alt="Twitter" src="https://cloud.githubusercontent.com/assets/25366/9665317/4f8a5e56-5224-11e5-9b9c-fe62d8a6cdf4.png">
 
@@ -41,6 +41,8 @@ Take five minutes and inspect our starter code. You'll see a pretty normal Angul
 
 
 ## Building a Simple Directive - Codealong (15 mins)
+
+[GET THE STARTER CODE HERE!](https://github.com/sf-wdi-22-23/angular-custom-directives)
 
 Using our starter code, our goal is to take:
 
@@ -113,7 +115,7 @@ directive.restrict = 'EACM';
 - `C` is class. Like `<div class="card"></div>`
 - `M` is comment. Like `<!-- directive: card -->`
 
-You can choose to have just one, all of the above, or any combination you like. You should steer towards elements & attributes as much as possible, though – classes can get messy with other CSS classes, and comments could just end up weird if there isn't a good reason for it.
+You can choose to have just one, all of the above, or any combination you like. You should steer towards elements & attributes as much as possible, though – classes can get messy with other CSS classes, and comments could just end up weird if there isn't a good reason for it.
 
 For ours, let's play with just an element.
 
