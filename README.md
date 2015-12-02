@@ -49,7 +49,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>HW</td>
     <td>[Angular Routing](https://github.com/sf-wdi-22-23/modules-22/blob/master/w10-mean/d1-homework.md) (Alex)</td>
     <td>[ng-resources and directives](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-homework) (Juliana)</td>
-    <td>CSS and UI info (Brianna)</td>
+    <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w10-mean/d3-homework.md" target="_blank">Responsive design and Angular UI info</a> (Brianna)</td>
     <td>Weekend Lab</td>
     <td>Lightning Talk Assignment / Research (Brianna)</td>
   </tr>
