@@ -1,13 +1,13 @@
 # Responsive Web Design
 
-If you want your portfolio to look great across various devices, you should invent some time in learning about responsive web design. If you plan to apply for front-end web development jobs, you *must* know basic principles of responsive design.  
+If you want your portfolio to look great across various devices, you should invest some time learning about responsive web design. If you plan to apply for front-end web development jobs, you *must* know basic principles of responsive design.  
 
-Tonight's homework is intended to be light enough that you can review new Angular material from the past few days, while still helping prepare you to move forward with Angular and with even more awesome UIs for your sites.
+Tonight's homework is intended to be light enough that you can review new Angular material from the past few days, while still preparing  to move forward with Angular and with even more awesome UIs for your sites.
 
 
-1. Flip through the Google Developer's fundamentals guide <a href="https://developers.google.com/web/fundamentals/design-and-ui/?hl=en"   target="_blank">Design and UI</a> section.
+1. Flip through the Google Developer's fundamentals guide <a href="https://developers.google.com/web/fundamentals/design-and-ui/?hl=en" target="_blank">Design and UI</a> section.
 
-2. Read and the Google Developer's fundamentals guide on <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/?hl=en" target="_blank">Responsive Web Design basics</a>, including the four short articles listed under the Topics heading on that page.  
+2. Read the Google Developer's fundamentals guide on <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/?hl=en" target="_blank">Responsive Web Design basics</a>, including the four short articles listed under the Topics heading on that page.  
 
 	**How have we been making our websites responsive so far?**
 
