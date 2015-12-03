@@ -7,7 +7,7 @@ Tonight's homework is intended to be light enough that you can review new Angula
 
 1. Flip through the Google Developer's fundamentals guide <a href="https://developers.google.com/web/fundamentals/design-and-ui/?hl=en"   target="_blank">Design and UI</a> section.
 
-2. Read and the Google Developer's fundamentals guide on <a href="" target="_blank">Responsive Web Design basics</a>, including the four short articles listed under the Topics heading on that page.  
+2. Read and the Google Developer's fundamentals guide on <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/?hl=en" target="_blank">Responsive Web Design basics</a>, including the four short articles listed under the Topics heading on that page.  
 
 	**How have we been making our websites responsive so far?**
 
