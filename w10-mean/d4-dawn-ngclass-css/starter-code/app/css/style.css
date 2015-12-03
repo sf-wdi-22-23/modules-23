@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Chewy|Shadows+Into+Light);
+
+body {
+  width: 500px;
+  margin: 4rem auto;
+  font-size: 21px;
+  line-height: 1.5;
+  background: #95e3e3;
+  font-family: 'Shadows Into Light', Georgia, Times New Roman, serif;
+}
+
+h1:before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url('../img/star.svg') no-repeat top left;
+  background-size: contain;
+  position: relative;
+  top: 0.8rem;
+  left: -0.392rem;
+}
+h1 {
+  font-family: "Chewy", Sniglet, Helvetica, sans-serif;
+  font-size: 3.6rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 0.618rem;
+}
+h1:after {
+  content: "™";
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+
+
+form {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1.618rem;
+  background: white;
+
+  -ms-transform: rotate(-7deg); /* IE 9 */
+  -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+  transform: rotate(-7deg);
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.14);
+
+  position: relative;
+  left:-1rem;
+  top: 0rem;
+
+
+}
+
+form:hover {
+  /*
+  top: -0.618rem;
+  left: -0.382rem;
+  -ms-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  */
+}
+
+form label, form input {
+  font-family: Helvetica;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.618rem;
+}
+
+form input[type=text]{
+  font-weight: normal;
+  border: 1px solid silver;
+  padding: 0.618em;
+  outline: none;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+form input[type=submit] {
+  display: block;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
+  background: white;
+  padding: 0.618rem 1.618rem;
+  cursor: pointer;
+}
+
+form input[type=submit]:disabled {
+  border: 1px solid #efefef;
+  color: #efefef;
+  cursor: default;
+}
+
+.error {
+  border-color: red !important;
+  color: red;
+}
+
+
+
+ol {
+  list-style-type: decimal-leading-zero;
+}
