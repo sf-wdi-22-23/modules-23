@@ -42,7 +42,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>[Intro MEAN and Client-Side Architecture, simple $http GET](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1_dusk_intro_mean_and_%24http) (Braus)</td>
     <td>[Angular $http Lab](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-dusk-angular-http) (Juliana)</td>
     <td>[Custom Angular Directives](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d3_dusk_custom_directives) (Matt)</td>
-    <td>Intro Weekend Lab (Matt)</td>
+    <td>[Intro Weekend Lab](https://github.com/sf-wdi-22-23/modules-23/blob/master/w10-mean/weekend-mean-lab.md) (Matt)</td>
     <td>Weekend Lab (Team)</td>
   </tr>
   <tr>
