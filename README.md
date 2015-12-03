@@ -34,7 +34,9 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>[Intro to Angular](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-dawn-intro-angular) (Juliana)</td>
     <td>[Angular Routing with UI router](https://github.com/sf-wdi-22-23/angular-ui-router-lab) (Matt)</td>
     <td>[Services and ng-resource](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d3-dawn-angular-resource) (Juliana)</td>
-    <td>[ng-class and CSS Animations](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d4-dawn-ngclass-css) (Braus)</td>
+    <td>ng-class and CSS Animations
+    <!-- https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d4-dawn-ngclass-css) (Braus) -->
+    </td>
     <td>Review (Braus)</td>
   </tr>
   <tr>
