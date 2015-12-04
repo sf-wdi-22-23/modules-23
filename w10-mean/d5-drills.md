@@ -63,4 +63,4 @@
   String matching has been worked on for decades and the best optimizations are marvels of coding creativity and efficiency.
 
   Let's go over a basic implementation of the Harspool Algorithm.
-  And if we have time, Knuth Morris Pratt. 
+
