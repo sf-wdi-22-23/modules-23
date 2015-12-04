@@ -76,13 +76,13 @@ We expect most students will complete this project individually, but pairs may b
 
 ## TIMELINE
 
-* **Wednesday, September 2nd @ 10:30am** - Project spec released.
-* **Thursday, September 3rd @ 9:17am** - Project planning deliverables deadline.
-* **Thursday, September 10th @ 10am** - Completed project deliverables deadline; project presentations.
+- **Wednesday, December 8th @ 2:00pm** - Project spec released.
+- **Thursday, December 9th @ 2:00pm** - Project planning deliverables deadline.
+- **Thursday, December 17th @ 10am** - Completed project deliverables deadline; project presentations.
 
 ## PRESENTATIONS
 
-Project 3 presentations will start at **10:00am** on **Thursday, September 10th**. Each presentation should be **5 minutes or less** and cover the following:
+Project 3 presentations will start at **10:00am** on **Thursday, December 17th**. Each presentation should be **5 minutes or less** and cover the following:
 
 * What is your project, and what does it do? (demo)
 * What was your motivation to build it?
