@@ -27,7 +27,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
     <td>[Breadth-First Search](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-drills-bfs) (Matt)</td>
     <td>[Depth-First Search](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d3-drills-dfs) (Juliana)</td>
     <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d4-drills-bst-traversal" target="_blank">Tree Traversal</a> (Braus)</td>
-    <td>String Matching(Matt)</td>
+    <td>[String Matching](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d5-drills-string-matching) (Matt)</td>
   </tr>
   <tr>
     <td>Module1</td>
