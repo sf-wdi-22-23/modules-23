@@ -11,6 +11,52 @@ Look here for all things related to lesson notes, exercises, and solutions as we
 <br>
 [Angular 1.4.x Screencasts](https://www.youtube.com/playlist?list=PLNcEnkMSwDUmKzFoqOwClxw6OIgKxa5sM)
 
+## Week 11 - MEAN Auth, Parse, and Project 3
+
+<table>
+ <tr>
+   <th></th>
+   <th>Monday</th>
+   <th>Tuesday</th>
+   <th>Wednesday</th>
+   <th>Thursday</th>
+   <th>Friday</th>
+ </tr>
+ <tr>
+   <td>Drills</td>
+   <td>[Trees & Tries Intro](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-drills-trees) (Matt)</td>
+   <td>[Breadth-First Search](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-drills-bfs) (Matt)</td>
+   <td>[Depth-First Search](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d3-drills-dfs) (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d4-drills-bst-traversal" target="_blank">Tree Traversal</a> (Braus)</td>
+   <td>[String Matching](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d5-drills-string-matching) (Matt)</td>
+ </tr>
+ <tr>
+   <td>Module1</td>
+   <td>[Intro to Angular](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1-dawn-intro-angular) (Juliana)</td>
+   <td>[Angular Routing with UI router](https://github.com/sf-wdi-22-23/angular-ui-router-lab) (Matt)</td>
+   <td>[Services and ng-resource](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d3-dawn-angular-resource) (Juliana)</td>
+   <td>[ng-class and CSS Animations](https://github.com/sf-wdi-22-23/ng-class) (Braus)</td>
+   <td>Review (Braus)</td>
+ </tr>
+ <tr>
+   <td>Module2</td>
+   <td>[Intro MEAN and Client-Side Architecture, simple $http GET](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d1_dusk_intro_mean_and_%24http) (Braus)</td>
+   <td>[Angular $http Lab](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-dusk-angular-http) (Juliana)</td>
+   <td>[Custom Angular Directives](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d3_dusk_custom_directives) (Matt)</td>
+   <td>[Intro Weekend Lab](https://github.com/sf-wdi-22-23/modules-23/blob/master/w10-mean/weekend-mean-lab.md) (Matt)</td>
+   <td>Weekend Lab (Team)</td>
+ </tr>
+ <tr>
+   <td>HW</td>
+   <td>[Angular Routing](https://github.com/sf-wdi-22-23/modules-22/blob/master/w10-mean/d1-homework.md) (Alex)</td>
+   <td>[ng-resources and directives](https://github.com/sf-wdi-22-23/modules-23/tree/master/w10-mean/d2-homework) (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/blob/master/w10-mean/d3-homework.md" target="_blank">Responsive design and Angular UI info</a> (Brianna)</td>
+   <td>Weekend Lab</td>
+   <td>Lightning Talk Assignment / Research (Brianna)</td>
+ </tr>
+</table>
+
+
 ## Week 10 - MEAN
  <table>
   <tr>
