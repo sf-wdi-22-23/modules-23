@@ -24,7 +24,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Drills</td>
-   <td> [Big O](https://github.com/sf-wdi-22-23/modules-23/tree/master/w11-mean-auth-project-3/d1-drills) (Juliana)</td>
+   <td>[Big O](https://github.com/sf-wdi-22-23/modules-23/tree/master/w11-mean-auth-project-3/d1-drills) (Juliana)</td>
    <td>CodeWars & Interview Prep</td>
    <td>CodeWars & Interview Prep</td>
    <td>CodeWars & Interview Prep</td>
