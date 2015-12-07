@@ -165,6 +165,7 @@ app.config(function ($httpProvider) {
 **Add a User Settings Page**
 
 1. Create a form to edit the user's details at the url `\settings`. This template will need a url, an angular controller, and a template.
+1. Set this link the navbar dropdown below `Profile`.
 1. You don't have a User service, so instead just make an `$http.get` request to `/api/me` to get the user's data.
 1. To submit the form, make an `$http.put` request to `/api/me`.
 1. Go to the `resources/users.js` file and write psuedocode explaining the logic of these routes.
@@ -173,32 +174,58 @@ app.config(function ($httpProvider) {
 **Add a Post Resource**
 
 1. In the `/profile`, display `user.posts` with an ng-repeat.
-1. Add a `posts` attribute to the User model in `user.js` that takes an ObjectId of a schema for Post.
-
+1. Create a form in the `/profile` template that has an input and a textarea field that use the `ng-model` directives to attach them to `post.title` and `post.body` in `$scope`.
+1. Use the `ng-sumit` directive to run the function `createPost()` on submit. This function should run a `$http.post` function to post the `$scope.post` object to `/api/posts`.
+1. Create a new file in `resources` called `posts.js` and model it after `users.js` but require the `post.js` model not the `user.js` model. For now only create one route - `app.post('/api/posts', function(req,res){ ... })`.
+1. Require the `posts.js` file in your `server.js` file just as the `users.js` file is required so that the route is available.
+1. Create another model called `post.js`
   ```js
-  var userSchema = Schema({
-    ...
-    stories : [{ type: Schema.Types.ObjectId, ref: 'Post' }]
-  });
+  var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
 
-  var postSchema = Schema({
+  var PostSchema = Schema({
     title  : String,
     body   : String
   });
 
-  var Post  = mongoose.model('Post', postSchema);
+  var Post = mongoose.model('Post', PostSchema);
+
+  module.exports = Post;
   ```
-1. Create a form in the `/profile` template that has an input and a textarea field that use the `ng-model` directives to attach them to `post.title` and `post.body` in `$scope`.
-1. Use the `ng-sumit` directive to run the function `createPost()` on submit. This function should run a `$http.post` function to post the `$scope.post` object to `/api/posts`.
-1. Create a new file in `resources` called `posts.js` and model it after `users.js` but only create one route for now - `app.post('/api/posts', function(req,res){ ... })`. Remember to require this file in your `server.js` file just as the `users.js` file is required so that the route is available.
+1. Add a `posts` attribute to the User model in `user.js` that references the Post model.
+  ```js
+  var userSchema = Schema({
+    ...
+    posts : [{ type: Schema.Types.ObjectId, ref: 'Post' }]
+  });
+  ```
 1. When you submit your new post form, can you console log the new post object in the server?
-1. Now that your client is posting data to your server route, let's save it to the current user's posts. Find the current user using the mongoose User model and the `req.userId` that satellizer makes available through the JWT token.
+1. Now that your client is posting data to your server route, let's save it to the current user's posts. To find the current user, we have to add the `auth.ensureAuthenticated` function to our route.
+  ```js
+  app.post('/api/posts', auth.ensureAuthenticated, function (req,res) {
+    ...
+  })
+  ```
+1. Now find the current user using the mongoose User model and the `req.userId` that `auth.ensureAuthenticated` makes available through the JWT token.
   ```js
   User.findById(req.userId, function(err, user) {
     ...
   })
   ```
-1. Now let's push the new post from `req.body` into `user.posts`, and then save the `user` object and send back the whole newly saved user object `res.send(user)`.
+1. Now let's create a `new Post` with `req.body`, save the post, and in the callback push that `post` into `user.posts`, and then save the `user` object and send back the post `res.send(post)`.
+  ```js
+  app.post('/api/posts', auth.ensureAuthenticated, function (req,res) {
+    User.findById(req.userId).exec(function(err, user) {
+      var post = new Post(req.body);
+      post.save(function(err, post) {
+        user.posts.unshift(post._id);
+        user.save();
+        res.send(post);				
+      });
+    })
+  })  
+  ```
 1. In the client can you console log the response with the user object?
-1. Now set `$scope.user` in `/profile` equal to the user object the server responds with.
+1. Now unshift the post response into the `$scope.user.posts`.
 1. Do you see the posts displaying? Are the Posts saving to a collection in your database?
+1. Add `.populate('posts')` to your `/api/me` route in `users.js`. Now refresh the `/profile` page - do you see the user's posts?
