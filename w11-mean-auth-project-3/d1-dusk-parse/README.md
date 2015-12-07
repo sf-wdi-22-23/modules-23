@@ -28,16 +28,27 @@ You may use any front-end you already have or you can make a new one. I'm going 
 1. In `app.js`, include a `run` block that initializes your Parse application. In Angular, `run` blocks get run before all other code.
   ```js
   app.run(function() {
-      Parse.initialize("add-your-parse-application-Id","add-you-parse-javascript-key");
-    });
+    Parse.initialize("add-your-parse-application-Id","add-you-parse-javascript-key");
+  });
   ```
 
 1. Now you're ready to `get/post/put/patch/delete` from your Parse backend. To create and post your first object, add this code to a controller:
   ```js
+  // Simple syntax to create a new subclass of Parse.Object.
   var Post = Parse.Object.extend("Post");
+  // Create a new instance of that class.
   var post = new Post();
-  post.save({title: "This is a new post"}).then(function(object) {
-    alert("yay! it worked");
+  // Save the new instance
+  post.save({title: "This is a new post"}, {
+    success: function(newPost) {
+      // Execute any logic that should take place after the object is saved.
+      alert('New object created with objectId: ' + newPost.id);
+    },
+    error: function(newPost, error) {
+      // Execute any logic that should take place if the save fails.
+      // error is a Parse.Error with an error code and message.
+      alert('Failed to create new object, with error code: ' + error.message);
+    }
   });
   ```
 
@@ -45,4 +56,7 @@ You may use any front-end you already have or you can make a new one. I'm going 
 1. Now go back to your Parse dashboard to see your new class and data!
 
 ## Challenge
-Create a fullstack Angular/Parse app CRUDing whatever resource you'd like. Could be fun to swap out your backend from your weekend project with a Parse backend. Consult the [Parse js docs](https://www.parse.com/docs/js/guide) and the [quick reference](https://www.parse.com/docs/rest/guide) for the rest API
+Create a fullstack Angular/Parse app CRUDing whatever resource you'd like. Could be fun to swap out your backend from your weekend project with a Parse backend. Consult the [Parse js docs](https://www.parse.com/docs/js/guide) (the 'Objects' section has info for how to `get/post/put/patch/delete`) and the [quick reference](https://www.parse.com/docs/rest/guide) for the rest API.
+
+## Stretch Challenge
+CRUD two resources and create a relationship between them.
