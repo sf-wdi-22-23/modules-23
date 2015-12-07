@@ -9,7 +9,7 @@
 
 With Express and Ruby we learned the Cookie-Session method of authentication; however, there is a better way to do communicate authentication with **Single Page Applications** and a **Service-Based Architecture**. We're going to use an encrypted chunk of JSON called a **JSON Web Token** or JWT (pronounced ''*jot*'') to communicate authentication between client and server.
 
-![cookie-token-auth](/cookie-token-auth.png)
+![cookie-token-auth](cookie-token-auth.png)
 > Reference [auth0.com](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 
 ## Why Use JWT?
@@ -38,7 +38,7 @@ A JWT is pretty easy to identify. It is three strings separated by .
 
 Each part has a different significance:
 
-![jwt](/jwt.png)
+![jwt](jwt.png)
 
 ### Here is a JWT Example:
 
