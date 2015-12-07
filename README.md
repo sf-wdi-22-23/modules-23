@@ -40,7 +40,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Module2</td>
-   <td>Parse (Juliana)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w11-mean-auth-project-3/d1-dusk-parse">Parse</a> (Juliana)</td>
    <td>Project 3 Intro + Approvals</td>
    <td>Project 3</td>
    <td>Project 3</td>
