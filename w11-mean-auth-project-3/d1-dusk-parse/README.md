@@ -41,7 +41,7 @@ You may use any front-end you already have or you can make a new one. I'm going 
   });
   ```
 
-1. Open your app in a browser window.
+1. Open your client-side app in a browser window using the file system.
 1. Now go back to your Parse dashboard to see your new class and data!
 
 ## Challenge
