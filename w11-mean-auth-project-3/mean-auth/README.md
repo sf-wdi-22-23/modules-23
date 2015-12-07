@@ -171,6 +171,7 @@ app.config(function ($httpProvider) {
 1. If the user update is successful redirect to `/profile`.
 
 **Add a Post Resource**
+
 1. In the `/profile`, display `user.posts` with an ng-repeat.
 1. Add a `posts` attribute to the User model in `user.js` that takes an ObjectId of a schema for Post.
 
