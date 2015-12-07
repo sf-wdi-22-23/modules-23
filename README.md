@@ -32,7 +32,7 @@ Look here for all things related to lesson notes, exercises, and solutions as we
  </tr>
  <tr>
    <td>Module1</td>
-   <td>[MEAN Auth with JWT](https://github.com/sf-wdi-22-23/modules-23/tree/master/w11-mean-auth-project-3/d1-dawn-mean-auth) (Braus)</td>
+   <td><a href="https://github.com/sf-wdi-22-23/modules-23/tree/master/w11-mean-auth-project-3/d1-dawn-mean-auth">MEAN Auth with JWT</a> (Braus)</td>
    <td>Parse Auth (Matt)</td>
    <td>Lightening Talks</td>
    <td>Project 3</td>
